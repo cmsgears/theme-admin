@@ -1,0 +1,125 @@
+/* == Main Navigation ========================================= */
+
+.nav-main {
+	display: none;	
+}
+
+.nav-main ul {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.nav-main li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.nav-main li a {
+	color: white;
+	font-size: 0.8em;
+}
+
+.nav-main li a:hover {
+	color: gray;
+}
+
+/* == Main Mobile Navigation =================================== */
+
+.nav-mobile-icon {
+    background: url("../../images/icons/menu.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+	display: inline-block;
+	width: 26px;
+	height: 16px;
+    cursor: pointer;
+	margin-top: 1em;    
+}
+
+.nav-mobile {
+	background-color: #222222;
+    display: none;
+    right: 0;
+    width: 100%;
+}
+
+.nav-mobile ul li {
+	border-bottom: 1px solid gray;
+}
+
+.nav-mobile ul li a {
+	color: white;
+	background-color: #000000;
+    display: inline-block;
+	text-align: center;
+    width: 100%;
+    line-height: 2em;
+}
+
+.nav-mobile ul li a:hover {
+	color: gray;
+}
+
+@media only screen and (min-width: 768px) {
+
+	.nav-main {
+		display: block;	
+	}
+	
+	.nav-mobile {
+		display: none;
+	}
+}
+
+/* == Social Navigation ======================================== */
+
+.social-icons {
+	display: inline-block;
+	margin: 1em 0;
+}
+
+.social-icons li {
+	background: url( "../../images/icons/icon-set-social.png" ) no-repeat;
+	width: 32px;
+	height: 32px;
+	float:left;
+	margin:0px 5px;
+	cursor:pointer;
+	
+	-webkit-transition: all 0.30s ease-in-out;
+  	   -moz-transition: all 0.30s ease-in-out;
+  		-ms-transition: all 0.30s ease-in-out;
+  		 -o-transition: all 0.30s ease-in-out;
+}
+
+.social-icons li.facebook-icon {
+	background-position:0px 0px;
+}
+
+.social-icons li.facebook-icon:hover {
+	background-position:0px -32px;
+}
+
+.social-icons li.twitter-icon {
+	background-position:-32px 0px;
+}
+
+.social-icons li.twitter-icon:hover {
+	background-position:-32px -32px;
+}
+
+.social-icons li.linkedin-icon {
+	background-position:-64px 0px;
+}
+
+.social-icons li.linkedin-icon:hover {
+	background-position:-64px -32px;
+}
+
+.social-icons li.gmail-icon {
+	background-position:-96px 0px;
+}
+
+.social-icons li.gmail-icon:hover {
+	background-position:-96px -32px;
+}

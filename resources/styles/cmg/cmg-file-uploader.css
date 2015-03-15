@@ -1,0 +1,118 @@
+.file-container {
+	position: relative;
+}
+
+.file-container .file-fields {
+	position: relative;
+	border: 1px solid #C0C0C0;
+	margin: 0 1%;
+	width: 98%;
+}
+
+.file-container .file-fields label, .file-container .file-fields input {
+	width: 45%;
+}
+
+.file-fieldset {
+	position: relative;
+}
+
+/* Modern File Selector */
+
+.file-selector-modern {
+	border: 1px solid #C0C0C0;
+	display: none;
+	width:30%;
+	padding: 1em;
+}
+
+.file-target-container {
+	border: 1px solid black;
+	width: 100px;
+	height: 120px;
+	margin: 0px auto;
+	position: relative;
+	cursor: pointer;
+}
+
+.file-target {
+
+}
+
+.file-target:hover {
+	background: gray;
+}
+
+.file-target-drag {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100px;
+	height: 120px;	
+	z-index: 10;	
+	text-align: center;
+	line-height: 120px;
+}
+
+.file-preview {
+	position: absolute;
+	top: 0px;
+	left: 0px;	
+	width: 100px;
+	height: 120px;	
+	z-index: 50;
+}
+
+.file-progress-modern {
+
+}
+
+/* Legacy File Selector */
+
+.file-selector-legacy {
+	padding: 1em;
+	width: 30%;
+}
+
+.file-input-wrap {
+	overflow: hidden;
+	position: relative;
+}
+
+.file-input-wrap input[type="file"] {
+	opacity: 0;
+    cursor: pointer !important;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+.file-input {
+
+}
+
+.file-progress-legacy {
+
+}
+
+
+.frm-inner .btn.file-input-wrap {
+	width: 60%;
+}
+
+.file-image {
+	position:absolute;
+	top: 0px;
+	right: 0px;
+	width: 58%;
+	height: 96%;
+	overflow: hidden;
+}
+
+.file-image img {
+	max-width: 100%;
+	max-height: 100%;
+}

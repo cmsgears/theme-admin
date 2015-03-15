@@ -1,0 +1,1 @@
+The modules directory can be used to override the default views provided by the modules.

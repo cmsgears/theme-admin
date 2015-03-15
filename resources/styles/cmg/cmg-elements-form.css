@@ -1,0 +1,213 @@
+/***************************************************************************************************
+(c) 2014 - http://www.cmsgears.com
+cmg-elements-forms.css, version - 1.0.0, http://www.cmsgears.com/license,
+http://www.cmsgears.com/web/utilities/cmg-elements-forms/
+****************************************************************************************************
+Description: A unified approach to make theme based fluid form elements.
+Possible Breakpoints: 320px, 480px, 768px, 1024px, 1280px, 1320px, 1600px
+***************************************************************************************************/
+
+/* ** Form ***************************************************** */
+
+form {
+	margin: 0 auto;
+	margin: 1em auto 0;
+    padding: 2em 0;
+}
+
+/* ** Label, Error and Success ********************************* */
+	
+label, .form-error, .form-success {
+	border: none;
+	box-shadow: none;
+	font-size: 1em;
+	width: 99%;
+	margin: 0.5%;
+	display: inline-block;
+}
+
+.form-error, .form-success {
+	color: red;
+	font-size: 0.8em;
+	display: inline-block;
+}
+
+.form-success {
+	color: green;
+}
+
+/* ** Input Fields ********************************************* */
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+	background-color: #ffffff;
+	width: 97%;
+	padding: 1%;
+	margin: 10px 0.5%;
+	outline: none;
+	border: 1px solid #d3d3d3;
+	box-shadow: none;
+	font-size: 1em;
+	line-height: 1em;
+
+	-webkit-transition: all 0.30s ease-in-out;
+  	   -moz-transition: all 0.30s ease-in-out;
+  		-ms-transition: all 0.30s ease-in-out;
+  		 -o-transition: all 0.30s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+	border-top: 1px solid #aaaaaa;
+	border-left: 1px solid #aaaaaa;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+input[type="text"].error-field, input[type="email"].error-field, input[type="password"].error-field, textarea.error-field, select.error-field {
+	border: 1px solid #ff3333;
+	box-shadow: 0 0 5px #ff3333;
+}
+
+/* ** Submit Buttons ******************************************* */
+
+input[type="submit"], input[type="button"], button, .btn {
+	color: white;
+	background-color: #A9131E;
+	font-size: 1em;
+	line-height: 1em;	
+	width: 99%;
+	padding: 1%;
+	margin: 0.5%;
+	outline: none;
+	border: 1px solid #DDDDDD;
+	box-shadow: none;
+
+	-webkit-transition: all 0.30s ease-in-out;
+  	   -moz-transition: all 0.30s ease-in-out;
+  		-ms-transition: all 0.30s ease-in-out;
+  		 -o-transition: all 0.30s ease-in-out;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
+	background-color: #860400;
+}
+
+select {
+	width: 99%;
+}
+
+.btn {
+	display: inline-block;
+	width: 97%;
+	text-align: center;
+}
+
+/* ** Round Corners ******************************************** */
+
+.frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"], 
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
+.frm-rounded-all button, .frm-rounded-all .btn {
+		-moz-border-radius: 1em;
+	 -webkit-border-radius: 1em;
+			 border-radius: 1em;
+	  -khtml-border-radius: 1em;
+}
+
+.frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"], 
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
+.frm-rounded-top button, .frm-rounded-top .btn {
+		-moz-border-radius-top-left: 1em; 		-moz-border-radius-top-right: 1em;
+	 -webkit-border-radius-top-left: 1em; 	 -webkit-border-radius-top-right: 1em;
+		      border-radius: 1em 1em 0 0; 			   border-radius: 1em 1em 0 0;
+	  -khtml-border-radius-top-left: 1em;  	  -khtml-border-radius-top-right: 1em;
+}
+
+.frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"], 
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
+.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+		 -moz-border-radius-bottom-left: 1em; 		-moz-border-radius-bottom-right: 1em;
+	  -webkit-border-radius-bottom-left: 1em; 	 -webkit-border-radius-bottom-right: 1em;
+     	          border-radius: 0 0 1em 1em; 			      border-radius: 0 0 1em 1em;
+	   -khtml-border-radius-bottom-left: 1em;  	  -khtml-border-radius-bottom-right: 1em;
+}
+
+/* ** Split the form for label and fields *********************** */
+
+.frm-split {
+	text-align: center;
+}
+
+.frm-split label {
+	width: 40%;
+	text-align: left;
+}
+
+.frm-split select {
+	width: 52%;
+}
+
+.frm-split .wrap-checkbox {
+	text-align: left;
+	margin: 0.5% 2%;
+}
+
+.frm-split input[type="text"], .frm-split input[type="password"], .frm-split textarea {
+	width: 50%;
+}
+
+.frm-split input[type="submit"], .frm-split input[type="button"] {
+	width: 40%;
+	height: 2.5em;
+}
+
+.frm-split .btn {
+	width: 40%;
+	height: 1em;
+}
+
+/* ** Recaptcha responsive fix ********************************* */
+
+#recaptcha_widget_div {
+	margin: 1%;
+}
+
+@media only screen and (max-width : 480px) {
+    
+    #recaptcha_challenge_image {
+	    margin: 0 !important;
+	    width: 100% !important;
+	    height: auto !important;
+    }
+    
+    #recaptcha_response_field {    	
+	    margin: 0 !important;
+	    width: 100% !important;
+	    height: auto !important;
+    }
+    
+    .recaptchatable #recaptcha_image {
+	    margin: 0 !important;
+	    width: 100% !important;
+	    height: auto !important;
+    }
+
+    .recaptchatable .recaptcha_r1_c1, 
+    .recaptchatable .recaptcha_r3_c1, 
+    .recaptchatable .recaptcha_r3_c2, 
+    .recaptchatable .recaptcha_r7_c1, 
+    .recaptchatable .recaptcha_r8_c1, 
+    .recaptchatable .recaptcha_r3_c3, 
+    .recaptchatable .recaptcha_r2_c1, 
+    .recaptchatable .recaptcha_r4_c1, 
+    .recaptchatable .recaptcha_r4_c2, 
+    .recaptchatable .recaptcha_r4_c4, 
+    .recaptchatable .recaptcha_image_cell {
+
+	    margin: 0 !important;
+	    width: 100% !important;
+	    background: none !important;
+	    height: auto !important;
+    }
+
+	#recaptcha_area, #recaptcha_table {
+	   	margin-left: -125px;
+	}
+}
