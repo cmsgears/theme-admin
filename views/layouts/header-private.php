@@ -24,6 +24,6 @@ $admin = Yii::$app->user->identity;
 		</div>
 	</div>
     <div class="header-content">
-        <?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/site/index' ], null );?>
+        <?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/dashboard' ], null );?>
     </div>
 </header>
