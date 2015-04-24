@@ -21,20 +21,6 @@ $user	= Yii::$app->user->getIdentity();
 		
 		<?= Yii::$app->sidebar->getSidebarHtml() ?>
 
-		<?php if( Yii::$app->cmgCore->hasModule( 'foxslider' ) && $user->isPermitted( 'slider' ) ) { ?>
-			<div class="collapsible-tab has-children" id="sidebar-slider">
-				<div class="collapsible-tab-header clearfix">
-					<div class="colf colf4"><span class="icon-sidebar icon-slider"></span></div>
-					<div class="colf colf4x3">Fox Slider</div>
-				</div>
-				<div class="collapsible-tab-content clear">
-					<ul>
-						<li><?= Html::a( "Sliders", ['/foxslider/slider/all'] ) ?></li>
-					</ul>
-				</div>
-			</div>
-		<?php } ?>
-
 		<?php if( Yii::$app->cmgCore->hasModule( 'cmgcommunity' ) && $user->isPermitted( 'community' ) ) { ?>
 			<div class="collapsible-tab has-children" id="sidebar-group">
 				<div class="collapsible-tab-header clearfix">
