@@ -21,23 +21,6 @@ $user	= Yii::$app->user->getIdentity();
 		
 		<?= Yii::$app->sidebar->getSidebarHtml() ?>
 
-		<?php if( Yii::$app->cmgCore->hasModule( 'cmgcommunity' ) && $user->isPermitted( 'community' ) ) { ?>
-			<div class="collapsible-tab has-children" id="sidebar-group">
-				<div class="collapsible-tab-header clearfix">
-					<div class="colf colf4"><span class="icon-sidebar icon-newsletter"></span></div>
-					<div class="colf colf4x3">Community</div>
-				</div>
-				<div class="collapsible-tab-content clear">
-					<ul>
-						<li><?= Html::a( "Groups Matrix", ['/cmgcommunity/group/matrix'] ) ?></li>
-						<li><?= Html::a( "Group Categories", ['/cmgcommunity/group/categories'] ) ?></li>
-						<li><?= Html::a( "Groups", ['/cmgcommunity/group/all'] ) ?></li>
-						<li><?= Html::a( "Chat Sessions", ['/cmgcommunity/message/all'] ) ?></li>
-					</ul>
-				</div>
-			</div>
-		<?php } ?>
-
 		<?php if( Yii::$app->cmgCore->hasModule( 'cmgforum' ) && $user->isPermitted( 'forum' ) ) { ?>
 			<div class="collapsible-tab has-children" id="sidebar-forum">
 				<div class="collapsible-tab-header clearfix">
