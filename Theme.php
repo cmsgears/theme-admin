@@ -16,5 +16,8 @@ class Theme extends \yii\base\Theme {
 
 		// The path for images directly accessed using the img tag 
 		Yii::setAlias( "@images", "@web/images" );
+
+		// The path for templates
+		Yii::setAlias( "@templates", "@themes/admin/views/templates" );
     }
 }

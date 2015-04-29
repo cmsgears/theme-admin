@@ -85,7 +85,7 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 	color: #2b3d51;
 	box-sizing: border-box;
 	border-right: 1px solid #c8cccf;
-	padding-top: 80px;
+	padding-top: 100px;
 }
 
 .sidebar .collapsible-tab {

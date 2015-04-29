@@ -16,14 +16,14 @@ $admin = Yii::$app->user->identity;
 		<div class="profile-details colf colf15x13">
 			<ul>
 				<?php  if( isset( $admin ) ) { ?> 
-					<li><?=$admin->user_username?></li>
-					<li><?=$admin->user_last_login?></li>
+					<li><?=$admin->username?></li>
+					<li><?=$admin->lastLogin?></li>
 				<?php } ?>
 				<li><span class="nav-mobile-icon"></span></li>
 			</ul>
 		</div>
 	</div>
     <div class="header-content">
-        <?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/site/index' ], null );?>
+        <?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/dashboard' ], null );?>
     </div>
 </header>

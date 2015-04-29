@@ -5,12 +5,12 @@ Description: The ajax processor can be used to submit ajax forms using jQuery. I
 			 table rows or any html element having child form elements as ajax request using same technique.
 ***************************************************************************************************/
 
-/* Form Groups slot reserved for Framework - 1 to 1000. */
+/* Form Groups slot reserved for Framework - 1 to 10000. */
 var FORM_GROUP_DEFAULT	= 0;
 
-/* Form Keys slot reserved for Framework - 1 to 1000. */
-var FORM_KEY_DEFAULT	= 0;
-var FORM_KEY_CONTACT	= 5;
+/* Form Keys slot reserved for Framework - 1 to 10000. */
+var FORM_KEY_DEFAULT	=  0;
+var FORM_KEY_LOGIN		=  5;
 
 // Ajax Processor Plugin
 ( function( cmg ) {
@@ -119,21 +119,21 @@ var FORM_KEY_CONTACT	= 5;
 		}
 
 		/* Submit Regular Ajax Form */
-		function submitAjaxForm( formId, formGroup, formKey ) {
+		function submitAjaxForm( requestId, formGroup, formKey ) {
 		
-			var form			= jQuery("#" + formId );
+			var form			= jQuery( "#" + requestId );
 			var httpMethod		= form.attr( "method" );
 			var actionUrl		= form.attr( "action" );
-			var statusMessage	= jQuery("#" + formId + " .frm-message");
+			var statusMessage	= jQuery( "#" + requestId + " .frm-message" );
 		
 			// Hide message
 			statusMessage.hide();
 
 			// Hide all errors
-			jQuery("#" + formId + " .error").hide();
+			jQuery( "#" + requestId + " .error" ).hide();
 
 			// Pre Process Form
-			if( !preAjaxProcessor.processPre( formId, formGroup, formKey ) ) {
+			if( !preAjaxProcessor.processPre( requestId, formGroup, formKey ) ) {
 		
 				return false;
 			}
@@ -149,7 +149,7 @@ var FORM_KEY_CONTACT	= 5;
 			}
 			
 			// Show Spinner
-			jQuery( "#" + formId + " .frm-spinner" ).show();
+			jQuery( "#" + requestId + " .frm-spinner" ).show();
 
 			jQuery.ajax( {
 				type: httpMethod,
@@ -159,7 +159,7 @@ var FORM_KEY_CONTACT	= 5;
 				success: function( response, textStatus, XMLHttpRequest ) {
 
 					// Process response
-					processAjaxResponse( formId, formGroup, formKey, statusMessage, response );
+					processAjaxResponse( requestId, formGroup, formKey, statusMessage, response );
 				}
 			} );
 
@@ -167,9 +167,9 @@ var FORM_KEY_CONTACT	= 5;
 		}
 
 		/* Submit Rest Form */
-		function submitRestForm( formId, formGroup, formKey ) {
+		function submitRestForm( requestId, formGroup, formKey ) {
 		
-			var form			= jQuery("#" + formId );
+			var form			= jQuery("#" + requestId );
 			var httpMethod		= form.attr( "method" );
 			var actionUrl		= form.attr( "action" );
 			var statusMessage	= form.children( ".frm-message" );
@@ -178,13 +178,13 @@ var FORM_KEY_CONTACT	= 5;
 			statusMessage.hide();
 		
 			// Hide all errors
-			jQuery( "#" + formId + " .error" ).hide();
+			jQuery( "#" + requestId + " .error" ).hide();
 		
 			// Hide message
-			jQuery( "#" + formId + " .frm-message" ).hide();
+			jQuery( "#" + requestId + " .frm-message" ).hide();
 		
 			// Pre Process Form
-			if( !preAjaxProcessor.processPre( formId, formGroup, formKey ) ) {
+			if( !preAjaxProcessor.processPre( requestId, formGroup, formKey ) ) {
 		
 				return false;
 			}
@@ -193,7 +193,7 @@ var FORM_KEY_CONTACT	= 5;
 			var formData		= form.serializeJSON();
 
 			// Show Spinner
-			jQuery( "#" + formId + " .frm-spinner" ).show();
+			jQuery( "#" + requestId + " .frm-spinner" ).show();
 
 			jQuery.ajax({
 				type: httpMethod,
@@ -204,7 +204,7 @@ var FORM_KEY_CONTACT	= 5;
 				success: function( response, textStatus, XMLHttpRequest ) {
 					
 					// Process response
-					processAjaxResponse( formId, formGroup, formKey, statusMessage,  response );
+					processAjaxResponse( requestId, formGroup, formKey, statusMessage,  response );
 				}
 			});
 
@@ -212,9 +212,9 @@ var FORM_KEY_CONTACT	= 5;
 		}
 
 		/* Submit Regular Ajax Request */
-		function submitAjaxRequest( parentId, formGroup, formKey ) {
+		function submitAjaxRequest( requestId, formGroup, formKey ) {
 
-			var parent			= jQuery("#" + parentId );
+			var parent			= jQuery("#" + requestId );
 			var actionUrl		= parent.attr( "action" );
 			var statusMessage	= parent.children( ".frm-message" );
 
@@ -222,13 +222,13 @@ var FORM_KEY_CONTACT	= 5;
 			statusMessage.hide();
 		
 			// Hide all errors
-			jQuery( "#" + parentId + " .error" ).hide();
+			jQuery( "#" + requestId + " .error" ).hide();
 		
 			// Hide message
-			jQuery( "#" + parentId + " .frm-message" ).hide();
+			jQuery( "#" + requestId + " .frm-message" ).hide();
 
 			// Pre Process Form
-			if( !preAjaxProcessor.processPre( parentId, formGroup, formKey ) ) {
+			if( !preAjaxProcessor.processPre( requestId, formGroup, formKey ) ) {
 
 				return false;
 			}
@@ -244,7 +244,7 @@ var FORM_KEY_CONTACT	= 5;
 			}
 
 			// Show Spinner
-			jQuery( "#" + parentId + " .frm-spinner" ).show();
+			jQuery( "#" + requestId + " .frm-spinner" ).show();
 
 			jQuery.ajax({
 				type: "POST",
@@ -254,7 +254,7 @@ var FORM_KEY_CONTACT	= 5;
 				success: function( response, textStatus, XMLHttpRequest ) {
 
 					// Process response
-					processAjaxResponse( parentId, formGroup, formKey, statusMessage,  response );
+					processAjaxResponse( requestId, formGroup, formKey, statusMessage,  response );
 				}
 			});
 
@@ -262,7 +262,7 @@ var FORM_KEY_CONTACT	= 5;
 		}
 
 		/* Process ajax response */
-		function processAjaxResponse( parentId, formGroup, formKey, statusMessage,  response ) {
+		function processAjaxResponse( requestId, formGroup, formKey, statusMessage,  response ) {
 		
 			var result 		= response['result'];
 			var message 	= response['message'];
@@ -275,35 +275,35 @@ var FORM_KEY_CONTACT	= 5;
 				statusMessage.show();
 
 				// Hide all errors
-				jQuery("#" + parentId + " .error").hide();
+				jQuery("#" + requestId + " .error").hide();
 				
 				// Hide Spinner
-				jQuery( "#" + parentId + " .frm-spinner" ).hide();
+				jQuery( "#" + requestId + " .frm-spinner" ).hide();
 
 				// Check to keep form data
-				var keepData = jQuery("#" + parentId ).attr( "keepData" );
+				var keepData = jQuery("#" + requestId ).attr( "keepData" );
 
 				if( !keepData ) {
 		
 					// Clear all form fields
-					jQuery("#" + parentId + " input[type='text']").val( '' );
-					jQuery("#" + parentId + " input[type='password']").val( '' );
-					jQuery("#" + parentId + " textarea").val( '' );
+					jQuery("#" + requestId + " input[type='text']").val( '' );
+					jQuery("#" + requestId + " input[type='password']").val( '' );
+					jQuery("#" + requestId + " textarea").val( '' );
 				}
 		
 				// Pass the data for post processing
-				postAjaxProcessor.processSuccess( parentId, formGroup, formKey, data );
+				postAjaxProcessor.processSuccess( requestId, formGroup, formKey, data );
 			}
 			else if( result == 0 ) {
 
 				// Hide Spinner
-				jQuery( "#" + parentId + " .frm-spinner" ).hide();
+				jQuery( "#" + requestId + " .frm-spinner" ).hide();
 
 				for( var key in errors ) {
 					
 		        	var fieldName 		= key;
 		        	var errorMessage 	= errors[key];
-		        	var errorField		= jQuery( "#" + parentId + " span[formError='" + fieldName + "']" );
+		        	var errorField		= jQuery( "#" + requestId + " span[formError='" + fieldName + "']" );
 		        
 		        	errorField.html( errorMessage );
 		        	errorField.show();
@@ -312,7 +312,7 @@ var FORM_KEY_CONTACT	= 5;
 				statusMessage.html( message );
 				statusMessage.show();
 			
-				postAjaxProcessor.processFailure( parentId, formGroup, formKey, data );
+				postAjaxProcessor.processFailure( requestId, formGroup, formKey, data );
 			}
 		}
 	};
