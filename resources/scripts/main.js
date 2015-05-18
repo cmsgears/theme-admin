@@ -1,14 +1,18 @@
-/* Form Groups */
-var FORM_GROUP_SLIDER			= 1001;
-
-/* Form Keys */
-var FORM_KEY_SLIDE_ADD			= 1001;
-
 var FORM_KEY_CATEGORY_CREATE 	= 20;
 var FORM_KEY_CATEGORY_UPDATE 	= 25;
 var FORM_KEY_CATEGORY_DELETE 	= 30;
 
 var FORM_KEY_UPDATE_SETTINGS 	= 35;
+
+/* Slider */
+var FORM_GROUP_SLIDER			= 1001;
+
+var FORM_KEY_SLIDE_ADD			= 1001;
+
+/* Slider */
+var FORM_GROUP_GALLERY			= 1005;
+
+var FORM_KEY_ITEM_ADD			= 1001;
 
 // global variables
 var fullContent = false;
@@ -167,6 +171,8 @@ function fileUploaded( parentId, selector, type, result ) {
 			case "avatar":
 			// Group/Page/Post Banner
 			case "banner":
+			// Gallery Items
+			case "gallery":
 			// Slider Image
 			case "slide":
 			{
@@ -256,6 +262,21 @@ function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
 			}
 			
 			break;
+		}
+		case FORM_GROUP_GALLERY:
+		{
+			switch( formKey ) {
+				
+				case FORM_KEY_ITEM_ADD:
+				{
+					// Reload on success
+					location.reload( true );
+
+					break;
+				}
+			}
+			
+			break;	
 		}
 	}
 }
