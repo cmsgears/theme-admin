@@ -1,7 +1,7 @@
 <?php
-use themes\admin\assets\AssetLoaderMain;
+use themes\admin\assets\CommonAssetBundle;
 
-AssetLoaderMain::register( $this );
+CommonAssetBundle::register( $this );
 
 $coreProperties = $this->context->getCoreProperties();
 ?>

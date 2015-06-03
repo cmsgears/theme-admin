@@ -5,7 +5,7 @@ use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
 
-class AssetLoaderMain extends AssetBundle {
+class CommonAssetBundle extends AssetBundle {
 
 	// Constructor and Initialisation ------------------------------
 
