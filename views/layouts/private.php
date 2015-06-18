@@ -9,21 +9,21 @@ $coreProperties = $this->context->getCoreProperties();
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
     <head>
-        <?php include dirname(__FILE__) . "/header-main.php"; ?>
+        <?php include dirname(__DIR__) . "/headers/main.php"; ?>
     </head>
     <body>
         <?php $this->beginBody(); ?>
         <div class="container-main">
-	        <?php include dirname(__FILE__) . "/header-private.php"; ?>
+	        <?php include dirname(__DIR__) . "/headers/private.php"; ?>
 	        <div class="container-content">
-		        <?php include dirname(__FILE__) . "/sidebar.php"; ?>
+		        <?php include dirname(__DIR__) . "/sidebars/sidebar.php"; ?>
 		        <div class="wrap-content colf">
 		        	<div class="breadcrumbs"></div>
 		        	<?= $content ?>
 		        </div>
 			</div>
         </div>
-        <?php include dirname(__FILE__) . "/footer-private.php"; ?>
+        <?php include dirname(__DIR__) . "/footers/private.php"; ?>
         <?php $this->endBody(); ?>
     </body>
 </html>

@@ -28,16 +28,12 @@ jQuery( document ).ready( function() {
 // initialise the basic features usable for whole site
 function initListeners() {
 
+	// Image Uploader
+	jQuery( ".file-uploader" ).cmtFileUploader();
+
 	jQuery(".nav-mobile-icon").click( function() { 
 
 		jQuery(".nav-mobile").slideToggle('slow');
-	});
-	
-	jQuery("#btn-logout a").click( function( evt ) {
-	
-		evt.preventDefault();
-		
-		logout( this.href );
 	});
 	
 	// Sorting
@@ -126,11 +122,6 @@ function initMappingsMatrix() {
 		var formData 	= form.serializeJSON();
 		var formAction	= form.attr("action");
 
-		if( !(formData.bindedData instanceof Array) ) {
-			
-			formData.bindedData = [ formData.bindedData ];
-		}
-
 		showMessagePopup( "Please wait. The requested changes are being made." );
 		
 		jQuery.ajax({  
@@ -156,38 +147,6 @@ function initMappingsMatrix() {
 	});
 }
 
-// File Uploader ------------------------------------------------------------------
-
-// The post processor for uploaded files.
-function fileUploaded( parentId, selector, type, result ) {
-
-	var fileName	= result[ 'name' ] + "." + result[ 'extension' ];
-
-	if( type == "image" ) {
-
-		switch( selector ) {
-
-			// User/Group Avatar
-			case "avatar":
-			// Group/Page/Post Banner
-			case "banner":
-			// Gallery Items
-			case "gallery":
-			// Slider Image
-			case "slide":
-			{
-				jQuery("#" + parentId + " .file-image").html( "<img src='" + result['tempUrl'] + "' />" );
-
-				jQuery("#" + parentId + " .file-name").val( result[ 'name' ] );
-				jQuery("#" + parentId + " .file-extension").val( result[ 'extension' ] );
-				jQuery("#" + parentId + " .file-change").val( 1 );
-
-				break;
-			}
-		}
-	}
-}
-
 // Sort/Search ---------------------
 
 function searchTable() {
@@ -211,8 +170,6 @@ function sortTable( order ) {
 // Forms --------------------------------------------------------------------------
 
 function preCMGProcessor( formId, formGroup, formKey ) {
-	
-	showSpinner( "#" + formId + " .spinner" );
 
 	return true;
 }
@@ -220,9 +177,7 @@ function preCMGProcessor( formId, formGroup, formKey ) {
 preAjaxProcessor.addListener( preCMGProcessor );
 
 function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
-	
-	hideSpinner( "#" + formId + " .spinner" );
-	
+
 	switch( formGroup ) {
 		
 		case FORM_GROUP_SLIDER:
@@ -282,32 +237,8 @@ function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
 }
 
 function postCMGProcessorFailure( formId, formGroup, formKey, data ) {
-	
-	hideSpinner( "#" + formId + " .spinner" );
+
 }
 
 postAjaxProcessor.addSuccessListener( postCMGProcessorSuccess );
 postAjaxProcessor.addFailureListener( postCMGProcessorFailure );
-
-// Logout -------------------------------------------------------------------------
-
-function logout( logoutUrl ) {
-
-	var csrfToken 	= jQuery( 'meta[name=csrf-token]' ).attr( 'content' );
-	var formData	= { _csrf: csrfToken };
-
-    jQuery.ajax({
-        type: 'POST',
-        url: logoutUrl,
-        data: formData,
-        dataType: "JSON",
-        success: function( data, textStatus, XMLHttpRequest ) { 
-
-        	location.href = siteUrl + "login";
-        },
-        complete: function(  jqXHR, textStatus ) {
-			
-			location.href = siteUrl + "login";
-        }
-	});
-}

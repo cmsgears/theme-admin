@@ -39,7 +39,7 @@ $user	= Yii::$app->user->getIdentity();
 
 		<div class="collapsible-tab" id="btn-logout">
 			<div class="collapsible-tab-header">
-				<a href="<?php echo Url::toRoute( ['/apix/cmgcore/site/logout'] ); ?>" class="clearfix">
+				<a href="<?php echo Url::toRoute( ['/cmgcore/site/logout'] ); ?>" class="clearfix">
 					<div class="colf colf4"><span class="icon-sidebar icon-power"></span></div>
 					<div class="colf colf4x3">Logout</div> 
 				</a>

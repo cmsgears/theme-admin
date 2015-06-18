@@ -38,10 +38,10 @@ class CommonAssetBundle extends AssetBundle {
             "conditionizr/detects/ie6-ie7-ie8-ie9.js",
             "scripts/vendor/jquery-ui-1.11.3.min.js",
             "scripts/vendor/bpopup-rateit-jpaginate-spin.js",
-            "scripts/cmgtools/cmt-browser-features.js",
+            "scripts/cmgtools/cmt-utils.js",
             "scripts/cmgtools/cmt-ajax-processor.js",
             "scripts/cmgtools/cmt-file-uploader.js",
-            "scripts/cmgtools/cmg-utilities.js",
+            "scripts/cmgtools/cmt-popup.js",
             "scripts/main.js"
 	    ];
 

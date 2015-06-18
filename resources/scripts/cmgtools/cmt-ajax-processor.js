@@ -1,9 +1,11 @@
-/***************************************************************************************************
-Dependencies: jQuery 1.11.0
-Description: The ajax processor can be used to submit ajax forms using jQuery. It's tested for JQuery 1.11.0, 
-			 but it should work fine for other versions which support ajax. It can also be used to submit
-			 table rows or any html element having child form elements as ajax request using same technique.
-***************************************************************************************************/
+/*
+ * Dependencies: jquery, cmt-utils
+ */
+
+// TODO: Change Form Group to Controller Classes and Keys to Controller Actions
+// TODO: Add Data Binding Support
+// TODO: Add Data Binding with Pagination for Data Grid
+// TODO: Add Page History and Caching Support
 
 /* Form Groups slot reserved for Framework - 1 to 10000. */
 var FORM_GROUP_DEFAULT	= 0;
@@ -172,16 +174,14 @@ var FORM_KEY_LOGIN		=  5;
 			var form			= jQuery("#" + requestId );
 			var httpMethod		= form.attr( "method" );
 			var actionUrl		= form.attr( "action" );
-			var statusMessage	= form.children( ".frm-message" );
+			var statusMessage	= jQuery("#" + requestId + " .frm-message" );
 
 			// Hide Status
 			statusMessage.hide();
 		
 			// Hide all errors
+			jQuery( "#" + requestId + " .error" ).html( '' );
 			jQuery( "#" + requestId + " .error" ).hide();
-		
-			// Hide message
-			jQuery( "#" + requestId + " .frm-message" ).hide();
 		
 			// Pre Process Form
 			if( !preAjaxProcessor.processPre( requestId, formGroup, formKey ) ) {
@@ -216,16 +216,14 @@ var FORM_KEY_LOGIN		=  5;
 
 			var parent			= jQuery("#" + requestId );
 			var actionUrl		= parent.attr( "action" );
-			var statusMessage	= parent.children( ".frm-message" );
+			var statusMessage	= jQuery("#" + requestId + " .frm-message" );
 
 			// Hide Status
 			statusMessage.hide();
 		
 			// Hide all errors
+			jQuery( "#" + requestId + " .error" ).html( '' );
 			jQuery( "#" + requestId + " .error" ).hide();
-		
-			// Hide message
-			jQuery( "#" + requestId + " .frm-message" ).hide();
 
 			// Pre Process Form
 			if( !preAjaxProcessor.processPre( requestId, formGroup, formKey ) ) {
