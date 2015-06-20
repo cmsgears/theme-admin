@@ -117,13 +117,18 @@ function initMappingsMatrix() {
 	jQuery(".matrix-row").click( function(e) {
 		
 		e.preventDefault();
-		
+
 		var form 		= jQuery( this ).parents().eq(2).find( "form" );
 		var formData 	= form.serializeJSON();
 		var formAction	= form.attr("action");
 
+		if( !(formData.Binder.bindedData instanceof Array) ) {
+
+			formData.Binder.bindedData = [ formData.Binder.bindedData ];
+		}
+
 		showMessagePopup( "Please wait. The requested changes are being made." );
-		
+
 		jQuery.ajax({  
 		     type: 'POST',  
 		     url: formAction,
