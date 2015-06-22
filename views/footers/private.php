@@ -9,3 +9,7 @@
     <div class="popup-title"><span class="popup-title-text">Message</span></div>
     <div class="popup-elements"></div>
 </div>
+
+<script type="text/javascript">
+	initSidebar( '<?=$this->params['sidebar-parent']?>', '<?=$this->params['sidebar-child']?>' );
+</script>

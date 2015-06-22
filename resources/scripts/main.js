@@ -49,10 +49,10 @@ function initListeners() {
 // Sidebar ------------------------------------------------------------------------
 
 // initialise sidebar accordion nature
-function initSidebar( activeTabId, activeIndex ) {
+function initSidebar( activeTabParent, activeTabChild ) {
 
 	// Activate Tab
-	var activeTab = jQuery( "#" + activeTabId );
+	var activeTab = jQuery( "#" + activeTabParent );
 
 	activeTab.addClass( "collapsible-tab-active" );
 	activeTab.children( ".collapsible-tab-content" ).show();
@@ -60,7 +60,8 @@ function initSidebar( activeTabId, activeIndex ) {
 	// Activate Tab Child
 	if( activeTab.hasClass( "has-children" ) ) {
 		
-		activeTab.children( ".collapsible-tab-content" ).children( "ul").children( "li").eq( activeIndex ).addClass( "collapsible-tab-content-active" );
+		activeTab.children( ".collapsible-tab-content" ).children( "ul").children( "li." + activeTabChild ).addClass( "collapsible-tab-content-active" );
+		activeTab.children( ".collapsible-tab-content" ).children( "ul").addClass( "expanded" );
 	}
 
 	// Initialise Sidebar Accordion
@@ -68,7 +69,7 @@ function initSidebar( activeTabId, activeIndex ) {
 
 		var child = jQuery( this ).children( ".collapsible-tab-content" );
 
-		if( !child.hasClass("expanded") ) {
+		if( !child.hasClass( "expanded" ) ) {
 
 			// Hide All
 			jQuery( "#sidebar .collapsible-tab-content" ).hide();
@@ -79,7 +80,7 @@ function initSidebar( activeTabId, activeIndex ) {
 			child.slideDown( "slow" );
 		}
 		else {
-			
+
 			// Slide Up Slowly
 			child.removeClass( "expanded" );
 			child.slideUp( "slow" );
