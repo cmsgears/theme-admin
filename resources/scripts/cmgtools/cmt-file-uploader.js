@@ -43,7 +43,7 @@
 				fileUploader.find( ".post-action" ).hide();
 
 				// Clear Old Values
-				if( isCanvasSupported() && fileUploader.attr( "type" ) == "image" ) {
+				if( Cmt.utils.isCanvasSupported() && fileUploader.attr( "type" ) == "image" ) {
 
 					fileUploader.find( ".preview canvas" ).hide();
 				}
@@ -53,19 +53,19 @@
 				var progressContainer	= fileUploader.find( ".preloader .preloader-bar" );
 
 				// Modern Uploader
-				if ( isFileApiSupported() ) {
+				if ( Cmt.utils.isFileApiSupported() ) {
 
 					progressContainer.css( "width", "0%" );
 				}
 				// Form Data Uploader
-				else if( isFormDataSupported() ) {
+				else if( Cmt.utils.isFormDataSupported() ) {
 
 					progressContainer.html( "" );
 				}
 			});
 
 			// Modern Uploader
-			if ( isFileApiSupported() ) {
+			if ( Cmt.utils.isFileApiSupported() ) {
 
 				// Traditional way using input
 				var inputField = fileUploader.find( ".chooser .input" );
@@ -94,7 +94,7 @@
 				});
 			}
 			// Form Data Uploader
-			else if( isFormDataSupported() ) {
+			else if( Cmt.utils.isFormDataSupported() ) {
 
 				var directory	= fileUploader.attr( "directory" );
 				var type		= fileUploader.attr( "type" );
@@ -129,11 +129,11 @@
 			var files = event.target.files || event.originalEvent.dataTransfer.files;
 
 			// Draw if image
-			if( isCanvasSupported() && type == "image" ) {
+			if( Cmt.utils.isCanvasSupported() && type == "image" ) {
 
 				canvas.show();
 
-				drawImage( canvas[0], files[0] );
+				Cmt.utils.drawImageOnCanvas( canvas[0], files[0] );
 			}
 
 			// Upload File	

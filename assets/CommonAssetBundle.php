@@ -38,11 +38,12 @@ class CommonAssetBundle extends AssetBundle {
             "conditionizr/detects/ie6-ie7-ie8-ie9.js",
             "scripts/vendor/jquery-ui-1.11.3.min.js",
             "scripts/vendor/bpopup-rateit-jpaginate-spin.js",
-            "scripts/cmgtools/cmt-utils.js",
+            "scripts/cmgtools/cmt-core.js",
             "scripts/cmgtools/cmt-ajax-processor.js",
             "scripts/cmgtools/cmt-file-uploader.js",
             "scripts/cmgtools/cmt-popup.js",
-            "scripts/main.js"
+            "scripts/main.js",
+            "scripts/ajax-processor.js"
 	    ];
 
 		// Define the Position to load Assets

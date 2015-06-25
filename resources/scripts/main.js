@@ -1,19 +1,3 @@
-var FORM_KEY_CATEGORY_CREATE 	= 20;
-var FORM_KEY_CATEGORY_UPDATE 	= 25;
-var FORM_KEY_CATEGORY_DELETE 	= 30;
-
-var FORM_KEY_UPDATE_SETTINGS 	= 35;
-
-/* Slider */
-var FORM_GROUP_SLIDER			= 1001;
-
-var FORM_KEY_SLIDE_ADD			= 1001;
-
-/* Slider */
-var FORM_GROUP_GALLERY			= 1005;
-
-var FORM_KEY_ITEM_ADD			= 1001;
-
 // global variables
 var fullContent = false;
 
@@ -21,7 +5,7 @@ var fullContent = false;
 jQuery( document ).ready( function() {
 
 	initListeners();
-	
+
 	initFullContent();
 });
 
@@ -41,9 +25,6 @@ function initListeners() {
 		
 		sortTable( jQuery( this ).attr( 'sort-order' ) );
 	});
-	
-	// Forms
-	jQuery( ".frm-ajax" ).processAjax();
 }
 
 // Sidebar ------------------------------------------------------------------------
@@ -120,7 +101,7 @@ function initMappingsMatrix() {
 		e.preventDefault();
 
 		var form 		= jQuery( this ).parents().eq(2).find( "form" );
-		var formData 	= form.serializeJSON();
+		var formData 	= Cmt.utils.formToJson( form );
 		var formAction	= form.attr("action");
 
 		if( !(formData.Binder.bindedData instanceof Array) ) {
@@ -172,79 +153,3 @@ function sortTable( order ) {
 
 	window.location = location.urlParams( 'sort', order );
 }
-
-// Forms --------------------------------------------------------------------------
-
-function preCMGProcessor( formId, formGroup, formKey ) {
-
-	return true;
-}
-
-preAjaxProcessor.addListener( preCMGProcessor );
-
-function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
-
-	switch( formGroup ) {
-		
-		case FORM_GROUP_SLIDER:
-		{
-			switch( formKey ) {
-				
-				case FORM_KEY_SLIDE_ADD:
-				{
-					// Reload on success
-					location.reload( true );
-
-					break;
-				}
-				case FORM_KEY_CATEGORY_CREATE:
-				{
-					jQuery(".add-cat-popup").fadeOut( 'slow' );
-					location.reload();
-
-					break;
-				}
-				
-				case FORM_KEY_CATEGORY_UPDATE:
-				{
-					jQuery(".update-cat-popup").fadeOut( 'slow' );
-					location.reload();
-
-					break;
-				}
-				
-				case FORM_KEY_CATEGORY_DELETE:
-				{
-					jQuery(".delete-cat-popup").fadeOut( 'slow' );
-					location.reload();
-
-					break;
-				}
-			}
-			
-			break;
-		}
-		case FORM_GROUP_GALLERY:
-		{
-			switch( formKey ) {
-				
-				case FORM_KEY_ITEM_ADD:
-				{
-					// Reload on success
-					location.reload( true );
-
-					break;
-				}
-			}
-			
-			break;	
-		}
-	}
-}
-
-function postCMGProcessorFailure( formId, formGroup, formKey, data ) {
-
-}
-
-postAjaxProcessor.addSuccessListener( postCMGProcessorSuccess );
-postAjaxProcessor.addFailureListener( postCMGProcessorFailure );
