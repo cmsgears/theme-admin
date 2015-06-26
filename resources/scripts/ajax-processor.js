@@ -1,9 +1,11 @@
-// Default Controller
-var FORM_KEY_CATEGORY_CREATE 	= 20;
-var FORM_KEY_CATEGORY_UPDATE 	= 25;
-var FORM_KEY_CATEGORY_DELETE 	= 30;
+/* Default Controller */
+var ACTION_UPDATE_SETTINGS 		= 'settings';
 
-var FORM_KEY_UPDATE_SETTINGS 	= 'settings';
+/* Category Controller */
+var CONTROLLER_CATEGORY			= 'category';
+var ACTION_CATEGORY_CREATE 		= 'create';
+var ACTION_CATEGORY_UPDATE 		= 'update';
+var ACTION_CATEGORY_DELETE 		= 'delete';
 
 /* Slider Controller */
 var CONTROLLER_SLIDER			= 'slider';
@@ -29,6 +31,37 @@ function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
 
 	switch( formGroup ) {
 		
+		case CONTROLLER_CATEGORY:
+		{
+			switch( formKey ) {
+
+				case ACTION_CATEGORY_CREATE:
+				{
+					jQuery(".add-cat-popup").fadeOut( 'slow' );
+					location.reload();
+
+					break;
+				}
+				
+				case ACTION_CATEGORY_UPDATE:
+				{
+					jQuery(".update-cat-popup").fadeOut( 'slow' );
+					location.reload();
+
+					break;
+				}
+				
+				case ACTION_CATEGORY_DELETE:
+				{
+					jQuery(".delete-cat-popup").fadeOut( 'slow' );
+					location.reload();
+
+					break;
+				}
+			}
+			
+			break;
+		}
 		case CONTROLLER_SLIDER:
 		{
 			switch( formKey ) {
@@ -37,29 +70,6 @@ function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
 				{
 					// Reload on success
 					location.reload( true );
-
-					break;
-				}
-				case FORM_KEY_CATEGORY_CREATE:
-				{
-					jQuery(".add-cat-popup").fadeOut( 'slow' );
-					location.reload();
-
-					break;
-				}
-				
-				case FORM_KEY_CATEGORY_UPDATE:
-				{
-					jQuery(".update-cat-popup").fadeOut( 'slow' );
-					location.reload();
-
-					break;
-				}
-				
-				case FORM_KEY_CATEGORY_DELETE:
-				{
-					jQuery(".delete-cat-popup").fadeOut( 'slow' );
-					location.reload();
 
 					break;
 				}
