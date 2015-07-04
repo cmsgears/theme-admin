@@ -15,11 +15,15 @@ function initListeners() {
 	// Image Uploader
 	jQuery( ".file-uploader" ).cmtFileUploader();
 
+	// JQuery Date	
+	jQuery( ".jqdate" ).datepicker( { dateFormat: 'yy-mm-dd' } );
+
+	// Mobile Nav Icon
 	jQuery(".nav-mobile-icon").click( function() { 
 
 		jQuery(".nav-mobile").slideToggle('slow');
 	});
-	
+
 	// Sorting
 	jQuery( ".icon-sort" ).click( function() {
 		
