@@ -287,6 +287,12 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 	padding-top: 100px;	
 }
 
+.error {
+	width: 100%;
+	font-size: 0.8em;
+	color: red;	
+}
+
 /* == Icons == */
 
 /* Sidebar Icons */

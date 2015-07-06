@@ -7,10 +7,6 @@ var ACTION_CATEGORY_CREATE 		= 'create';
 var ACTION_CATEGORY_UPDATE 		= 'update';
 var ACTION_CATEGORY_DELETE 		= 'delete';
 
-/* Slider Controller */
-var CONTROLLER_SLIDER			= 'slider';
-var ACTION_SLIDE_UPDATE			= 'updateSlide';
-
 /* Gallery Controller */
 var CONTROLLER_GALLERY			= 'gallery';
 var ACTION_ITEM_UPDATE			= 'updateItem';
@@ -27,13 +23,13 @@ jQuery( document ).ready( function() {
 
 // Forms --------------------------------------------------------------------------
 
-function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
+function postCMGProcessorSuccess( formId, controllerId, actionId, data ) {
 
-	switch( formGroup ) {
+	switch( controllerId ) {
 		
 		case CONTROLLER_CATEGORY:
 		{
-			switch( formKey ) {
+			switch( actionId ) {
 
 				case ACTION_CATEGORY_CREATE:
 				{
@@ -62,24 +58,9 @@ function postCMGProcessorSuccess( formId, formGroup, formKey, data ) {
 			
 			break;
 		}
-		case CONTROLLER_SLIDER:
-		{
-			switch( formKey ) {
-				
-				case ACTION_SLIDE_UPDATE:
-				{
-					// Reload on success
-					location.reload( true );
-
-					break;
-				}
-			}
-			
-			break;
-		}
 		case CONTROLLER_GALLERY:
 		{
-			switch( formKey ) {
+			switch( actionId ) {
 				
 				case ACTION_ITEM_UPDATE:
 				{
