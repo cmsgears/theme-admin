@@ -31,44 +31,47 @@
 		// Initialise Uploader
 		function init( fileUploader ) {
 
-			// Show/Hide file chooser
-			var btnShowChooser	= fileUploader.find( ".btn-show-chooser" );
+			// Show/Hide file chooser - either of the option must exist to choose file
+			var btnShowChooser	= fileUploader.find( ".btn-show-chooser, .btn-direct-chooser" );
 
-			btnShowChooser.click( function() {
+			if( btnShowChooser.length > 0 ) {
 
-				// Show Chooser
-				fileUploader.find( ".wrap-chooser" ).toggle( "slow" );
+				btnShowChooser.click( function() {
 
-				// Hide Postaction
-				fileUploader.find( ".post-action" ).hide();
+					// Show Chooser
+					fileUploader.find( ".wrap-chooser" ).toggle( "slow" );
 
-				// Clear Old Values
-				if( Cmt.utils.isCanvasSupported() && fileUploader.attr( "type" ) == "image" ) {
+					// Hide Postaction
+					fileUploader.find( ".post-action" ).hide();
 
-					fileUploader.find( ".preview canvas" ).hide();
-				}
+					// Clear Old Values
+					if( Cmt.utils.isCanvasSupported() && fileUploader.attr( "type" ) == "image" ) {
 
-				fileUploader.find( ".chooser .input" ).val("");
+						fileUploader.find( ".preview canvas" ).hide();
+					}
 
-				var progressContainer	= fileUploader.find( ".preloader .preloader-bar" );
+					fileUploader.find( ".chooser .input, .direct-chooser .input" ).val("");
 
-				// Modern Uploader
-				if ( Cmt.utils.isFileApiSupported() ) {
-
-					progressContainer.css( "width", "0%" );
-				}
-				// Form Data Uploader
-				else if( Cmt.utils.isFormDataSupported() ) {
-
-					progressContainer.html( "" );
-				}
-			});
+					var progressContainer	= fileUploader.find( ".preloader .preloader-bar" );
+	
+					// Modern Uploader
+					if ( Cmt.utils.isFileApiSupported() ) {
+	
+						progressContainer.css( "width", "0%" );
+					}
+					// Form Data Uploader
+					else if( Cmt.utils.isFormDataSupported() ) {
+	
+						progressContainer.html( "" );
+					}
+				});
+			}
 
 			// Modern Uploader
 			if ( Cmt.utils.isFileApiSupported() ) {
 
 				// Traditional way using input
-				var inputField = fileUploader.find( ".chooser .input" );
+				var inputField = fileUploader.find( ".chooser .input, .direct-chooser .input" );
 
 				inputField.change( function( event ) {
 
@@ -98,7 +101,7 @@
 
 				var directory	= fileUploader.attr( "directory" );
 				var type		= fileUploader.attr( "type" );
-				var inputField 	= fileUploader.find( ".chooser .input" );
+				var inputField 	= fileUploader.find( ".chooser .input, .direct-chooser .input" );
 
 				inputField.change( function( event ) {
 
@@ -120,7 +123,6 @@
 
 			var directory	= fileUploader.attr( "directory" );
 			var type		= fileUploader.attr( "type" );
-			var canvas		= fileUploader.find( ".preview canvas" );
 
 			// cancel event and add hover styling
 			handleDragging( event );
@@ -129,14 +131,16 @@
 			var files = event.target.files || event.originalEvent.dataTransfer.files;
 
 			// Draw if image
-			if( Cmt.utils.isCanvasSupported() && type == "image" ) {
+			if( settings.preview && Cmt.utils.isCanvasSupported() && type == "image" ) {
+
+				var canvas		= fileUploader.find( ".preview canvas" );
 
 				canvas.show();
 
 				Cmt.utils.drawImageOnCanvas( canvas[0], files[0] );
 			}
 
-			// Upload File	
+			// Upload File
 			uploadFile( fileUploader, directory, type, files[0] );
 		}
 
@@ -212,7 +216,7 @@
 		function uploadTraditionalFile( fileUploader, directory, type ) {
 
 			var progressContainer	= fileUploader.find( ".preloader .preloader-bar" );
-			var fileList			= fileUploader.find( ".chooser .input" );
+			var fileList			= fileUploader.find( ".chooser .input, .direct-chooser .input" );
 			var file 				= fileList.files[0];
 			var formData 			= new FormData();
 			fileName 				= file.name;
@@ -279,7 +283,8 @@
 	// Default Settings
 	cmt.fn.cmtFileUploader.defaults = {
 		fileFormats: [ "jpg", "jpeg", "png", "gif", "pdf", "csv" ],
-		uploadListener: null
+		uploadListener: null,
+		preview: true
 	};
 
 }( jQuery ) );

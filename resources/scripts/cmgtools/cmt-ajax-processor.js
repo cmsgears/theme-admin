@@ -203,8 +203,8 @@ Cmt.remote = {
 	handleAjaxRequest: function( elementId, controllerId, actionId ) {
 
 		var element		= jQuery( "#" + elementId );
-		var httpMethod	= form.attr( "method" );
-		var actionUrl	= form.attr( "action" );
+		var httpMethod	= element.attr( "method" );
+		var actionUrl	= element.attr( "action" );
 		var message		= jQuery( "#" + elementId + " ." + this.messageClass );
 
 		if( null == httpMethod ) {
