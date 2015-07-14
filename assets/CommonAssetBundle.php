@@ -51,8 +51,9 @@ class CommonAssetBundle extends AssetBundle {
 	        "position" => View::POS_HEAD
 	    ];
 
-		// Define dependent Asset Loaders
+		// Define dependent Asset Bundles
 	    $this->depends = [
+			// dependent asset bundles - classpath without leading backslash
 			'yii\web\JqueryAsset'
 	    ];
 	}

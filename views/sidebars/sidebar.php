@@ -6,17 +6,7 @@ use yii\helpers\Url;
 
 $user			= Yii::$app->user->getIdentity();
 $settings		= Yii::$app->sidebar->getConfig();
-
-$themeChilds	= $this->theme->childs;
-
-foreach ( $themeChilds as $child ) {
-
-	$child = Yii::createObject( $child );
-
-	$child->init( $this );
-}
 ?>
-
 <div class="sidebar-back col-filler  colf colf15x2"></div>
 <div class="sidebar colf colf15x2">
 	<div id="sidebar" class="collapsible">

@@ -14,5 +14,7 @@ class Theme extends \cmsgears\core\common\base\Theme {
     public function init() {
 
         parent::init();
+		
+		// Initialise theme
     }
 }
