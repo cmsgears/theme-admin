@@ -48,7 +48,7 @@ class CommonAssetBundle extends AssetBundle {
 
 		// Define the Position to load Assets
 	    $this->jsOptions = [
-	        "position" => View::POS_HEAD
+	        "position" => View::POS_END
 	    ];
 
 		// Define dependent Asset Bundles
@@ -56,6 +56,30 @@ class CommonAssetBundle extends AssetBundle {
 			// dependent asset bundles - classpath without leading backslash
 			'yii\web\JqueryAsset'
 	    ];
+	}
+
+	public function registerAssetFiles( $view ) {
+
+		parent::registerAssetFiles( $view );
+
+		$inlineScript	= "conditionizr.config({
+			assets: 'conditionizr/resources/',
+		        tests: {
+		        ie6: [ 'script', 'style', 'class' ],
+		        ie7: [ 'script', 'style', 'class' ],
+		        ie8: [ 'script', 'style', 'class' ]
+		        }
+		    });
+
+    		conditionizr.polyfill( 'scripts/vendor/html5shiv.min.js', [ 'ie6', 'ie7', 'ie8' ] );
+    		conditionizr.polyfill( 'scripts/vendor/respond.min.js', [ 'ie6', 'ie7', 'ie8' ] );";
+
+    	$siteUrl = "var siteUrl = '" . Yii::$app->homeUrl . "';
+					var fileUploadUrl = '" . Yii::$app->homeUrl . "apix/file/file-handler';";
+
+		$view->registerJs( $inlineScript, View::POS_READY );
+
+		$view->registerJs( $siteUrl, View::POS_END );
 	}
 }
 

@@ -1,7 +1,15 @@
 <?php
+// Yii Imports
+use \Yii;
+
+// CMG Imports
 use themes\admin\assets\CommonAssetBundle;
 
+// Register Assets
 CommonAssetBundle::register( $this );
+
+// Register Child theme Assets
+$this->theme->registerChildAssets( $this );
 
 $coreProperties = $this->context->getCoreProperties();
 ?>
