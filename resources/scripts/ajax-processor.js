@@ -76,4 +76,4 @@ function postCMGProcessorSuccess( formId, controllerId, actionId, data ) {
 	}
 }
 
-postAjaxProcessor.addSuccessListener( postCMGProcessorSuccess );
+postCmtApiProcessor.addSuccessListener( postCMGProcessorSuccess );

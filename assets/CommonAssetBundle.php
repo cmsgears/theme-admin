@@ -39,7 +39,7 @@ class CommonAssetBundle extends AssetBundle {
             "scripts/vendor/jquery-ui-1.11.3.min.js",
             "scripts/vendor/bpopup-rateit-jpaginate-spin.js",
             "scripts/cmgtools/cmt-core.js",
-            "scripts/cmgtools/cmt-ajax-processor.js",
+            "scripts/cmgtools/cmt-api-processor.js",
             "scripts/cmgtools/cmt-file-uploader.js",
             "scripts/cmgtools/cmt-popup.js",
             "scripts/main.js",
