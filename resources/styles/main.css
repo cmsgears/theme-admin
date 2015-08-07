@@ -312,6 +312,14 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 	background-position: -20px -20px;
 }
 
+.icon-cart {
+	background-position: -60px -20px;
+}
+
+.icon-product {
+	background-position: -80px -20px;
+}
+
 .icon-rbac {
 	background-position: -100px -20px;
 }
@@ -411,6 +419,14 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 
 .icon-action-delete:hover {
 	background-position: -24px -24px;
+}
+
+.icon-action-view {
+	background-position: -72px 0px;
+}
+
+.icon-action-view:hover {
+	background-position: -72px -24px;
 }
 
 .icon-action-save {
