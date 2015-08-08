@@ -95,53 +95,10 @@ function initFullContent() {
 	});
 }
 
-// Mappings Matrix ------------------------------------------------------------------
-
-// It helps admin to map two tables using matrix.
-function initMappingsMatrix() {
-
-	jQuery(".matrix-row").click( function(e) {
-		
-		e.preventDefault();
-
-		var form 		= jQuery( this ).parents().eq(2).find( "form" );
-		var formData 	= Cmt.utils.formToJson( form );
-		var formAction	= form.attr("action");
-
-		if( !(formData.Binder.bindedData instanceof Array) ) {
-
-			formData.Binder.bindedData = [ formData.Binder.bindedData ];
-		}
-
-		showMessagePopup( "Please wait. The requested changes are being made." );
-
-		jQuery.ajax({  
-		     type: 'POST',  
-		     url: formAction,
-		     data: JSON.stringify( formData ),
-		     dataType: "JSON",
-		     contentType: "application/json;charset=UTF-8",
-		     success: function( response, textStatus, XMLHttpRequest ) {
-		    	 	
-	    	 	hideMessagePopup();
-
-				if( response['result'] == 1 ) {
-					
-					showMessagePopup( "Your request has been processed successfully." );
-				}
-				else if( response['result'] == 0 ) {
-
-					showErrorPopup( "Your request was not processed." );					
-				}
-			}
-		});
-	});
-}
-
 // Sort/Search ---------------------
 
 function searchTable() {
-	
+
 	var searchTerms	= jQuery("#search-terms").val();
 	var location 	= "" + window.location;
 

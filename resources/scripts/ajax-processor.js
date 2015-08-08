@@ -19,6 +19,8 @@ jQuery( document ).ready( function() {
 
 	// Forms
 	jQuery( ".frm-ajax" ).processAjax();
+	
+	jQuery( ".request-ajax" ).processAjax( { form: false } );
 });
 
 // Forms --------------------------------------------------------------------------
