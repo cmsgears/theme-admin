@@ -5,7 +5,7 @@ use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
 
-class AssetLoaderMain extends AssetBundle {
+class CommonAssetBundle extends AssetBundle {
 
 	// Constructor and Initialisation ------------------------------
 
@@ -38,22 +38,48 @@ class AssetLoaderMain extends AssetBundle {
             "conditionizr/detects/ie6-ie7-ie8-ie9.js",
             "scripts/vendor/jquery-ui-1.11.3.min.js",
             "scripts/vendor/bpopup-rateit-jpaginate-spin.js",
-            "scripts/cmgtools/cmt-browser-features.js",
-            "scripts/cmgtools/cmt-ajax-processor.js",
+            "scripts/cmgtools/cmt-core.js",
+            "scripts/cmgtools/cmt-api-processor.js",
             "scripts/cmgtools/cmt-file-uploader.js",
-            "scripts/cmgtools/cmg-utilities.js",
-            "scripts/main.js"
+            "scripts/cmgtools/cmt-popup.js",
+            "scripts/main.js",
+            "scripts/ajax-processor.js"
 	    ];
 
 		// Define the Position to load Assets
 	    $this->jsOptions = [
-	        "position" => View::POS_HEAD
+	        "position" => View::POS_END
 	    ];
 
-		// Define dependent Asset Loaders
+		// Define dependent Asset Bundles
 	    $this->depends = [
+			// dependent asset bundles - classpath without leading backslash
 			'yii\web\JqueryAsset'
 	    ];
+	}
+
+	public function registerAssetFiles( $view ) {
+
+		parent::registerAssetFiles( $view );
+
+		$inlineScript	= "conditionizr.config({
+			assets: 'conditionizr/resources/',
+		        tests: {
+		        ie6: [ 'script', 'style', 'class' ],
+		        ie7: [ 'script', 'style', 'class' ],
+		        ie8: [ 'script', 'style', 'class' ]
+		        }
+		    });
+
+    		conditionizr.polyfill( 'scripts/vendor/html5shiv.min.js', [ 'ie6', 'ie7', 'ie8' ] );
+    		conditionizr.polyfill( 'scripts/vendor/respond.min.js', [ 'ie6', 'ie7', 'ie8' ] );";
+
+    	$siteUrl = "var siteUrl = '" . Yii::$app->homeUrl . "';
+					var fileUploadUrl = '" . Yii::$app->homeUrl . "apix/file/file-handler';";
+
+		$view->registerJs( $inlineScript, View::POS_READY );
+
+		$view->registerJs( $siteUrl, View::POS_END );
 	}
 }
 

@@ -283,6 +283,16 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 
 /* == Site CSS =================================================== */
 
+.site-error {
+	padding-top: 100px;	
+}
+
+.error {
+	width: 100%;
+	font-size: 0.8em;
+	color: red;	
+}
+
 /* == Icons == */
 
 /* Sidebar Icons */
@@ -300,6 +310,14 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 
 .icon-user {
 	background-position: -20px -20px;
+}
+
+.icon-cart {
+	background-position: -60px -20px;
+}
+
+.icon-product {
+	background-position: -80px -20px;
 }
 
 .icon-rbac {
@@ -401,6 +419,14 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 
 .icon-action-delete:hover {
 	background-position: -24px -24px;
+}
+
+.icon-action-view {
+	background-position: -72px 0px;
+}
+
+.icon-action-view:hover {
+	background-position: -72px -24px;
 }
 
 .icon-action-save {
@@ -832,4 +858,89 @@ div.settings-core-view span input[type="text"], div.settings-core-view span inpu
 	.cud-box {
 		width: 60%;
 	}	
+}
+
+
+
+
+
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+  background: none repeat scroll 0 0 #E74343;
+  color: #FFFFFF;
+  width: 250px;
+}
+
+.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all a {
+  color: #FFFFFF;
+  margin: 0 3px;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-next:after {
+  content: ">>";
+}
+
+.ui-datepicker-prev:after {
+  content: "<<";
+}
+
+.ui-datepicker-header .ui-icon {
+  display: none;
+}
+
+.ui-datepicker-header {
+  background: none repeat scroll 0 0 #363636;
+  height: 31px;
+  padding-top: 8px;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  top: -10px;
+}
+
+.ui-datepicker-next, .ui-datepicker-prev {
+  position: relative;
+  z-index: 50;
+}
+
+.ui-datepicker-calendar td {
+  padding: 4px;
+}
+
+.ui-state-default {
+  display: inline-block;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.ui-state-disabled span {
+  background-color: #ebebeb;
+  color: #9e9e9e;
+}
+
+@media only screen and (min-width: 481px) {
+  .ui-datepicker-title {
+    top: -14px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all {
+    width: 275px;
+  }
+
+  .ui-datepicker-title {
+    top: -18px;
+  }
+
+  .ui-datepicker-calendar td {
+    padding: 6px;
+  }
 }

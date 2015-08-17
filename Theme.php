@@ -1,9 +1,10 @@
 <?php
 namespace themes\admin;
 
+// Yii Imports
 use \Yii;
 
-class Theme extends \yii\base\Theme {
+class Theme extends \cmsgears\core\common\base\Theme {
 
     public $pathMap = [
         '@admin/views' => '@themes/admin/views',
@@ -13,11 +14,7 @@ class Theme extends \yii\base\Theme {
     public function init() {
 
         parent::init();
-
-		// The path for images directly accessed using the img tag 
-		Yii::setAlias( "@images", "@web/images" );
-
-		// The path for templates
-		Yii::setAlias( "@templates", "@themes/admin/views/templates" );
+		
+		// Initialise theme
     }
 }

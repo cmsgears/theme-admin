@@ -18,20 +18,3 @@ use yii\helpers\Html;
 <link href="assets/images/icons/icon.jpg" rel="apple-touch-icon-precomposed">
 
 <?php $this->head(); ?>
-
-<script>
-    conditionizr.config({
-        assets: 'conditionizr/resources/',
-        tests: {
-        ie6: ['script', 'style', 'class'],
-        ie7: ['script', 'style', 'class'],
-        ie8: ['script', 'style', 'class']
-        }
-    });
-
-    conditionizr.polyfill('scripts/vendor/html5shiv.min.js', ['ie6', 'ie7', 'ie8']);
-    conditionizr.polyfill('scripts/vendor/respond.min.js', ['ie6', 'ie7', 'ie8']);
-    
-    var siteUrl 		= "<?= Yii::$app->homeUrl ?>";
-    var fileUploadUrl 	= "<?=Yii::$app->urlManager->createAbsoluteUrl('apix/cmgcore/file/file-handler')?>";
-</script>

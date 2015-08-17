@@ -1,7 +1,15 @@
 <?php
-use themes\admin\assets\AssetLoaderMain;
+// Yii Imports
+use \Yii;
 
-AssetLoaderMain::register( $this );
+// CMG Imports
+use themes\admin\assets\CommonAssetBundle;
+
+// Register Assets
+CommonAssetBundle::register( $this );
+
+// Register Child theme Assets
+$this->theme->registerChildAssets( $this );
 
 $coreProperties = $this->context->getCoreProperties();
 ?>
@@ -9,16 +17,16 @@ $coreProperties = $this->context->getCoreProperties();
 <!DOCTYPE html>
 <html lang="<?= $coreProperties->getLanguage() ?>">
     <head>
-        <?php include dirname(__FILE__) . "/header-main.php"; ?>
+        <?php include dirname(__DIR__) . "/headers/main.php"; ?>
     </head>
     <body>
         <?php $this->beginBody(); ?>
         <div class="container-main">
-	        <?php include dirname(__FILE__) . "/header-public.php"; ?>
+	        <?php include dirname(__DIR__) . "/headers/public.php"; ?>
 	        <div class="container-content">
 	        	<?= $content ?>
 	        </div>
-	        <?php include dirname(__FILE__) . "/footer.php"; ?>
+	        <?php include dirname(__DIR__) . "/footers/public.php"; ?>
 		</div>
         <?php $this->endBody(); ?>
     </body>

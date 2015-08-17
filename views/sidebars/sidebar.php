@@ -1,10 +1,11 @@
-<?php 
+<?php
 // Yii Imports
 use \Yii;
-use yii\helpers\Html; 
+use yii\helpers\Html;
 use yii\helpers\Url;
 
-$user	= Yii::$app->user->getIdentity();
+$user			= Yii::$app->user->getIdentity();
+$settings		= Yii::$app->sidebar->getConfig();
 ?>
 <div class="sidebar-back col-filler  colf colf15x2"></div>
 <div class="sidebar colf colf15x2">
@@ -18,20 +19,26 @@ $user	= Yii::$app->user->getIdentity();
 				</a>
 			</div>
 		</div>
-		
+
 		<?= Yii::$app->sidebar->getSidebarHtml() ?>
 
-		<?php if( Yii::$app->cmgCore->hasModule( 'cmgforum' ) && $user->isPermitted( 'forum' ) ) { ?>
-			<div class="collapsible-tab has-children" id="sidebar-forum">
-				<div class="collapsible-tab-header clearfix">
-					<div class="colf colf4"><span class="icon-sidebar icon-blogpost"></span></div>
-					<div class="colf colf4x3">Forums</div>
+		<?php if( Yii::$app->cmgCore->hasModule( 'cmgcore' ) && $user->isPermitted( 'core' ) ) { ?>
+			<div class='collapsible-tab has-children' id='sidebar-setting'>
+				<div class='collapsible-tab-header'>
+						<div class='colf colf4'><span class='icon-sidebar icon-settings'></span></div>
+						<div class='colf colf4x3'>Settings</div>
+					</a>
 				</div>
 				<div class="collapsible-tab-content clear">
 					<ul>
-						<li><?= Html::a( "Forum Matrix", ['/cmgforum/forum/matrix'] ) ?></li>
-						<li><?= Html::a( "Forum Categories", ['/cmgforum/forum/categories'] ) ?></li>
-						<li><?= Html::a( "Forums", ['/cmgforum/forum/all'] ) ?></li>
+						<?php 
+							foreach ( $settings as $setting ) {
+
+								$path = Html::a( "$setting", [ "/cmgcore/settings/index?type=$setting" ] );
+
+								echo "<li class='$setting'>$path</li>";
+							}
+						?>
 					</ul>
 				</div>
 			</div>
@@ -39,7 +46,7 @@ $user	= Yii::$app->user->getIdentity();
 
 		<div class="collapsible-tab" id="btn-logout">
 			<div class="collapsible-tab-header">
-				<a href="<?php echo Url::toRoute( ['/apix/cmgcore/site/logout'] ); ?>" class="clearfix">
+				<a href="<?php echo Url::toRoute( ['/cmgcore/site/logout'] ); ?>" class="clearfix">
 					<div class="colf colf4"><span class="icon-sidebar icon-power"></span></div>
 					<div class="colf colf4x3">Logout</div> 
 				</a>
