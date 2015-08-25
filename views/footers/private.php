@@ -13,11 +13,3 @@ use yii\web\View;
     <div class="popup-title"><span class="popup-title-text">Message</span></div>
     <div class="popup-elements"></div>
 </div>
-
-<?php
-$parent			= $this->params['sidebar-parent'];
-$child			= $this->params['sidebar-child'];
-$sidebarScript 	= "initSidebar( '$parent', '$child' )";
-
-$this->registerJs( $sidebarScript, View::POS_READY );
-?>

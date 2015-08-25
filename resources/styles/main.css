@@ -94,17 +94,17 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 	 border-top: 1px solid #ffffff;
 }
 
-.sidebar .collapsible-tab-active {
+.sidebar .collapsible-tab.active {
 	width: 98%;	
 	border-right: 4px solid #2b3d51;
 }
 
-.sidebar .collapsible-tab-active .collapsible-tab-header {
+.sidebar .collapsible-tab.active .collapsible-tab-header, .sidebar .collapsible-tab.pactive .collapsible-tab-header {
 	background-color: #d9dce0;
 	font-family: Lato-Bold;
 }
 
-.sidebar .collapsible-tab-active .collapsible-tab-content-active {
+.sidebar .collapsible-tab.active .active {
 	font-family: Lato-Bold;
 	font-size:1.2em;
 }
@@ -137,8 +137,6 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
     -moz-box-shadow:inset 0px 0px 2px #909090;
     -webkit-box-shadow:inset 0px 0px 2px #909090;
     box-shadow:inset 0px 0px 2px #909090;
-
-
 }
 
 .sidebar .collapsible-tab-content ul li {
