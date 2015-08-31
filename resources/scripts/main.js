@@ -44,7 +44,7 @@ function initSidebar() {
 
 		var child = jQuery( this ).children( ".collapsible-tab-content" );
 
-		if( !child.hasClass( "active" ) ) {
+		if( !jQuery( this ).hasClass( "active" ) ) {
 
 			if( !child.hasClass( "expanded" ) ) {
 	
@@ -54,7 +54,7 @@ function initSidebar() {
 				child.slideDown( "slow" );
 			}
 			else {
-	
+
 				// Slide Up Slowly
 				jQuery( this ).removeClass( "pactive" );
 				child.removeClass( "expanded" );
