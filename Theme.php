@@ -7,8 +7,8 @@ use \Yii;
 class Theme extends \cmsgears\core\common\base\Theme {
 
     public $pathMap = [
-        '@admin/views' => '@themes/admin/views',
-        '@admin/modules' => '@themes/admin/modules'
+        '@backend/views' => '@themes/admin/views',
+        '@backend/modules' => '@themes/admin/modules'
     ];
 
     public function init() {
