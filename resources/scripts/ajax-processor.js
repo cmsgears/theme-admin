@@ -28,7 +28,21 @@ jQuery( document ).ready( function() {
 function postCMGProcessorSuccess( formId, controllerId, actionId, data ) {
 
 	switch( controllerId ) {
-		
+
+		case CONTROLLER_DEFAULT: {
+
+			switch( actionId ) {
+
+				case ACTION_AVATAR: {
+
+					jQuery( "#" + formId ).parent().hide();
+
+					break;
+				}
+			}
+
+			break;
+		}
 		case CONTROLLER_CATEGORY:
 		{
 			switch( actionId ) {
