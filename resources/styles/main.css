@@ -605,10 +605,6 @@ h1.title {
 
 /* ** Input Fields ********************************************* */
 
-.frm-edit {
-	display: none;
-}
-
 input {
 	font-family:Lato-Reg;
 	padding:4px 1%;

@@ -32,13 +32,14 @@ function initListeners() {
 		
 		sortTable( jQuery( this ).attr( 'sort-order' ) );
 	});
-	
-	jQuery(".btn-edit").click( function() {
-		
+
+	jQuery(".btn-edit-profile").click( function() {
+
 		jQuery(this).hide();
-		jQuery(".frm-view").hide();
-		jQuery(".frm-edit").fadeIn();
-	} );
+		jQuery(".frm-view-profile").hide();
+		jQuery(".frm-edit").removeClass("hidden");
+		
+	});
 }
 
 // Sidebar -------------------------
