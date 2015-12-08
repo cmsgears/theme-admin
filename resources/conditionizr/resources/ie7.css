@@ -1,7 +1,0 @@
-html {
-	filter: expression(document.execCommand("BackgroundImageCache", false, true));
-}
-
-input[type="checkbox"] {
-	vertical-align: baseline;
-}

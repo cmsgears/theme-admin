@@ -15,8 +15,11 @@ jQuery( document ).ready( function() {
 
 function initListeners() {
 
-	// Image Uploader
-	jQuery( ".file-uploader" ).cmtFileUploader();
+	// File Uploader
+	if( jQuery().cmtFileUploader ) {
+
+		jQuery( '.file-uploader' ).cmtFileUploader();
+	}
 
 	// JQuery Date	
 	jQuery( ".jqdate" ).datepicker( { dateFormat: 'yy-mm-dd' } );
