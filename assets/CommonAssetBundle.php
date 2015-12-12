@@ -25,8 +25,6 @@ class CommonAssetBundle extends AssetBundle {
 
 	// Load Javascript
     public $js      = [
-        "scripts/vendor/jquery-ui-1.11.3.min.js",
-        "scripts/vendor/cmgtools.js",
         "scripts/main.js",
         "scripts/api-processor.js"
     ];
@@ -39,7 +37,8 @@ class CommonAssetBundle extends AssetBundle {
 	// Define dependent Asset Bundles
     public $depends = [
 		'yii\web\JqueryAsset',
-		'themes\admin\assets\JqUiAssetBundle',
+		'cmsgears\core\common\assets\JqueryUiAssetBundle',
+		'cmsgears\core\common\assets\CMTAssetBundle'
     ];
 
 	// Constructor and Initialisation ------------------------------
