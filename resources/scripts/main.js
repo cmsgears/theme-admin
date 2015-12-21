@@ -15,8 +15,11 @@ jQuery( document ).ready( function() {
 
 function initListeners() {
 
-	// Image Uploader
-	jQuery( ".file-uploader" ).cmtFileUploader();
+	// File Uploader
+	if( jQuery().cmtFileUploader ) {
+
+		jQuery( '.file-uploader' ).cmtFileUploader();
+	}
 
 	// JQuery Date	
 	jQuery( ".jqdate" ).datepicker( { dateFormat: 'yy-mm-dd' } );
@@ -31,6 +34,14 @@ function initListeners() {
 	jQuery( ".icon-sort" ).click( function() {
 		
 		sortTable( jQuery( this ).attr( 'sort-order' ) );
+	});
+
+	jQuery(".btn-edit-profile").click( function() {
+
+		jQuery(this).hide();
+		jQuery(".frm-view-profile").hide();
+		jQuery(".frm-edit").removeClass("hidden");
+		
 	});
 }
 
