@@ -25,8 +25,8 @@ class CommonAssetBundle extends AssetBundle {
 
 	// Load Javascript
     public $js      = [
-        "scripts/main.js",
-        "scripts/api-processor.js"
+        "scripts/main-old.js",
+        "scripts/api-processor-old.js"
     ];
 
 	// Define the Position to load Assets

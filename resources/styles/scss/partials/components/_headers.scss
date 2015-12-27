@@ -1,0 +1,11 @@
+.header-public {
+    background-color: $color-header;
+    color: $color-header-text;
+    text-align: center;
+    padding: 1rem;
+
+    .logo {
+        height: 80px;
+        display: inline-block;
+    }
+}

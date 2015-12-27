@@ -8,13 +8,11 @@ class Theme extends \cmsgears\core\common\base\Theme {
 
     public $pathMap = [
         '@backend/views' => '@themes/admin/views',
-        '@backend/modules' => '@themes/admin/modules'
+        '@cmsgears' => '@themes/admin/modules/cmsgears'
     ];
 
     public function init() {
 
         parent::init();
-		
-		// Initialise theme
     }
 }
