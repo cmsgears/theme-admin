@@ -3983,6 +3983,108 @@ Dependencies: variables, variables-ext, mixins
   display: inline-block;
 }
 
+/**********************************************************************
+Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
+Each block can have background image with or without parallax effect, a content wrapper which wraps block header and content.
+Dependencies: variables, variables-ext, mixins
+Javascript: jquery, cmt-block
+***********************************************************************/
+.block {
+  position: relative;
+}
+.block .block-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-attachment: scroll;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+  z-index: 5;
+}
+.block .texture {
+  z-index: 10;
+}
+.block .block-wrap-content {
+  position: relative;
+  z-index: 15;
+}
+.block .block-splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.block .block-splitter.top {
+  top: 0;
+  margin-top: -50px;
+}
+.block .block-splitter.bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.block .block-splitter .icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.block-basic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
 .block .block-wrap-content {
   height: 100%;
 }
