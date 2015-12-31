@@ -44,8 +44,15 @@
 @import "cmt/components/headers";
 @import "partials/components/headers";
 
-@import "cmt/components/blocks";
-@import "partials/components/blocks";
+@import "partials/components/popouts";
+
+@import "partials/components/sidebars";
+
+@import "cmt/components/collapsible-menu";
+
+@import "cmt/components/box";
+@import "cmt/components/box-form";
+@import "partials/components/box-settings";
 
 // Extensions -------------------------------
 

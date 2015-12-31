@@ -9,3 +9,35 @@
         display: inline-block;
     }
 }
+
+.header-private {
+    background-color: $color-header;
+    color: $color-header-text;
+
+    #btn-sidebar-main {
+        background-color: $color-secondary;
+        color: $color-secondary-text;
+        width: 120px;
+        float: left;
+        padding: 1rem;
+        @include transit-color-bkg-color( $transit-eio,$transit-time-medium );
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        &:hover {
+            background-color: $color-secondary-d;
+            color: $color-secondary-text-d;
+        }
+    }
+
+    .logo {
+        width: 220px;
+        float: left;
+        padding: 1rem;
+    }
+}

@@ -4019,151 +4019,262 @@ Dependencies: variables, variables-ext, mixins
   padding: 1rem;
 }
 
-/**********************************************************************
-Description: It defines the styles for the block components forming the page. We can devide the entire page in one or more blocks. 
-Each block can have background image with or without parallax effect, a content wrapper which wraps block header and content.
-Dependencies: variables, variables-ext, mixins
-Javascript: jquery, cmt-block
-***********************************************************************/
-.block {
-  position: relative;
+.wrap-popout-actions .btn-popout {
+  padding: 1.5em 0.5em;
+  margin: 0;
+  border: 0;
+  line-height: 1em !important;
+  background-color: transparent !important;
 }
-.block .block-bkg {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.wrap-popout-actions .btn-popout:hover {
+  background-color: #000000 !important;
 }
-.block .block-bkg-fixed {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-attachment: fixed;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.wrap-popout-actions .btn-popout.active, .wrap-popout-actions .btn-popout.active:hover {
+  background-color: #F2F2F2 !important;
+  color: #363636 !important;
 }
-.block .block-bkg-scroll {
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-attachment: scroll;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.wrap-popout-actions .btn {
+  line-height: 1em !important;
 }
-.block .block-bkg-parallax {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-position: 50% 50% 9 !important;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  width: 100%;
-  height: 110%;
-  position: absolute;
-  top: -5%;
-  left: 0;
-  z-index: 5;
+.wrap-popout-actions .count {
+  line-height: 1em !important;
+  background: #3C4655;
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-left: 5px;
+  padding: 5px;
 }
-.block .texture {
-  z-index: 10;
+.wrap-popout-actions .wrap-user {
+  text-align: left;
+  padding: 0.55em 0.5em;
 }
-.block .block-wrap-content {
-  position: relative;
-  z-index: 15;
-}
-.block .block-splitter {
-  position: absolute;
-  width: 100%;
-  height: 100px;
-  text-align: center;
-  z-index: 10000;
-}
-.block .block-splitter.top {
-  top: 0;
-  margin-top: -50px;
-}
-.block .block-splitter.bottom {
-  bottom: 0;
-  margin-bottom: -50px;
-}
-.block .block-splitter .icon {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-}
-
-.block-basic {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.wrap-popout-actions .wrap-user .user-avatar {
+  height: 3em;
+  padding: 2px;
   overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #7F7F7F;
+  color: #FFFFFF;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -webkit-box-shadow: inset 0 0 0 2px #FFFFFF;
+  -moz-box-shadow: inset 0 0 0 2px #FFFFFF;
+  box-shadow: inset 0 0 0 2px #FFFFFF;
+}
+@media only screen and (max-width: 1024px) {
+  .wrap-popout-actions .wrap-user {
+    text-align: center;
+  }
+  .wrap-popout-actions .wrap-user .user-name {
+    display: none;
+  }
 }
 
-.block .block-wrap-content {
-  height: 100%;
+.wrap-popouts {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+.wrap-popouts > div {
+  display: none;
+}
+.wrap-popouts .popout {
+  background-color: #F2F2F2;
+  padding: 0.5em;
+  position: absolute;
+  -webkit-box-shadow: 0 2px 4px 0 #7F7F7F;
+  -moz-box-shadow: 0 2px 4px 0 #7F7F7F;
+  box-shadow: 0 2px 4px 0 #7F7F7F;
+}
+.wrap-popouts .popout li {
+  padding: 0.25em;
+  border-bottom: 1px solid #5c6b82;
+}
+.wrap-popouts .popout li a {
+  color: #363636;
+  display: block;
+}
+.wrap-popouts .popout li:hover a {
+  color: #298ccf;
+}
+.wrap-popouts .popout li:last-child {
+  border-bottom: none;
+}
+.wrap-popouts #popout-reminder {
+  left: 33.33%;
+}
+.wrap-popouts #popout-user {
+  left: 66.66%;
+}
+@media only screen and (min-width: 481px) and (max-width: 768px), only screen and (max-width: 320px) {
+  .wrap-popouts #popout-reminder, .wrap-popouts #popout-user, .wrap-popouts #popout-notification {
+    left: 0 !important;
+    width: 100% !important;
+  }
+  .wrap-popouts .popout li a {
+    font-size: 0.75em;
+  }
 }
 
-#block-public {
-  padding-bottom: 2rem;
-  padding-top: 120px;
+.sidebar-filler {
+  background-color: #3C4655;
 }
-#block-public .block-content {
+
+@media only screen and (max-width: 1024px) {
+  .sidebar-filler {
+    display: none;
+  }
+
+  .sidebar-main {
+    width: 220px !important;
+    padding: 0 !important;
+    position: absolute;
+    top: 82px;
+    left: -220px;
+    z-index: 5;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .sidebar-main {
+    top: 120px;
+  }
+}
+.collapsible-menu .collapsible-tab {
+  width: 100%;
+  border-bottom: 1px solid #d3d3d3;
+  border-top: 1px solid #ffffff;
+}
+.collapsible-menu .collapsible-tab.active {
+  width: 98%;
+  border-right: 4px solid #2b3d51;
+}
+.collapsible-menu .collapsible-tab.active .collapsible-tab-header, .collapsible-menu .collapsible-tab.pactive .collapsible-tab-header {
+  background-color: #d9dce0;
+  font-family: questrial, Geneva, sans-serif;
+}
+.collapsible-menu .collapsible-tab.active .active {
+  font-family: questrial, Geneva, sans-serif;
+  font-size: 1.2em;
+}
+.collapsible-menu .collapsible-tab-header {
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+}
+.collapsible-menu .collapsible-tab-header:hover {
+  background-color: #d9dce0;
+}
+.collapsible-menu .collapsible-tab-header a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  cursor: pointer;
+  color: #2b3d51;
+}
+.collapsible-menu .collapsible-tab-header .colf4 {
+  text-align: center;
+}
+.collapsible-menu .collapsible-tab-content {
+  padding-left: 35%;
+  display: none;
+  -moz-box-shadow: inset 0px 0px 2px #909090;
+  -webkit-box-shadow: inset 0px 0px 2px #909090;
+  box-shadow: inset 0px 0px 2px #909090;
+}
+.collapsible-menu .collapsible-tab-content ul li {
+  width: 100%;
+  text-align: left;
+}
+.collapsible-menu .collapsible-tab-content ul li a {
+  color: #4f5e7f;
+  font-size: 0.8em;
+  line-height: 25px;
+  width: 95%;
+  display: block;
+  padding-left: 5%;
+}
+.collapsible-menu .collapsible-tab-content ul li a:hover {
+  background-color: #d9dce0;
+}
+
+.box .box-wrap-header {
+  position: relative;
+}
+.box .box-wrap-content {
+  position: relative;
+}
+
+.box-collapsible .box-wrap-header {
+  background-color: #3C4655;
+  color: #96B0D6;
+  padding: 0.5rem;
+}
+.box-collapsible .box-wrap-header .btn-collapse {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.box-collapsible .box-wrap-header .btn-collapse:hover {
+  color: #FFFFFF;
+}
+.box-collapsible .box-wrap-content {
   background-color: white;
   color: #101010;
-  width: 450px;
-  margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
 }
-#block-public .block-content a {
-  color: #E74343;
+
+.box-form {
+  position: relative;
 }
-#block-public .block-content p {
-  font-size: 0.75em;
+.box-form .btn-edit {
+  cursor: pointer;
 }
-#block-public .block-content h2 {
-  color: #3C4655;
-  margin: 0;
+.box-form .wrap-info {
+  display: block;
 }
-@media only screen and (max-width: 480px) {
-  #block-public .block-content {
-    width: 90%;
-  }
+.box-form .wrap-form {
+  display: none;
 }
-@media only screen and (max-width: 480px) {
-  #block-public {
-    padding-top: 140px;
-  }
+
+.box-form-regular .btn-edit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
 }
-@media only screen and (min-width: 1601px) {
-  #block-public .block-content {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-  }
+.box-form-regular .btn-edit:hover {
+  color: #FFFFFF;
+}
+
+.box-form-collapsible .box-wrap-content .btn-edit {
+  position: absolute;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.box-form-collapsible .box-wrap-content .btn-edit:hover {
+  color: #FFFFFF;
+}
+
+.box-settings .box-wrap-content label {
+  width: 40%;
+  float: left;
+}
+.box-settings .box-form .btn-edit {
+  color: #000000;
+}
+.box-settings .wrap-form .frm-field {
+  clear: both;
 }
 
 .mCustomScrollbar {
@@ -4278,4 +4389,4 @@ Javascript: jquery, cmt-block
   width: 4px;
 }
 
-/*# sourceMappingURL=public.css.map */
+/*# sourceMappingURL=private.css.map */

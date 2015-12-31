@@ -27,24 +27,12 @@ $child 		= $this->params['sidebar-child'];
 		<?= Yii::$app->sidebar->getSidebarHtml( $parent, $child ) ?>
 
 		<?php if( Yii::$app->cmgCore->hasModule( 'cmgcore' ) && $user->isPermitted( 'core' ) ) { ?>
-			<div id='sidebar-setting' class='collapsible-tab has-children <?php if( strcmp( $parent, 'sidebar-setting' ) == 0 ) echo 'active';?>'>
-				<div class='collapsible-tab-header'>
-						<div class='colf colf4'><span class='icon-sidebar icon-settings'></span></div>
-						<div class='colf colf4x3'>Settings</div>
+			<div id="sidebar-setting" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-setting' ) == 0 ) echo 'active';?>">
+				<div class="collapsible-tab-header">
+					<a href="<?php echo Url::toRoute( ['/cmgcore/settings'] ); ?>">
+						<div class="colf colf4"><span class="cmti cmti-2x cmti-setting"></span></div>
+						<div class="colf colf4x3">Settings</div>
 					</a>
-				</div>
-				<div class="collapsible-tab-content clear <?php if( strcmp( $parent, 'sidebar-setting' ) == 0 ) echo 'expanded visible';?>">
-					<ul>
-						<?php 
-							foreach ( $settings as $setting ) {
-
-								$path 	= Html::a( "$setting", [ "/cmgcore/settings/index?type=$setting" ] );
-								$cClass	= strcmp( $child, $setting ) == 0 ? 'active' : '';
-
-								echo "<li class='$setting $cClass'>$path</li>";
-							}
-						?>
-					</ul>
 				</div>
 			</div>
 		<?php } ?>

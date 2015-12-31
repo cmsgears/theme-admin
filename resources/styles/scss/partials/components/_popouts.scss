@@ -1,0 +1,115 @@
+.wrap-popout-actions {
+    //background-color: $color-black;
+
+    .btn-popout {
+        padding: 1.5em 0.5em;
+        margin: 0;
+        border: 0;
+        line-height: 1em !important;
+        background-color: transparent !important; 
+        
+        &:hover {
+            background-color: $color-black !important;
+        }    
+    }
+    
+    .btn-popout.active, .btn-popout.active:hover {
+        background-color: $color-primary !important;
+        color: $color-primary-text !important;
+    }
+    
+    .btn {
+        line-height: 1em !important;
+    }
+
+    .count {
+        line-height: 1em !important;
+        background: $color-secondary;
+        border-radius: $size-medium;
+        color: $color-white;
+        margin-left: $size-medium;
+        padding: $size-medium;
+    }
+
+    .wrap-user {
+        text-align: left;
+        padding: 0.55em 0.5em;
+
+        .user-name {
+            //line-height: 1em !important;
+            //width: 70%;
+            //text-align: left;
+        }
+
+        .user-avatar {
+            height: 3em;
+            padding: 2px;
+            @include circled1( $color-gray, $color-white );
+            @include shadow-inset( 0, 0, 0, $color-white, $spread: 2px );
+        }
+
+        @include responsive-max( screen-tablet-large ) {
+            text-align: center;
+
+            .user-name {
+                display: none;
+            }
+        }
+    }
+}
+
+.wrap-popouts {
+    position: relative;
+    width: 100%;
+    float: left;
+
+    > div {
+        display: none;
+    }
+
+    .popout {
+        background-color: $color-primary;
+        padding: 0.5em;
+        position: absolute;
+        @include shadow(0, 2px, 4px, $color-gray, 0);        
+
+        li {
+            padding: 0.25em;
+            border-bottom: 1px solid $color-secondary-l;
+
+            a {
+                color: $color-primary-text;
+                display: block;
+            }
+        }
+
+        li:hover a {
+            color: $color-link;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+    }
+
+    #popout-reminder {
+        left: 33.33%;
+    }
+    
+    #popout-user {
+        left: 66.66%;
+    }
+    
+    @media only screen and ( min-width: $screen-mobile-large + 1 ) and ( max-width: $screen-tablet-small ),
+    only screen and ( max-width: $screen-mobile-small ) {
+      
+        #popout-reminder, #popout-user, #popout-notification {
+            left: 0 !important;
+            width:100% !important;
+        }
+        
+        .popout li a {
+            font-size: $font-size-8;
+        }
+    }
+}

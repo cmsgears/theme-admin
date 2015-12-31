@@ -1,0 +1,30 @@
+.sidebar-filler {
+    background-color: $color-secondary;
+}
+
+.sidebar-main {
+
+}
+
+@include responsive-max( screen-tablet-large ) {
+
+    .sidebar-filler {
+        display: none;
+    }
+
+    .sidebar-main {
+        width: 220px !important;
+        padding: 0 !important;
+        position: absolute;
+        top: 82px;
+        left: -220px;
+        z-index: 5;
+    }
+}
+
+@include responsive-max( screen-mobile-large ) { 
+
+    .sidebar-main {        
+        top: 120px;        
+    }
+}

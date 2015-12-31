@@ -5,6 +5,8 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
+	
+	initSidebar();
 });
 
 function initPreloaders() {
@@ -48,8 +50,85 @@ function initCmgTools() {
 
 		jQuery( ".cmt-select" ).cmtSelect( { iconHtml: "<span class='cmti cmti-chevron-down'></span>" } );
 	}
+
+	// Form with Info
+	if( jQuery().cmtFormInfo ) {
+
+		jQuery( ".box-form" ).cmtFormInfo();
+	}
 }
 
 function initListeners() {
+
+	// Popout Trigger
+	jQuery( ".btn-popout" ).click( function() {
+		
+		jQuery( ".btn-popout" ).removeClass( "active" );
+		jQuery(this).toggleClass( "active" );
+		var popoutId	= "#" + jQuery( this ).attr( "popout" );
+		var show 		= jQuery( popoutId );
+
+		if( show.is( ":visible" ) ) {
+
+			show.slideUp();
+			jQuery( ".btn-popout" ).removeClass( "active" );
+		}
+		else {
+
+			jQuery( ".popout" ).hide();
+
+			show.slideDown();
+		}
+	});
+}
+
+function initSidebar() {
+
+	// Initialise Sidebar Accordion
+	jQuery( "#sidebar-main .collapsible-tab.has-children" ).click( function() {
+
+		var child = jQuery( this ).children( ".collapsible-tab-content" );
+
+		if( !jQuery( this ).hasClass( "active" ) ) {
+
+			if( !child.hasClass( "expanded" ) ) {
+
+				// Slide Down Slowly
+				jQuery( this ).addClass( "pactive" );
+				child.addClass( "expanded" );
+				child.slideDown( "slow" );
+			}
+			else {
+
+				// Slide Up Slowly
+				jQuery( this ).removeClass( "pactive" );
+				child.removeClass( "expanded" );
+				child.slideUp( "slow" );
+			}
+		}
+	});
+}
+
+function activateSettingsBox( parentElement ) {
+
+	var parent 	= parentElement.closest( ".box-collapsible" );
+	var btn		= parent.find( ".btn-collapse" );
 	
+	btn.unbind( "click" );
+
+	btn.click( function() {
+
+		var content = parent.find( ".box-wrap-content" );
+
+		if( content.is( ':visible' ) ) {
+
+			content.slideUp( "fast" );
+		}
+		else {
+
+			content.slideDown( "slow" );
+		}
+	});
+	
+	parent.find( ".box-form" ).cmtFormInfo();
 }
