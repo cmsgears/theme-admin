@@ -1,3 +1,5 @@
+var mainApp		= new cmt.api.Application();
+
 jQuery(document).ready( function() {
 
 	var appControllers				= [];
@@ -5,7 +7,8 @@ jQuery(document).ready( function() {
 	appControllers[ 'gallery' ]		= 'GalleryController';
 	appControllers[ 'permission' ]	= 'PermissionController';
 
-	jQuery( ".cmt-form, .cmt-request" ).processAjax({
+	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
+		app: mainApp,
 		controllers: appControllers
 	});
 });
@@ -14,7 +17,7 @@ jQuery(document).ready( function() {
 
 cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, parentElement, message, response ) {
 
-	jQuery( "#" + parentElement ).parent().hide();
+	parentElement.parent().hide();
 };
 
 // GalleryController ----------------------------------------
