@@ -25,7 +25,7 @@ $child 		= $sidebar[ 'child' ];
 	<?= Yii::$app->sidebar->getSidebarHtml( $parent, $child ) ?>
 	
 	<?php if( Yii::$app->cmgCore->hasModule( 'cmgcore' ) && $user->isPermitted( 'core' ) ) { ?>
-		<div id="sidebar-setting" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-setting' ) == 0 ) echo 'active';?>">
+		<div id="sidebar-settings" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-settings' ) == 0 ) echo 'active';?>">
 			<div class="collapsible-tab-header">
 				<a href="<?php echo Url::toRoute( ['/cmgcore/settings'] ); ?>">
 					<div class="colf colf4"><span class="cmti cmti-setting"></span></div>

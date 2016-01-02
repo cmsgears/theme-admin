@@ -23,7 +23,7 @@ $themePath		= Yii::getAlias( '@themes/admin' );
 			<div class='valign-center cmti cmti-5x cmti-spinner-1 spin'></div>
 		</div>
 		<?php include "$themePath/views/headers/public.php"; ?>
-        <div class='container container-main'>
+        <div class='container container-main container-public'>
 	        <div class='wrap-content wrap-content-main'>
 	        	<div class='content'>
 	        		<?= $content ?>
