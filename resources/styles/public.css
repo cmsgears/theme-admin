@@ -29,6 +29,13 @@
 .cmti.cmti-action {
   cursor: pointer;
 }
+.cmti.cmti-circled {
+  border-radius: 100%;
+  height: 1.75em;
+  padding-left: 0.35em;
+  padding-top: 0.15em;
+  width: 1.75em;
+}
 
 /* makes the font 33% larger relative to the cmti container */
 .cmti-lg {
@@ -70,6 +77,43 @@
   border-radius: .1em;
 }
 
+.cmti-pull-left {
+  float: left;
+}
+
+.cmti-pull-right {
+  float: right;
+}
+
+.cmti.cmti-pull-left {
+  margin-right: .3em;
+}
+
+.cmti.cmti-pull-right {
+  margin-left: .3em;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.cmti.pull-left {
+  margin-right: .3em;
+}
+
+.cmti.pull-right {
+  margin-left: .3em;
+}
+
+.cmti-spin {
+  -webkit-animation: cmti-spin 2s infinite linear;
+  animation: cmti-spin 2s infinite linear;
+}
+
 .cmti-pulse-8 {
   -webkit-animation: cmti-spin 1s infinite steps(8);
   animation: cmti-spin 1s infinite steps(8);
@@ -78,6 +122,65 @@
 .cmti-pulse-4 {
   -webkit-animation: cmti-spin 2s infinite steps(4);
   animation: cmti-spin 2s infinite steps(4);
+}
+
+@-webkit-keyframes cmti-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes cmti-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+.cmti-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.cmti-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.cmti-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.cmti-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.cmti-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+:root .cmti-rotate-90, :root .cmti-rotate-180, :root .cmti-rotate-270, :root .cmti-flip-horizontal, :root .cmti-flip-vertical {
+  filter: none;
 }
 
 .cmti-stack {
@@ -102,6 +205,10 @@
 
 .cmti-stack-2x {
   font-size: 2em;
+}
+
+.cmti-inverse {
+  color: #ffffff;
 }
 
 @font-face {
@@ -1317,32 +1424,18 @@
   src: url("../fonts/cmgtools/cmti-core.woff");
 }
 @font-face {
-  font-family: lato-black;
-  src: url("../fonts/lato/Lato-Black.eot");
-  src: url("../fonts/lato/Lato-Black.svg");
-  src: url("../fonts/lato/Lato-Black.ttf");
-  src: url("../fonts/lato/Lato-Black.woff");
+  font-family: clear-sans-L;
+  src: url("../fonts/clear-sans/ClearSans-Light.eot");
+  src: url("../fonts/clear-sans/ClearSans-Light.svg");
+  src: url("../fonts/clear-sans/ClearSans-Light.ttf");
+  src: url("../fonts/clear-sans/ClearSans-Light.woff");
 }
 @font-face {
-  font-family: lato-bold;
-  src: url("../fonts/lato/Lato-Bold.eot");
-  src: url("../fonts/lato/Lato-Bold.svg");
-  src: url("../fonts/lato/Lato-Bold.ttf");
-  src: url("../fonts/lato/Lato-Bold.woff");
-}
-@font-face {
-  font-family: lato-light;
-  src: url("../fonts/lato/Lato-Light.eot");
-  src: url("../fonts/lato/Lato-Light.svg");
-  src: url("../fonts/lato/Lato-Light.ttf");
-  src: url("../fonts/lato/Lato-Light.woff");
-}
-@font-face {
-  font-family: lato-reg;
-  src: url("../fonts/lato/Lato-Reg.eot");
-  src: url("../fonts/lato/Lato-Reg.svg");
-  src: url("../fonts/lato/Lato-Reg.ttf");
-  src: url("../fonts/lato/Lato-Reg.woff");
+  font-family: clear-sans-R;
+  src: url("../fonts/clear-sans/ClearSans-Regular.eot");
+  src: url("../fonts/clear-sans/ClearSans-Regular.svg");
+  src: url("../fonts/clear-sans/ClearSans-Regular.ttf");
+  src: url("../fonts/clear-sans/ClearSans-Regular.woff");
 }
 /**********************************************************************
 Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
@@ -1414,7 +1507,7 @@ Dependencies: variables
 }
 
 .bkg-transparent-secondary {
-  background-color: rgba(60, 70, 85, 0.6);
+  background-color: rgba(41, 56, 70, 0.6);
 }
 
 .bkg-transparent-tertiary {
@@ -1514,7 +1607,7 @@ Dependencies: variables
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  background-color: #3C4655;
+  background-color: #293846;
   color: #96B0D6;
   -moz-border-radius: 100%;
   -webkit-border-radius: 100%;
@@ -1525,7 +1618,7 @@ Dependencies: variables
 .circled2 {
   width: 250px;
   height: 250px;
-  background: #3C4655;
+  background: #293846;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
@@ -1534,7 +1627,7 @@ Dependencies: variables
 .circled3 {
   width: 50%;
   height: 0;
-  background-color: #3C4655;
+  background-color: #293846;
   padding-bottom: 50%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -1547,7 +1640,7 @@ Dependencies: variables
 .shape-text:after {
   width: 100%;
   height: 0;
-  background-color: #3C4655;
+  background-color: #293846;
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -1579,9 +1672,9 @@ Dependencies: variables
 }
 
 .shadow-secondary {
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4);
-  box-shadow: 1px 1px 5px 0px rgba(60, 70, 85, 0.4);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(41, 56, 70, 0.4);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(41, 56, 70, 0.4);
+  box-shadow: 1px 1px 5px 0px rgba(41, 56, 70, 0.4);
 }
 
 .shadow-tertiary {
@@ -1615,37 +1708,37 @@ Dependencies: variables
 }
 
 .border-default {
-  border: 1px solid #3C4655;
+  border: 1px solid #293846;
 }
 
 .border-default-top {
-  border-top: 1px solid #3C4655;
+  border-top: 1px solid #293846;
 }
 
 .border-default-right {
-  border-right: 1px solid #3C4655;
+  border-right: 1px solid #293846;
 }
 
 .border-default-bottom {
-  border-bottom: 1px solid #3C4655;
+  border-bottom: 1px solid #293846;
 }
 
 .border-default-left {
-  border-left: 1px solid #3C4655;
+  border-left: 1px solid #293846;
 }
 
 .gradient-linear {
-  background-color: #3C4655;
-  background-image: -moz-linear-gradient("bottom", #F2F2F2, #3C4655);
-  background-image: -o-linear-gradient("bottom", #F2F2F2, #3C4655);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2F2F2), color-stop(1, #3C4655));
-  background-image: -webkit-linear-gradient("bottom", #F2F2F2, #3C4655);
-  background-image: -ms-linear-gradient("bottom", #F2F2F2, #3C4655);
-  background-image: linear-gradient(to "bottom", #F2F2F2, #3C4655);
+  background-color: #293846;
+  background-image: -moz-linear-gradient("bottom", #F2F2F2, #293846);
+  background-image: -o-linear-gradient("bottom", #F2F2F2, #293846);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F2F2F2), color-stop(1, #293846));
+  background-image: -webkit-linear-gradient("bottom", #F2F2F2, #293846);
+  background-image: -ms-linear-gradient("bottom", #F2F2F2, #293846);
+  background-image: linear-gradient(to "bottom", #F2F2F2, #293846);
 }
 
 .gradient-radial {
-  background-image: radial-gradient(circle at center top, #F2F2F2, #3C4655);
+  background-image: radial-gradient(circle at center top, #F2F2F2, #293846);
 }
 
 .valign-center {
@@ -1687,7 +1780,7 @@ Dependencies: variables
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
-  color: #363636;
+  color: #505050;
   z-index: 1000000;
   display: none;
 }
@@ -2143,7 +2236,7 @@ hr {
   margin-right: auto;
   height: 0;
   border: none;
-  border-bottom: 1px solid #3C4655;
+  border-bottom: 1px solid #293846;
 }
 
 audio, canvas, video {
@@ -2318,28 +2411,28 @@ Dependencies: variables
   /**
    * Color Palatte:
    * 1. primary: #F2F2F2
-   * 2. primary text: #363636
+   * 2. primary text: #505050
    * 3. primary light: white
    * 4. primary text light: #101010
    * 5. primary dark: #cccccc
    * 6. primary text dark: #5c5c5c
-   * 7. secondary: #3C4655
+   * 7. secondary: #293846
    * 8. secondary text: #96B0D6
-   * 9. secondary light: #5c6b82
-   * 10. secondary text light: #5f87c1
+   * 9. secondary light: #2D404F
+   * 10. secondary text light: #A7B1C2
    * 11. secondary dark: #1c2128
    * 12. secondary text dark: #cdd9eb
    * 13. tertiary: #87BA45
    * 14. tertiary text: #E6E6E6
    * 15. tertiary light: #abcf7d
-   * 16. tertiary text light: #5e8230
-   * 17. tertiary dark: #5e8230
+   * 16. tertiary text light: #5f8230
+   * 17. tertiary dark: #5f8230
    * 18. tertiary text dark: #cfe3b5
    */
 }
 .color.color-primary {
   background-color: #F2F2F2;
-  color: #363636;
+  color: #505050;
 }
 .color.color-primary-l {
   background-color: white;
@@ -2350,12 +2443,12 @@ Dependencies: variables
   color: #5c5c5c;
 }
 .color.color-secondary {
-  background-color: #3C4655;
+  background-color: #293846;
   color: #96B0D6;
 }
 .color.color-secondary-l {
-  background-color: #5c6b82;
-  color: #5f87c1;
+  background-color: #2D404F;
+  color: #A7B1C2;
 }
 .color.color-secondary-d {
   background-color: #1c2128;
@@ -2367,10 +2460,10 @@ Dependencies: variables
 }
 .color.color-tertiary-l {
   background-color: #abcf7d;
-  color: #5e8230;
+  color: #5f8230;
 }
 .color.color-tertiary-d {
-  background-color: #5e8230;
+  background-color: #5f8230;
   color: #cfe3b5;
 }
 .color.color-white {
@@ -2386,7 +2479,7 @@ Dependencies: variables
   background-color: #F2F2F2;
 }
 .bkg.bkg-secondary {
-  background-color: #3C4655;
+  background-color: #293846;
 }
 .bkg.bkg-tertiary {
   background-color: #87BA45;
@@ -2449,7 +2542,7 @@ html {
  */
 html, body {
   background-color: #F2F2F2;
-  color: #363636;
+  color: #505050;
 }
 
 .margin-none {
@@ -2640,7 +2733,7 @@ Description: The default text elements and font styles for CMGTools.
 Dependencies: variables, mixins
 ***********************************************************************/
 html, body {
-  font-family: lato-reg, Helvetica, sans-serif;
+  font-family: clear-sans-L, Helvetica, sans-serif;
   line-height: 1;
 }
 
@@ -2662,10 +2755,10 @@ html, body {
  * Fonts - The font classes default, heading and code can be used for global headers and code font.
  */
 .font.font-default {
-  font-family: lato-reg, Helvetica, sans-serif;
+  font-family: clear-sans-L, Helvetica, sans-serif;
 }
 .font.font-heading {
-  font-family: questrial, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 .font.font-code {
   font-family: "Courier New", Courier, monospace;
@@ -2730,7 +2823,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   verticle-align: middle;
   padding: 0.25em 0;
   margin: 0.5em 0;
-  font-family: questrial, Geneva, sans-serif;
+  font-family: Verdana, Geneva, sans-serif;
 }
 
 p, span, em, div, a {
@@ -2779,7 +2872,7 @@ a:hover, .link:hover {
 }
 
 .text.text-primary {
-  color: #363636;
+  color: #505050;
 }
 .text.text-secondary {
   color: #96B0D6;
@@ -2834,6 +2927,10 @@ a:hover, .link:hover {
   margin-top: -1.25em;
   padding: 0 1rem;
   background-color: #F2F2F2;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
+  font-family: clear-sans-R, Helvetica, sans-serif;
 }
 
 /**********************************************************************
@@ -3516,10 +3613,10 @@ Description: It defines the html elements styles for CMGTools excluding form, fo
 Dependencies: variables, mixins
 ***********************************************************************/
 fieldset {
-  border: 1px solid #3C4655;
+  border: 1px solid #293846;
 }
 fieldset legend {
-  background-color: #3C4655;
+  background-color: #293846;
   color: #FFFFFF;
   padding: 1rem;
   -webkit-border-radius: 5px;
@@ -3807,6 +3904,10 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
   border: none;
 }
 
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn {
+  padding: 0.5em;
+}
+
 /**********************************************************************
 Description: The custom elements for CMGTools.
 Dependencies: variables, mixins, transitions, transformation
@@ -3936,7 +4037,7 @@ Dependencies: variables, variables-ext, mixins
 }
 
 .header-standard {
-  background-color: #363636;
+  background-color: #222222;
   color: #ffffff;
 }
 .header-standard .logo {
@@ -3977,26 +4078,36 @@ Dependencies: variables, variables-ext, mixins
 }
 
 .header-public {
-  background-color: #363636;
+  background-color: #222222;
   color: #ffffff;
   text-align: center;
-  padding: 1rem;
+  padding: 15px;
 }
 .header-public .logo {
   height: 80px;
   display: inline-block;
 }
+@media only screen and (max-width: 1024px) {
+  .header-public .logo {
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header-public .logo {
+    height: 40px;
+  }
+}
 
 .header-private {
-  background-color: #363636;
+  background-color: #222222;
   color: #ffffff;
 }
 .header-private #btn-sidebar-main {
-  background-color: #3C4655;
+  background-color: #000000;
   color: #96B0D6;
-  width: 120px;
+  width: 80px;
   float: left;
-  padding: 1rem;
+  padding: 1rem 1rem;
   -moz-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
   -ms-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
   -o-transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
@@ -4009,14 +4120,35 @@ Dependencies: variables, variables-ext, mixins
   width: 100%;
   text-align: center;
 }
+.header-private #btn-sidebar-main span .cmti-menu {
+  line-height: 1.5em;
+  font-size: 1.5em;
+}
 .header-private #btn-sidebar-main:hover {
-  background-color: #1c2128;
-  color: #cdd9eb;
+  background-color: #2D404F;
+  color: #A7B1C2;
+}
+@media only screen and (max-width: 480px) {
+  .header-private #btn-sidebar-main {
+    width: 24%;
+  }
 }
 .header-private .logo {
-  width: 220px;
+  width: 180px;
   float: left;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
+}
+@media only screen and (max-width: 1024px) {
+  .header-private .logo {
+    width: 134px;
+    padding: 0.8rem 1rem;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header-private .logo {
+    padding: 0.55rem 1rem;
+    float: right;
+  }
 }
 
 /**********************************************************************
@@ -4127,7 +4259,7 @@ Javascript: jquery, cmt-block
 
 #block-public {
   padding-bottom: 2rem;
-  padding-top: 120px;
+  padding-top: 7em;
 }
 #block-public .block-content {
   background-color: white;
@@ -4143,8 +4275,9 @@ Javascript: jquery, cmt-block
   font-size: 0.75em;
 }
 #block-public .block-content h2 {
-  color: #3C4655;
-  margin: 0;
+  color: #F3702E;
+  margin-top: 0;
+  padding-top: 0;
 }
 @media only screen and (max-width: 480px) {
   #block-public .block-content {

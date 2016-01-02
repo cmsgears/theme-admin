@@ -18,7 +18,7 @@ $this->title 	= $coreProperties->getSiteTitle() . " | Login";
 
 	<?php $form = ActiveForm::begin( [ 'id' => 'frm-login' ] );?>
 
-	<h5 class='align align-middle'>LOGIN</h5>
+	<h2 class='align align-middle'>LOGIN</h2>
 
 	<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
 	<?= $form->field( $model, 'password' )->passwordInput( array( 'placeholder' => 'Password*' ) )->label( false ) ?>

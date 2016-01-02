@@ -36,6 +36,7 @@
 @import "cmt/elements/table";
 
 @import "cmt/elements/form";
+@import "partials/elements/form";
 
 @import "cmt/elements/custom";
 
@@ -49,8 +50,10 @@
 @import "partials/components/sidebars";
 
 @import "cmt/components/collapsible-menu";
+@import "partials/components/collapsible-menu";
 
 @import "cmt/components/box";
+@import "partials/components/box";
 @import "cmt/components/box-form";
 @import "partials/components/box-settings";
 

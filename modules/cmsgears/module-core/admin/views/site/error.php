@@ -19,7 +19,7 @@ $this->title 	= $coreProperties->getSiteTitle() . " | Error";
 ]);?>
 
 <?php } else { ?>
-	<h5 class='align align-middle'>ERROR</h5>
+	<h2 class='align align-middle'>ERROR</h2>
 
 	<p> <?= nl2br( Html::encode( $message ) ) ?> </p>
 <?php } ?>

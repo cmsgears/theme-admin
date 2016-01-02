@@ -1,0 +1,46 @@
+.collapsible-menu {
+
+    .collapsible-tab {        
+        border :none;       //         
+    }
+  
+    .collapsible-tab.pactive, .collapsible-tab.active  {         
+        border-right: 4px solid black;
+    }
+
+    .collapsible-tab.active .collapsible-tab-header, .collapsible-tab.pactive .collapsible-tab-header, .collapsible-tab-content {
+        background-color: $color-secondary; //
+        color: white;
+    }
+
+    .collapsible-tab-header:hover {
+        background-color: $color-secondary; //
+    }
+
+    .collapsible-tab-header, .collapsible-tab-header a {
+        color: $color-secondary-text-l;  //
+    }
+    
+    .collapsible-tab-header a {
+        color: $color-secondary-text-l; 
+    }
+
+    .collapsible-tab-content {
+        padding: 5px 0 5px 35%;        
+        -moz-box-shadow:    inset  0  8px 8px -10px #000000, 
+                            inset  0 -8px 8px -12px #000000;
+        -webkit-box-shadow: inset  0  8px 8px -10px #000000, 
+                            inset  0 -8px 8px -12px #000000;
+         box-shadow:        inset  0  8px 8px -10px #000000, 
+                            inset  0 -8px 8px -12px #000000;
+    }
+
+    .collapsible-tab-content ul li a {
+        color: $color-secondary-text-l;  //
+    }
+
+    .collapsible-tab-content ul li a:hover, .collapsible-tab-content ul li a:active {
+        color: white;
+        background: transparent;
+    }
+}

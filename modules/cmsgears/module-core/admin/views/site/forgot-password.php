@@ -23,7 +23,7 @@ use cmsgears\widgets\block\BasicBlock;
 
 			$form = ActiveForm::begin( [ 'id' => 'frm-forgot-password' ] ); 
 	?>
-			<h5 class='align align-middle'>FORGOT PASSWORD</h5>
+			<h2 class='align align-middle'>FORGOT PASSWORD</h2>
 
 	    	<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
 

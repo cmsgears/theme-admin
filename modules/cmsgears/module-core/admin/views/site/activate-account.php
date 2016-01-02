@@ -23,7 +23,7 @@ use cmsgears\widgets\block\BasicBlock;
 
 			$form = ActiveForm::begin( ['id' => 'frm-activate-account'] ); 
 	?>
-			<h5 class='align align-middle'>ACTIVATE ACCOUNT</h5>
+			<h2 class='align align-middle'>ACTIVATE ACCOUNT</h2>
 
 	    	<?= $form->field( $model, 'password' )->passwordInput( [ 'placeholder' => 'Password*' ] )->label( false ) ?>
 	    	<?= $form->field( $model, 'password_repeat' )->passwordInput([ 'placeholder' => 'Confirm Password*' ] )->label( false ) ?>

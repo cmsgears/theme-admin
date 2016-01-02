@@ -23,7 +23,7 @@ use cmsgears\widgets\block\BasicBlock;
 
 			$form = ActiveForm::begin( [ 'id' => 'frm-reset-password' ] ); 
 	?>
-			<h5 class='align align-middle'>RESET PASSWORD</h5>
+			<h2 class='align align-middle'>RESET PASSWORD</h2>
 
 			<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
 	    	<?= $form->field( $model, 'password' )->passwordInput( [ 'placeholder' => 'Password*' ] )->label( false ) ?>

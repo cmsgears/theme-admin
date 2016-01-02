@@ -1,9 +1,5 @@
 .sidebar-filler {
-    background-color: $color-secondary;
-}
-
-.sidebar-main {
-
+    background-color: $color-secondary-l;
 }
 
 @include responsive-max( screen-tablet-large ) {

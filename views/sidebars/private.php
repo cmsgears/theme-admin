@@ -28,7 +28,7 @@ $child 		= $sidebar[ 'child' ];
 		<div id="sidebar-setting" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-setting' ) == 0 ) echo 'active';?>">
 			<div class="collapsible-tab-header">
 				<a href="<?php echo Url::toRoute( ['/cmgcore/settings'] ); ?>">
-					<div class="colf colf4"><span class="cmti cmti-2x cmti-setting"></span></div>
+					<div class="colf colf4"><span class="cmti cmti-setting"></span></div>
 					<div class="colf colf4x3">Settings</div>
 				</a>
 			</div>
