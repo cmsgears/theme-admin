@@ -19,7 +19,7 @@ jQuery(document).ready( function() {
 
 cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, parentElement, message, response ) {
 
-	jQuery( "#" + parentElement ).parent().hide();
+	parentElement.parent().hide();
 };
 
 // UserController -------------------------------------------
@@ -35,7 +35,7 @@ UserController.prototype.profileActionPost = function( success, parentElement, m
 		var source 		= document.getElementById( "userProfileTemplate" ).innerHTML;
 		var template 	= Handlebars.compile( source );
 		var output 		= template( response.data );
-		var parent		= jQuery( "#" + parentElement ).parent().parent();
+		var parent		= parentElement.closest( ".box-form" );
 
 		parent.find( ".wrap-info" ).html( output );
 
@@ -50,7 +50,7 @@ UserController.prototype.accountActionPost = function( success, parentElement, m
 		var source 		= document.getElementById( "userAccountTemplate" ).innerHTML;
 		var template 	= Handlebars.compile( source );
 		var output 		= template( response.data );
-		var parent		= jQuery( "#" + parentElement ).parent().parent();
+		var parent		= parentElement.closest( ".box-form" );
 
 		parent.find( ".wrap-info" ).html( output );
 
@@ -83,14 +83,17 @@ SettingsController.prototype.getContentActionPost = function( success, parentEle
 
 		var content	= parentElement.attr( 'content' );
 		content		= jQuery( "#" + content );
-		
+		var parent	= parentElement.closest( ".box-collapsible" );
+
 		content.html( response.data );
-		
+
 		content.slideDown( "slow" );
-		
+
 		activateSettingsBox( parentElement );
 
-		parentElement.closest( ".box-collapsible" ).find( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
+		parent.find( ".cmt-checkbox" ).cmtCheckbox();
+
+		parent.find( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
 			app: mainApp
 		});
 	}

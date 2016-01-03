@@ -51,6 +51,12 @@ function initCmgTools() {
 		jQuery( ".cmt-select" ).cmtSelect( { iconHtml: "<span class='cmti cmti-chevron-down'></span>" } );
 	}
 
+	// Custom Checkbox
+	if( jQuery().cmtCheckbox ) {
+
+		jQuery( ".cmt-checkbox" ).cmtCheckbox();
+	}
+
 	// Form with Info
 	if( jQuery().cmtFormInfo ) {
 
