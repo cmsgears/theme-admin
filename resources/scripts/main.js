@@ -7,7 +7,11 @@ jQuery( document ).ready( function() {
 	initListeners();
 	
 	initSidebar();
+	
+	initSortSearch();
 });
+
+// Content Pre-loaders -------------
 
 function initPreloaders() {
 
@@ -17,6 +21,8 @@ function initPreloaders() {
 		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
 	});
 }
+
+// CMGTools ------------------------
 
 function initCmgTools() {
 
@@ -64,6 +70,8 @@ function initCmgTools() {
 	}
 }
 
+// Generic Listeners ---------------
+
 function initListeners() {
 
 	// Popout Trigger
@@ -87,6 +95,8 @@ function initListeners() {
 		}
 	});
 }
+
+// Sidebar/Settings ----------------
 
 function initSidebar() {
 
@@ -137,4 +147,32 @@ function activateSettingsBox( parentElement ) {
 	});
 	
 	parent.find( ".box-form" ).cmtFormInfo();
+}
+
+// Sort/Search ---------------------
+
+function initSortSearch() {
+	
+	jQuery( "#btn-search" ).click( function() {
+		
+		searchTable();
+	});
+}
+
+function searchTable() {
+
+	var searchTerms	= jQuery( "#search-terms" ).val();
+	var location 	= "" + window.location;
+
+	if( null != searchTerms && searchTerms.length > 0 ) {
+
+		window.location = cmt.utils.data.updateUrlParam( location, 'search', searchTerms );
+	}
+}
+
+function sortTable( order ) {
+
+	var location 	= "" + window.location;
+
+	window.location = location.urlParams( 'sort', order );
 }

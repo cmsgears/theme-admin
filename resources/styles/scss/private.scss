@@ -45,6 +45,8 @@
 @import "cmt/components/headers";
 @import "partials/components/headers";
 
+@import "cmt/components/menus";
+
 @import "partials/components/popouts";
 
 @import "partials/components/sidebars";
@@ -56,6 +58,12 @@
 @import "partials/components/box";
 @import "cmt/components/box-form";
 @import "partials/components/box-settings";
+
+@import "cmt/components/file-uploader";
+
+@import "cmt/components/pagination";
+
+@import "partials/components/old-admin";
 
 // Extensions -------------------------------
 

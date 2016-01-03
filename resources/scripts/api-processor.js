@@ -8,6 +8,8 @@ jQuery(document).ready( function() {
 	appControllers[ 'newsletter' ] 	= 'NewsletterController';
 	appControllers[ 'user' ]		= 'UserController';
 	appControllers[ 'settings' ]	= 'SettingsController';
+	appControllers[ 'gallery' ]		= 'GalleryController';
+	appControllers[ 'permission' ]	= 'PermissionController';
 
 	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
 		app: mainApp,
@@ -112,5 +114,33 @@ SettingsController.prototype.updateActionPost = function( success, parentElement
 		parent.find( ".wrap-info" ).html( output );
 
 		parent.find( ".btn-edit" ).click();
+	}
+};
+
+// GalleryController ----------------------------------------
+
+GalleryController	= function() {};
+
+GalleryController.inherits( cmt.api.controllers.BaseController );
+
+GalleryController.prototype.updateItemActionPost = function( success, parentElement, message, response ) {
+
+	if( success ) {
+
+		location.reload( true );
+	}
+};
+
+// PermissionController -------------------------------------
+
+PermissionController	= function() {};
+
+PermissionController.inherits( cmt.api.controllers.BaseController );
+
+PermissionController.prototype.matrixActionPost = function( success, parentElement, message, response ) {
+
+	if( success ) {
+
+		location.reload( true );
 	}
 };

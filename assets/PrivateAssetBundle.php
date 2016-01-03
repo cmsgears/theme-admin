@@ -57,11 +57,11 @@ class PrivateAssetBundle extends AssetBundle {
 
 		parent::registerAssetFiles( $view );
 
-    	$siteUrl = "var siteUrl 	= '" . Yii::$app->homeUrl . "';
-					var ajaxUrl 	= '" . Yii::$app->homeUrl . "apix';";
+    	$siteUrl = "var siteUrl 		= '" . Yii::$app->homeUrl . "';
+					var ajaxUrl 		= '" . Yii::$app->homeUrl . "apix';
+					var fileUploadUrl	= '" . Yii::$app->homeUrl . "apix/file/file-handler';";
 
 		$view->registerJs( $siteUrl, View::POS_END );
 	}
 }
-
 ?>
