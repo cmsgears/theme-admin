@@ -7,6 +7,9 @@ use themes\admin\assets\PrivateAssetBundle;
 
 PrivateAssetBundle::register( $this );
 
+// Register Child theme Assets
+$this->theme->registerChildAssets( $this );
+
 // Variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();
 $themePath		= Yii::getAlias( '@themes/admin' );

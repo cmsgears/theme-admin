@@ -4471,7 +4471,8 @@ Dependencies: variables, variables-ext, mixins
   padding: 0.62em 0.5em;
 }
 .wrap-popout-actions .wrap-user .user-avatar {
-  height: 3em;
+  height: 3rem;
+  width: 3rem;
   padding: 2px;
   overflow: hidden;
   text-align: center;
