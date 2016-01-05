@@ -28,6 +28,7 @@ class PrivateAssetBundle extends AssetBundle {
 	// Load Javascript
     public $js      = [
         'scripts/vendor/imagesloaded.pkgd-3.2.0.min.js',
+        'scripts/vendor/jquery.mCustomScrollbar-3.0.6.js',
         'scripts/main.js',
         'scripts/api-processor.js'
     ];
@@ -40,6 +41,7 @@ class PrivateAssetBundle extends AssetBundle {
 	// Define dependent Asset Loaders
     public $depends = [
 		'yii\web\JqueryAsset',
+		'cmsgears\core\common\assets\JqueryUiAssetBundle',
 		'cmsgears\core\common\assets\CMTAssetBundle',
 		'cmsgears\core\common\assets\HandlebarAssetBundle'
     ];
