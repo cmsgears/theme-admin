@@ -41,9 +41,9 @@ class PrivateAssetBundle extends AssetBundle {
 	// Define dependent Asset Loaders
     public $depends = [
 		'yii\web\JqueryAsset',
-		'cmsgears\core\common\assets\JqueryUiAssetBundle',
-		'cmsgears\core\common\assets\CMTAssetBundle',
-		'cmsgears\core\common\assets\HandlebarAssetBundle'
+		'cmsgears\core\common\assets\JqueryUi',
+		'cmsgears\core\common\assets\CmgTools',
+		'cmsgears\core\common\assets\Handlebars'
     ];
 
 	// Constructor and Initialisation ------------------------------

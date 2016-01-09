@@ -3726,7 +3726,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-split-40-60 select, .element-60 {
+.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 select, .element-60, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
   width: 60%;
   float: left;
 }
@@ -3736,7 +3736,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 .cmt-checkbox, .element-60 .cmt-switch, .element-60 select {
+.element-60 textarea, .element-60 .cmt-checkbox, .element-60 select, .element-60 .cmt-select-wrap {
   width: 100%;
 }
 
@@ -4003,6 +4003,23 @@ Dependencies: variables, mixins, transitions, transformation
 }
 .cmt-switch .cmt-toggle-round:checked + label:after {
   margin-left: 3.5em;
+}
+
+.btn-delete {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  font-size: 1.25em;
+  color: #E74343;
+  cursor: pointer;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s;
+}
+.btn-delete:hover {
+  color: #505050;
 }
 
 /**********************************************************************
@@ -4954,6 +4971,45 @@ Dependencies: variables, variables-ext, mixins
   -o-transition: all 250ms ease-in-out 0s;
   -webkit-transition: all 250ms ease-in-out 0s;
   transition: all 250ms ease-in-out 0s;
+}
+
+.box-category-mapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.box-category-mapper .wrap-categories {
+  height: 250px;
+  background-color: #F2F2F2;
+}
+.box-category-mapper .wrap-categories .category {
+  display: inline-block;
+  width: 100%;
+  margin: 10px;
+  background-color: #FFFFFF;
+}
+.box-category-mapper .wrap-categories .category.depth-1 {
+  padding-left: 15px;
+}
+.box-category-mapper .wrap-categories .category.depth-2 {
+  padding-left: 30px;
+}
+.box-category-mapper .wrap-categories .category.depth-3 {
+  padding-left: 45px;
+}
+
+.box-tag-mapper {
+  width: 100%;
+  margin: 0 auto;
+}
+.box-tag-mapper .wrap-tags {
+  background-color: #F2F2F2;
+}
+.box-tag-mapper .wrap-tags .tag {
+  position: relative;
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: 1em;
+  padding: 0.5em 1.5em;
 }
 
 /* == Content Header ============================================ */

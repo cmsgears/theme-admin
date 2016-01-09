@@ -94,6 +94,12 @@ function initListeners() {
 			show.slideDown();
 		}
 	});
+
+	// custom scroller
+	if( jQuery().mCustomScrollbar ) {
+
+		jQuery( ".cscroller" ).mCustomScrollbar( { autoHideScrollbar: true } );
+	}
 }
 
 // Sidebar/Settings ----------------
