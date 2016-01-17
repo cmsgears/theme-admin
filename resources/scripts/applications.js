@@ -30,6 +30,13 @@ UserController	= function() {};
 
 UserController.inherits( cmt.api.controllers.BaseController );
 
+UserController.prototype.avatarActionPost = function( success, parentElement, message, response ) {
+
+	parentElement.parent().hide();
+
+	jQuery( ".wrap-popout-actions .wrap-user img" ).attr( 'src', response.data.fileUrl );
+};
+
 UserController.prototype.profileActionPost = function( success, parentElement, message, response ) {
 
 	if( success ) {

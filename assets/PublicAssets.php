@@ -6,7 +6,7 @@ use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
 
-class PublicAssetBundle extends AssetBundle {
+class PublicAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -27,9 +27,8 @@ class PublicAssetBundle extends AssetBundle {
 
 	// Load Javascript
     public $js      = [
-        'scripts/vendor/imagesloaded.pkgd-3.2.0.min.js',
         'scripts/main.js',
-        'scripts/api-processor.js'
+        'scripts/applications.js'
     ];
 
 	// Position to load Javascript
@@ -40,6 +39,7 @@ class PublicAssetBundle extends AssetBundle {
 	// Define dependent Asset Loaders
     public $depends = [
 		'yii\web\JqueryAsset',
+		'cmsgears\core\common\assets\ImagesLoaded',
 		'cmsgears\core\common\assets\CmgTools'
     ];
 

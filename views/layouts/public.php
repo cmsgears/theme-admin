@@ -3,9 +3,9 @@
 use \Yii;
 
 // CMG Imports
-use themes\admin\assets\PublicAssetBundle;
+use themes\admin\assets\PublicAssets;
 
-PublicAssetBundle::register( $this );
+PublicAssets::register( $this );
 
 // Register Child theme Assets
 $this->theme->registerChildAssets( $this );

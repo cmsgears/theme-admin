@@ -3715,6 +3715,10 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
   color: #FFFFFF !important;
 }
 
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+  width: auto;
+}
+
 .frm-split-40-60 label, .element-40 {
   clear: both;
   width: 40%;

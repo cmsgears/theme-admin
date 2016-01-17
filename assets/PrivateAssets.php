@@ -6,7 +6,7 @@ use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
 
-class PrivateAssetBundle extends AssetBundle {
+class PrivateAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -27,10 +27,8 @@ class PrivateAssetBundle extends AssetBundle {
 
 	// Load Javascript
     public $js      = [
-        'scripts/vendor/imagesloaded.pkgd-3.2.0.min.js',
-        'scripts/vendor/jquery.mCustomScrollbar-3.0.6.js',
         'scripts/main.js',
-        'scripts/api-processor.js'
+        'scripts/applications.js'
     ];
 
 	// Position to load Javascript
@@ -42,8 +40,11 @@ class PrivateAssetBundle extends AssetBundle {
     public $depends = [
 		'yii\web\JqueryAsset',
 		'cmsgears\core\common\assets\JqueryUi',
-		'cmsgears\core\common\assets\CmgTools',
-		'cmsgears\core\common\assets\Handlebars'
+		'cmsgears\core\common\assets\JqueryMouseWheel',
+		'cmsgears\core\common\assets\MCustomScrollbar',
+		'cmsgears\core\common\assets\ImagesLoaded',
+		'cmsgears\core\common\assets\Handlebars',
+		'cmsgears\core\common\assets\CmgTools'
     ];
 
 	// Constructor and Initialisation ------------------------------
