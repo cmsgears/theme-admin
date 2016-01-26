@@ -14,6 +14,9 @@
   text-rendering: auto;
   font-size: 1em;
 }
+.cmti.cmti-1-5x {
+  font-size: 1.5em;
+}
 .cmti.cmti-2x {
   font-size: 2em;
 }
@@ -137,1176 +140,1650 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.cmti {
+  display: inline-block;
+  font-family: "cmti-core";
+  text-rendering: auto;
+}
+
 .cmti-alarm:before {
   content: "\61";
 }
 
-.cmti-ambulance:before {
+.cmti-alpha-asc:before {
   content: "\62";
 }
 
-.cmti-anchor:before {
+.cmti-alpha-des:before {
   content: "\63";
 }
 
-.cmti-angle-down:before {
+.cmti-ambulance:before {
   content: "\64";
 }
 
-.cmti-angle-left:before {
+.cmti-amt-asc:before {
   content: "\65";
 }
 
-.cmti-angle-right:before {
+.cmti-amt-des:before {
   content: "\66";
 }
 
-.cmti-angle-up:before {
+.cmti-anchor:before {
   content: "\67";
 }
 
-.cmti-approve:before {
+.cmti-angle-down:before {
   content: "\68";
 }
 
-.cmti-arrow-down:before {
+.cmti-angle-left:before {
   content: "\69";
 }
 
-.cmti-arrow-down-b:before {
+.cmti-angle-right:before {
   content: "\6a";
 }
 
-.cmti-arrow-left:before {
+.cmti-angle-up:before {
   content: "\6b";
 }
 
-.cmti-arrow-left-b:before {
+.cmti-approve:before {
   content: "\6c";
 }
 
-.cmti-arrow-right:before {
+.cmti-archive:before {
   content: "\6d";
 }
 
-.cmti-arrow-right-b:before {
+.cmti-arrow-compress:before {
   content: "\6e";
 }
 
-.cmti-arrow-up:before {
+.cmti-arrow-down:before {
   content: "\6f";
 }
 
-.cmti-arrow-up-b:before {
+.cmti-arrow-expand:before {
   content: "\70";
 }
 
-.cmti-at:before {
+.cmti-arrow-height:before {
   content: "\71";
 }
 
-.cmti-attachment:before {
+.cmti-arrow-left:before {
   content: "\72";
 }
 
-.cmti-bag:before {
+.cmti-arrow-right:before {
   content: "\73";
 }
 
-.cmti-bag-b:before {
+.cmti-arrow-up:before {
   content: "\74";
 }
 
-.cmti-ban:before {
+.cmti-arrow-width:before {
   content: "\75";
 }
 
-.cmti-ban-b:before {
+.cmti-arrows:before {
   content: "\76";
 }
 
-.cmti-basket:before {
+.cmti-asterisk:before {
   content: "\77";
 }
 
-.cmti-basket-air:before {
+.cmti-at:before {
   content: "\78";
 }
 
-.cmti-basket-b:before {
+.cmti-attachment:before {
   content: "\79";
 }
 
-.cmti-bed:before {
+.cmti-backward-btn:before {
   content: "\7a";
 }
 
-.cmti-bed-b:before {
+.cmti-backward-c:before {
   content: "\41";
 }
 
-.cmti-bell:before {
+.cmti-bag:before {
   content: "\42";
 }
 
-.cmti-bell-b:before {
+.cmti-bag-o:before {
   content: "\43";
 }
 
-.cmti-bin:before {
+.cmti-ban:before {
   content: "\44";
 }
 
-.cmti-browser-chrome:before {
+.cmti-ban-o:before {
   content: "\45";
 }
 
-.cmti-browser-firefox:before {
+.cmti-basket:before {
   content: "\46";
 }
 
-.cmti-browser-ie:before {
+.cmti-basket-air:before {
   content: "\47";
 }
 
-.cmti-browser-safari:before {
+.cmti-basket-o:before {
   content: "\48";
 }
 
-.cmti-building:before {
+.cmti-bed:before {
   content: "\49";
 }
 
-.cmti-buy:before {
+.cmti-bed-o:before {
   content: "\4a";
 }
 
-.cmti-calendar:before {
+.cmti-beer:before {
   content: "\4b";
 }
 
-.cmti-calendar-b:before {
+.cmti-bell:before {
   content: "\4c";
 }
 
-.cmti-card:before {
+.cmti-bell-o:before {
   content: "\4d";
 }
 
-.cmti-cart:before {
+.cmti-bin:before {
   content: "\4e";
 }
 
-.cmti-cart-bag:before {
+.cmti-bluetooth:before {
   content: "\4f";
 }
 
-.cmti-cart-empty:before {
+.cmti-bluetooth-c:before {
   content: "\50";
 }
 
-.cmti-chart-area:before {
+.cmti-bluetooth-s:before {
   content: "\51";
 }
 
-.cmti-chart-area-b:before {
+.cmti-bookmark:before {
   content: "\52";
 }
 
-.cmti-chart-column:before {
+.cmti-books:before {
   content: "\53";
 }
 
-.cmti-chart-donut:before {
+.cmti-briefcase:before {
   content: "\54";
 }
 
-.cmti-chart-down:before {
+.cmti-brightness:before {
   content: "\55";
 }
 
-.cmti-chart-down-zig:before {
+.cmti-browser-chrome:before {
   content: "\56";
 }
 
-.cmti-chart-pie:before {
+.cmti-browser-firefox:before {
   content: "\57";
 }
 
-.cmti-chart-up:before {
+.cmti-browser-ie:before {
   content: "\58";
 }
 
-.cmti-chart-up-zig:before {
+.cmti-browser-safari:before {
   content: "\59";
 }
 
-.cmti-check:before {
+.cmti-brush:before {
   content: "\5a";
 }
 
-.cmti-check-b:before {
+.cmti-bug:before {
   content: "\30";
 }
 
-.cmti-check-report:before {
+.cmti-building:before {
   content: "\31";
 }
 
-.cmti-checkbox:before {
+.cmti-bus:before {
   content: "\32";
 }
 
-.cmti-checkbox-active:before {
+.cmti-calendar:before {
   content: "\33";
 }
 
-.cmti-checkbox-c:before {
+.cmti-calendar-o:before {
   content: "\34";
 }
 
-.cmti-checkbox-c-active:before {
+.cmti-camera:before {
   content: "\35";
 }
 
-.cmti-checkbox-c-b:before {
+.cmti-car:before {
   content: "\36";
 }
 
-.cmti-checkbox-c-b-active:before {
+.cmti-card:before {
   content: "\37";
 }
 
-.cmti-checkbox-c-f-active:before {
+.cmti-cart:before {
   content: "\38";
 }
 
-.cmti-chevron-down:before {
+.cmti-cart-bag:before {
   content: "\39";
 }
 
-.cmti-chevron-down-b:before {
+.cmti-cart-empty:before {
   content: "\21";
 }
 
-.cmti-chevron-left:before {
+.cmti-chart-area:before {
   content: "\22";
 }
 
-.cmti-chevron-left-b:before {
+.cmti-chart-area-o:before {
   content: "\23";
 }
 
-.cmti-chevron-right:before {
+.cmti-chart-column:before {
   content: "\24";
 }
 
-.cmti-chevron-right-b:before {
+.cmti-chart-donut:before {
   content: "\25";
 }
 
-.cmti-chevron-up:before {
+.cmti-chart-down:before {
   content: "\26";
 }
 
-.cmti-chevron-up-b:before {
+.cmti-chart-down-zig:before {
   content: "\27";
 }
 
-.cmti-close:before {
+.cmti-chart-pie:before {
   content: "\28";
 }
 
-.cmti-close-b:before {
+.cmti-chart-up:before {
   content: "\29";
 }
 
-.cmti-close-o:before {
+.cmti-chart-up-zig:before {
   content: "\2a";
 }
 
-.cmti-close-o-b:before {
+.cmti-check:before {
   content: "\2b";
 }
 
-.cmti-comment:before {
+.cmti-check-o:before {
   content: "\2c";
 }
 
-.cmti-comment-b:before {
+.cmti-check-report:before {
   content: "\2d";
 }
 
-.cmti-coupon:before {
+.cmti-checkbox:before {
   content: "\2e";
 }
 
-.cmti-crop:before {
+.cmti-checkbox-active-f:before {
   content: "\2f";
 }
 
-.cmti-curency-dollar:before {
+.cmti-checkbox-active-o:before {
   content: "\3a";
 }
 
-.cmti-curency-dollar-b:before {
+.cmti-checkbox-b:before {
   content: "\3b";
 }
 
-.cmti-dashboard:before {
+.cmti-checkbox-b-active:before {
   content: "\3c";
 }
 
-.cmti-design-tools:before {
+.cmti-chevron-down:before {
   content: "\3d";
 }
 
-.cmti-document:before {
+.cmti-chevron-down-o:before {
   content: "\3e";
 }
 
-.cmti-document-b:before {
+.cmti-chevron-left:before {
   content: "\3f";
 }
 
-.cmti-door:before {
+.cmti-chevron-left-o:before {
   content: "\40";
 }
 
-.cmti-door-b:before {
+.cmti-chevron-right:before {
   content: "\5b";
 }
 
-.cmti-door-o:before {
+.cmti-chevron-right-o:before {
   content: "\5d";
 }
 
-.cmti-door-o-b:before {
+.cmti-chevron-up:before {
   content: "\5e";
 }
 
-.cmti-earth:before {
+.cmti-chevron-up-o:before {
   content: "\5f";
 }
 
-.cmti-edit:before {
+.cmti-close:before {
   content: "\60";
 }
 
-.cmti-emotcmtis-happy:before {
+.cmti-close-c:before {
   content: "\7b";
 }
 
-.cmti-emotcmtis-hopeful:before {
+.cmti-close-c-o:before {
   content: "\7c";
 }
 
-.cmti-emotcmtis-intense:before {
+.cmti-cms:before {
   content: "\7d";
 }
 
-.cmti-emotcmtis-intense-copy:before {
+.cmti-coffee:before {
   content: "\7e";
 }
 
-.cmti-emotcmtis-sad:before {
+.cmti-comment:before {
   content: "\5c";
 }
 
-.cmti-emotcmtis-sulk:before {
+.cmti-comment-o:before {
   content: "\e000";
 }
 
-.cmti-emotcmtis-surprise:before {
+.cmti-copyright:before {
   content: "\e001";
 }
 
-.cmti-envelope:before {
+.cmti-core:before {
   content: "\e002";
 }
 
-.cmti-envelope-b:before {
+.cmti-coupon:before {
   content: "\e003";
 }
 
-.cmti-equalizer:before {
+.cmti-crop:before {
   content: "\e004";
 }
 
-.cmti-event:before {
+.cmti-curency-dollar-b:before {
   content: "\e005";
 }
 
-.cmti-exchange:before {
+.cmti-currency-dollar:before {
   content: "\e006";
 }
 
-.cmti-eye:before {
+.cmti-currency-note:before {
   content: "\e007";
 }
 
-.cmti-eye-off:before {
+.cmti-cutlery:before {
   content: "\e008";
 }
 
-.cmti-file:before {
+.cmti-dashboard:before {
   content: "\e009";
 }
 
-.cmti-file-archive:before {
+.cmti-design-tools:before {
   content: "\e00a";
 }
 
-.cmti-file-audio:before {
+.cmti-desktop:before {
   content: "\e00b";
 }
 
-.cmti-file-code:before {
+.cmti-document:before {
   content: "\e00c";
 }
 
-.cmti-file-copy:before {
+.cmti-document-o:before {
   content: "\e00d";
 }
 
-.cmti-file-image:before {
+.cmti-door:before {
   content: "\e00e";
 }
 
-.cmti-file-text:before {
+.cmti-door-c:before {
   content: "\e00f";
 }
 
-.cmti-file-video:before {
+.cmti-door-c-o:before {
   content: "\e010";
 }
 
-.cmti-film:before {
+.cmti-door-o:before {
   content: "\e011";
 }
 
-.cmti-flag:before {
+.cmti-earth:before {
   content: "\e012";
 }
 
-.cmti-flag-b:before {
+.cmti-edit:before {
   content: "\e013";
 }
 
-.cmti-flexible:before {
+.cmti-eject:before {
   content: "\e014";
 }
 
-.cmti-flexible-b:before {
+.cmti-eject-c:before {
   content: "\e015";
 }
 
-.cmti-flexible-o:before {
+.cmti-emoticons-happy:before {
   content: "\e016";
 }
 
-.cmti-forward:before {
+.cmti-emoticons-hopeful:before {
   content: "\e017";
 }
 
-.cmti-forward-b:before {
+.cmti-emoticons-intense:before {
   content: "\e018";
 }
 
-.cmti-forward-c:before {
+.cmti-emoticons-laugh:before {
   content: "\e019";
 }
 
-.cmti-forward-c-b:before {
+.cmti-emoticons-sad:before {
   content: "\e01a";
 }
 
-.cmti-gift:before {
+.cmti-emoticons-sulk:before {
   content: "\e01b";
 }
 
-.cmti-gift-b:before {
+.cmti-emoticons-surprise:before {
   content: "\e01c";
 }
 
-.cmti-glass:before {
+.cmti-envelope:before {
   content: "\e01d";
 }
 
-.cmti-glass-b:before {
+.cmti-envelope-o:before {
   content: "\e01e";
 }
 
-.cmti-grid:before {
+.cmti-equalizer:before {
   content: "\e01f";
 }
 
-.cmti-grid-b:before {
+.cmti-event:before {
   content: "\e020";
 }
 
-.cmti-groups:before {
+.cmti-exchange:before {
   content: "\e021";
 }
 
-.cmti-groups-b:before {
+.cmti-exclamation:before {
   content: "\e022";
 }
 
-.cmti-guarantee:before {
+.cmti-exclamation-c:before {
   content: "\e023";
 }
 
-.cmti-headphone:before {
+.cmti-eye:before {
   content: "\e024";
 }
 
-.cmti-heart:before {
+.cmti-eye-off:before {
   content: "\e025";
 }
 
-.cmti-heart-b:before {
+.cmti-fast-backward:before {
   content: "\e026";
 }
 
-.cmti-heart-beat:before {
+.cmti-fast-backward-c:before {
   content: "\e027";
 }
 
-.cmti-hierarchy:before {
+.cmti-fast-forward:before {
   content: "\e028";
 }
 
-.cmti-home:before {
+.cmti-fast-forward-c:before {
   content: "\e029";
 }
 
-.cmti-home-b:before {
+.cmti-file:before {
   content: "\e02a";
 }
 
-.cmti-image:before {
+.cmti-file-archive:before {
   content: "\e02b";
 }
 
-.cmti-image-b:before {
+.cmti-file-audio:before {
   content: "\e02c";
 }
 
-.cmti-instrument-piano:before {
+.cmti-file-code:before {
   content: "\e02d";
 }
 
-.cmti-joystick:before {
+.cmti-file-copy:before {
   content: "\e02e";
 }
 
-.cmti-key:before {
+.cmti-file-doc:before {
   content: "\e02f";
 }
 
-.cmti-key-b:before {
+.cmti-file-image:before {
   content: "\e030";
 }
 
-.cmti-list:before {
+.cmti-file-pdf:before {
   content: "\e031";
 }
 
-.cmti-list-approved:before {
+.cmti-file-ppt:before {
   content: "\e032";
 }
 
-.cmti-list-blocked:before {
+.cmti-file-rar:before {
   content: "\e033";
 }
 
-.cmti-list-c:before {
+.cmti-file-text:before {
   content: "\e034";
 }
 
-.cmti-list-disable:before {
+.cmti-file-video:before {
   content: "\e035";
 }
 
-.cmti-list-new:before {
+.cmti-file-xls:before {
   content: "\e036";
 }
 
-.cmti-list-small:before {
+.cmti-file-xlsx:before {
   content: "\e037";
 }
 
-.cmti-lock-close:before {
+.cmti-file-zip:before {
   content: "\e038";
 }
 
-.cmti-lock-close-b:before {
+.cmti-film:before {
   content: "\e039";
 }
 
-.cmti-lock-open:before {
+.cmti-flag:before {
   content: "\e03a";
 }
 
-.cmti-lock-open-b:before {
+.cmti-flag-o:before {
   content: "\e03b";
 }
 
-.cmti-login:before {
+.cmti-flexible:before {
   content: "\e03c";
 }
 
-.cmti-login-b:before {
+.cmti-flexible-o:before {
   content: "\e03d";
 }
 
-.cmti-logout:before {
+.cmti-food-bowl:before {
   content: "\e03e";
 }
 
-.cmti-logout-b:before {
+.cmti-food-plate:before {
   content: "\e03f";
 }
 
-.cmti-marker:before {
+.cmti-forum:before {
   content: "\e040";
 }
 
-.cmti-marker-b:before {
+.cmti-forward:before {
   content: "\e041";
 }
 
-.cmti-menu:before {
+.cmti-forward-btn:before {
   content: "\e042";
 }
 
-.cmti-mic:before {
+.cmti-forward-c:before {
   content: "\e043";
 }
 
-.cmti-minus:before {
+.cmti-forward-c-o:before {
   content: "\e044";
 }
 
-.cmti-money-return:before {
+.cmti-forward-o:before {
   content: "\e045";
 }
 
-.cmti-music-off:before {
+.cmti-gift:before {
   content: "\e046";
 }
 
-.cmti-music-off-b:before {
+.cmti-gift-o:before {
   content: "\e047";
 }
 
-.cmti-music-on:before {
+.cmti-glass:before {
   content: "\e048";
 }
 
-.cmti-music-on-b:before {
+.cmti-glass-o:before {
   content: "\e049";
 }
 
-.cmti-page:before {
+.cmti-grid:before {
   content: "\e04a";
 }
 
-.cmti-page-b:before {
+.cmti-grid-o:before {
   content: "\e04b";
 }
 
-.cmti-pen:before {
+.cmti-groups:before {
   content: "\e04c";
 }
 
-.cmti-pen-b:before {
+.cmti-groups-o:before {
   content: "\e04d";
 }
 
-.cmti-pencil:before {
+.cmti-guarantee:before {
   content: "\e04e";
 }
 
-.cmti-pencil-b:before {
+.cmti-hammer:before {
   content: "\e04f";
 }
 
-.cmti-permission:before {
+.cmti-headphone:before {
   content: "\e050";
 }
 
-.cmti-phone:before {
+.cmti-heart:before {
   content: "\e051";
 }
 
-.cmti-plane:before {
+.cmti-heart-beat:before {
   content: "\e052";
 }
 
-.cmti-plane-b:before {
+.cmti-heart-o:before {
   content: "\e053";
 }
 
-.cmti-plus:before {
+.cmti-hierarchy:before {
   content: "\e054";
 }
 
-.cmti-power:before {
+.cmti-home:before {
   content: "\e055";
 }
 
-.cmti-power-b:before {
+.cmti-home-o:before {
   content: "\e056";
 }
 
-.cmti-prize:before {
+.cmti-image:before {
   content: "\e057";
 }
 
-.cmti-prize-b:before {
+.cmti-image-o:before {
   content: "\e058";
 }
 
-.cmti-product:before {
+.cmti-industry:before {
   content: "\e059";
 }
 
-.cmti-radio:before {
+.cmti-info:before {
   content: "\e05a";
 }
 
-.cmti-radio-active:before {
+.cmti-info-o:before {
   content: "\e05b";
 }
 
-.cmti-refresh:before {
+.cmti-instrument-piano:before {
   content: "\e05c";
 }
 
-.cmti-rent:before {
+.cmti-joystick:before {
   content: "\e05d";
 }
 
-.cmti-return:before {
+.cmti-key:before {
   content: "\e05e";
 }
 
-.cmti-return-b:before {
+.cmti-leaf:before {
   content: "\e05f";
 }
 
-.cmti-return-c:before {
+.cmti-list:before {
   content: "\e060";
 }
 
-.cmti-return-c-b:before {
+.cmti-list-approved:before {
   content: "\e061";
 }
 
-.cmti-rotate-left:before {
+.cmti-list-blocked:before {
   content: "\e062";
 }
 
-.cmti-rotate-left-b:before {
+.cmti-list-disable:before {
   content: "\e063";
 }
 
-.cmti-rotate-right:before {
+.cmti-list-new:before {
   content: "\e064";
 }
 
-.cmti-rotate-right-b:before {
+.cmti-list-small:before {
   content: "\e065";
 }
 
-.cmti-save:before {
+.cmti-listing:before {
   content: "\e066";
 }
 
-.cmti-scissor:before {
+.cmti-lock-close:before {
   content: "\e067";
 }
 
-.cmti-search:before {
+.cmti-lock-close-o:before {
   content: "\e068";
 }
 
-.cmti-server:before {
+.cmti-lock-open:before {
   content: "\e069";
 }
 
-.cmti-setting:before {
+.cmti-lock-open-o:before {
   content: "\e06a";
 }
 
-.cmti-setting-b:before {
+.cmti-login:before {
   content: "\e06b";
 }
 
-.cmti-shipping-free:before {
+.cmti-login-o:before {
   content: "\e06c";
 }
 
-.cmti-site-amazon:before {
+.cmti-logout:before {
   content: "\e06d";
 }
 
-.cmti-site-apple:before {
+.cmti-logout-o:before {
   content: "\e06e";
 }
 
-.cmti-site-ebay:before {
+.cmti-marker:before {
   content: "\e06f";
 }
 
-.cmti-site-wordpress:before {
+.cmti-marker-o:before {
   content: "\e070";
 }
 
-.cmti-slider:before {
+.cmti-medical-kit:before {
   content: "\e071";
 }
 
-.cmti-social-dropbox:before {
+.cmti-menu:before {
   content: "\e072";
 }
 
-.cmti-social-evernote:before {
+.cmti-mic:before {
   content: "\e073";
 }
 
-.cmti-social-facebook:before {
+.cmti-microphone:before {
   content: "\e074";
 }
 
-.cmti-social-flicker:before {
+.cmti-microphone-off:before {
   content: "\e075";
 }
 
-.cmti-social-foursquare:before {
+.cmti-minus:before {
   content: "\e076";
 }
 
-.cmti-social-gmail:before {
+.cmti-minus-c:before {
   content: "\e077";
 }
 
-.cmti-social-google:before {
+.cmti-minus-s:before {
   content: "\e078";
 }
 
-.cmti-social-google-plus:before {
+.cmti-mobile:before {
   content: "\e079";
 }
 
-.cmti-social-instagram:before {
+.cmti-money-hand:before {
   content: "\e07a";
 }
 
-.cmti-social-linkedin:before {
+.cmti-money-return:before {
   content: "\e07b";
 }
 
-.cmti-social-picasa:before {
+.cmti-moon:before {
   content: "\e07c";
 }
 
-.cmti-social-pinterest:before {
+.cmti-music-off:before {
   content: "\e07d";
 }
 
-.cmti-social-quora:before {
+.cmti-music-off-o:before {
   content: "\e07e";
 }
 
-.cmti-social-skype:before {
+.cmti-music-on:before {
   content: "\e07f";
 }
 
-.cmti-social-snapchat:before {
+.cmti-music-on-o:before {
   content: "\e080";
 }
 
-.cmti-social-tumblr:before {
+.cmti-newspaper:before {
   content: "\e081";
 }
 
-.cmti-social-twitter:before {
+.cmti-num-asc:before {
   content: "\e082";
 }
 
-.cmti-social-vimeo:before {
+.cmti-num-des:before {
   content: "\e083";
 }
 
-.cmti-social-vine:before {
+.cmti-page:before {
   content: "\e084";
 }
 
-.cmti-social-vk:before {
+.cmti-page-o:before {
   content: "\e085";
 }
 
-.cmti-social-whatsapp:before {
+.cmti-pause:before {
   content: "\e086";
 }
 
-.cmti-social-yahoo:before {
+.cmti-pause-c:before {
   content: "\e087";
 }
 
-.cmti-social-youtube:before {
+.cmti-pen:before {
   content: "\e088";
 }
 
-.cmti-sound-off:before {
+.cmti-pen-o:before {
   content: "\e089";
 }
 
-.cmti-sound-off-b:before {
+.cmti-pencil:before {
   content: "\e08a";
 }
 
-.cmti-sound-on:before {
+.cmti-pencil-large:before {
   content: "\e08b";
 }
 
-.cmti-sound-on-b:before {
+.cmti-pencil-o:before {
   content: "\e08c";
 }
 
-.cmti-spinner-1:before {
+.cmti-percent:before {
   content: "\e08d";
 }
 
-.cmti-spinner-2:before {
+.cmti-permission:before {
   content: "\e08e";
 }
 
-.cmti-spinner-3:before {
+.cmti-phone:before {
   content: "\e08f";
 }
 
-.cmti-spinner-4:before {
+.cmti-phone-c:before {
   content: "\e090";
 }
 
-.cmti-spinner-5:before {
+.cmti-plane:before {
   content: "\e091";
 }
 
-.cmti-spinner-6:before {
+.cmti-plane-o:before {
   content: "\e092";
 }
 
-.cmti-spinner-7:before {
+.cmti-plans:before {
   content: "\e093";
 }
 
-.cmti-spinner-8:before {
+.cmti-play:before {
   content: "\e094";
 }
 
-.cmti-spinner-9:before {
+.cmti-play-c:before {
   content: "\e095";
 }
 
-.cmti-spinner-10:before {
+.cmti-plug:before {
   content: "\e096";
 }
 
-.cmti-spinner-11:before {
+.cmti-plus:before {
   content: "\e097";
 }
 
-.cmti-spinner-12:before {
+.cmti-plus-c:before {
   content: "\e098";
 }
 
-.cmti-spinner-13:before {
+.cmti-plus-s:before {
   content: "\e099";
 }
 
-.cmti-spinner-14:before {
+.cmti-power:before {
   content: "\e09a";
 }
 
-.cmti-spinner-15:before {
+.cmti-power-o:before {
   content: "\e09b";
 }
 
-.cmti-spinner-16:before {
+.cmti-printer:before {
   content: "\e09c";
 }
 
-.cmti-spinner-17:before {
+.cmti-prize:before {
   content: "\e09d";
 }
 
-.cmti-spinner-18:before {
+.cmti-prize-o:before {
   content: "\e09e";
 }
 
-.cmti-star:before {
+.cmti-product:before {
   content: "\e09f";
 }
 
-.cmti-star-b:before {
+.cmti-quote-end:before {
   content: "\e0a0";
 }
 
-.cmti-star-half:before {
+.cmti-quote-start:before {
   content: "\e0a1";
 }
 
-.cmti-stock-out:before {
+.cmti-radio:before {
   content: "\e0a2";
 }
 
-.cmti-stopwatch:before {
+.cmti-radio-active:before {
   content: "\e0a3";
 }
 
-.cmti-tachometer:before {
+.cmti-random:before {
   content: "\e0a4";
 }
 
-.cmti-tag:before {
+.cmti-random-c:before {
   content: "\e0a5";
 }
 
-.cmti-tag-b:before {
+.cmti-refresh:before {
   content: "\e0a6";
 }
 
-.cmti-thumbs-down:before {
+.cmti-registered:before {
   content: "\e0a7";
 }
 
-.cmti-thumbs-down-b:before {
+.cmti-rent:before {
   content: "\e0a8";
 }
 
-.cmti-thumbs-up:before {
+.cmti-return:before {
   content: "\e0a9";
 }
 
-.cmti-thumbs-up-b:before {
+.cmti-return-c:before {
   content: "\e0aa";
 }
 
-.cmti-todo:before {
+.cmti-return-c-o:before {
   content: "\e0ab";
 }
 
-.cmti-tweeter:before {
+.cmti-return-o:before {
   content: "\e0ac";
 }
 
-.cmti-tweeter-b:before {
+.cmti-road:before {
   content: "\e0ad";
 }
 
-.cmti-user:before {
+.cmti-rotate-left:before {
   content: "\e0ae";
 }
 
-.cmti-user-add:before {
+.cmti-rotate-left-o:before {
   content: "\e0af";
 }
 
-.cmti-user-approved:before {
+.cmti-rotate-right:before {
   content: "\e0b0";
 }
 
-.cmti-user-b:before {
+.cmti-rotate-right-o:before {
   content: "\e0b1";
 }
 
-.cmti-user-blocked:before {
+.cmti-rupee:before {
   content: "\e0b2";
 }
 
-.cmti-user-executive:before {
+.cmti-rupee-c:before {
   content: "\e0b3";
 }
 
-.cmti-user-executive-o:before {
+.cmti-save:before {
   content: "\e0b4";
 }
 
-.cmti-user-full:before {
+.cmti-scissor:before {
   content: "\e0b5";
 }
 
-.cmti-user-full-b:before {
+.cmti-screw-driver:before {
   content: "\e0b6";
 }
 
-.cmti-user-group:before {
+.cmti-search:before {
   content: "\e0b7";
 }
 
-.cmti-user-o:before {
+.cmti-server:before {
   content: "\e0b8";
 }
 
-.cmti-user-o-b:before {
+.cmti-setting:before {
   content: "\e0b9";
 }
 
-.cmti-user-stranger:before {
+.cmti-setting-o:before {
   content: "\e0ba";
 }
 
-.cmti-user-stranger-b:before {
+.cmti-shield:before {
   content: "\e0bb";
 }
 
-.cmti-vc-cmgtools:before {
+.cmti-shipping-free:before {
   content: "\e0bc";
 }
 
-.cmti-vc-cmsgears:before {
+.cmti-sign-in:before {
   content: "\e0bd";
 }
 
-.cmti-vc-foxslider:before {
+.cmti-sign-out:before {
   content: "\e0be";
 }
 
-.cmti-vc-vulpinecode:before {
+.cmti-signals:before {
   content: "\e0bf";
 }
 
-.cmti-wallet:before {
+.cmti-site-amazon:before {
   content: "\e0c0";
 }
 
-.cmti-watch:before {
+.cmti-site-apple:before {
   content: "\e0c1";
 }
 
-.cmti-widget:before {
+.cmti-site-ebay:before {
   content: "\e0c2";
 }
 
-.cmti-zoom-in:before {
+.cmti-site-wordpress:before {
   content: "\e0c3";
 }
 
-.cmti-zoom-in-b:before {
+.cmti-slider:before {
   content: "\e0c4";
 }
 
-.cmti-zoom-out:before {
+.cmti-sliders:before {
   content: "\e0c5";
 }
 
-.cmti-zoom-out-b:before {
+.cmti-social-dropbox:before {
   content: "\e0c6";
+}
+
+.cmti-social-evernote:before {
+  content: "\e0c7";
+}
+
+.cmti-social-facebook:before {
+  content: "\e0c8";
+}
+
+.cmti-social-flicker:before {
+  content: "\e0c9";
+}
+
+.cmti-social-foursquare:before {
+  content: "\e0ca";
+}
+
+.cmti-social-gmail:before {
+  content: "\e0cb";
+}
+
+.cmti-social-google:before {
+  content: "\e0cc";
+}
+
+.cmti-social-google-plus:before {
+  content: "\e0cd";
+}
+
+.cmti-social-instagram:before {
+  content: "\e0ce";
+}
+
+.cmti-social-linkedin:before {
+  content: "\e0cf";
+}
+
+.cmti-social-picasa:before {
+  content: "\e0d0";
+}
+
+.cmti-social-pinterest:before {
+  content: "\e0d1";
+}
+
+.cmti-social-quora:before {
+  content: "\e0d2";
+}
+
+.cmti-social-skype:before {
+  content: "\e0d3";
+}
+
+.cmti-social-snapchat:before {
+  content: "\e0d4";
+}
+
+.cmti-social-tumblr:before {
+  content: "\e0d5";
+}
+
+.cmti-social-twitter:before {
+  content: "\e0d6";
+}
+
+.cmti-social-vimeo:before {
+  content: "\e0d7";
+}
+
+.cmti-social-vine:before {
+  content: "\e0d8";
+}
+
+.cmti-social-vk:before {
+  content: "\e0d9";
+}
+
+.cmti-social-whatsapp:before {
+  content: "\e0da";
+}
+
+.cmti-social-yahoo:before {
+  content: "\e0db";
+}
+
+.cmti-social-youtube:before {
+  content: "\e0dc";
+}
+
+.cmti-sound-off:before {
+  content: "\e0dd";
+}
+
+.cmti-sound-off-o:before {
+  content: "\e0de";
+}
+
+.cmti-sound-on:before {
+  content: "\e0df";
+}
+
+.cmti-sound-on-o:before {
+  content: "\e0e0";
+}
+
+.cmti-spinner-1:before {
+  content: "\e0e1";
+}
+
+.cmti-spinner-2:before {
+  content: "\e0e2";
+}
+
+.cmti-spinner-3:before {
+  content: "\e0e3";
+}
+
+.cmti-spinner-4:before {
+  content: "\e0e4";
+}
+
+.cmti-spinner-5:before {
+  content: "\e0e5";
+}
+
+.cmti-spinner-6:before {
+  content: "\e0e6";
+}
+
+.cmti-spinner-7:before {
+  content: "\e0e7";
+}
+
+.cmti-spinner-8:before {
+  content: "\e0e8";
+}
+
+.cmti-spinner-9:before {
+  content: "\e0e9";
+}
+
+.cmti-spinner-10:before {
+  content: "\e0ea";
+}
+
+.cmti-spinner-11:before {
+  content: "\e0eb";
+}
+
+.cmti-spinner-12:before {
+  content: "\e0ec";
+}
+
+.cmti-spinner-13:before {
+  content: "\e0ed";
+}
+
+.cmti-spinner-14:before {
+  content: "\e0ee";
+}
+
+.cmti-spinner-15:before {
+  content: "\e0ef";
+}
+
+.cmti-spinner-16:before {
+  content: "\e0f0";
+}
+
+.cmti-spinner-17:before {
+  content: "\e0f1";
+}
+
+.cmti-spinner-18:before {
+  content: "\e0f2";
+}
+
+.cmti-star:before {
+  content: "\e0f3";
+}
+
+.cmti-star-half:before {
+  content: "\e0f4";
+}
+
+.cmti-star-o:before {
+  content: "\e0f5";
+}
+
+.cmti-step-backward:before {
+  content: "\e0f6";
+}
+
+.cmti-step-backward-c:before {
+  content: "\e0f7";
+}
+
+.cmti-step-forward:before {
+  content: "\e0f8";
+}
+
+.cmti-step-forward-c:before {
+  content: "\e0f9";
+}
+
+.cmti-stethoscope:before {
+  content: "\e0fa";
+}
+
+.cmti-stop:before {
+  content: "\e0fb";
+}
+
+.cmti-stop-c:before {
+  content: "\e0fc";
+}
+
+.cmti-stopwatch:before {
+  content: "\e0fd";
+}
+
+.cmti-table:before {
+  content: "\e0fe";
+}
+
+.cmti-tablet:before {
+  content: "\e0ff";
+}
+
+.cmti-tachometer:before {
+  content: "\e100";
+}
+
+.cmti-tag:before {
+  content: "\e101";
+}
+
+.cmti-tag-o:before {
+  content: "\e102";
+}
+
+.cmti-taxi:before {
+  content: "\e103";
+}
+
+.cmti-thumbs-down:before {
+  content: "\e104";
+}
+
+.cmti-thumbs-down-o:before {
+  content: "\e105";
+}
+
+.cmti-thumbs-up:before {
+  content: "\e106";
+}
+
+.cmti-thumbs-up-o:before {
+  content: "\e107";
+}
+
+.cmti-todo:before {
+  content: "\e108";
+}
+
+.cmti-toggle-off:before {
+  content: "\e109";
+}
+
+.cmti-toggle-on:before {
+  content: "\e10a";
+}
+
+.cmti-toggle-on-f:before {
+  content: "\e10b";
+}
+
+.cmti-tools:before {
+  content: "\e10c";
+}
+
+.cmti-train:before {
+  content: "\e10d";
+}
+
+.cmti-tree:before {
+  content: "\e10e";
+}
+
+.cmti-triangle-down:before {
+  content: "\e10f";
+}
+
+.cmti-triangle-down-o:before {
+  content: "\e110";
+}
+
+.cmti-triangle-left:before {
+  content: "\e111";
+}
+
+.cmti-triangle-left-o:before {
+  content: "\e112";
+}
+
+.cmti-triangle-right:before {
+  content: "\e113";
+}
+
+.cmti-triangle-right-o:before {
+  content: "\e114";
+}
+
+.cmti-triangle-up:before {
+  content: "\e115";
+}
+
+.cmti-triangle-up-o:before {
+  content: "\e116";
+}
+
+.cmti-tv:before {
+  content: "\e117";
+}
+
+.cmti-tweeter:before {
+  content: "\e118";
+}
+
+.cmti-tweeter-o:before {
+  content: "\e119";
+}
+
+.cmti-umbrella:before {
+  content: "\e11a";
+}
+
+.cmti-usb:before {
+  content: "\e11b";
+}
+
+.cmti-usb-c:before {
+  content: "\e11c";
+}
+
+.cmti-usb-s:before {
+  content: "\e11d";
+}
+
+.cmti-user:before {
+  content: "\e11e";
+}
+
+.cmti-user-add:before {
+  content: "\e11f";
+}
+
+.cmti-user-approved:before {
+  content: "\e120";
+}
+
+.cmti-user-blocked:before {
+  content: "\e121";
+}
+
+.cmti-user-c:before {
+  content: "\e122";
+}
+
+.cmti-user-c-o:before {
+  content: "\e123";
+}
+
+.cmti-user-executive:before {
+  content: "\e124";
+}
+
+.cmti-user-executive-o:before {
+  content: "\e125";
+}
+
+.cmti-user-full:before {
+  content: "\e126";
+}
+
+.cmti-user-full-o:before {
+  content: "\e127";
+}
+
+.cmti-user-group:before {
+  content: "\e128";
+}
+
+.cmti-user-o:before {
+  content: "\e129";
+}
+
+.cmti-user-stranger:before {
+  content: "\e12a";
+}
+
+.cmti-user-stranger-o:before {
+  content: "\e12b";
+}
+
+.cmti-vc-cmgtools:before {
+  content: "\e12c";
+}
+
+.cmti-vc-cmsgears:before {
+  content: "\e12d";
+}
+
+.cmti-vc-foxslider:before {
+  content: "\e12e";
+}
+
+.cmti-vc-vulpinecode:before {
+  content: "\e12f";
+}
+
+.cmti-wallet:before {
+  content: "\e130";
+}
+
+.cmti-watch:before {
+  content: "\e131";
+}
+
+.cmti-wheelchair:before {
+  content: "\e132";
+}
+
+.cmti-widget:before {
+  content: "\e133";
+}
+
+.cmti-wifi:before {
+  content: "\e134";
+}
+
+.cmti-wifi-c:before {
+  content: "\e135";
+}
+
+.cmti-wrench:before {
+  content: "\e136";
+}
+
+.cmti-youtube-play:before {
+  content: "\e137";
+}
+
+.cmti-zoom-in:before {
+  content: "\e138";
+}
+
+.cmti-zoom-in-o:before {
+  content: "\e139";
+}
+
+.cmti-zoom-out:before {
+  content: "\e13a";
+}
+
+.cmti-zoom-out-o:before {
+  content: "\e13b";
 }
 
 @font-face {
@@ -2555,6 +3032,14 @@ html, body {
 .absolute {
   position: absolute !important;
 }
+.absolute.absolute-top-left {
+  top: 0px;
+  left: 0px;
+}
+.absolute.absolute-top-right {
+  top: 0px;
+  right: 0px;
+}
 
 .relative {
   position: relative !important;
@@ -2602,11 +3087,11 @@ html, body {
   font-size: 0.75em;
 }
 
-.error {
+.error, .help-block {
   color: #E74343;
 }
 
-.warning, .help-block {
+.warning {
   color: #EF9300;
 }
 
@@ -2715,7 +3200,7 @@ h6, .h6 {
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .header-default {
   verticle-align: middle;
   padding: 0.25em 0;
-  margin: 0.5em 0;
+  margin: 0.25em 0;
   font-family: Verdana, Geneva, sans-serif;
 }
 
@@ -2723,7 +3208,8 @@ p, span, em, div, a {
   font-size: 1em;
 }
 
-p, span, em, a {
+.reader {
+  font-size: 1em;
   line-height: 1.5em;
 }
 
@@ -2853,7 +3339,7 @@ Dependencies: variables, mixins
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
   float: left;
-  margin: 1rem 1%;
+  margin: 0.5rem 1%;
   word-wrap: break-word;
 }
 
@@ -3560,6 +4046,7 @@ form.form-medium {
 }
 form.form-large {
   width: 630px;
+  padding: 1rem;
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
@@ -3569,31 +4056,41 @@ form.form-large {
   }
 }
 
-label {
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .btn, .cmt-checkbox, .cmt-switch {
   border: none;
   box-shadow: none;
+  outline: none;
   font-size: 1em;
-  line-height: 1.25em;
+  line-height: 1.25;
   margin: 0.25em 0;
-  width: 100%;
   padding: 0.25em;
   display: inline-block;
-  text-align: left;
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch, input[type="submit"], input[type="button"], button, .btn {
-  vertical-align: middle;
-  font-size: 1em;
-  line-height: 1.25em;
-  margin: 0.25em 0;
   width: 100%;
-  padding: 0.25em;
-  outline: none;
-  box-shadow: none;
-  border: none;
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.frm-icon-element {
+  width: 25% !important;
+}
+label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.frm-icon-element {
+  width: 50% !important;
+}
+label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.frm-icon-element {
+  width: 75% !important;
+}
+label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.frm-icon-element {
+  width: 80px !important;
+}
+label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.frm-icon-element {
+  width: 120px !important;
+}
+label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.frm-icon-element {
+  width: 180px !important;
+}
+label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.frm-icon-element {
+  width: 250px !important;
+}
+
+label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
@@ -3603,39 +4100,19 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   color: #363636;
   text-align: left;
 }
-input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+label:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
   background-color: #E9E9E9;
   color: #363636;
 }
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+label:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
   color: #4F688E;
   -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
   -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
   box-shadow: inset 0 0 0 1px #E1E1E1;
 }
-input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+label:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
   background-color: #CCCCCC;
   color: #909090;
-}
-input[type="text"].field-small, input[type="email"].field-small, input[type="password"].field-small, textarea.field-small, select.field-small, .cmt-checkbox.field-small, .cmt-switch.field-small {
-  width: 80px;
-}
-input[type="text"].field-medium, input[type="email"].field-medium, input[type="password"].field-medium, textarea.field-medium, select.field-medium, .cmt-checkbox.field-medium, .cmt-switch.field-medium {
-  width: 120px;
-}
-input[type="text"].field-large, input[type="email"].field-large, input[type="password"].field-large, textarea.field-large, select.field-large, .cmt-checkbox.field-large, .cmt-switch.field-large {
-  width: 180px;
-}
-input[type="text"].field-xlarge, input[type="email"].field-xlarge, input[type="password"].field-xlarge, textarea.field-xlarge, select.field-xlarge, .cmt-checkbox.field-xlarge, .cmt-switch.field-xlarge {
-  width: 250px;
-}
-
-.cmt-checkbox, .cmt-switch {
-  background: none;
-}
-.cmt-checkbox:hover, .cmt-switch:hover {
-  background: none;
-  color: #363636;
 }
 
 input[type="submit"], input[type="button"], button, .btn {
@@ -3662,60 +4139,12 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
   color: #363636;
 }
 
-.btn {
-  display: inline-block;
-}
-.btn.btn-25 {
-  width: 25%;
-}
-.btn.btn-50 {
-  width: 50%;
-}
-.btn.btn-75 {
-  width: 75%;
-}
-.btn.btn-small {
-  width: 80px;
-}
-.btn.btn-medium {
-  width: 120px;
-}
-.btn.btn-large {
-  width: 180px;
-}
-.btn.btn-xlarge {
-  width: 250px;
-}
-.btn.btn-white {
-  background-color: #FFFFFF;
-  color: #000000;
-}
-.btn.btn-white:hover {
-  background-color: #595959;
-  color: #A5A5A5;
-}
-.btn.btn-black {
-  background-color: #000000;
-  color: #FFFFFF;
-}
-.btn.btn-black:hover {
-  background-color: #595959;
-  color: #A5A5A5;
-}
-.btn.btn-gray {
-  background-color: #7F7F7F;
-  color: #FFFFFF;
-}
-.btn.btn-gray:hover {
-  background-color: #595959;
-  color: #A5A5A5;
-}
-.btn.btn-reverse:hover {
-  background-color: #E74343 !important;
-  color: #FFFFFF !important;
+label {
+  text-align: left;
+  background: none;
 }
 
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button {
   width: auto;
 }
 
@@ -3730,23 +4159,18 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 select, .element-60, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60 {
   width: 60%;
   float: left;
 }
 
-.frm-split-40-60 .frm-select-50 select {
-  width: 50%;
-}
-
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 .cmt-checkbox, .element-60 select, .element-60 .cmt-select-wrap {
+.element-60 textarea, .element-60 select {
   width: 100%;
 }
 
 .frm-rounded-all input[type="text"], .frm-rounded-all input[type="email"], .frm-rounded-all input[type="password"],
-.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"],
-.frm-rounded-all button, .frm-rounded-all .btn {
+.frm-rounded-all textarea, .frm-rounded-all input[type="submit"], .frm-rounded-all input[type="button"], .frm-rounded-all button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -3754,8 +4178,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-rounded-top input[type="text"], .frm-rounded-top input[type="email"], .frm-rounded-top input[type="password"],
-.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"],
-.frm-rounded-top button, .frm-rounded-top .btn {
+.frm-rounded-top textarea, .frm-rounded-top input[type="submit"], .frm-rounded-top input[type="button"], .frm-rounded-top button {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-top-right: 5px;
   -webkit-border-radius-top-left: 5px;
@@ -3766,8 +4189,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-rounded-right input[type="text"], .frm-rounded-right input[type="email"], .frm-rounded-right input[type="password"],
-.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"],
-.frm-rounded-right button, .frm-rounded-right .btn {
+.frm-rounded-right textarea, .frm-rounded-right input[type="submit"], .frm-rounded-right input[type="button"], .frm-rounded-right button {
   -moz-border-radius-top-right: 5px;
   -moz-border-radius-bottom-right: 5px;
   -webkit-border-radius-top-right: 5px;
@@ -3778,8 +4200,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-rounded-bottom input[type="text"], .frm-rounded-bottom input[type="email"], .frm-rounded-bottom input[type="password"],
-.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"],
-.frm-rounded-bottom button, .frm-rounded-bottom .btn {
+.frm-rounded-bottom textarea, .frm-rounded-bottom input[type="submit"], .frm-rounded-bottom input[type="button"], .frm-rounded-bottom button {
   -moz-border-radius-bottom-left: 5px;
   -moz-border-radius-bottom-right: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -3790,8 +4211,7 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
 }
 
 .frm-rounded-left input[type="text"], .frm-rounded-left input[type="email"], .frm-rounded-left input[type="password"],
-.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"],
-.frm-rounded-left button, .frm-rounded-left .btn {
+.frm-rounded-left textarea, .frm-rounded-left input[type="submit"], .frm-rounded-left input[type="button"], .frm-rounded-left button {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
   -webkit-border-radius-top-left: 5px;
@@ -3808,37 +4228,17 @@ input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled, .
   width: 100%;
 }
 .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button, .frm-icon-element .btn {
-  padding-left: 1.3em;
+  padding-left: 1.75em;
 }
 .frm-icon-element .icon, .frm-icon-element .cmti {
   position: absolute;
+  border: none;
+  box-shadow: none;
+  outline: none;
   font-size: 1em;
-  line-height: 1.25em;
+  line-height: 1.25;
   margin: 0.25em 0;
   padding: 0.25em;
-  outline: none;
-  box-shadow: none;
-  border: none;
-}
-.frm-icon-element.field-small {
-  width: 80px;
-}
-.frm-icon-element.field-medium {
-  width: 120px;
-}
-.frm-icon-element.field-large {
-  width: 180px;
-}
-.frm-icon-element.field-xlarge {
-  width: 250px;
-}
-
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch, input[type="submit"], input[type="button"], button, .btn {
-  padding: 0.5em;
-}
-
-.frm-icon-element .icon, .frm-icon-element .cmti {
-  margin-top: 0.5em;
 }
 
 /**********************************************************************
@@ -3846,45 +4246,44 @@ Description: The custom elements for CMGTools.
 Dependencies: variables, mixins, transitions, transformation
 ***********************************************************************/
 .cmt-select-wrap {
-  position: relative;
+  margin: 0.25em 0;
+  width: 100%;
 }
 .cmt-select-wrap select {
   display: none;
 }
 .cmt-select-wrap .cmt-select {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   background-color: #F2F2F2;
-  margin: 0.25em 0;
 }
 .cmt-select-wrap .cmt-select .cmt-selected {
   cursor: pointer;
   position: relative;
   z-index: 100000;
-  padding-right: 32px;
+  padding-right: 1.5em;
 }
 .cmt-select-wrap .cmt-select .cmt-selected .s-text {
   display: inline-block;
   width: 100%;
   overflow: hidden;
   text-align: left;
-  padding: 12px;
+  padding: 0.25em;
   color: #363636;
 }
 .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
-  display: inline-block;
-  width: 32px;
   position: absolute;
   top: 0;
   right: 0;
+  display: inline-block;
+  padding: 0.25em;
 }
 .cmt-select-wrap .cmt-select .cmt-selected.disabled {
   cursor: default;
 }
 .cmt-select-wrap .cmt-select .cmt-select-list {
-  position: relative;
+  position: absolute;
+  width: 100%;
+  background-color: #F2F2F2;
   z-index: 100001;
   max-height: 180px;
   overflow-y: auto;
@@ -3901,14 +4300,14 @@ Dependencies: variables, mixins, transitions, transformation
   background-color: #E74343;
 }
 
-.cmt-choice input[type=checkbox], .cmt-choice input[type=radio] {
+.cmt-choice input[type=checkbox], .cmt-choice input[type=radio], .cmt-rating input[type=checkbox], .cmt-rating input[type=radio] {
   cursor: pointer;
   display: none;
 }
-.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before {
+.cmt-choice input[type=checkbox] + .label.pad-label::before, .cmt-choice input[type=radio] + .label.pad-label::before, .cmt-rating input[type=checkbox] + .label.pad-label::before, .cmt-rating input[type=radio] + .label.pad-label::before {
   margin-right: 8px;
 }
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before {
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=checkbox] + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=checkbox] + .label::before {
   font-family: "cmti-core";
   font-weight: normal;
   color: gray;
@@ -3918,35 +4317,45 @@ Dependencies: variables, mixins, transitions, transformation
   margin-top: -5px;
   line-height: 13px;
 }
-.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus {
+.cmt-choice input[type=checkbox]:checked, .cmt-choice input[type=radio]:checked, .cmt-choice input[type=checkbox]:focus, .cmt-choice input[type=radio]:focus, .cmt-rating input[type=checkbox]:checked, .cmt-rating input[type=radio]:checked, .cmt-rating input[type=checkbox]:focus, .cmt-rating input[type=radio]:focus {
   outline: none !important;
 }
-.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before {
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
   color: #E74343;
 }
-.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label {
+.cmt-choice input[type=checkbox]:checked + .label, .cmt-choice input[type=radio]:checked + .label, .cmt-rating input[type=checkbox]:checked + .label, .cmt-rating input[type=radio]:checked + .label {
   color: #b51717;
 }
-.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before {
+.cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-rating input[type=checkbox]:hover + .label::before, .cmt-rating input[type=radio]:hover + .label::before, .cmt-rating input[type=checkbox] + .label:hover::before, .cmt-rating input[type=radio] + .label:hover::before {
   color: #FF3636;
 }
-.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
   background-color: #DDD !important;
   color: #BBB;
 }
-.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
+.cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
   content: "\e05a";
 }
-.cmt-choice input[type=radio]:checked + .label::before {
+.cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
   content: "\e05b";
 }
-.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
+.cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=checkbox] + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before {
   content: "6";
 }
-.cmt-choice input[type=checkbox]:checked + .label::before {
+.cmt-choice input[type=checkbox]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before {
   content: "8";
+}
+
+.cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
+  margin-right: 8px;
+}
+.cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
+  content: "\e0f3";
+}
+.cmt-rating input[type=radio]:checked + .label::before {
+  content: "\e0f3";
 }
 
 .cmt-switch {
@@ -4009,6 +4418,56 @@ Dependencies: variables, mixins, transitions, transformation
   margin-left: 3.5em;
 }
 
+.btn.btn-25 {
+  width: 25% !important;
+}
+.btn.btn-50 {
+  width: 50% !important;
+}
+.btn.btn-75 {
+  width: 75% !important;
+}
+.btn.btn-small {
+  width: 80px !important;
+}
+.btn.btn-medium {
+  width: 120px !important;
+}
+.btn.btn-large {
+  width: 180px !important;
+}
+.btn.btn-xlarge {
+  width: 250px !important;
+}
+.btn.btn-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.btn.btn-white:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.btn.btn-black:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-gray {
+  background-color: #7F7F7F;
+  color: #FFFFFF;
+}
+.btn.btn-gray:hover {
+  background-color: #595959;
+  color: #A5A5A5;
+}
+.btn.btn-reverse:hover {
+  background-color: #E74343 !important;
+  color: #FFFFFF !important;
+}
+
 .btn-delete {
   position: absolute;
   top: -0.5em;
@@ -4024,6 +4483,84 @@ Dependencies: variables, mixins, transitions, transformation
 }
 .btn-delete:hover {
   color: #505050;
+}
+
+.list-radio label {
+  width: auto;
+  clear: none;
+}
+
+.cmt-checkbox, .cmt-switch {
+  background: none;
+}
+.cmt-checkbox:hover, .cmt-switch:hover {
+  background: none;
+  color: #363636;
+}
+
+.frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch {
+  width: auto;
+}
+
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap {
+  width: 60%;
+  float: left;
+}
+
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap {
+  width: 100%;
+}
+
+.frm-rounded-all .btn {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+
+.frm-rounded-top .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-top-right: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-top-right: 5px;
+  border-radius: 5px 5px 0 0;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-top-right: 5px;
+}
+
+.frm-rounded-right .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-bottom .btn {
+  -moz-border-radius-bottom-left: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 0 5px 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+
+.frm-rounded-left .btn {
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  border-radius: 5px 0 0 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+}
+
+/** Iconified Elements - Works in presence of CMGTools IconLib. It can be overriden to use any preferred icon font library. */
+.frm-icon-element .btn {
+  padding-left: 1.3em;
 }
 
 /**********************************************************************
