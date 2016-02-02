@@ -3335,6 +3335,13 @@ Dependencies: variables, mixins
 .row.row-xlarge {
   width: 90%;
 }
+.row.row-inline {
+  text-align: center;
+}
+.row.row-inline .col, .row.row-inline .colf {
+  display: inline-block !important;
+  float: none !important;
+}
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
@@ -4336,16 +4343,16 @@ Dependencies: variables, mixins, transitions, transformation
   color: #BBB;
 }
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before, .cmt-rating input[type=radio] + .label::before, .cmt-rating input[type=radio]:disabled + .label::before {
-  content: "\e05a";
+  content: "\e0a2";
 }
 .cmt-choice input[type=radio]:checked + .label::before, .cmt-rating input[type=radio]:checked + .label::before {
-  content: "\e05b";
+  content: "\e0a3";
 }
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before, .cmt-rating input[type=checkbox] + .label::before, .cmt-rating input[type=checkbox]:disabled + .label::before {
-  content: "6";
+  content: "\3b";
 }
 .cmt-choice input[type=checkbox]:checked + .label::before, .cmt-rating input[type=checkbox]:checked + .label::before {
-  content: "8";
+  content: "\3a";
 }
 
 .cmt-rating input[type=checkbox] + .label.label-rating::before, .cmt-rating input[type=radio] + .label.label-rating::before {
@@ -5637,6 +5644,9 @@ Dependencies: variables, variables-ext, mixins
   display: inline;
   width: auto;
   margin-right: 1em;
+}
+.box-cud .render-file {
+  display: none;
 }
 
 /* == Slider Slides == */

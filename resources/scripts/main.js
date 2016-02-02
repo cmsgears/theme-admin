@@ -9,6 +9,8 @@ jQuery( document ).ready( function() {
 	initSidebar();
 	
 	initSortSearch();
+	
+	initTemplates();
 });
 
 // Content Pre-loaders -------------
@@ -181,4 +183,42 @@ function sortTable( order ) {
 	var location 	= "" + window.location;
 
 	window.location = location.urlParams( 'sort', order );
+}
+
+// Templates -----------------------
+
+function initTemplates() {
+
+	// Templates
+	var templateCheck = jQuery( ".template-file" );
+
+	if( templateCheck.length > 0 ) {
+
+		var templateCheckParent	= templateCheck.closest( "#frm-template" );
+
+		if( templateCheck.prop( 'checked' ) ) {
+
+			templateCheckParent.find( ".render-file" ).show();
+			templateCheckParent.find( ".render-content" ).hide();
+		}
+		else {
+
+			templateCheckParent.find( ".render-file" ).hide();
+			templateCheckParent.find( ".render-content" ).show();
+		}
+
+		templateCheck.click( function() {
+
+			if( templateCheck.prop( 'checked' ) ) {
+
+				templateCheckParent.find( ".render-file" ).fadeIn( 'slow' );
+				templateCheckParent.find( ".render-content" ).fadeOut( 'fast' );
+			}
+			else {
+
+				templateCheckParent.find( ".render-content" ).fadeIn( 'slow' );
+				templateCheckParent.find( ".render-file" ).fadeOut( 'fast' );
+			}
+		});
+	}
 }
