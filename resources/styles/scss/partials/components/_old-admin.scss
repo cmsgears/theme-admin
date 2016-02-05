@@ -195,10 +195,17 @@
             .avatar {
                 width: 64px;
             }
+
+            .icon {
+                display: inline-block;
+                font-size: 1.5rem;
+                height: 1.5rem;
+                line-height: 1.5rem;
+                margin: 0.25em 0;
+            }
         }
 
-        .cmti {
-            color: $color-primary-text;
+        .actions span {
             margin-right: 0.5em;
             cursor: pointer;
         }

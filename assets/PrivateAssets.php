@@ -44,7 +44,8 @@ class PrivateAssets extends AssetBundle {
 		'cmsgears\core\common\assets\MCustomScrollbar',
 		'cmsgears\core\common\assets\ImagesLoaded',
 		'cmsgears\core\common\assets\Handlebars',
-		'cmsgears\core\common\assets\CmgTools'
+		'cmsgears\core\common\assets\CmgTools',
+		'cmsgears\icons\assets\IconAssets'
     ];
 
 	// Constructor and Initialisation ------------------------------
