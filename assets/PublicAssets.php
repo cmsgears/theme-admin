@@ -40,7 +40,7 @@ class PublicAssets extends AssetBundle {
     public $depends = [
 		'yii\web\JqueryAsset',
 		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\CmgTools'
+		'cmsgears\core\common\assets\CmgToolsJs'
     ];
 
 	// Constructor and Initialisation ------------------------------
