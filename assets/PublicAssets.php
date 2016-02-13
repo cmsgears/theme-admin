@@ -5,6 +5,7 @@ namespace themes\admin\assets;
 use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
+use yii\helpers\Url;
 
 class PublicAssets extends AssetBundle {
 
@@ -56,8 +57,10 @@ class PublicAssets extends AssetBundle {
 
 		parent::registerAssetFiles( $view );
 
-    	$siteUrl = "var siteUrl 	= '" . Yii::$app->homeUrl . "';
-					var ajaxUrl 	= '" . Yii::$app->homeUrl . "apix';";
+		$rootUrl = Url::toRoute( '/', true );
+
+    	$siteUrl = "var siteUrl 	= '$rootUrl';
+					var ajaxUrl 	= '" . $rootUrl ."apix/';";
 
 		$view->registerJs( $siteUrl, View::POS_END );
 	}

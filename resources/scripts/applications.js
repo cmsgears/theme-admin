@@ -1,6 +1,8 @@
-var mainApp		= new cmt.api.Application();
+var mainApp	= null;
 
 jQuery(document).ready( function() {
+
+	mainApp		= new cmt.api.Application( { basePath: ajaxUrl } );
 
 	var appControllers				= [];
 
@@ -19,9 +21,9 @@ jQuery(document).ready( function() {
 
 // DefaultController ----------------------------------------
 
-cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, parentElement, message, response ) {
+cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, requestElement, response ) {
 
-	parentElement.parent().hide();
+	requestElement.parent().hide();
 };
 
 // UserController -------------------------------------------
@@ -30,21 +32,21 @@ UserController	= function() {};
 
 UserController.inherits( cmt.api.controllers.BaseController );
 
-UserController.prototype.avatarActionPost = function( success, parentElement, message, response ) {
+UserController.prototype.avatarActionPost = function( success, requestElement, response ) {
 
-	parentElement.parent().hide();
+	requestElement.parent().hide();
 
 	jQuery( ".wrap-popout-actions .wrap-user img" ).attr( 'src', response.data.fileUrl );
 };
 
-UserController.prototype.profileActionPost = function( success, parentElement, message, response ) {
+UserController.prototype.profileActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
 		var source 		= document.getElementById( "userProfileTemplate" ).innerHTML;
 		var template 	= Handlebars.compile( source );
 		var output 		= template( response.data );
-		var parent		= parentElement.closest( ".box-form" );
+		var parent		= requestElement.closest( ".box-form" );
 
 		parent.find( ".wrap-info" ).html( output );
 
@@ -52,14 +54,14 @@ UserController.prototype.profileActionPost = function( success, parentElement, m
 	}
 };
 
-UserController.prototype.accountActionPost = function( success, parentElement, message, response ) {
+UserController.prototype.accountActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
 		var source 		= document.getElementById( "userAccountTemplate" ).innerHTML;
 		var template 	= Handlebars.compile( source );
 		var output 		= template( response.data );
-		var parent		= parentElement.closest( ".box-form" );
+		var parent		= requestElement.closest( ".box-form" );
 
 		parent.find( ".wrap-info" ).html( output );
 
@@ -73,9 +75,9 @@ SettingsController	= function() {};
 
 SettingsController.inherits( cmt.api.controllers.BaseController );
 
-SettingsController.prototype.getContentActionPre = function( parentElement ) {
+SettingsController.prototype.getContentActionPre = function( requestElement ) {
 
-	var content	= parentElement.attr( 'content' );
+	var content	= requestElement.attr( 'content' );
 	content		= jQuery( "#" + content );
 
 	if( !content.is( ':empty' ) ) {
@@ -86,19 +88,19 @@ SettingsController.prototype.getContentActionPre = function( parentElement ) {
 	return true;
 };
 
-SettingsController.prototype.getContentActionPost = function( success, parentElement, message, response ) {
+SettingsController.prototype.getContentActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
-		var content	= parentElement.attr( 'content' );
+		var content	= requestElement.attr( 'content' );
 		content		= jQuery( "#" + content );
-		var parent	= parentElement.closest( ".box-collapsible" );
+		var parent	= requestElement.closest( ".box-collapsible" );
 
 		content.html( response.data );
 
 		content.slideDown( "slow" );
 
-		activateSettingsBox( parentElement );
+		activateSettingsBox( requestElement );
 
 		parent.find( ".cmt-checkbox" ).cmtCheckbox();
 
@@ -108,7 +110,7 @@ SettingsController.prototype.getContentActionPost = function( success, parentEle
 	}
 };
 
-SettingsController.prototype.updateActionPost = function( success, parentElement, message, response ) {
+SettingsController.prototype.updateActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
@@ -116,7 +118,7 @@ SettingsController.prototype.updateActionPost = function( success, parentElement
 		var template 	= Handlebars.compile( source );
 		var data		= { settings: response.data };
 		var output 		= template( data );
-		var parent		= parentElement.closest( ".box-collapsible" );
+		var parent		= requestElement.closest( ".box-collapsible" );
 
 		parent.find( ".wrap-info" ).html( output );
 
@@ -130,7 +132,7 @@ GalleryController	= function() {};
 
 GalleryController.inherits( cmt.api.controllers.BaseController );
 
-GalleryController.prototype.updateItemActionPost = function( success, parentElement, message, response ) {
+GalleryController.prototype.updateItemActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
@@ -144,7 +146,7 @@ PermissionController	= function() {};
 
 PermissionController.inherits( cmt.api.controllers.BaseController );
 
-PermissionController.prototype.matrixActionPost = function( success, parentElement, message, response ) {
+PermissionController.prototype.matrixActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
