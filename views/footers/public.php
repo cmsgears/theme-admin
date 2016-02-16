@@ -1,6 +1,6 @@
 <footer class="footer">
 	<div class="content-footer">
-		<p class="align align-middle">Copyright © 2015-2016 <?=$coreProperties->getSiteName()?>. All Rights Reserved.</p>
+		<p class="align align-center">Copyright © 2015-2016 <?=$coreProperties->getSiteName()?>. All Rights Reserved.</p>
 	</div>
 </footer>
 

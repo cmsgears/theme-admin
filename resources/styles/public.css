@@ -1,11 +1,4 @@
 @font-face {
-  font-family: cmti-core;
-  src: url("../fonts/cmgtools/cmti-core.eot");
-  src: url("../fonts/cmgtools/cmti-core.svg");
-  src: url("../fonts/cmgtools/cmti-core.ttf");
-  src: url("../fonts/cmgtools/cmti-core.woff");
-}
-@font-face {
   font-family: clear-sans-L;
   src: url("../fonts/clear-sans/ClearSans-Light.eot");
   src: url("../fonts/clear-sans/ClearSans-Light.svg");
@@ -2552,7 +2545,7 @@ Dependencies: variables, mixins, transitions, transformation
   position: absolute;
   left: 0;
   top: 64px;
-  width: 252px;
+  width: 254px;
   padding: 5px;
   height: 216px;
   background-color: #cccccc;
