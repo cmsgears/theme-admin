@@ -24,6 +24,9 @@ jQuery(document).ready( function() {
 cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, requestElement, response ) {
 
 	requestElement.parent().hide();
+
+	jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
+	jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
 };
 
 // UserController -------------------------------------------
