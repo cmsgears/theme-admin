@@ -72,6 +72,22 @@ UserController.prototype.accountActionPost = function( success, requestElement, 
 	}
 };
 
+UserController.prototype.addressActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var source 		= document.getElementById( 'userAddressTemplate' ).innerHTML;
+		var template 	= Handlebars.compile( source );
+		var data		= { address: response.data };
+		var output 		= template( data );
+		var parent		= requestElement.closest( '.box-form' );
+
+		parent.find( '.wrap-info' ).html( output );
+
+		parent.find( '.btn-edit' ).click();
+	}
+};
+
 // SettingsController ---------------------------------------
 
 SettingsController	= function() {};

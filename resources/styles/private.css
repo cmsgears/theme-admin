@@ -16,16 +16,16 @@
 Description: The mixins used by CMGTools. It define the default classes for mixins available within CMGTools.
 Dependencies: variables
 ***********************************************************************/
-.clearfix, .frm-split-40-60 .form-group, .ui-datepicker-header {
+.clearfix, .frm-split-40-60 .form-group, .ui-datepicker-header, .ui-helper-clearfix {
   zoom: 1;
 }
-.clearfix:before, .frm-split-40-60 .form-group:before, .ui-datepicker-header:before, .clearfix:after, .frm-split-40-60 .form-group:after, .ui-datepicker-header:after {
+.clearfix:before, .frm-split-40-60 .form-group:before, .ui-datepicker-header:before, .ui-helper-clearfix:before, .clearfix:after, .frm-split-40-60 .form-group:after, .ui-datepicker-header:after, .ui-helper-clearfix:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after, .frm-split-40-60 .form-group:after, .ui-datepicker-header:after {
+.clearfix:after, .frm-split-40-60 .form-group:after, .ui-datepicker-header:after, .ui-helper-clearfix:after {
   clear: both;
 }
 
@@ -2161,7 +2161,7 @@ Dependencies: variables, mixins
   position: absolute;
 }
 
-.padding.padding-small-all {
+.padding.padding-small {
   padding: 0.5rem;
 }
 .padding.padding-small-v {
@@ -2172,7 +2172,7 @@ Dependencies: variables, mixins
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.padding.padding-medium-all {
+.padding.padding-medium {
   padding: 1rem;
 }
 .padding.padding-medium-v {
@@ -2183,7 +2183,7 @@ Dependencies: variables, mixins
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.padding.padding-large-all {
+.padding.padding-large {
   padding: 1.5rem;
 }
 .padding.padding-large-v {
@@ -2194,7 +2194,7 @@ Dependencies: variables, mixins
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.padding.padding-xlarge-all {
+.padding.padding-xlarge {
   padding: 2rem;
 }
 .padding.padding-xlarge-v {
@@ -2204,6 +2204,51 @@ Dependencies: variables, mixins
 .padding.padding-xlarge-h {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.margin.margin-small {
+  margin: 0.5rem;
+}
+.margin.margin-small-v {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.margin.margin-small-h {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.margin.margin-medium {
+  margin: 1rem;
+}
+.margin.margin-medium-v {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.margin.margin-medium-h {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.margin.margin-large {
+  margin: 1.5rem;
+}
+.margin.margin-large-v {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.margin.margin-large-h {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.margin.margin-xlarge {
+  margin: 2rem;
+}
+.margin.margin-xlarge-v {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.margin.margin-xlarge-h {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 html, body {
@@ -2385,6 +2430,11 @@ label {
   clear: both;
   width: 40%;
   float: left;
+}
+
+.required .control-label:after {
+  content: " *";
+  color: #B42A1A;
 }
 
 .element-40 label {
@@ -4223,6 +4273,29 @@ Dependencies: variables, mixins
 .ui-datepicker-calendar .ui-state-disabled span {
   background: #87BA45;
   color: #293846;
+}
+
+#tabs-default {
+  padding-top: 2rem;
+}
+#tabs-default > ul li {
+  display: inline-block;
+}
+@media only screen and (max-width: 480px) {
+  #tabs-default > ul li {
+    display: none;
+  }
+}
+
+.ui-state-default .btn {
+  background-color: transparent !important;
+  color: #505050;
+  margin: 0 !important;
+}
+
+.ui-tabs-active .btn {
+  background-color: white !important;
+  color: #E74343;
 }
 
 /*# sourceMappingURL=private.css.map */

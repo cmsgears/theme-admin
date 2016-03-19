@@ -102,6 +102,12 @@ function initListeners() {
 
 		jQuery( ".cscroller" ).mCustomScrollbar( { autoHideScrollbar: true } );
 	}
+	
+	//Profile tabs
+	if( jQuery().tabs ) {
+
+		jQuery( '#tabs-default' ).tabs();	
+	}
 }
 
 // Sidebar/Settings ----------------
