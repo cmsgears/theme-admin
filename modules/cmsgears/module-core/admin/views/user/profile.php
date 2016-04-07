@@ -6,28 +6,28 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 
 // CMG Imports
-use cmsgears\core\common\models\entities\Address;
+use cmsgears\core\common\config\CoreGlobal;
+use cmsgears\core\frontend\config\WebGlobalCore;
 
-use cmsgears\core\common\services\CountryService;
-use cmsgears\core\common\services\ProvinceService;
-use cmsgears\core\common\services\ModelAddressService;
+use cmsgears\core\common\models\resources\Address;
+
+use cmsgears\core\common\services\entities\CountryService;
+use cmsgears\core\common\services\entities\ProvinceService;
+use cmsgears\core\common\services\mappers\ModelAddressService;
 
 use cmsgears\files\widgets\AvatarUploader;
-
-// NGOFB Imports
-use ngofb\core\common\config\CoreGlobal;
-use ngofb\core\frontend\config\WebGlobalCore;
 
 $coreProperties = $this->context->getCoreProperties();
 $this->title    = 'Profile | ' . $coreProperties->getSiteTitle();
 
 $user           = Yii::$app->user->getIdentity();
 $countryList    = CountryService::getIdNameList();
-$provinceList   = ProvinceService::getMapByCountryId( WebGlobalCore::COUNTRY_ID_INDIA );
+$countries		= array_keys( $countryList );
+$provinceList   = ProvinceService::getMapByCountryId( $countries[ 0 ] );
 $addressList    = ModelAddressService::findByParent( $user->id, CoreGlobal::TYPE_USER );
 $address        = new Address();
 
-$address->countryId = WebGlobalCore::COUNTRY_ID_INDIA;
+$address->countryId = $countries[ 0 ];
 ?>
 <div id="tabs-default">
     <ul>
@@ -37,10 +37,10 @@ $address->countryId = WebGlobalCore::COUNTRY_ID_INDIA;
     </ul>
 
     <div id="tabs-1" class="content-80 max-content-100 bkg bkg-white">
-        
+
         <div class="box-content clearfix">
             <?= AvatarUploader::widget([
-                'options' => [ 'id' => 'avatar-user', 'class' => 'file-uploader' ], 
+                'options' => [ 'id' => 'avatar-user', 'class' => 'file-uploader' ],
                 'model' => $user->avatar, 'cmtController' => 'user',
                 'postAction' => true, 'postViewIcon' => 'cmti cmti-2x cmti-user'
             ]); ?>
@@ -235,8 +235,8 @@ $address->countryId = WebGlobalCore::COUNTRY_ID_INDIA;
                     <label>Country</label>
                     <?= Html::dropDownList( 'Address[countryId]', $address->countryId, $countryList, [ 'class' => 'element-60 cmt-select' ] ); ?>
                     <span  class="error" cmt-error="countryId"></span>
-                </div>  
-                
+                </div>
+
                 <div class="frm-field frm-province">
                     <label>State/Province</label>
                     <?= Html::dropDownList( 'Address[provinceId]', $address->provinceId, $provinceList, [ 'class' => 'element-60 cmt-select', 'id' => 'wrap-province' ] ); ?>
@@ -246,7 +246,7 @@ $address->countryId = WebGlobalCore::COUNTRY_ID_INDIA;
                     <label>Phone</label>
                     <input type="text" name="Address[phone]" placeholder="Phone" value="<?= $address->phone ?>" />
                     <span  class="error" cmt-error="phone"></span>
-                </div> 
+                </div>
                 <div class="frm-field">
                     <label>Zip/Postal</label>
                     <input type="text" name="Address[zip]" placeholder="Zip*" value="<?= $address->zip ?>" />
@@ -264,5 +264,5 @@ $address->countryId = WebGlobalCore::COUNTRY_ID_INDIA;
 
 <!-- Templates -->
 <?php include_once( dirname( __FILE__ ) . "/templates/user-profile.php" ); ?>
-<?php include_once( dirname( __FILE__ ) . "/templates/user-account.php" ); ?> 
+<?php include_once( dirname( __FILE__ ) . "/templates/user-account.php" ); ?>
 <?php include_once( dirname( __FILE__ ) . "/templates/user-address.php" ); ?>
