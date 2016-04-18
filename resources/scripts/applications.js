@@ -11,6 +11,7 @@ jQuery(document).ready( function() {
 	appControllers[ 'user' ]		= 'UserController';
 	appControllers[ 'settings' ]	= 'SettingsController';
 	appControllers[ 'gallery' ]		= 'GalleryController';
+	appControllers[ 'tag' ]			= 'TagController';
 	appControllers[ 'permission' ]	= 'PermissionController';
 
 	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
@@ -156,6 +157,39 @@ GalleryController.prototype.updateItemActionPost = function( success, requestEle
 	if( success ) {
 
 		location.reload( true );
+	}
+};
+
+// TagController --------------------------------------------
+
+TagController	= function() {};
+
+TagController.inherits( cmt.api.controllers.BaseController );
+
+TagController.prototype.createActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var tags		= jQuery( '#box-tag-mapper .wrap-tags' );
+
+		var source 		= document.getElementById( 'tagTemplate' ).innerHTML;
+		var template 	= Handlebars.compile( source );
+		var data		= { tags: response.data };
+		var output 		= template( data );
+
+		tags.html( output );
+
+		tags.find( '.cmt-request' ).cmtRequestProcessor({
+			app: mainApp
+		});
+	}
+};
+
+TagController.prototype.deleteActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		jQuery( '#frm-delete-tag-' + response.data ).parent().remove();
 	}
 };
 
