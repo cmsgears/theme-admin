@@ -433,7 +433,7 @@ Dependencies: variables
   min-height: 50%;
 }
 
-.texture.texture-default {
+.texture {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC");
 }
 .texture.texture-bar-s {
@@ -477,12 +477,12 @@ Dependencies: variables
 }
 
 .blur {
+  transform: scale(1.1);
   filter: blur(1px);
   -webkit-filter: blur(1px);
   -moz-filter: blur(1px);
   -o-filter: blur(1px);
   -ms-filter: blur(1px);
-  transform: scale(1.1);
 }
 .blur.blur-small {
   filter: blur(3px);
@@ -513,7 +513,7 @@ Dependencies: variables
   -ms-filter: blur(14px);
 }
 
-.pattern .pattern-default {
+.pattern {
   background-image: url("../images/pattern-default.jpg");
 }
 
@@ -737,8 +737,8 @@ Dependencies: none
 }
 
 /**********************************************************************
-Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com) 
-and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css 
+Description: The reset CSS Inspired by Eric Meyer(http://meyerweb.com)
+and HTML5 Doctor(http://html5doctor.com) aims to make a custom reset css
 for CMGTools.
 Dependencies: variables
 ***********************************************************************/
@@ -934,6 +934,11 @@ a {
   text-decoration: none;
   cursor: pointer;
   color: #298ccf;
+  -moz-transition: color 250ms ease-in-out 0s;
+  -ms-transition: color 250ms ease-in-out 0s;
+  -o-transition: color 250ms ease-in-out 0s;
+  -webkit-transition: color 250ms ease-in-out 0s;
+  transition: color 250ms ease-in-out 0s;
 }
 
 a:focus {
@@ -942,6 +947,7 @@ a:focus {
 
 a:active, a:hover {
   outline: 0;
+  color: #E74343;
 }
 
 /**********************************************************************
@@ -949,7 +955,7 @@ Description: The basic styles for CMGTools.
 Dependencies: variables
 ***********************************************************************/
 /**
- * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive. 
+ * Screen Resolutions - The large number of device resolutions and to serve content decorated specific to these devices is a tedius task without going responsive.
  * CMGTools have used the most commonly used standard resolutions to cover maximum screens.
  */
 .screen.screen-mobile-small {
@@ -978,8 +984,8 @@ Dependencies: variables
 }
 
 /**
- * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in 
- * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating 
+ * Coloring - It is one of the most important factor while designing website following a theme approach. CMGTools have taken extra care in
+ * this area and tried to manage colors by dividing them into 3 major variations forming a standard color palette. The primary color is dominating
  * for the entire design and secondary is contrary to primary to be used for components. The tertiary color can also be used apart from secondary.
  */
 .color {
@@ -1095,7 +1101,7 @@ Dependencies: variables
 }
 
 /**
- * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and 
+ * Make all box elements to follow border-box. It gives flexibility to use css width as the element width including border and
  * padding. The remaining space deducting border and padding from given width will be used by element content.
  */
 html {
@@ -1110,7 +1116,7 @@ html {
   box-sizing: inherit;
 }
 
-/** 
+/**
  * The primary color will be used as default color for document body and text.
  */
 html, body {
@@ -1131,14 +1137,14 @@ html, body {
   padding: 0 !important;
 }
 
-/** 
+/**
  * The global pre-loader can be displayed to hide content till all the images are loaded. It depends on the Javascript library used to detect image loading.
  */
 #pre-loader-main {
   display: block;
 }
 
-/** 
+/**
  * Floating Blocks - These classes can be used to clear or float the elements.
  */
 .clear {
@@ -1162,7 +1168,7 @@ html, body {
   margin: 0 auto;
 }
 
-/** 
+/**
  * Pre-defined width and height, handy at few places.
  */
 .width {
@@ -1200,7 +1206,7 @@ html, body {
   height: 75%;
 }
 
-/** 
+/**
  * Alignments for centered box and text.
  */
 .center {
@@ -1217,7 +1223,7 @@ html, body {
   text-align: right !important;
 }
 
-/** 
+/**
  * Height fillers to seperate boxes.
  */
 .filler-height {
@@ -1232,9 +1238,18 @@ html, body {
 .filler-height.filler-height-large {
   height: 2.5em;
 }
+.filler-height.filler-height-xlarge {
+  height: 3em;
+}
 
 .absolute {
   position: absolute !important;
+}
+.absolute.absolute-center {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .absolute.absolute-top-left {
   top: 0px;
@@ -1283,6 +1298,10 @@ html, body {
   color: #FFFFFF !important;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .visible {
   display: block !important;
 }
@@ -1323,9 +1342,21 @@ html, body {
 
 .error-field {
   border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.25);
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2);
+  box-shadow: 1px 1px 5px 0px rgba(231, 67, 67, 0.2);
+}
+
+.upd-count.upd-count-rounded {
+  line-height: 1em !important;
+  background: #F3702E;
+  border-radius: 5px;
+  color: #FFFFFF;
+  margin-left: 5px;
+  padding: 3px;
+}
+.upd-count.upd-count-0 {
+  display: none;
 }
 
 /**********************************************************************
@@ -1351,8 +1382,8 @@ html, body {
   }
 }
 
-/** 
- * Fonts - The font classes default, heading and code can be used for global headers and code font.
+/**
+ * Standard Fonts - The font classes default, heading and code can be used for global headers and code font.
  */
 .font.font-default {
   font-family: clear-sans-L, Helvetica, sans-serif;
@@ -1365,7 +1396,7 @@ html, body {
 }
 
 /**
- * Font Size - The font size for headers h1 to h6, default and small.
+ * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 .font-size.font-size-large-1 {
   font-size: 2.5em;
@@ -1393,6 +1424,22 @@ html, body {
 }
 .font-size.font-size-tiny {
   font-size: 0.65em;
+}
+
+.line-height {
+  line-height: 1em;
+}
+.line-height.line-height-small {
+  line-height: 1.5em;
+}
+.line-height.line-height-medium {
+  line-height: 2em;
+}
+.line-height.line-height-large {
+  line-height: 2.5em;
+}
+.line-height.line-height-xlarge {
+  line-height: 3em;
 }
 
 h1, .h1 {
@@ -1568,6 +1615,22 @@ Dependencies: variables, mixins
   display: inline-block !important;
   float: none !important;
 }
+.row.row-inline .col3 {
+  width: 30%;
+}
+@media only screen and (max-width: 1024px) {
+  .row.row-inline.max-cols-50 > .col3 {
+    width: 47%;
+  }
+  .row.row-inline.max-cols-100 > .col3 {
+    width: 98%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-100 > .col3 {
+    width: 98%;
+  }
+}
 
 .col, .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12, .col3x2, .col4x2, .col4x3, .col5x2, .col5x3, .col5x4, .col6x2, .col6x3, .col6x4, .col6x5, .col12x2, .col12x3, .col12x4, .col12x5, .col12x6, .col12x7, .col12x8, .col12x9, .col12x10, .col12x11 {
   display: block;
@@ -1650,6 +1713,9 @@ Dependencies: variables, mixins
 
   .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
     width: 48%;
+  }
+  .max-cols-50 > .col:nth-child(odd) {
+    clear: both;
   }
 
   .max-cols-100 > .col1, .max-cols-100 > .col2, .max-cols-100 > .col3, .max-cols-100 > .col4, .max-cols-100 > .col5, .max-cols-100 > .col6, .max-cols-100 > .col7, .max-cols-100 > .col8, .max-cols-100 > .col9, .max-cols-100 > .col10, .max-cols-100 > .col11, .max-cols-100 > .col12, .max-cols-100 > .col13, .max-cols-100 > .col14, .max-cols-100 > .col15 {
@@ -1878,6 +1944,9 @@ Dependencies: variables, mixins
 @media only screen and (max-width: 1024px) {
   .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
     width: 50%;
+  }
+  .max-cols-50 > .colf:nth-child(odd) {
+    clear: both;
   }
 
   .max-cols-100 > .colf1, .max-cols-100 > .colf2, .max-cols-100 > .colf3, .max-cols-100 > .colf4, .max-cols-100 > .colf5, .max-cols-100 > .colf6, .max-cols-100 > .colf7, .max-cols-100 > .colf8, .max-cols-100 > .colf9, .max-cols-100 > .colf10, .max-cols-100 > .colf11, .max-cols-100 > .colf12, .max-cols-100 > .colf13, .max-cols-100 > .colf14, .max-cols-100 > .colf15 {
@@ -2161,7 +2230,18 @@ Dependencies: variables, mixins
   position: absolute;
 }
 
-.padding.padding-small-all {
+.padding.padding-default {
+  padding: 0.25rem;
+}
+.padding.padding-default-v {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.padding.padding-default-h {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+.padding.padding-small {
   padding: 0.5rem;
 }
 .padding.padding-small-v {
@@ -2172,7 +2252,7 @@ Dependencies: variables, mixins
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
-.padding.padding-medium-all {
+.padding.padding-medium {
   padding: 1rem;
 }
 .padding.padding-medium-v {
@@ -2183,7 +2263,7 @@ Dependencies: variables, mixins
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.padding.padding-large-all {
+.padding.padding-large {
   padding: 1.5rem;
 }
 .padding.padding-large-v {
@@ -2194,7 +2274,7 @@ Dependencies: variables, mixins
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-.padding.padding-xlarge-all {
+.padding.padding-xlarge {
   padding: 2rem;
 }
 .padding.padding-xlarge-v {
@@ -2204,6 +2284,62 @@ Dependencies: variables, mixins
 .padding.padding-xlarge-h {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.margin.margin-default {
+  margin: 0.25rem;
+}
+.margin.margin-default-v {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.margin.margin-default-h {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+.margin.margin-small {
+  margin: 0.5rem;
+}
+.margin.margin-small-v {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.margin.margin-small-h {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.margin.margin-medium {
+  margin: 1rem;
+}
+.margin.margin-medium-v {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.margin.margin-medium-h {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.margin.margin-large {
+  margin: 1.5rem;
+}
+.margin.margin-large-v {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.margin.margin-large-h {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.margin.margin-xlarge {
+  margin: 2rem;
+}
+.margin.margin-xlarge-v {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.margin.margin-xlarge-h {
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 html, body {
@@ -2323,7 +2459,7 @@ label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[ty
   width: 250px !important;
 }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-checkbox, .cmt-switch {
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
@@ -2333,17 +2469,17 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   color: #363636;
   text-align: left;
 }
-label:hover, input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
+input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover, textarea:hover, select:hover, .cmt-checkbox:hover, .cmt-switch:hover {
   background-color: #E9E9E9;
   color: #363636;
 }
-label:focus, input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus, .cmt-checkbox:focus, .cmt-switch:focus {
   color: #4F688E;
   -webkit-box-shadow: inset 0 0 0 1px #E1E1E1;
   -moz-box-shadow: inset 0 0 0 1px #E1E1E1;
   box-shadow: inset 0 0 0 1px #E1E1E1;
 }
-label:disabled, input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
+input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"]:disabled, textarea:disabled, select:disabled, .cmt-checkbox:disabled, .cmt-switch:disabled {
   background-color: #CCCCCC;
   color: #909090;
 }
@@ -2385,6 +2521,11 @@ label {
   clear: both;
   width: 40%;
   float: left;
+}
+
+.required .control-label:after {
+  content: " *";
+  color: #B42A1A;
 }
 
 .element-40 label {
@@ -2494,6 +2635,13 @@ label {
   line-height: 1.25;
   margin: 0.25em 0;
   padding: 0.25em;
+}
+.frm-icon-element.reverse input[type="text"], .frm-icon-element.reverse input[type="email"], .frm-icon-element.reverse input[type="password"], .frm-icon-element.reverse textarea, .frm-icon-element.reverse select, .frm-icon-element.reverse input[type="submit"], .frm-icon-element.reverse input[type="button"], .frm-icon-element.reverse button {
+  padding-left: 0.25em;
+  padding-right: 1.75em;
+}
+.frm-icon-element.reverse .icon, .frm-icon-element.reverse .cmti {
+  right: 0;
 }
 
 .frm-split-40-60 .frm-icon-element {
@@ -2875,6 +3023,13 @@ Dependencies: variables, mixins, transitions, transformation
 
 .frm-split-40-60 .frm-icon-element .btn {
   float: none;
+}
+
+.cmt-click {
+  cursor: pointer;
+}
+.cmt-click.disabled {
+  cursor: default;
 }
 
 /**********************************************************************

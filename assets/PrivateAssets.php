@@ -29,7 +29,8 @@ class PrivateAssets extends AssetBundle {
 	// Load Javascript
     public $js      = [
         'scripts/main.js',
-        'scripts/applications.js'
+        'scripts/applications.js',
+        'scripts/search.js'
     ];
 
 	// Position to load Javascript

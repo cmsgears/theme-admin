@@ -1,9 +1,9 @@
-#tabs-default {
+.tabs-default {
     padding-top: 2rem;
-    
+
     & > ul li {
-        display: inline-block;        
-       
+        display: inline-block;
+
         @include responsive-max( screen-mobile-large ) {
             display: none;
         }
@@ -22,5 +22,5 @@
 
 .ui-tabs-active .btn {
     background-color: $color-primary-l !important;
-    color: $color-btn;   
+    color: $color-btn;
 }

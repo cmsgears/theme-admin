@@ -5,11 +5,9 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
-	
+
 	initSidebar();
-	
-	initSortSearch();
-	
+
 	initTemplates();
 });
 
@@ -78,7 +76,7 @@ function initListeners() {
 
 	// Popout Trigger
 	jQuery( ".btn-popout" ).click( function() {
-		
+
 		jQuery( ".btn-popout" ).removeClass( "active" );
 		jQuery(this).toggleClass( "active" );
 		var popoutId	= "#" + jQuery( this ).attr( "popout" );
@@ -102,11 +100,11 @@ function initListeners() {
 
 		jQuery( ".cscroller" ).mCustomScrollbar( { autoHideScrollbar: true } );
 	}
-	
+
 	//Profile tabs
 	if( jQuery().tabs ) {
 
-		jQuery( '#tabs-default' ).tabs();	
+		jQuery( '.tabs-default' ).tabs();
 	}
 }
 
@@ -143,7 +141,7 @@ function activateSettingsBox( parentElement ) {
 
 	var parent 	= parentElement.closest( ".box-collapsible" );
 	var btn		= parent.find( ".btn-collapse" );
-	
+
 	btn.unbind( "click" );
 
 	btn.click( function() {
@@ -159,36 +157,8 @@ function activateSettingsBox( parentElement ) {
 			content.slideDown( "slow" );
 		}
 	});
-	
+
 	parent.find( ".box-form" ).cmtFormInfo();
-}
-
-// Sort/Search ---------------------
-
-function initSortSearch() {
-	
-	jQuery( "#btn-search" ).click( function() {
-		
-		searchTable();
-	});
-}
-
-function searchTable() {
-
-	var searchTerms	= jQuery( "#search-terms" ).val();
-	var location 	= "" + window.location;
-
-	if( null != searchTerms && searchTerms.length > 0 ) {
-
-		window.location = cmt.utils.data.updateUrlParam( location, 'search', searchTerms );
-	}
-}
-
-function sortTable( order ) {
-
-	var location 	= "" + window.location;
-
-	window.location = location.urlParams( 'sort', order );
 }
 
 // Templates -----------------------

@@ -19,5 +19,7 @@
 	<div class="clearfix">
 		<div class="col3">Phone</div><div class="col3x2">{{phone}}</div>
 	</div>
-
+	<div class="note">
+		Note: Click on edit icon to change address.
+	</div>
 </script>

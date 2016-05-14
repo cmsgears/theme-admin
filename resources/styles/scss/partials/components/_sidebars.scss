@@ -2,6 +2,21 @@
     background-color: $color-secondary-l;
 }
 
+#sidebar-main {
+
+    .collapsible-tab-header .upd-count {
+        margin-right: 2em;
+    }
+}
+
+
+
+
+
+
+
+
+
 @include responsive-max( screen-tablet-large ) {
 
     .sidebar-filler {
@@ -18,9 +33,9 @@
     }
 }
 
-@include responsive-max( screen-mobile-large ) { 
+@include responsive-max( screen-mobile-large ) {
 
-    .sidebar-main {        
-        top: 120px;        
+    .sidebar-main {
+        top: 120px;
     }
 }

@@ -4,15 +4,16 @@ jQuery(document).ready( function() {
 
 	mainApp		= new cmt.api.Application( { basePath: ajaxUrl } );
 
-	var appControllers				= [];
+	var appControllers					= [];
 
-	appControllers[ 'form' ] 		= 'FormController';
-	appControllers[ 'newsletter' ] 	= 'NewsletterController';
-	appControllers[ 'user' ]		= 'UserController';
-	appControllers[ 'settings' ]	= 'SettingsController';
-	appControllers[ 'gallery' ]		= 'GalleryController';
-	appControllers[ 'tag' ]			= 'TagController';
-	appControllers[ 'permission' ]	= 'PermissionController';
+	appControllers[ 'form' ] 			= 'FormController';
+	appControllers[ 'newsletter' ] 		= 'NewsletterController';
+	appControllers[ 'user' ]			= 'UserController';
+	appControllers[ 'settings' ]		= 'SettingsController';
+	appControllers[ 'gallery' ]			= 'GalleryController';
+	appControllers[ 'tag' ]				= 'TagController';
+	appControllers[ 'permission' ]		= 'PermissionController';
+	appControllers[ 'notification' ]	= 'NotificationController';
 
 	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
 		app: mainApp,
@@ -70,6 +71,33 @@ UserController.prototype.accountActionPost = function( success, requestElement, 
 		parent.find( ".wrap-info" ).html( output );
 
 		parent.find( ".btn-edit" ).click();
+	}
+};
+
+UserController.prototype.settingsActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var source 		= document.getElementById( 'userSettingsTemplate' ).innerHTML;
+		var template 	= Handlebars.compile( source );
+		var data		= { settings: response.data };
+		var output 		= template( data );
+		var parent		= requestElement.closest( '.box-form' );
+
+		parent.find( '.wrap-info' ).html( output );
+
+		parent.find( '.btn-edit' ).click();
+	}
+};
+
+UserController.prototype.provinceActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		jQuery( '.frm-province .cmt-select-wrap select' ).remove();
+		jQuery( '.frm-province .cmt-select-wrap' ).empty();
+		jQuery( '.frm-province ' ).html( "<label>State/Province</label><select id='wrap-province' class='element-60 cmt-select cmt-change' name='Address[provinceId]'>" + response.data.provinceList + "</select>" );
+		jQuery( '.frm-province .cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
 	}
 };
 
@@ -200,6 +228,64 @@ PermissionController	= function() {};
 PermissionController.inherits( cmt.api.controllers.BaseController );
 
 PermissionController.prototype.matrixActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		location.reload( true );
+	}
+};
+
+// NotificationController -----------------------------------
+
+NotificationController	= function() {};
+
+NotificationController.inherits( cmt.api.controllers.BaseController );
+
+NotificationController.prototype.toggleReadActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		location.reload( true );
+
+		/*
+		var clickBtn	= requestElement.find( '.cmt-click' );
+		var count		= response.data.unread;
+		var less		= count - 1;
+		var more		= count + 1;
+
+		if( response.data.consumed ) {
+
+			clickBtn.attr( 'title', 'Mark Unread' );
+			clickBtn.removeClass( 'cmti-envelope' );
+			clickBtn.addClass( 'cmti-envelope-o' );
+
+			jQuery( ".upd-count-notification-all" ).removeClass( "upd-count-" + more );
+			jQuery( ".upd-count-notification-all" ).addClass( "upd-count-" + count );
+		}
+		else {
+
+			clickBtn.attr( 'title', 'Mark Read' );
+			clickBtn.removeClass( 'cmti-envelope-o' );
+			clickBtn.addClass( 'cmti-envelope' );
+
+			jQuery( ".upd-count-notification-all" ).removeClass( "upd-count-" + less );
+			jQuery( ".upd-count-notification-all" ).addClass( "upd-count-" + count );
+		}
+
+		jQuery( ".upd-count-notification-all" ).html( count );
+		*/
+	}
+};
+
+NotificationController.prototype.trashActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		location.reload( true );
+	}
+};
+
+NotificationController.prototype.deleteActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
