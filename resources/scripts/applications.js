@@ -14,6 +14,7 @@ jQuery(document).ready( function() {
 	appControllers[ 'tag' ]				= 'TagController';
 	appControllers[ 'permission' ]		= 'PermissionController';
 	appControllers[ 'notification' ]	= 'NotificationController';
+	appControllers[ 'category' ]		= 'CategoryController';
 
 	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
 		app: mainApp,
@@ -290,5 +291,115 @@ NotificationController.prototype.deleteActionPost = function( success, requestEl
 	if( success ) {
 
 		location.reload( true );
+	}
+};
+
+// CategoryController ---------------------------------------
+
+CategoryController	= function() {};
+
+CategoryController.inherits( cmt.api.controllers.BaseController );
+
+CategoryController.prototype.autoSearchActionPre = function( requestElement, response ) {
+
+	var keyword	= this.requestTrigger.val();
+
+	if( keyword.length <= 0 ) {
+
+		var widget		= requestElement.parent();
+		var itemList	= widget.find( '.auto-map .item-list' );
+
+		itemList.slideUp();
+
+		return false;
+	}
+
+	return true;
+};
+
+CategoryController.prototype.autoSearchActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var data			= response.data;
+		var listHtml		= '';
+		var widget			= requestElement.parent();
+		var itemList		= widget.find( '.auto-map .item-list' );
+
+		for( var key in data ) {
+
+			listHtml += "<li data-id='" + key + "' class='cmt-click'>" + data[ key ] + "</li>";
+		}
+
+		if( listHtml.length == 0 ) {
+
+			listHtml	= '<li>No matching items found.</li>';
+		}
+
+		itemList.html( listHtml );
+
+		itemList.slideDown();
+
+		mainApp.registerElements( widget.find( '.auto-map' ) );
+	}
+};
+
+CategoryController.prototype.mapModelCategoryActionPre = function( requestElement, response ) {
+
+	var categoryId	= this.requestTrigger.attr( 'data-id' );
+	categoryId		= parseInt( categoryId );
+
+	if( categoryId > 0 ) {
+
+		requestElement.find( 'input[name=categoryId]').val( categoryId );
+
+		return true;
+	}
+
+	return false;
+};
+
+CategoryController.prototype.mapModelCategoryActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var data			= response.data;
+		var listHtml		= '';
+		var widget			= requestElement.parent();
+		var itemList		= widget.find( '.auto-mapped .item-list' );
+
+		for( var key in data ) {
+
+			listHtml += "<li><span class='value'>" + data[ key ] + "</span><i data-id='" + key + "' class='cmti cmti-close close cmt-click'></i></li>";
+		}
+
+		itemList.html( listHtml );
+
+		mainApp.registerElements( widget.find( '.auto-mapped' ) );
+
+		widget.find( '.auto-map .item-list' ).slideUp();
+	}
+};
+
+CategoryController.prototype.deleteModelCategoryActionPre = function( requestElement, response ) {
+
+	var categoryId	= this.requestTrigger.attr( 'data-id' );
+	categoryId		= parseInt( categoryId );
+
+	if( categoryId > 0 ) {
+
+		requestElement.find( 'input[name=categoryId]').val( categoryId );
+
+		return true;
+	}
+
+	return false;
+};
+
+CategoryController.prototype.deleteModelCategoryActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		this.requestTrigger.parent().remove();
 	}
 };

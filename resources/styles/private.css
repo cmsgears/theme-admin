@@ -1159,6 +1159,10 @@ html, body {
   float: right !important;
 }
 
+.clear-none {
+  clear: none !important;
+}
+
 .float-none {
   float: none !important;
 }
@@ -2876,6 +2880,33 @@ Dependencies: variables, mixins, transitions, transformation
   margin-left: 3.5em;
 }
 
+.auto-suggest {
+  position: relative;
+}
+.auto-suggest .wrap-auto-list {
+  position: absolute;
+  top: 2em;
+  left: 0;
+  display: none;
+  width: 100%;
+  z-index: 1000000;
+  background-color: #cccccc;
+  color: #5c5c5c;
+}
+.auto-suggest .wrap-auto-list .list-item, .auto-suggest .wrap-auto-list li {
+  background-color: #cccccc;
+  color: #5c5c5c;
+  cursor: pointer;
+}
+.auto-suggest .wrap-auto-list .list-item:nth-child(even), .auto-suggest .wrap-auto-list li:nth-child(even) {
+  background-color: white;
+  color: #101010;
+}
+.auto-suggest .wrap-auto-list .list-item:hover, .auto-suggest .wrap-auto-list li:hover {
+  background-color: #293846;
+  color: #96B0D6;
+}
+
 .btn.btn-25 {
   width: 25% !important;
 }
@@ -4045,6 +4076,29 @@ Dependencies: variables, variables-ext, mixins
   display: inline-block;
   margin: 1em;
   padding: 0.5em 1.5em;
+}
+
+.box-mapper-auto .auto-map {
+  position: relative;
+}
+.box-mapper-auto .auto-map .item-list {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+.box-mapper-auto .auto-map .item-list li {
+  background-color: #cccccc;
+  color: #5c5c5c;
+}
+.box-mapper-auto .auto-mapped .item-list li {
+  background-color: #cccccc;
+  color: #5c5c5c;
+  display: inline-block;
+  padding: 0.5em;
+  margin: 0.25em;
+}
+.box-mapper-auto .auto-mapped .item-list li .close {
+  margin-left: 0.5em;
 }
 
 /* == Content Header ============================================ */
