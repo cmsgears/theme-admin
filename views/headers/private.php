@@ -16,7 +16,10 @@ $menuItems = [
 	    [ 'label' => 'Logout', 'url' => [ '/logout' ] ]
 	];
 
-$counts	= Yii::$app->updateManager->getCounts();
+$adminStats		= Yii::$app->eventManager->getAdminStats();
+$notifications	= $adminStats[ 'notifications' ];
+$reminders		= $adminStats[ 'reminders' ];
+$activities		= $adminStats[ 'activities' ];
 ?>
 <header id="header-main" class="header header-absolute header-private max-cols-50 clearfix">
 	<div class="colf12x6" clearfix>
@@ -31,19 +34,19 @@ $counts	= Yii::$app->updateManager->getCounts();
 		 <div class="colf15x3">
 		 	<span class="btn btn-black btn-popout" popout="popout-notification" title="Notifications">
 				<span class="cmti cmti-flag"></span>
-				<span class="upd-count upd-count-rounded upd-count-notification-all circled1 upd-count-<?= $counts[ 'notificationCount' ] ?>"><?= $counts[ 'notificationCount' ] ?></span>
+				<span class="upd-count upd-count-rounded upd-count-notification-all circled1 upd-count-<?= $adminStats[ 'notificationCount' ] ?>"><?= $adminStats[ 'notificationCount' ] ?></span>
 			</span>
 		 </div>
 		 <div class="colf15x3">
 		 	<span class="btn btn-black btn-popout" popout="popout-reminder" title="Reminders">
 				<span class="cmti cmti-bell"></span>
-				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $counts[ 'reminderCount' ] ?>"><?= $counts[ 'reminderCount' ] ?></span>
+				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $adminStats[ 'reminderCount' ] ?>"><?= $adminStats[ 'reminderCount' ] ?></span>
 			</span>
 		 </div>
 		 <div class="colf15x3">
 		 	<span class="btn btn-black btn-popout" popout="popout-activity" title="Activities">
 				<span class="cmti cmti-widget"></span>
-				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $counts[ 'activityCount' ] ?>"><?= $counts[ 'activityCount' ] ?></span>
+				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $adminStats[ 'activityCount' ] ?>"><?= $adminStats[ 'activityCount' ] ?></span>
 			</span>
 		 </div>
 		 <div class="colf15x6">
@@ -56,9 +59,7 @@ $counts	= Yii::$app->updateManager->getCounts();
 		 	<div id="popout-notification" class="popout colf12x6">
 			 	<ul>
 			 		<?php
-			 			if( isset( Yii::$app->updateManager->notifications ) && count( Yii::$app->updateManager->notifications ) > 0 ) {
-
-							$notifications	= Yii::$app->updateManager->notifications;
+			 			if( count( $notifications ) > 0 ) {
 
 							foreach ( $notifications as $notification ) {
 
@@ -73,12 +74,32 @@ $counts	= Yii::$app->updateManager->getCounts();
 			</div>
 			<div id="popout-reminder" class="popout colf12x6">
 			 	<ul>
-					<li>No reminders found.</li>
+			 		<?php
+			 			if( count( $reminders ) > 0 ) {
+
+							foreach ( $reminders as $reminder ) {
+
+								echo $reminder->toHtml();
+							}
+			 		?>
+			 		<?php } else { ?>
+			 		<li>No reminders found.</li>
+			 		<?php } ?>
 			 	</ul>
 			</div>
 			<div id="popout-activity" class="popout colf12x6">
 			 	<ul>
-					<li>No activities found.</li>
+			 		<?php
+			 			if( count( $activities ) > 0 ) {
+
+							foreach ( $activities as $activity ) {
+
+								echo $activity->toHtml();
+							}
+			 		?>
+			 		<?php } else { ?>
+			 		<li>No activities found.</li>
+			 		<?php } ?>
 			 	</ul>
 			</div>
 			<div id="popout-user" class="popout colf15x6">
