@@ -1,7 +1,4 @@
 <?php
-// Yii Imports
-use \Yii;
-
 // CMG Imports
 use themes\admin\assets\PrivateAssets;
 
@@ -25,7 +22,7 @@ $user			= Yii::$app->user->getIdentity();
         <?php $this->beginBody(); ?>
 		<div id='pre-loader-main' class='max-area-cover'>
 			<div class='valign-center cmti cmti-5x cmti-spinner-1 spin'></div>
-		</div>		
+		</div>
 		<?php include "$themePath/views/headers/private.php"; ?>
         <div class='container container-main container-private max-cols-100 wrap-col-filler clearfix'>
 			<div class='sidebar-filler col-filler colf12x2'></div>

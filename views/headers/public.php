@@ -1,5 +1,4 @@
 <?php
-use \Yii;
 use yii\helpers\Html;
 ?>
 <header id="header-main" class="header header-absolute header-public">

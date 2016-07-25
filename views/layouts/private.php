@@ -1,7 +1,4 @@
 <?php
-// Yii Imports
-use \Yii;
-
 // CMG Imports
 use themes\admin\assets\PrivateAssets;
 

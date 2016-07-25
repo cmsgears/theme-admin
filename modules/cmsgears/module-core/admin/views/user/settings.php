@@ -1,6 +1,5 @@
 <?php
 // Yii Imports
-use \Yii;
 use yii\widgets\ActiveForm;
 
 // CMG Imports
