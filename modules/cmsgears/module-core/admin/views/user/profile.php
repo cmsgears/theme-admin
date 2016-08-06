@@ -8,17 +8,16 @@ use cmsgears\core\common\config\CoreGlobal;
 
 use cmsgears\core\common\models\resources\Address;
 
-use cmsgears\core\common\services\entities\CountryService;
-use cmsgears\core\common\services\entities\ProvinceService;
-use cmsgears\core\common\services\mappers\ModelAddressService;
+use cmsgears\files\widgets\AvatarUploader;
 
 $coreProperties = $this->context->getCoreProperties();
 $this->title 	= 'Profile | ' . $coreProperties->getSiteTitle();
 
-$country		= CountryService::findByCode( 'US' );
-$countryList	= [ $country->id => $country->name ];
-$provinceList	= ProvinceService::getMapByCountryId( $country->id );
-$addressList	= ModelAddressService::findByParent( $user->id, CoreGlobal::TYPE_USER );
+$user			= Yii::$app->user->getIdentity();
+
+$countryList	= Yii::$app->factory->get( 'countryService' )->getIdNameMap();
+$provinceList	= Yii::$app->factory->get( 'provinceService' )->getMapByCountryId( key( $countryList ) );
+$addressList	= Yii::$app->factory->get( 'modelAddressService' )->getByParent( $user->id, CoreGlobal::TYPE_USER );
 $address 		= new Address();
 ?>
 <div class="tabs-default">
@@ -103,6 +102,12 @@ $address 		= new Address();
 				<div class="message"></div>
 			</form>
 		</div>
+		<h4>Avatar</h4>
+		<?= AvatarUploader::widget([
+				'options' => [ 'id' => 'avatar-user', 'class' => 'file-uploader' ],
+				'model' => $user->avatar, 'postAction' => true,
+				'postActionUrl' => "user/avatar?id=$user->id"
+		]); ?>
 	</div>
 
 	<div id="tabs-2" class="box-form box-form-regular content-80 max-content-100">
@@ -178,13 +183,13 @@ $address 		= new Address();
 					<div class="col12x5">Line 2</div><div class="col12x7"><?= $address->line2 ?></div>
 				</div>
 				<div class="info-row clearfix">
-					<div class="col12x5">City</div><div class="col12x7"><?= $address->city ?></div>
+					<div class="col12x5">City</div><div class="col12x7"><?= $address->cityName ?></div>
 				</div>
 				<div class="info-row clearfix">
-					<div class="col12x5">Country</div><div class="col12x7"><?= $address->country->name ?></div>
+					<div class="col12x5">Country</div><div class="col12x7"><?= $address->countryName ?></div>
 				</div>
 				<div class="info-row clearfix">
-					<div class="col12x5">State/Province</div><div class="col12x7"><?= $address->province->name ?></div>
+					<div class="col12x5">State/Province</div><div class="col12x7"><?= $address->provinceName ?></div>
 				</div>
 				<div class="info-row clearfix">
 					<div class="col12x5">Phone</div><div class="col12x7"><?= $address->phone ?></div>
@@ -196,7 +201,7 @@ $address 		= new Address();
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="address" action="user/update-address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="address" action="user/address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>
@@ -213,8 +218,8 @@ $address 		= new Address();
 				</div>
 				<div class="frm-field">
 					<label>City</label>
-					<input type="text" name="Address[city]" placeholder="City" value="<?= $address->city ?>" />
-					<span  class="error" cmt-error="city"></span>
+					<input type="text" name="Address[cityName]" placeholder="City" value="<?= $address->cityName ?>" />
+					<span  class="error" cmt-error="cityName"></span>
 				</div>
 				<div class="frm-field">
 					<label>Country</label>

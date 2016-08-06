@@ -29,13 +29,13 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Show Address</label>
-					<input type="hidden" name="ModelAttribute[0][name]" value="show_address" />
-					<input type="hidden" name="ModelAttribute[0][type]" value="<?= CoreGlobal::SETTINGS_PRIVACY ?>" />
-					<input type="hidden" name="ModelAttribute[0][valueType]" value="flag" />
+					<input type="hidden" name="ModelMeta[0][name]" value="show_address" />
+					<input type="hidden" name="ModelMeta[0][type]" value="<?= CoreGlobal::SETTINGS_PRIVACY ?>" />
+					<input type="hidden" name="ModelMeta[0][valueType]" value="flag" />
 					<span class='cmt-switch cmt-checkbox'>
 						<input id="privacy_show_address" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for='privacy_show_address'></label>
-						<input type="hidden" name="ModelAttribute[0][value]" value="<?php if( isset( $privacy[ 'show_address' ] ) ) echo $privacy[ 'show_address' ]->value; ?>" />
+						<input type="hidden" name="ModelMeta[0][value]" value="<?php if( isset( $privacy[ 'show_address' ] ) ) echo $privacy[ 'show_address' ]->value; ?>" />
 					</span>
 				</div>
 				<div class="frm-actions align align-center">
@@ -60,13 +60,13 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Receive Mail</label>
-					<input type="hidden" name="ModelAttribute[0][name]" value="receive_mail" />
-					<input type="hidden" name="ModelAttribute[0][type]" value="<?= CoreGlobal::SETTINGS_NOTIFICATION ?>" />
-					<input type="hidden" name="ModelAttribute[0][valueType]" value="flag" />
+					<input type="hidden" name="ModelMeta[0][name]" value="receive_mail" />
+					<input type="hidden" name="ModelMeta[0][type]" value="<?= CoreGlobal::SETTINGS_NOTIFICATION ?>" />
+					<input type="hidden" name="ModelMeta[0][valueType]" value="flag" />
 					<span class='cmt-switch cmt-checkbox'>
 						<input id="notify_receive_mail" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for='notify_receive_mail'></label>
-						<input type="hidden" name="ModelAttribute[0][value]" value="<?php if( isset( $notification[ 'receive_mail' ] ) ) echo $notification[ 'receive_mail' ]->value; ?>" />
+						<input type="hidden" name="ModelMeta[0][value]" value="<?php if( isset( $notification[ 'receive_mail' ] ) ) echo $notification[ 'receive_mail' ]->value; ?>" />
 					</span>
 				</div>
 				<div class="frm-actions align align-center">
@@ -91,13 +91,13 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Receive Mail</label>
-					<input type="hidden" name="ModelAttribute[0][name]" value="receive_mail" />
-					<input type="hidden" name="ModelAttribute[0][type]" value="<?= CoreGlobal::SETTINGS_REMINDER ?>" />
-					<input type="hidden" name="ModelAttribute[0][valueType]" value="flag" />
+					<input type="hidden" name="ModelMeta[0][name]" value="receive_mail" />
+					<input type="hidden" name="ModelMeta[0][type]" value="<?= CoreGlobal::SETTINGS_REMINDER ?>" />
+					<input type="hidden" name="ModelMeta[0][valueType]" value="flag" />
 					<span class='cmt-switch cmt-checkbox'>
 						<input id="remind_receive_mail" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for='remind_receive_mail'></label>
-						<input type="hidden" name="ModelAttribute[0][value]" value="<?php if( isset( $reminder[ 'receive_mail' ] ) ) echo $reminder[ 'receive_mail' ]->value; ?>" />
+						<input type="hidden" name="ModelMeta[0][value]" value="<?php if( isset( $reminder[ 'receive_mail' ] ) ) echo $reminder[ 'receive_mail' ]->value; ?>" />
 					</span>
 				</div>
 				<div class="frm-actions align align-center">

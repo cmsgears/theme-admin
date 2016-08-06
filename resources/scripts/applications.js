@@ -326,9 +326,11 @@ CategoryController.prototype.autoSearchActionPost = function( success, requestEl
 		var widget			= requestElement.parent();
 		var itemList		= widget.find( '.auto-map .item-list' );
 
-		for( var key in data ) {
+		for( i = 0; i < data.length; i++ ) {
 
-			listHtml += "<li data-id='" + key + "' class='cmt-click'>" + data[ key ] + "</li>";
+			var obj = data[ i ];
+
+			listHtml += "<li class='cmt-click' data-id='" + obj.id + "'>" + obj.name + "</li>";
 		}
 
 		if( listHtml.length == 0 ) {
@@ -351,7 +353,7 @@ CategoryController.prototype.mapModelCategoryActionPre = function( requestElemen
 
 	if( categoryId > 0 ) {
 
-		requestElement.find( 'input[name=categoryId]').val( categoryId );
+		requestElement.find( 'input[name=categoryId]' ).val( categoryId );
 
 		return true;
 	}
@@ -368,9 +370,11 @@ CategoryController.prototype.mapModelCategoryActionPost = function( success, req
 		var widget			= requestElement.parent();
 		var itemList		= widget.find( '.auto-mapped .item-list' );
 
-		for( var key in data ) {
+		for( i = 0; i < data.length; i++ ) {
 
-			listHtml += "<li><span class='value'>" + data[ key ] + "</span><i data-id='" + key + "' class='cmti cmti-close close cmt-click'></i></li>";
+			var obj = data[ i ];
+
+			listHtml += "<li><span class='value'>" + obj.name + "</span><i data-id='" + obj.id + "' class='cmti cmti-close close cmt-click'></i></li>";
 		}
 
 		itemList.html( listHtml );
