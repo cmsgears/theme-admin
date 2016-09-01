@@ -221,13 +221,12 @@ $address 		= new Address();
 					<input type="text" name="Address[cityName]" placeholder="City" value="<?= $address->cityName ?>" />
 					<span  class="error" cmt-error="cityName"></span>
 				</div>
-				<div class="frm-field">
+				<div class="clearfix cmt-request" cmt-controller="address" cmt-action="province" action="ngocore/address/province-options" cmt-keep>
 					<label>Country</label>
-					<?= Html::dropDownList( 'Address[countryId]', $address->countryId, $countryList, [ 'class' => 'element-60 cmt-select' ] ); ?>
+					<?= Html::dropDownList( 'Address[countryId]', $address->countryId, $countryList, [ 'class' => 'element-60 cmt-select cmt-change' ] ); ?>
 					<span  class="error" cmt-error="countryId"></span>
 				</div>
-
-				<div class="frm-field frm-province">
+				<div class="frm-field frm-province  wrap-province">
 					<label>State/Province</label>
 					<?= Html::dropDownList( 'Address[provinceId]', $address->provinceId, $provinceList, [ 'class' => 'element-60 cmt-select', 'id' => 'wrap-province' ] ); ?>
 					<span  class="error" cmt-error="provinceId"></span>

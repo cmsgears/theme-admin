@@ -15,6 +15,7 @@ jQuery(document).ready( function() {
 	appControllers[ 'permission' ]		= 'PermissionController';
 	appControllers[ 'notification' ]	= 'NotificationController';
 	appControllers[ 'category' ]		= 'CategoryController';
+	appControllers[ 'address' ]			= 'AddressController';
 
 	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
 		app: mainApp,
@@ -405,5 +406,33 @@ CategoryController.prototype.deleteModelCategoryActionPost = function( success, 
 	if( success ) {
 
 		this.requestTrigger.parent().remove();
+	}
+};
+
+// AddressController ----------------------------------------
+
+AddressController	= function() {};
+
+AddressController.inherits( cmt.api.controllers.DefaultController );
+
+AddressController.prototype.provinceActionPre = function( requestElement ) {
+
+	this.requestData = { countryId: requestElement.find( 'select' ).val() };
+
+	return true;
+};
+
+AddressController.prototype.provinceActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var selectWrap	= requestElement.parent().find( '.wrap-province .cmt-select-wrap' );
+
+		if( response.data.length <= 0 ) {
+
+			response.data	= '<option value="0">Choose Province</option>';
+		}
+
+		jQuery.fn.cmtSelect.resetSelect( selectWrap, response.data );
 	}
 };
