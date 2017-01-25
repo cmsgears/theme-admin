@@ -1,17 +1,6 @@
 <footer class="footer">
-	<div class="content-footer clearfix">
-		<div class="col col12x3"></div>	        		
-    	<div class="col col12x6">
-			<p>Copyright © 2015-2016 <?=$coreProperties->getSiteName()?>. All Rights Reserved.</p>
-		</div>
-		<div class="col col12x3">
-			<ul class="social-icons">
-				<li class="facebook-icon"> </li>
-				<li class="twitter-icon"> </li>
-				<li class="linkedin-icon"> </li>
-				<li class="gmail-icon"> </li>
-			</ul>
-		</div>
+	<div class="content-footer">
+		<p class="align align-center">Copyright © 2015-2016 <?=$coreProperties->getSiteName()?>. All Rights Reserved.</p>
 	</div>
 </footer>
 

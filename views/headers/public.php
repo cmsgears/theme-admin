@@ -1,9 +1,6 @@
 <?php
-use \Yii;
 use yii\helpers\Html;
 ?>
-<header class="header header-public">
-    <div class="header-content clearfix">
-        <?=Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null );?>
-    </div>
+<header id="header-main" class="header header-absolute header-public">
+	<?= Html::a( "<img class='logo' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null )?>
 </header>

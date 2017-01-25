@@ -1,0 +1,51 @@
+.block {
+
+    .block-wrap-content {
+          height: 100%;
+    }
+}
+
+// Public block used for system pages having forms
+#block-public {
+    padding-bottom: 2rem;
+    padding-top: 7em;
+
+    .block-content {
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
+        width: 450px;
+        margin: 0 auto;
+        padding: 2rem;
+
+        a {
+            color: $color-btn;
+        }
+        
+        p {
+            font-size: $font-size-8;
+        }
+
+        h2 {
+            color: $color-orange;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        @include responsive-max( screen-mobile-large ) {
+
+            //background-color: $color-transparent-white;
+            width: 90%;
+        }
+    }
+
+    @include responsive-max( screen-mobile-large ) {
+        padding-top: 140px;
+    }
+
+    @include responsive-min( screen-desktop-large ) {
+
+        .block-content {
+            @include valign-center;
+        }
+    }
+}

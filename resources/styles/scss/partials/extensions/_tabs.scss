@@ -1,0 +1,26 @@
+.tabs-default {
+    padding-top: 2rem;
+
+    & > ul li {
+        display: inline-block;
+
+        @include responsive-max( screen-mobile-large ) {
+            display: none;
+        }
+    }
+}
+
+.ui-helper-clearfix {
+    @extend %clearfix;
+}
+
+.ui-state-default .btn {
+    background-color: transparent !important;
+    color: $color-primary-text;
+    margin: 0 !important;
+}
+
+.ui-tabs-active .btn {
+    background-color: $color-primary-l !important;
+    color: $color-btn;
+}

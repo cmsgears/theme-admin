@@ -1,0 +1,71 @@
+.header-public {
+    background-color: $color-header;
+    color: $color-header-text;
+    text-align: center;
+    padding: 15px;
+
+    .logo {
+        height: 80px;
+        display: inline-block;
+        
+        @include responsive-max ( screen-tablet-large ) {
+            height: 60px;            
+        }
+        
+        @include responsive-max ( screen-mobile-large ) {
+            height: 40px;            
+        }
+    }
+}
+
+.header-private {
+    background-color: $color-header;
+    color: $color-header-text;
+
+    #btn-sidebar-main {
+        background-color: $color-black;
+        color: $color-secondary-text;
+        width: 80px;
+        float: left;
+        padding: 1rem 1rem;
+        @include transit-color-bkg-color( $transit-eio,$transit-time-medium );
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            width: 100%;            
+            text-align: center;
+            
+            .cmti-menu {
+                line-height: 1.5em;
+                font-size: $font-size-5;
+            }
+        }
+
+        &:hover {
+            background-color: $color-secondary-l;
+            color: $color-secondary-text-l;
+        }
+        
+        @include responsive-max ( screen-mobile-large ) {
+          
+            width: 24%;
+        }  
+    }
+
+    .logo {
+        width: 180px;
+        float: left;
+        padding: 0.6rem 1rem;
+        
+        @include responsive-max ( screen-tablet-large ) {
+            width: 134px;
+            padding: 0.8rem 1rem;
+        }
+        
+        @include responsive-max ( screen-mobile-large ) {
+            padding: 0.55rem 1rem;
+            float: right;
+        }
+    }
+}

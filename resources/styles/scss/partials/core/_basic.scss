@@ -1,0 +1,15 @@
+.upd-count {
+
+    &.upd-count-rounded {
+        line-height: 1em !important;
+        background: $color-orange;
+        border-radius: $size-medium;
+        color: $color-white;
+        margin-left: $size-medium;
+        padding: $size-small;
+    }
+
+    &.upd-count-0 {
+        display: none;
+    }
+}

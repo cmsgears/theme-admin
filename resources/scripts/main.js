@@ -1,19 +1,41 @@
-// global variables
-var fullContent = false;
-
-// initialise on page load
 jQuery( document ).ready( function() {
+
+	initPreloaders();
+
+	initCmgTools();
 
 	initListeners();
 
-	initSidebar();
-
-	initFullContent();
+	initTemplates();
 });
 
-// Default Listeners ---------------
+// Content Pre-loaders -------------
 
-function initListeners() {
+function initPreloaders() {
+
+	// Hide global pre-loader spinner
+	jQuery( '.container-main' ).imagesLoaded( { background: true }, function() {
+
+		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
+	});
+}
+
+// CMGTools ------------------------
+
+function initCmgTools() {
+
+	// Page Blocks
+	if( jQuery().cmtBlock ) {
+
+		jQuery( '.block' ).cmtBlock({
+			// Generic
+			fullHeight: true,
+			// Block Specific - Ignores generic
+			blocks: {
+				'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+			}
+		});
+	}
 
 	// File Uploader
 	if( jQuery().cmtFileUploader ) {
@@ -21,98 +43,146 @@ function initListeners() {
 		jQuery( '.file-uploader' ).cmtFileUploader();
 	}
 
-	// JQuery Date	
-	jQuery( ".jqdate" ).datepicker( { dateFormat: 'yy-mm-dd' } );
+	// Popups
+	if( jQuery().cmtPopup ) {
 
-	// Mobile Nav Icon
-	jQuery(".nav-mobile-icon").click( function() { 
+		jQuery( '.popup' ).cmtPopup();
+	}
 
-		jQuery(".nav-mobile").slideToggle('slow');
-	});
+	// Custom Select
+	if( jQuery().cmtSelect ) {
 
-	// Sorting
-	jQuery( ".icon-sort" ).click( function() {
-		
-		sortTable( jQuery( this ).attr( 'sort-order' ) );
-	});
+		jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
+	}
 
-	jQuery(".btn-edit-profile").click( function() {
+	// Custom Checkbox
+	if( jQuery().cmtCheckbox ) {
 
-		jQuery(this).hide();
-		jQuery(".frm-view-profile").hide();
-		jQuery(".frm-edit").removeClass("hidden");
-		
-	});
-}
+		jQuery( '.cmt-checkbox' ).cmtCheckbox();
+	}
 
-// Sidebar -------------------------
+	// Form with Info
+	if( jQuery().cmtFormInfo ) {
 
-// initialise sidebar accordion nature
-function initSidebar() {
+		jQuery( '.box-form' ).cmtFormInfo();
+	}
 
-	// Initialise Sidebar Accordion
-	jQuery( "#sidebar .collapsible-tab.has-children" ).click( function() {
+	// Collapsible Menu
+	if( jQuery().cmtCollapsibleMenu ) {
 
-		var child = jQuery( this ).children( ".collapsible-tab-content" );
-
-		if( !jQuery( this ).hasClass( "active" ) ) {
-
-			if( !child.hasClass( "expanded" ) ) {
-	
-				// Slide Down Slowly
-				jQuery( this ).addClass( "pactive" );
-				child.addClass( "expanded" );
-				child.slideDown( "slow" );
-			}
-			else {
-
-				// Slide Up Slowly
-				jQuery( this ).removeClass( "pactive" );
-				child.removeClass( "expanded" );
-				child.slideUp( "slow" );
-			}
-		}
-	});
-}
-
-// It slides up/down the sidebar to have more visible area for admin.
-function initFullContent() {
-
-	jQuery( ".nav-mobile-icon" ).click( function() { 
-		
-		if( fullContent ) {
-			
-			fullContent = false;
-			
-			jQuery(".sidebar, .sidebar-back").slideDown();
-			jQuery(".wrap-content").removeClass( "wrap-content-full" );
-		}
-		else {
-
-			fullContent = true;
-
-			jQuery(".sidebar, .sidebar-back").slideUp();
-			jQuery(".wrap-content").addClass( "wrap-content-full" );
-		}
-	});
-}
-
-// Sort/Search ---------------------
-
-function searchTable() {
-
-	var searchTerms	= jQuery("#search-terms").val();
-	var location 	= "" + window.location;
-
-	if( null != searchTerms && searchTerms.length > 0 ) {
-
-		window.location = location.urlParams( 'search', searchTerms );
+		jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 	}
 }
 
-function sortTable( order ) {
+// Generic Listeners ---------------
 
-	var location 	= "" + window.location;
+function initListeners() {
 
-	window.location = location.urlParams( 'sort', order );
+	// Datepicker
+	if( jQuery().datepicker ) {
+
+		var start 	= jQuery( '.datepicker' ).attr( 'start' );
+
+		jQuery( '.datepicker' ).datepicker({
+			dateFormat: 'yy-mm-dd',
+			minDate: start
+		});
+	}
+
+	// Popout Trigger
+	jQuery( '.btn-popout' ).click( function() {
+
+		jQuery( '.btn-popout' ).removeClass( 'active' );
+		jQuery(this).toggleClass( 'active' );
+		var popoutId	= '#' + jQuery( this ).attr( 'popout' );
+		var show 		= jQuery( popoutId );
+
+		if( show.is( ':visible' ) ) {
+
+			show.slideUp();
+			jQuery( '.btn-popout' ).removeClass( 'active' );
+		}
+		else {
+
+			jQuery( '.popout' ).hide();
+
+			show.slideDown();
+		}
+	});
+
+	// custom scroller
+	if( jQuery().mCustomScrollbar ) {
+
+		jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
+	}
+
+	//Profile tabs
+	if( jQuery().tabs ) {
+
+		jQuery( '.tabs-default' ).tabs();
+	}
+}
+
+// Sidebar/Settings ----------------
+
+function activateSettingsBox( parentElement ) {
+
+	var parent 	= parentElement.closest( '.box-collapsible' );
+	var btn		= parent.find( '.btn-collapse' );
+
+	btn.unbind( 'click' );
+
+	btn.click( function() {
+
+		var content = parent.find( '.box-wrap-content' );
+
+		if( content.is( ':visible' ) ) {
+
+			content.slideUp( 'fast' );
+		}
+		else {
+
+			content.slideDown( 'slow' );
+		}
+	});
+
+	parent.find( '.box-form' ).cmtFormInfo();
+}
+
+// Templates -----------------------
+
+function initTemplates() {
+
+	// Templates
+	var templateCheck = jQuery( '.template-file' );
+
+	if( templateCheck.length > 0 ) {
+
+		var templateCheckParent	= templateCheck.closest( '#frm-template' );
+
+		if( templateCheck.prop( 'checked' ) ) {
+
+			templateCheckParent.find( '.render-file' ).show();
+			templateCheckParent.find( '.render-content' ).hide();
+		}
+		else {
+
+			templateCheckParent.find( '.render-file' ).hide();
+			templateCheckParent.find( '.render-content' ).show();
+		}
+
+		templateCheck.click( function() {
+
+			if( templateCheck.prop( 'checked' ) ) {
+
+				templateCheckParent.find( '.render-file' ).fadeIn( 'slow' );
+				templateCheckParent.find( '.render-content' ).fadeOut( 'fast' );
+			}
+			else {
+
+				templateCheckParent.find( '.render-content' ).fadeIn( 'slow' );
+				templateCheckParent.find( '.render-file' ).fadeOut( 'fast' );
+			}
+		});
+	}
 }
