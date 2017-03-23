@@ -1,22 +1,23 @@
 .box-settings {
-    
+    margin-bottom: 1rem;
+
     .box-wrap-content {
-        
+
         label {
             width: 40%;
             float: left;
         }
     }
-    
+
     .box-form {
-        
+
         .btn-edit {
             color: $color-black;
         }
     }
 
     .wrap-form {
-        
+
         .frm-field {
             clear: both;
         }

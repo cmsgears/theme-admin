@@ -20,16 +20,16 @@ $user			= Yii::$app->user->getIdentity();
     </head>
     <body>
         <?php $this->beginBody(); ?>
-		<div id='pre-loader-main' class='max-area-cover'>
-			<div class='valign-center cmti cmti-5x cmti-spinner-1 spin'></div>
+		<div id="pre-loader-main" class="pre-loader max-area-cover-color fixed">
+			<div class="valign-center cmti cmti-4x cmti-spinner-1 spin"></div>
 		</div>
 		<?php include "$themePath/views/headers/private.php"; ?>
-        <div class='container container-main container-private max-cols-100 wrap-col-filler clearfix'>
-			<div class='sidebar-filler col-filler colf12x2'></div>
-	        <div id='sidebar-main' class='sidebar-private colf12x2'>
+        <div class='row container container-main container-private max-cols-100 wrap-col-filler'>
+			<div class='colf colf15x2 sidebar-filler col-filler'></div>
+	        <div id='sidebar-main' class='colf colf15x2 sidebar-private'>
 	        	<?php include "$themePath/views/sidebars/private.php"; ?>
 	        </div>
-        	<div class='wrap-content wrap-content-main colf12x10'>
+        	<div class='colf colf15x13 wrap-content wrap-content-main'>
 		        <div class='content'>
 		        	<?php include "$themePath/views/includes/breadcrumbs.php"; ?>
 		        	<?= $content ?>

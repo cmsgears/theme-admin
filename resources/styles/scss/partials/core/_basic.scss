@@ -13,3 +13,26 @@
         display: none;
     }
 }
+
+/*
+//to match button height (input[type]=button and anchor button)
+.btn {
+    //line-height: 1.55 !important;
+    box-sizing: border-box;
+}
+
+.align {
+
+    &.align-center, &.align-right {
+
+        .btn {
+             //line-height: 1.55;
+             //margin-bottom: 0.7em;
+        }
+    }
+}
+
+a {
+    vertical-align: baseline;
+}
+*/

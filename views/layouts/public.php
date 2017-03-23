@@ -19,8 +19,8 @@ $themePath		= Yii::getAlias( '@themes/admin' );
     </head>
     <body>
         <?php $this->beginBody(); ?>
-		<div id='pre-loader-main' class="max-area-cover">
-			<div class='valign-center cmti cmti-5x cmti-spinner-1 spin'></div>
+		<div id="pre-loader-main" class="pre-loader max-area-cover-color fixed">
+			<div class="valign-center cmti cmti-4x cmti-spinner-1 spin"></div>
 		</div>
 		<?php include "$themePath/views/headers/public.php"; ?>
         <div class='container container-main container-public'>

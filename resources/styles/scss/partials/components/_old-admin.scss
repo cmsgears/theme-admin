@@ -5,6 +5,14 @@
     background-color: $color-primary-l;
     color: $color-primary-text-l;
 
+    .header-actions {
+        min-height: 1em;
+
+        a {
+            color: white;
+        }
+    }
+
     .header-search {
         text-align: right;
     }
@@ -22,7 +30,7 @@
 }
 
 .icon-up {
-  
+
 }
 
 .icon-up-active {
@@ -51,7 +59,7 @@
         color: $color-secondary-text;
         font-size: $font-size-7;
         padding: 0.5rem 1rem;
-        text-align: center; 
+        text-align: center;
     }
 
     .box-wrap-header {
@@ -67,7 +75,7 @@
         .form-group {
             clear: both;
         }
-        
+
         .cleditorMain {
             border: none;
         }
@@ -96,7 +104,7 @@
 
         .box-half {
             width: 45%;
-            display: inline-block;  
+            display: inline-block;
             text-align: left;
             float: left;
             padding-left: 5%;
@@ -108,7 +116,7 @@
             }
         }
     }
-    
+
     .render-file {
         display: none;
     }
@@ -136,13 +144,20 @@
     .grid-header, .grid-footer {
         background-color: $color-secondary;
         color: $color-secondary-text;
-        
+
+        .info {
+            color: $color-secondary-text;
+            margin: 1em 0.5em;
+        }
+
         .pagination {
             text-align: right;
+            margin-top: 0.5em;
 
             a {
                 background-color: $color-secondary-l;
                 color: $color-secondary-text-l;
+                font-size: $font-size-8;
             }
 
             .active {

@@ -7,6 +7,8 @@ jQuery( document ).ready( function() {
 	initListeners();
 
 	initTemplates();
+
+	activateSettingsBox();
 });
 
 // Content Pre-loaders -------------
@@ -25,53 +27,35 @@ function initPreloaders() {
 function initCmgTools() {
 
 	// Page Blocks
-	if( jQuery().cmtBlock ) {
-
-		jQuery( '.block' ).cmtBlock({
-			// Generic
-			fullHeight: true,
-			// Block Specific - Ignores generic
-			blocks: {
-				'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
-			}
-		});
-	}
+	jQuery( '.block' ).cmtBlock({
+		// Generic
+		fullHeight: true,
+		// Block Specific - Ignores generic
+		blocks: {
+			'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+		}
+	});
 
 	// File Uploader
-	if( jQuery().cmtFileUploader ) {
-
-		jQuery( '.file-uploader' ).cmtFileUploader();
-	}
+	jQuery( '.file-uploader' ).cmtFileUploader();
 
 	// Popups
-	if( jQuery().cmtPopup ) {
-
-		jQuery( '.popup' ).cmtPopup();
-	}
+	jQuery( '.popup' ).cmtPopup();
 
 	// Custom Select
-	if( jQuery().cmtSelect ) {
-
-		jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
-	}
+	jQuery( '.cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
 
 	// Custom Checkbox
-	if( jQuery().cmtCheckbox ) {
-
-		jQuery( '.cmt-checkbox' ).cmtCheckbox();
-	}
+	jQuery( '.cmt-checkbox' ).cmtCheckbox();
 
 	// Form with Info
-	if( jQuery().cmtFormInfo ) {
-
-		jQuery( '.box-form' ).cmtFormInfo();
-	}
+	jQuery( '.box-form' ).cmtFormInfo();
 
 	// Collapsible Menu
-	if( jQuery().cmtCollapsibleMenu ) {
+	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 
-		jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
-	}
+	// Icon Picker
+	jQuery( '.icon-picker' ).cmtIconPicker();
 }
 
 // Generic Listeners ---------------
@@ -125,15 +109,13 @@ function initListeners() {
 
 // Sidebar/Settings ----------------
 
-function activateSettingsBox( parentElement ) {
+function activateSettingsBox() {
 
-	var parent 	= parentElement.closest( '.box-collapsible' );
-	var btn		= parent.find( '.btn-collapse' );
+	jQuery( '.box-settings .box-wrap-content' ).hide();
 
-	btn.unbind( 'click' );
+	jQuery( '.box-settings .btn-collapse' ).click( function() {
 
-	btn.click( function() {
-
+		var parent	= jQuery( this ).closest( '.box-settings' );
 		var content = parent.find( '.box-wrap-content' );
 
 		if( content.is( ':visible' ) ) {
@@ -143,10 +125,13 @@ function activateSettingsBox( parentElement ) {
 		else {
 
 			content.slideDown( 'slow' );
+
+			if( content.html().length < 5 ) {
+
+				parent.find( '.collapse-trigger' ).click();
+			}
 		}
 	});
-
-	parent.find( '.box-form' ).cmtFormInfo();
 }
 
 // Templates -----------------------

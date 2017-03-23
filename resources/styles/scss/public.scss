@@ -1,10 +1,11 @@
-// Vendor -----------------------------------
-
-// Core -------------------------------------
+// ---------------------------------------//
+// Core Division
+// ---------------------------------------//
 
 @import "cmt/core/variables";
 @import "partials/core/fonts";
 @import "partials/core/variables";
+
 @import "cmt/core/variables-ext";
 @import "partials/core/variables-ext";
 
@@ -23,25 +24,63 @@
 @import "cmt/core/containers";
 @import "partials/core/containers";
 
-// Elements ---------------------------------
+// ---------------------------------------//
+// Elements Division
+// ---------------------------------------//
 
-@import "cmt/elements/common";
+@import "cmt/elements/basic";
 
-@import "cmt/elements/table";
+@import "cmt/elements/custom";
 
 @import "cmt/elements/form";
 @import "partials/elements/form";
 
-@import "cmt/elements/custom";
+@import "cmt/elements/table";
 
-// Components -------------------------------
+// ---------------------------------------//
+// Components Division
+// ---------------------------------------//
+
+@import "cmt/components/menus/basic";
+@import "cmt/components/menus/collapsible";
+//@import "cmt/components/menus/social";
 
 @import "cmt/components/headers";
+@import "cmt/components/footers";
+@import "cmt/components/sidebars";
 @import "partials/components/headers";
+
+//@import "cmt/components/breadcrumbs";
+// project - breadcrumbs
+
+@import "cmt/components/popups";
+
+//@import "cmt/components/login-register";
 
 @import "cmt/components/blocks";
 @import "partials/components/blocks";
 
-// Extensions -------------------------------
+//@import "cmt/components/grid/data";
+//@import "cmt/components/grid/pagination";
+//@import "cmt/components/grid/sorting";
+
+//@import "cmt/components/boxes/basic";
+//@import "cmt/components/boxes/form";
+//@import "cmt/components/boxes/mapper";
+// project - boxes
+
+//@import "cmt/components/blog";
+
+//@import "cmt/components/file-uploaders";
+// project - file uploaders
+
+//@import "cmt/components/sliders";
+//@import "cmt/components/flipper";
+//@import "cmt/components/galleries";
+// project - components
+
+// ---------------------------------------//
+// Extensions Division
+// ---------------------------------------//
 
 @import "cmt/extensions/m-custom-scrollbar";

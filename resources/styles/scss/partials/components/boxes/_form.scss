@@ -1,0 +1,13 @@
+.box-form-regular {
+    background-color: white;
+    padding: 2em 0;
+
+    .btn-edit {
+        color: $color-link;
+        padding: 1em;
+
+        &:hover {
+            color: $color-link-h;
+        }
+    }
+}

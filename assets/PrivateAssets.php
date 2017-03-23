@@ -29,8 +29,10 @@ class PrivateAssets extends AssetBundle {
 	// Load Javascript
     public $js      = [
         'scripts/main.js',
-        'scripts/applications.js',
-        'scripts/search.js'
+        'scripts/search.js',
+		'scripts/apps/main.js',
+		'scripts/apps/site.js',
+		'scripts/apps/user.js'
     ];
 
 	// Position to load Javascript
@@ -72,4 +74,3 @@ class PrivateAssets extends AssetBundle {
 		$view->registerJs( $siteUrl, View::POS_END );
 	}
 }
-?>
