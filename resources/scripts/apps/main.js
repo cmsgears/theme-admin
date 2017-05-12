@@ -2,35 +2,28 @@ var mainApp	= null;
 
 jQuery( document ).ready( function() {
 
+	// App
 	mainApp		= new cmt.api.Application( { basePath: ajaxUrl } );
 
-	var appControllers					= [];
+	// Controllers
+	var controllers					= [];
 
-	appControllers[ 'newsletter' ] 		= 'NewsletterController';
-	appControllers[ 'gallery' ]			= 'GalleryController';
-	appControllers[ 'tag' ]				= 'TagController';
-	appControllers[ 'permission' ]		= 'PermissionController';
-	appControllers[ 'notification' ]	= 'NotificationController';
-	appControllers[ 'category' ]		= 'CategoryController';
-	appControllers[ 'address' ]			= 'AddressController';
+	controllers[ 'gallery' ]		= 'GalleryController';
+	controllers[ 'category' ]		= 'CategoryController';
+	controllers[ 'tag' ]			= 'TagController';
 
-	jQuery( ".cmt-form, .cmt-request" ).cmtRequestProcessor({
+	controllers[ 'permission' ]		= 'PermissionController';
+	controllers[ 'notification' ]	= 'NotificationController';
+	controllers[ 'address' ]		= 'AddressController';
+
+	// Init App
+	jQuery( '[cmt-app=main]' ).cmtRequestProcessor({
 		app: mainApp,
-		controllers: appControllers
+		controllers: controllers
 	});
 });
 
-// DefaultController ----------------------------------------
-
-cmt.api.controllers.DefaultController.prototype.avatarActionPost = function( success, requestElement, response ) {
-
-	requestElement.parent().hide();
-
-	jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
-	jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
-};
-
-// GalleryController ----------------------------------------
+// == Gallery Controller ==================
 
 GalleryController	= function() {};
 
@@ -44,7 +37,145 @@ GalleryController.prototype.updateItemActionPost = function( success, requestEle
 	}
 };
 
-// TagController --------------------------------------------
+// == Category Controller =================
+
+CategoryController	= function() {};
+
+CategoryController.inherits( cmt.api.controllers.BaseController );
+
+CategoryController.prototype.deleteActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		cmt.utils.data.refreshGrid();
+	}
+};
+
+CategoryController.prototype.autoSearchActionPre = function( requestElement ) {
+
+	var autoFill	= requestElement.closest( '.auto-fill' );
+	var type 		= autoFill.find( 'input[name=type]' ).val();
+	var keyword 	= autoFill.find( '.auto-fill-text' ).val();
+
+	if( keyword.length <= 0 ) {
+
+		var widget		= requestElement.parent();
+		var itemList	= widget.find( '.auto-map .item-list' );
+
+		itemList.slideUp();
+
+		return false;
+	}
+
+	this.requestData	= 'type=' + type + '&name=' + keyword;
+
+	return true;
+};
+
+CategoryController.prototype.autoSearchActionPost = function( success, requestElement, response, child ) {
+
+	if( success ) {
+
+		var data			= response.data;
+		var listHtml		= '';
+		var wrapItemList	= requestElement.find( '.wrap-auto-list' );
+		var itemList		= requestElement.find( '.auto-list' );
+
+		for( i = 0; i < data.length; i++ ) {
+
+			var obj = data[ i ];
+
+			listHtml += '<li data-id="' + obj.id + '">' + obj.name + '</li>';
+		}
+
+		if( listHtml.length == 0 ) {
+
+			listHtml	= '<li>No matching results found</li>';
+
+			itemList.html( listHtml );
+		}
+		else {
+
+			itemList.html( listHtml );
+
+			requestElement.find( '.auto-list li' ).click( function() {
+
+				var autoFill	= requestElement.closest( '.auto-fill' );
+				var wrapper		= requestElement.parent().find( '.wrap-field-auto' );
+				var id			= jQuery( this ).attr( 'data-id' );
+				var name		= jQuery( this ).html();
+
+				autoFill.find( '.trigger-map-category input[name=categoryId]' ).val( id );
+
+				autoFill.find( '.trigger-map-category .cmt-click' )[0].click();
+
+				wrapItemList.slideUp();
+			});
+		}
+
+		wrapItemList.slideDown();
+	}
+};
+
+CategoryController.prototype.mapModelCategoryActionPre = function( requestElement ) {
+
+	var categoryId	= requestElement.find( 'input[name=categoryId]' ).val();
+	categoryId		= parseInt( categoryId );
+
+	if( categoryId > 0 ) {
+
+		return true;
+	}
+
+	return false;
+};
+
+CategoryController.prototype.mapModelCategoryActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var data			= response.data;
+		var listHtml		= '';
+		var wrapper			= requestElement.closest( '.wrap-categories' );
+		var itemList		= wrapper.find( '.auto-mapped .item-list' );
+
+		for( i = 0; i < data.length; i++ ) {
+
+			var obj = data[ i ];
+
+			listHtml += "<li><span class='value'>" + obj.name + "</span><i data-id='" + obj.id + "' class='cmti cmti-close close cmt-click'></i></li>";
+		}
+
+		itemList.html( listHtml );
+
+		mainApp.registerElements( wrapper.find( '.auto-mapped' ) );
+	}
+};
+
+CategoryController.prototype.deleteModelCategoryActionPre = function( requestElement ) {
+
+	var categoryId	= this.requestTrigger.attr( 'data-id' );
+	categoryId		= parseInt( categoryId );
+
+	if( categoryId > 0 ) {
+
+		requestElement.find( 'input[name=categoryId]').val( categoryId );
+
+		return true;
+	}
+
+	return false;
+};
+
+CategoryController.prototype.deleteModelCategoryActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		this.requestTrigger.parent().remove();
+	}
+};
+
+// == Tag Controller ======================
 
 TagController	= function() {};
 
@@ -54,7 +185,7 @@ TagController.prototype.createActionPost = function( success, requestElement, re
 
 	if( success ) {
 
-		var tags		= jQuery( '#box-tag-mapper .wrap-tags' );
+		var tags		= requestElement.closest( '.mapper-tag' ).find( '.wrap-tags' );
 
 		var source 		= document.getElementById( 'tagTemplate' ).innerHTML;
 		var template 	= Handlebars.compile( source );
@@ -63,9 +194,7 @@ TagController.prototype.createActionPost = function( success, requestElement, re
 
 		tags.html( output );
 
-		tags.find( '.cmt-request' ).cmtRequestProcessor({
-			app: mainApp
-		});
+		mainApp.registerElements( tags.find( '[cmt-app=main]' ) );
 	}
 };
 
@@ -76,6 +205,16 @@ TagController.prototype.deleteActionPost = function( success, requestElement, re
 		jQuery( '#frm-delete-tag-' + response.data ).parent().remove();
 	}
 };
+
+
+
+
+
+
+
+
+
+
 
 // PermissionController -------------------------------------
 

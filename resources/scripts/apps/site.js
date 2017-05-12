@@ -6,18 +6,16 @@ jQuery( document ).ready( function() {
 	siteApp	= new cmt.api.Application( { basePath: ajaxUrl } );
 
 	// Controllers
-	var siteControllers				= [];
-	siteControllers[ 'site' ]		= 'SiteController';
-	siteControllers[ 'settings' ]	= 'SettingsController';
+	var controllers				= [];
+	controllers[ 'site' ]		= 'SiteController';
+	controllers[ 'settings' ]	= 'SiteSettingsController';
 
 	// Init App
 	jQuery( '[cmt-app=site]' ).cmtRequestProcessor({
 		app: siteApp,
-		controllers: siteControllers
+		controllers: controllers
 	});
 });
-
-// == Form App Controllers ===================================
 
 // == Site Controller =====================
 
@@ -33,13 +31,13 @@ SiteController.prototype.loginActionPost = function( success, requestElement, re
 	}
 };
 
-// SettingsController ---------------------------------------
+// == Site Settings Controller ============
 
-SettingsController	= function() {};
+SiteSettingsController	= function() {};
 
-SettingsController.inherits( cmt.api.controllers.BaseController );
+SiteSettingsController.inherits( cmt.api.controllers.BaseController );
 
-SettingsController.prototype.getContentActionPre = function( requestElement ) {
+SiteSettingsController.prototype.getContentActionPre = function( requestElement ) {
 
 	var content	= requestElement.attr( 'content' );
 	content		= jQuery( '#' + content );
@@ -52,7 +50,7 @@ SettingsController.prototype.getContentActionPre = function( requestElement ) {
 	return true;
 };
 
-SettingsController.prototype.getContentActionPost = function( success, requestElement, response ) {
+SiteSettingsController.prototype.getContentActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 
@@ -73,7 +71,7 @@ SettingsController.prototype.getContentActionPost = function( success, requestEl
 	}
 };
 
-SettingsController.prototype.updateActionPost = function( success, requestElement, response ) {
+SiteSettingsController.prototype.updateActionPost = function( success, requestElement, response ) {
 
 	if( success ) {
 

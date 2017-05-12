@@ -51,7 +51,7 @@ $address 		= new Address();
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="profile" action="user/profile" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="profile" action="user/profile" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>
@@ -122,7 +122,7 @@ $address 		= new Address();
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="account" action="user/account" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="account" action="user/account" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>
@@ -201,7 +201,7 @@ $address 		= new Address();
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="address" action="user/address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="address" action="user/address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>

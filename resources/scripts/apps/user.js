@@ -16,8 +16,6 @@ jQuery( document ).ready( function() {
 	});
 });
 
-// == Form App Controllers ===================================
-
 // == User Controller =====================
 
 UserController	= function() {};
@@ -28,9 +26,10 @@ UserController.prototype.avatarActionPost = function( success, requestElement, r
 
 	if( success ) {
 
-		requestElement.closest( '.post-action' ).hide();
+		jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
+		jQuery( '.wrap-popout-actions .wrap-user .user-avatar' ).remove();
 
-		jQuery( ".wrap-popout-actions .wrap-user img" ).attr( 'src', response.data.fileUrl );
+		jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
 	}
 };
 
