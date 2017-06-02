@@ -1,6 +1,7 @@
 <?php
 // Yii Imports
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 // CMG Imports
 use cmsgears\core\common\utilities\CodeGenUtil;
@@ -18,7 +19,7 @@ use cmsgears\core\common\utilities\CodeGenUtil;
 <script type="text/javascript"> if ( !window.console ) console = { log: function() {} }; </script>
 
 <!-- Browser tab icons -->
-<link href="images/icons/favicon.ico" rel="shortcut icon">
-<link href="images/icons/apple-touch-icon.png" rel="apple-touch-icon-precomposed">
+<link href="<?= Url::toRoute( '/images/icons/favicon.ico', true ) ?>" rel="shortcut icon">
+<link href="<?= Url::toRoute( '/images/icons/apple-touch-icon.png', true ) ?>" rel="apple-touch-icon-precomposed">
 
 <?php $this->head(); ?>

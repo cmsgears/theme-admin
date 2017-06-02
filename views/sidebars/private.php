@@ -1,9 +1,8 @@
 <?php
 // Yii Imports
-use yii\helpers\Html;
 use yii\helpers\Url;
 
-$user			= Yii::$app->user->getIdentity();
+$user		= Yii::$app->user->getIdentity();
 
 // Sidebar
 $sidebar	= $this->context->sidebar;
