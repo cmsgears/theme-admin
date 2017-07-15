@@ -2,6 +2,7 @@
 // Yii Imports
 use yii\helpers\Url;
 
+$core		= Yii::$app->core;
 $user		= Yii::$app->user->getIdentity();
 
 // Sidebar
@@ -11,7 +12,7 @@ $child 		= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 ?>
 <div class="collapsible-menu collapsible-menu-admin">
 
-	<div id="sidebar-dasboard" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-dashboard' ) == 0 ) echo 'active';?>">
+	<div id="sidebar-dasboard" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-dashboard' ) == 0 ) echo 'active'; ?>">
 		<span class="marker"></span>
 		<div class="tab-header">
 			<a href="<?php echo Url::toRoute( [ '/dashboard' ] ); ?>">
@@ -23,8 +24,8 @@ $child 		= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 
 	<?= Yii::$app->sidebar->getSidebarHtml( $parent, $child ) ?>
 
-	<?php if( Yii::$app->core->hasModule( 'core' ) && $user->isPermitted( 'core' ) ) { ?>
-		<div id="sidebar-settings" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-settings' ) == 0 ) echo 'active';?>">
+	<?php if( $core->hasModule( 'core' ) && $user->isPermitted( 'core' ) ) { ?>
+		<div id="sidebar-settings" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-settings' ) == 0 ) echo 'active'; ?>">
 			<span class="marker"></span>
 			<div class="tab-header">
 				<a href="<?php echo Url::toRoute( [ '/core/settings' ] ); ?>">

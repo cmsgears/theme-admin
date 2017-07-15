@@ -2,10 +2,10 @@
 namespace themes\admin\assets;
 
 // Yii Imports
-use yii\web\AssetBundle;
+use yii\helpers\Url;
 use yii\web\View;
 
-class PublicAssets extends AssetBundle {
+class InlineAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -22,36 +22,7 @@ class PublicAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@themes/admin/resources';
-
-	// Load css
-	public $css = [
-		'styles/public.css'
-	];
-
-	// Position to load css
-	public $cssOptions = [
-		'position' => View::POS_HEAD
-	];
-
-	// Load Javascript
-	public $js = [
-		'scripts/main.js',
-		'scripts/applications.js'
-	];
-
-	// Position to load Javascript
-	public $jsOptions = [
-		'position' => View::POS_END
-	];
-
-	// Define dependent Asset Loaders
-	public $depends = [
-		'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\CmgToolsJs',
-		'cmsgears\icons\assets\IconAssets'
-	];
+	public $sourcePath	= '@themes/admin/resources';
 
 	// Protected --------------
 
@@ -67,10 +38,23 @@ class PublicAssets extends AssetBundle {
 
 	// Yii parent classes --------------------
 
+	public function registerAssetFiles( $view ) {
+
+		parent::registerAssetFiles( $view );
+
+		$rootUrl = Url::toRoute( '/', true );
+
+		$siteUrl = "var siteUrl	= '$rootUrl';
+					var ajaxUrl	= '" . $rootUrl ."apix/';
+					var fileUploadUrl	= '" . $rootUrl . "apix/file/file-handler';";
+
+		$view->registerJs( $siteUrl, View::POS_END );
+	}
+
 	// CMG interfaces ------------------------
 
 	// CMG parent classes --------------------
 
-	// PublicAssets --------------------------
+	// InlineAssets --------------------------
 
 }

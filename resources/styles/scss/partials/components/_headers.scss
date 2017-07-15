@@ -1,71 +1,86 @@
-.header-public {
+.header {
     background-color: $color-header;
     color: $color-header-text;
+	@include shadow( $size-default, $size-default, $size-medium, rgba( $color-shadow, $color-transparent-medium ) );
+}
+
+.header-public {
     text-align: center;
-    padding: 15px;
+    padding: 1rem;
 
     .logo {
-        height: 80px;
+        height: 60px;
         display: inline-block;
-
-        @include responsive-max ( screen-tablet-large ) {
-            height: 60px;
-        }
-
-        @include responsive-max ( screen-mobile-large ) {
-            height: 40px;
-        }
     }
+
+	@include responsive-max ( screen-mobile-large ) {
+
+		.logo {
+			height: 40px;
+		}
+	}
 }
 
 .header-private {
-    background-color: $color-header;
-    color: $color-header-text;
+	height: 60px;
 
-    #btn-sidebar-main {
-        background-color: $color-black;
-        color: $color-secondary-text;
-        width: 80px;
-        float: left;
-        padding: 1rem 1rem;
-        @include transit-color-bkg-color( $transit-eio,$transit-time-medium );
-        cursor: pointer;
+	.header-logo {
 
-        span {
-            display: inline-block;
-            width: 100%;
-            text-align: center;
+		#btn-sidebar-main {
+			color: $color-link;
+			display: inline-block;
+			width: 40px;
+			height: 60px;
+			padding: 10px 10px;
+			cursor: pointer;
+			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
+			text-align: center;
 
-            .cmti-menu {
-                line-height: 1.9em;
-                font-size: $font-size-5;
-            }
-        }
+			&:hover {
+				background-color: $color-btn-h;
+				color: $color-btn-text-h;
+			}
+		}
 
-        &:hover {
-            background-color: $color-secondary-l;
-            color: $color-secondary-text-l;
-        }
+		.logo {
+			display: inline-block;
+			height: 60px;
+			padding: 10px 0;
+		}
+	}
 
-        @include responsive-max ( screen-mobile-large ) {
+	@include responsive-max ( screen-tablet-large ) {
+		height: 40px;
 
-            width: 24%;
-        }
-    }
+		.header-logo {
 
-    .logo {
-        width: 180px;
-        float: left;
-        padding: 0.3rem 1rem;
+			#btn-sidebar-main {
+				height: 40px;
+				padding: 5px;
+			}
 
-        @include responsive-max ( screen-tablet-large ) {
-            width: 134px;
-            padding: 0.4rem 1rem;
-        }
+			.logo {
+				height: 35px;
+				padding: 7.5px 0;
+			}
+		}
+	}
 
-        @include responsive-max ( screen-mobile-large ) {
-            padding: 0.25rem 1rem;
-            float: right;
-        }
-    }
+	@include responsive-max( screen-tablet-small ) {
+		height: 80px;
+
+		.colf {
+			width: 100%;
+		}
+
+		.header-logo {
+			width: 100%;
+			text-align: center;
+			border-bottom: 1px solid $color-border;
+
+			#btn-sidebar-main {
+				float: left;
+			}
+		}
+	}
 }

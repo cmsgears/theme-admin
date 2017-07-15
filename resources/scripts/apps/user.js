@@ -94,3 +94,17 @@ UserController.prototype.addressActionPost = function( success, requestElement, 
 		parent.find( '.btn-edit' ).click();
 	}
 };
+
+// == Direct Calls ========================
+
+function updateUserMeta( key, value ) {
+
+	// Trigger - Set Sidebar
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/set-meta", "Meta[key]=" + key + "&Meta[value]=" + value );
+}
+
+function removeUserMeta( key ) {
+
+	// Trigger - Set Sidebar
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/remove-meta", "Meta[key]=" + key );
+}

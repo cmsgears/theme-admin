@@ -1,7 +1,7 @@
 <?php
 // Yii Imports
-use yii\helpers\Url;
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 // CMG Imports
 use cmsgears\widgets\nav\BasicNav;
@@ -9,100 +9,92 @@ use cmsgears\widgets\nav\BasicNav;
 use cmsgears\core\common\utilities\CodeGenUtil;
 
 $menuItems = [
-	    [ 'label' => 'Dashboard', 'url' => [ '/dashboard' ] ],
-	    [ 'label' => 'Profile', 'url' => [ '/core/user/profile' ] ],
-	    [ 'label' => 'Settings', 'url' => [ '/core/user/settings' ] ],
-	    [ 'label' => 'Logout', 'url' => [ '/logout' ] ]
+		[ 'label' => 'Dashboard', 'url' => [ '/dashboard' ] ],
+		[ 'label' => 'Profile', 'url' => [ '/core/user/profile' ] ],
+		[ 'label' => 'Settings', 'url' => [ '/core/user/settings' ] ],
+		[ 'label' => 'Logout', 'url' => [ '/logout' ] ]
 	];
 
 $adminStats		= Yii::$app->eventManager->getAdminStats();
 $notifications	= $adminStats[ 'notifications' ];
 $reminders		= $adminStats[ 'reminders' ];
 $activities		= $adminStats[ 'activities' ];
+
+$userAvatar		= isset( $user->avatar ) ? $user->avatar : null;
+$avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-user icon', 'class' => 'avatar' ] );
 ?>
-<header id="header-main" class="row header header-absolute header-private max-cols-50">
-	<div class="colf colf12x6 clearfix">
-		<div id="btn-sidebar-main">
-			<span><i class="cmti cmti-menu"></i></span>
-		</div>
-		<span class="logo">
-			<?= Html::a( "<img class='fluid' src='" . Yii::getAlias( '@images' ) . "/logo.png'>", [ '/' ], null ) ?>
+<header id="header-main" class="header header-absolute header-private row">
+	<div class="colf colf15x4 header-logo">
+		<span id="btn-sidebar-main">
+			<i class="cmti cmti-menu valign-center"></i>
 		</span>
+		<?= Html::a( "<img class=\"logo\" src=\"" . Yii::getAlias( '@images' ) . "/logo.png\">", [ '/' ], null ) ?>
 	</div>
-	<div class="colf colf12x6 row wrap-popout-actions">
-		 <div class="colf colf15x3">
-		 	<span class="btn btn-black btn-popout" popout="popout-notification" title="Notifications">
-				<span class="cmti cmti-flag"></span>
-				<span class="upd-count upd-count-rounded upd-count-notification-all circled1 upd-count-<?= $adminStats[ 'notificationCount' ] ?>"><?= $adminStats[ 'notificationCount' ] ?></span>
-			</span>
-		 </div>
-		 <div class="colf colf15x3">
-		 	<span class="btn btn-black btn-popout" popout="popout-reminder" title="Reminders">
-				<span class="cmti cmti-bell"></span>
-				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $adminStats[ 'reminderCount' ] ?>"><?= $adminStats[ 'reminderCount' ] ?></span>
-			</span>
-		 </div>
-		 <div class="colf colf15x3">
-		 	<span class="btn btn-black btn-popout" popout="popout-activity" title="Activities">
-				<span class="cmti cmti-widget"></span>
-				<span class="upd-count upd-count-rounded upd-count-reminder-all circled1 upd-count-<?= $adminStats[ 'activityCount' ] ?>"><?= $adminStats[ 'activityCount' ] ?></span>
-			</span>
-		 </div>
-		 <div class="colf colf15x6">
-			<span class="btn btn-black btn-popout wrap-user" popout="popout-user">
-				<?= CodeGenUtil::getImageThumbTag( $user->avatar, [ 'class' => 'user-avatar', 'icon' => 'cmti cmti-3x cmti-user circled1 user-avatar icon' ] ) ?>
-				<span class="user-name"><?=substr($user->getName(), 0, 7)?></span>
-			</span>
-		 </div>
-		 <div class="row wrap-popouts">
-		 	<div id="popout-notification" class="colf colf15x6 popout">
-			 	<ul>
-			 		<?php
-			 			if( count( $notifications ) > 0 ) {
+	<div class="colf colf15x11 header-menu wrap-popout-actions align align-right">
+		<span class="btn-popout relative" popout="popout-notification" title="Notifications">
+			<span class="cmti cmti-flag-o"></span>
+			<?php if( $adminStats[ 'notificationCount' ] > 0 ) { ?>
+				<span class="count"><?= $adminStats[ 'notificationCount' ] ?></span>
+			<?php } ?>
+		</span>
+		<span class="btn-popout relative" popout="popout-reminder" title="Reminders">
+			<span class="cmti cmti-bell-o"></span>
+			<?php if( $adminStats[ 'reminderCount' ] > 0 ) { ?>
+				<span class="count"><?= $adminStats[ 'reminderCount' ] ?></span>
+			<?php } ?>
+		</span>
+		<span class="btn-popout relative" popout="popout-activity" title="Activities">
+			<span class="cmti cmti-sliders"></span>
+			<?php if( $adminStats[ 'activityCount' ] > 0 ) { ?>
+				<span class="count"><?= $adminStats[ 'activityCount' ] ?></span>
+			<?php } ?>
+		</span>
+		<span class="btn-popout wrap-user" popout="popout-user">
+			<?= $avatarThumb ?>
+			<span class="fa fa-caret-down"></span>
+		</span>
+		<div class="wrap-popouts">
+			<div id="popout-notification" class="popout">
+				<ul>
+					<?php
+						if( count( $notifications ) > 0 ) {
 
-							foreach ( $notifications as $notification ) {
-
-								echo $notification->toHtml();
+							foreach( $notifications as $notification ) {
+					?>
+								<li class="cmt-request" redirect='<?=Url::toRoute( $notification->adminLink )?>' cmt-controller="notification" cmt-action="read" action="notify/notification/toggle-read?id=<?=$notification->id?>" consumed="<?=$notification->consumed?>">
+									<a class="cmt-click <?= $notification->consumed ? "text text-gray" : null ?>"><?php echo $notification->content ?></a>
+								</li>
+					<?php
 							}
-			 		?>
-			 		<?php } else { ?>
-			 		<li>No notifications found.</li>
-			 		<?php } ?>
-			 	</ul>
-			 	<div class="align align-center"><?= Html::a( 'View All', [ '/notify/notification/all' ], [ 'class' => 'btn btn-small' ] ) ?></div>
+					?>
+							<li class="align align-center">
+								<a href="<?= Url::to( 'core/notify/notification' ) ?>">View All</a>
+							</li>
+					<?php
+						}
+						else {
+					?>
+							<li>No new notifications.</li>
+					<?php
+						}
+					?>
+				</ul>
 			</div>
-			<div id="popout-reminder" class="colf colf15x6 popout">
-			 	<ul>
-			 		<?php
-			 			if( count( $reminders ) > 0 ) {
-
-							foreach ( $reminders as $reminder ) {
-
-								echo $reminder->toHtml();
-							}
-			 		?>
-			 		<?php } else { ?>
-			 		<li>No reminders found.</li>
-			 		<?php } ?>
-			 	</ul>
+			<div id="popout-reminder" class="popout">
+				<ul>
+					<li>No new reminder message at this time.</li>
+				</ul>
 			</div>
-			<div id="popout-activity" class="colf colf15x6 popout">
-			 	<ul>
-			 		<?php
-			 			if( count( $activities ) > 0 ) {
-
-							foreach ( $activities as $activity ) {
-
-								echo $activity->toHtml();
-							}
-			 		?>
-			 		<?php } else { ?>
-			 		<li>No activities found.</li>
-			 		<?php } ?>
-			 	</ul>
+			<div id="popout-activity" class="popout">
+				<ul>
+					<li>No new activities at this time.</li>
+				</ul>
 			</div>
-			<div id="popout-user" class="colf colf15x6 popout">
-				<?= BasicNav::widget( [ 'options' => [ 'class' => 'vnav' ], 'items' => $menuItems ] ); ?>
+			<div id="popout-user" class="popout">
+				<?= BasicNav::widget([
+					'options' => [ 'class' => 'vnav' ],
+					'items' => $menuItems
+				])?>
 			</div>
 		</div>
 	</div>

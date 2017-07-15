@@ -5,31 +5,41 @@ use yii\widgets\ActiveForm;
 
 // CMG Imports
 use cmsgears\widgets\block\BasicBlock;
+
+$coreProperties = $this->context->getCoreProperties();
+$this->title 	= 'Reset Password | ' . $coreProperties->getSiteTitle();
 ?>
 
 <?php BasicBlock::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'texture' => true, 'textureClass' => 'texture-default',
 	'contentWrapClass' => 'align align-center', 'content' => true
 ]);?>
 
+	<h2 class="align align-center">Reset Password</h2>
+	<div class="filler-height"></div>
+
 	<?php if( Yii::$app->session->hasFlash( 'message' ) ) { ?>
-		<div class='frm-message'>
-			<?= Yii::$app->session->getFlash( 'message' ) ?>
-		</div>
+		<p><?= Yii::$app->session->getFlash( 'message' ) ?></p>
 	<?php
 		}
 		else {
-
-			$form = ActiveForm::begin( [ 'id' => 'frm-reset-password' ] ); 
 	?>
-			<h2 class='align align-middle'>RESET PASSWORD</h2>
+	<?php $form = ActiveForm::begin( [ 'id' => 'frm-reset-password', 'options' => [ 'class' => 'form' ] ] ); ?>
 
-			<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
-	    	<?= $form->field( $model, 'password' )->passwordInput( [ 'placeholder' => 'Password*' ] )->label( false ) ?>
-	    	<?= $form->field( $model, 'password_repeat' )->passwordInput( [ 'placeholder' => 'Repeat Password*' ] )->label( false ) ?>
+	<?= Yii::$app->formDesigner->getIconInput( $form, $model, 'email', [ 'placeholder' => 'Email' ], 'cmti cmti-user-full', false ) ?>
+	<?= Yii::$app->formDesigner->getIconPassword( $form, $model, 'password', [ 'placeholder' => 'Password' ], 'cmti cmti-key', false ) ?>
+	<?= Yii::$app->formDesigner->getIconPassword( $form, $model, 'password_repeat', [ 'placeholder' => 'Repeat Password' ], 'cmti cmti-key', false ) ?>
 
-			<input type="submit" value="Reset" />
+	<div class="filler-height"></div>
+	<div class="row">
+		<div class="colf colf2 align align-left">
+			<?= Html::a( "Login", [ '/login' ] ) ?>
+		</div>
+		<div class="colf colf2 align align-right">
+			<input class="element-medium" type="submit" value="Reset" />
+		</div>
+	</div>
+
 	<?php
 			ActiveForm::end();
 		}

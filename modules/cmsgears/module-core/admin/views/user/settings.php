@@ -10,9 +10,9 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 ?>
 <div class="tabs-default">
 	<ul>
-	    <li><a href="#tabs-1" class="btn btn-medium">Privacy</a></li>
-	    <li><a href="#tabs-2" class="btn btn-medium">Notifications</a></li>
-	    <li><a href="#tabs-3" class="btn btn-medium">Reminders</a></li>
+		<li><a href="#tabs-1" class="btn btn-medium">Privacy</a></li>
+		<li><a href="#tabs-2" class="btn btn-medium">Notifications</a></li>
+		<li><a href="#tabs-3" class="btn btn-medium">Reminders</a></li>
 	</ul>
 
 	<div id="tabs-1" class="box-form box-form-regular content-80 max-content-100">

@@ -8,13 +8,17 @@
     .header-actions {
         min-height: 1em;
 
-        a {
-            color: white;
+        .cmti, a {
+            color: $color-white;
         }
     }
 
     .header-search {
         text-align: right;
+
+        .cmti {
+            color: $color-white;
+        }
     }
 }
 
@@ -51,6 +55,8 @@
 .box-cud {
     width: 640px;
     margin: 0 auto;
+	margin-top: 1em;
+	padding-bottom: 1em;
     background-color: $color-primary-l;
     color: $color-primary-text-l;
 
@@ -140,10 +146,11 @@
 
 .data-grid {
     padding: 0.5rem 1rem;
+	background-color: $color-primary-l;
 
     .grid-header, .grid-footer {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
 
         .info {
             color: $color-secondary-text;

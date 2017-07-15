@@ -7,26 +7,32 @@ use yii\widgets\ActiveForm;
 use cmsgears\widgets\block\BasicBlock;
 
 $coreProperties = $this->context->getCoreProperties();
-$this->title 	= $coreProperties->getSiteTitle() . " | Login";
+$this->title 	= 'Login | ' . $coreProperties->getSiteTitle();
 ?>
 
 <?php BasicBlock::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'texture' => true, 'textureClass' => 'texture-default',
 	'contentWrapClass' => 'align align-center', 'content' => true
 ]);?>
 
-	<?php $form = ActiveForm::begin( [ 'id' => 'frm-login' ] );?>
+	<h2 class="align align-center">Login</h2>
+	<div class="filler-height"></div>
 
-	<h2 class='align align-middle'>LOGIN</h2>
+	<?php $form = ActiveForm::begin( [ 'id' => 'frm-login', 'options' => [ 'class' => 'form' ] ] ); ?>
 
-	<?= $form->field( $model, 'email' )->textInput( [ 'placeholder' => 'Email*' ] )->label( false ) ?>
-	<?= $form->field( $model, 'password' )->passwordInput( array( 'placeholder' => 'Password*' ) )->label( false ) ?>
-	<?= $form->field( $model, 'rememberMe' )->checkbox() ?>
+	<?= Yii::$app->formDesigner->getIconInput( $form, $model, 'email', [ 'placeholder' => 'Email/Username' ], 'cmti cmti-user-full', false ) ?>
+	<?= Yii::$app->formDesigner->getIconPassword( $form, $model, 'password', [ 'placeholder' => 'Password' ], 'cmti cmti-key', false ) ?>
+	<?= Yii::$app->formDesigner->getIconCheckbox( $form, $model, 'rememberMe', null, 'cmti cmti-checkbox', 'Remember Me' ) ?>
 
-	<?= Html::a( "Forgot your Password ?", [ '/forgot-password' ] ) ?>
-
-	<div class='align-middle'><input type="submit" value="Login" /></div>
+	<div class="filler-height"></div>
+	<div class="row">
+		<div class="colf colf2 align align-left">
+			<?= Html::a( "Forgot Password ?", [ '/forgot-password' ] ) ?>
+		</div>
+		<div class="colf colf2 align align-right">
+			<input class="element-medium" type="submit" value="Login" />
+		</div>
+	</div>
 
 	<?php ActiveForm::end(); ?>
 

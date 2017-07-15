@@ -39,8 +39,8 @@ SiteSettingsController.inherits( cmt.api.controllers.BaseController );
 
 SiteSettingsController.prototype.getContentActionPre = function( requestElement ) {
 
-	var content	= requestElement.attr( 'content' );
-	content		= jQuery( '#' + content );
+	var contentWrap	= requestElement.attr( 'content' );
+	var content		= jQuery( '#' + contentWrap + ' .box-content' );
 
 	if( !content.is( ':empty' ) ) {
 
@@ -54,20 +54,18 @@ SiteSettingsController.prototype.getContentActionPost = function( success, reque
 
 	if( success ) {
 
-		var content	= requestElement.attr( 'content' );
-		content		= jQuery( '#' + content );
-		var parent	= requestElement.closest( '.box-collapsible' );
+		var contentWrap	= requestElement.attr( 'content' );
+		contentWrap		= jQuery( '#' + contentWrap );
+		var content		= contentWrap.find( '.box-content' );
 
 		content.html( response.data );
 
-		content.slideDown( 'slow' );
+		content.find( '.cmt-checkbox' ).cmtCheckbox();
+		content.find( '.box-form' ).cmtFormInfo();
 
-		parent.find( '.cmt-checkbox' ).cmtCheckbox();
-		parent.find( '.box-form' ).cmtFormInfo();
+		siteApp.registerElements( content.find( '[cmt-app=site]' ) );
 
-		parent.find( '[cmt-app=site]' ).cmtRequestProcessor({
-			app: siteApp
-		});
+		contentWrap.slideDown( 'slow' );
 	}
 };
 
@@ -81,8 +79,8 @@ SiteSettingsController.prototype.updateActionPost = function( success, requestEl
 		var output 		= template( data );
 		var parent		= requestElement.closest( '.box-collapsible' );
 
-		parent.find( '.wrap-info' ).html( output );
+		parent.find( '.box-form-info-wrap' ).html( output );
 
-		parent.find( '.btn-edit' ).click();
+		parent.find( '.box-form-trigger' ).click();
 	}
 };

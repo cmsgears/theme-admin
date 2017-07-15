@@ -1,38 +1,19 @@
 .upd-count {
 
     &.upd-count-rounded {
-        line-height: 1em !important;
-        background: $color-orange;
-        border-radius: $size-medium;
-        color: $color-white;
+		position: absolute;
+		top: 16px;
+		right: 10px;
+		line-height: 1em !important;
+		background: $color-tertiary-d;
+		color: $color-tertiary-text-d;
+		border-radius: $size-medium;
         margin-left: $size-medium;
         padding: $size-small;
+		font-size: $font-size-8;
     }
 
     &.upd-count-0 {
         display: none;
     }
 }
-
-/*
-//to match button height (input[type]=button and anchor button)
-.btn {
-    //line-height: 1.55 !important;
-    box-sizing: border-box;
-}
-
-.align {
-
-    &.align-center, &.align-right {
-
-        .btn {
-             //line-height: 1.55;
-             //margin-bottom: 0.7em;
-        }
-    }
-}
-
-a {
-    vertical-align: baseline;
-}
-*/

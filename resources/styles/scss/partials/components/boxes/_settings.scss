@@ -1,25 +1,14 @@
 .box-settings {
     margin-bottom: 1rem;
 
-    .box-wrap-content {
+    .box-content-wrap {
 
-        label {
-            width: 40%;
-            float: left;
-        }
-    }
+		.box-content {
 
-    .box-form {
-
-        .btn-edit {
-            color: $color-black;
-        }
-    }
-
-    .wrap-form {
-
-        .frm-field {
-            clear: both;
-        }
+			label {
+				width: 40%;
+				float: left;
+			}
+		}
     }
 }
