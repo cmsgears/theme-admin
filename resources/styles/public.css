@@ -2521,6 +2521,15 @@ html, body {
   display: none;
 }
 
+.disabled {
+  background-color: #C5C5C5 !important;
+  color: #FFFFFF !important;
+}
+.disabled:hover {
+  background-color: #C5C5C5 !important;
+  color: #FFFFFF !important;
+}
+
 /**********************************************************************
 Description: This file define the text and background colors used by CMT-UI css framework.
 
@@ -4636,6 +4645,7 @@ Details: It defines the custom element styles as listed below:
   overflow: hidden;
   cursor: pointer;
   background-color: #FFFFFF;
+  padding: 0.25em;
 }
 .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
   color: #FFFFFF;
@@ -4692,6 +4702,7 @@ Details: It defines the custom element styles as listed below:
   overflow: hidden;
   cursor: pointer;
   background-color: #FFFFFF;
+  padding: 0.25em;
 }
 .cmt-multiselect .cmt-select-list li:hover {
   color: #FFFFFF;
@@ -5511,6 +5522,40 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding-left: 0;
   }
 }
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+input[type="submit"], input[type="button"], button, .btn, .btn-icon {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+.frm-icon-element .cmti {
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+}
+.frm-icon-element .icon {
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+  border-right: 1px solid #F2F2F2;
+}
+
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
 

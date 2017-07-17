@@ -117,3 +117,35 @@ CityController.prototype.autoSearchActionPost = function( success, requestElemen
 		wrapItemList.slideDown();
 	}
 };
+
+
+
+
+
+// AddressController ----------------------------------------
+
+AddressController	= function() {};
+
+AddressController.inherits( cmt.api.controllers.DefaultController );
+
+AddressController.prototype.provinceActionPre = function( requestElement ) {
+
+	this.requestData = { countryId: requestElement.find( 'select' ).val() };
+
+	return true;
+};
+
+AddressController.prototype.provinceActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var selectWrap	= requestElement.parent().find( '.wrap-province .cmt-select-wrap' );
+
+		if( response.data.length <= 0 ) {
+
+			response.data	= '<option value="0">Choose Province</option>';
+		}
+
+		jQuery.fn.cmtSelect.resetSelect( selectWrap, response.data );
+	}
+};

@@ -1,0 +1,21 @@
+// == Form Elements =================
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
+	@include rounded( $size-small );
+}
+
+input[type="submit"], input[type="button"], button, .btn, .btn-icon {
+	@include rounded( $size-small );
+}
+
+.frm-icon-element {
+
+	.cmti {
+		@include rounded-left( $size-small );
+	}
+
+	.icon {
+		@include rounded-left( $size-small );
+		@include border-right( 1px, solid, $color-shadow-inset );
+	}
+}

@@ -8,13 +8,13 @@ jQuery( document ).ready( function() {
 	// Controllers
 	var controllers					= [];
 
+	controllers[ 'crud' ]			= 'CrudController';
 	controllers[ 'gallery' ]		= 'GalleryController';
 	controllers[ 'category' ]		= 'CategoryController';
 	controllers[ 'tag' ]			= 'TagController';
 
 	controllers[ 'permission' ]		= 'PermissionController';
 	controllers[ 'notification' ]	= 'NotificationController';
-	controllers[ 'address' ]		= 'AddressController';
 
 	// Init App
 	jQuery( '[cmt-app=main]' ).cmtRequestProcessor({
@@ -22,6 +22,28 @@ jQuery( document ).ready( function() {
 		controllers: controllers
 	});
 });
+
+// == CRUD Controller =====================
+
+CrudController	= function() {};
+
+CrudController.inherits( cmt.api.controllers.BaseController );
+
+CrudController.prototype.bulkActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		cmt.utils.data.refreshGrid();
+	}
+};
+
+CrudController.prototype.deleteActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		cmt.utils.data.refreshGrid();
+	}
+};
 
 // == Gallery Controller ==================
 
@@ -42,14 +64,6 @@ GalleryController.prototype.updateItemActionPost = function( success, requestEle
 CategoryController	= function() {};
 
 CategoryController.inherits( cmt.api.controllers.BaseController );
-
-CategoryController.prototype.deleteActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		cmt.utils.data.refreshGrid();
-	}
-};
 
 CategoryController.prototype.autoSearchActionPre = function( requestElement ) {
 
@@ -285,147 +299,5 @@ NotificationController.prototype.deleteActionPost = function( success, requestEl
 	if( success ) {
 
 		location.reload( true );
-	}
-};
-
-// CategoryController ---------------------------------------
-
-CategoryController	= function() {};
-
-CategoryController.inherits( cmt.api.controllers.BaseController );
-
-CategoryController.prototype.autoSearchActionPre = function( requestElement, response ) {
-
-	var keyword	= this.requestTrigger.val();
-
-	if( keyword.length <= 0 ) {
-
-		var widget		= requestElement.parent();
-		var itemList	= widget.find( '.auto-map .item-list' );
-
-		itemList.slideUp();
-
-		return false;
-	}
-
-	return true;
-};
-
-CategoryController.prototype.autoSearchActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		var data			= response.data;
-		var listHtml		= '';
-		var widget			= requestElement.parent();
-		var itemList		= widget.find( '.auto-map .item-list' );
-
-		for( i = 0; i < data.length; i++ ) {
-
-			var obj = data[ i ];
-
-			listHtml += "<li class='cmt-click' data-id='" + obj.id + "'>" + obj.name + "</li>";
-		}
-
-		if( listHtml.length == 0 ) {
-
-			listHtml	= '<li>No matching items found.</li>';
-		}
-
-		itemList.html( listHtml );
-
-		itemList.slideDown();
-
-		mainApp.registerElements( widget.find( '.auto-map' ) );
-	}
-};
-
-CategoryController.prototype.mapModelCategoryActionPre = function( requestElement, response ) {
-
-	var categoryId	= this.requestTrigger.attr( 'data-id' );
-	categoryId		= parseInt( categoryId );
-
-	if( categoryId > 0 ) {
-
-		requestElement.find( 'input[name=categoryId]' ).val( categoryId );
-
-		return true;
-	}
-
-	return false;
-};
-
-CategoryController.prototype.mapModelCategoryActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		var data			= response.data;
-		var listHtml		= '';
-		var widget			= requestElement.parent();
-		var itemList		= widget.find( '.auto-mapped .item-list' );
-
-		for( i = 0; i < data.length; i++ ) {
-
-			var obj = data[ i ];
-
-			listHtml += "<li><span class='value'>" + obj.name + "</span><i data-id='" + obj.id + "' class='cmti cmti-close close cmt-click'></i></li>";
-		}
-
-		itemList.html( listHtml );
-
-		mainApp.registerElements( widget.find( '.auto-mapped' ) );
-
-		widget.find( '.auto-map .item-list' ).slideUp();
-	}
-};
-
-CategoryController.prototype.deleteModelCategoryActionPre = function( requestElement, response ) {
-
-	var categoryId	= this.requestTrigger.attr( 'data-id' );
-	categoryId		= parseInt( categoryId );
-
-	if( categoryId > 0 ) {
-
-		requestElement.find( 'input[name=categoryId]').val( categoryId );
-
-		return true;
-	}
-
-	return false;
-};
-
-CategoryController.prototype.deleteModelCategoryActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		this.requestTrigger.parent().remove();
-	}
-};
-
-// AddressController ----------------------------------------
-
-AddressController	= function() {};
-
-AddressController.inherits( cmt.api.controllers.DefaultController );
-
-AddressController.prototype.provinceActionPre = function( requestElement ) {
-
-	this.requestData = { countryId: requestElement.find( 'select' ).val() };
-
-	return true;
-};
-
-AddressController.prototype.provinceActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		var selectWrap	= requestElement.parent().find( '.wrap-province .cmt-select-wrap' );
-
-		if( response.data.length <= 0 ) {
-
-			response.data	= '<option value="0">Choose Province</option>';
-		}
-
-		jQuery.fn.cmtSelect.resetSelect( selectWrap, response.data );
 	}
 };

@@ -1,5 +1,7 @@
 <?php
 // CMG Imports
+use cmsgears\core\common\config\CoreGlobal;
+
 use themes\admin\assets\InlineAssets;
 
 InlineAssets::register( $this );
@@ -13,7 +15,7 @@ $this->theme->registerChildAssets( $this );
 $coreProperties = $this->context->getCoreProperties();
 $themePath		= Yii::getAlias( '@themes/admin' );
 $user			= Yii::$app->user->getIdentity();
-$microSidebar	= $user->getDataMeta( 'microSidebar' );
+$microSidebar	= $user->getDataMeta( CoreGlobal::DATA_SIDEBAR_MICRO );
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>

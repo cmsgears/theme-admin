@@ -2521,6 +2521,15 @@ html, body {
   display: none;
 }
 
+.disabled {
+  background-color: #C5C5C5 !important;
+  color: #FFFFFF !important;
+}
+.disabled:hover {
+  background-color: #C5C5C5 !important;
+  color: #FFFFFF !important;
+}
+
 /**********************************************************************
 Description: This file define the text and background colors used by CMT-UI css framework.
 
@@ -4636,6 +4645,7 @@ Details: It defines the custom element styles as listed below:
   overflow: hidden;
   cursor: pointer;
   background-color: #FFFFFF;
+  padding: 0.25em;
 }
 .cmt-select-wrap .cmt-select .cmt-select-list li:hover {
   color: #FFFFFF;
@@ -4692,6 +4702,7 @@ Details: It defines the custom element styles as listed below:
   overflow: hidden;
   cursor: pointer;
   background-color: #FFFFFF;
+  padding: 0.25em;
 }
 .cmt-multiselect .cmt-select-list li:hover {
   color: #FFFFFF;
@@ -5511,6 +5522,40 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding-left: 0;
   }
 }
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+input[type="submit"], input[type="button"], button, .btn, .btn-icon {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+.frm-icon-element .cmti {
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+}
+.frm-icon-element .icon {
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+  border-right: 1px solid #F2F2F2;
+}
+
 /**********************************************************************
 Description: It defines the table styles for CMT-UI css framework.
 
@@ -6595,6 +6640,44 @@ Details: It defines the styles for popout components as listed below:
     right: 0;
   }
 }
+.popup-admin .popup-screen {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.popup-admin .popup-data {
+  background-color: #FFFFFF;
+  color: #898989;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+.popup-admin .popup-data .popup-header {
+  background-color: #3489DB;
+  color: #FFFFFF;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-top-right: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-top-right: 3px;
+  border-radius: 3px 3px 0 0;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-top-right: 3px;
+  padding: 1rem;
+}
+.popup-admin .popup-data .popup-header .popup-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.popup-admin .popup-data .popup-content-wrap {
+  padding: 1rem;
+  overflow-y: auto;
+}
+.popup-admin .popup-data .popup-close {
+  padding: 0.25em 0.5em;
+  top: 0.5em;
+  right: 0.5em;
+  color: #FFFFFF;
+}
+
 /**********************************************************************
 Description: It defines the styles for mapper components available in CMT-UI css framework.
 
@@ -6935,6 +7018,33 @@ Details: It defines the styles of form box components as listed below:
   padding: 0.5rem;
 }
 
+.box-crud-wrap {
+  background-color: #FFFFFF;
+  color: #898989;
+  padding: 0.5rem 1rem;
+}
+
+.box-crud {
+  border: 1px solid #D1D2D3;
+}
+.box-crud .box-header {
+  background-color: #F9F9F9;
+  color: #898989;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+  border-bottom: 1px solid #D1D2D3;
+}
+.box-crud .box-content-wrap {
+  padding: 1em 0.25em;
+}
+.box-crud .box-content-wrap .cmt-checkbox, .box-crud .box-content-wrap .cmt-switch {
+  padding-left: 0.30em;
+}
+.box-crud .box-content-wysiwyg .cleditorMain {
+  border: none;
+}
+
 .box-form .frm-field {
   clear: both;
 }
@@ -6953,133 +7063,100 @@ Details: It defines the styles of form box components as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for header components as listed below:
+Details: It defines the styles for data grid components as listed below:
 
-* Block       - The barebone grid class with minimum styles common for all the data grids.
+* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
 *
-* Basic       - The basic data grid having coloring.
+* Basic       - The basic data grid having default coloring.
 ***********************************************************************/
-.grid-data .grid-content .grid-rows {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
   display: none;
 }
-.grid-data .grid-content .grid-rows.active {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap.active {
   display: block;
 }
-.grid-data .grid-content .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap.grid-rows-zebra .grid-row:nth-child(even) {
   background-color: #F9F9F9;
 }
-.grid-data .grid-content .grid-rows .grid-rows-header {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
   display: none;
   font-weight: bold;
 }
-.grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
   display: inline-block;
   width: 68%;
   padding: 1%;
   word-wrap: break-word;
 }
-.grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
   width: 28%;
 }
-.grid-data .grid-content .grid-rows .grid-rows-footer {
+.grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
   display: none;
   font-weight: bold;
 }
-.grid-data .grid-content .grid-cards {
+.grid-data .grid-content-wrap .grid-content .grid-cards-wrap {
   display: none;
 }
-.grid-data .grid-content .grid-cards.active {
+.grid-data .grid-content-wrap .grid-content .grid-cards-wrap.active {
   display: block;
 }
 @media only screen and (min-width: 1025px) {
-  .grid-data .grid-content .grid-rows .grid-rows-header {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
     display: block;
   }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-header {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-header {
     display: none;
   }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data {
     width: 100%;
     padding: 0;
   }
-  .grid-data .grid-content .grid-rows .wrap-grid-rows .grid-row .grid-row-data .data.title {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .data.title {
     display: none;
   }
-  .grid-data .grid-content .grid-rows .grid-rows-footer {
+  .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
     display: block;
   }
 }
 
-.grid-basic {
+.grid-data-basic {
   background-color: #E6E7E8;
   padding: 10px;
 }
-.grid-basic .grid-header {
+.grid-data-basic .grid-header {
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.25em 10px;
   text-align: right;
   min-height: 2em;
 }
-.grid-basic .grid-header .info {
+.grid-data-basic .grid-header .grid-header-content {
   display: inline-block;
   float: left;
   padding: 0.25em 0.5em;
 }
-.grid-basic .grid-footer {
+.grid-data-basic .grid-footer {
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.25em 10px;
   text-align: right;
   min-height: 2em;
 }
-.grid-basic .grid-footer .info {
+.grid-data-basic .grid-footer .grid-footer-info {
   display: inline-block;
   float: left;
   padding: 0.25em 0.5em;
 }
-.grid-basic .grid-rows {
+.grid-data-basic .grid-rows {
   margin: 10px 0;
 }
-.grid-basic .grid-rows .avatar {
+.grid-data-basic .grid-rows .avatar {
   width: 48px;
-}
-.grid-basic .pagination, .grid-basic .pagination li {
-  display: inline-block;
-  list-style: none;
-}
-.grid-basic .pagination li {
-  margin: 0 0.5em;
-}
-.grid-basic .pagination li span, .grid-basic .pagination li a {
-  display: inline-block;
-  background-color: #94CBEA;
-  color: #FFFFFF;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -khtml-border-radius: 5px;
-  font-size: 1em;
-  padding: 0.25em 0.5em;
-  -moz-transition: background-color 250ms ease-in-out 0s;
-  -ms-transition: background-color 250ms ease-in-out 0s;
-  -o-transition: background-color 250ms ease-in-out 0s;
-  -webkit-transition: background-color 250ms ease-in-out 0s;
-  transition: background-color 250ms ease-in-out 0s;
-}
-.grid-basic .pagination li span:hover, .grid-basic .pagination li a:hover {
-  background-color: #FFFFFF;
-  color: #3489DB;
-}
-.grid-basic .pagination li.disabled span, .grid-basic .pagination li.disabled a, .grid-basic .pagination li.disabled:hover span, .grid-basic .pagination li.disabled:hover a {
-  background-color: gray;
-  color: #F9F9F9;
 }
 
 /**********************************************************************
@@ -7190,71 +7267,326 @@ Details: It defines the styles of sorting components as listed below:
 
 * Sort        - The barebone sort class with minimum styles common for all the sorting.
 ***********************************************************************/
-.wrap-sort .sort {
+.grid-sort .sort {
   cursor: pointer;
 }
-.wrap-sort .sort.sort-inline {
+.grid-sort .sort.sort-inline {
   padding-right: 0.5rem;
 }
-.wrap-sort .sort.sort-asc {
+.grid-sort .sort.sort-asc {
   color: #A5D75A !important;
 }
-.wrap-sort .sort.sort-desc {
+.grid-sort .sort.sort-desc {
   color: #E74343 !important;
 }
 
-.grid-table .table-header {
+/**********************************************************************
+Description: It defines the styles of the table grid components forming the grid using html tables.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for data table components as listed below:
+
+* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
+*
+* Basic       - The basic data grid having default coloring.
+***********************************************************************/
+.grid-table .grid-table-header {
   display: none;
 }
-.grid-table .table-rows.table-rows-zebra .table-row:nth-child(even) {
+.grid-table .grid-table-rows.grid-table-rows-zebra .grid-table-row:nth-child(even) {
   background-color: #F9F9F9;
 }
-.grid-table .table-rows .table-row .table-row-data .data {
+.grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data {
   display: inline-block;
   width: 68%;
   padding: 1%;
   word-wrap: break-word;
 }
-.grid-table .table-rows .table-row .table-row-data .data.title {
+.grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data.title {
   width: 28%;
 }
+.grid-table .grid-table-footer {
+  display: none;
+}
 @media only screen and (min-width: 1025px) {
-  .grid-table .table-header {
+  .grid-table .grid-table-header {
     display: block;
   }
-  .grid-table .table-rows .table-row .table-row-header {
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-header {
     display: none;
   }
-  .grid-table .table-rows .table-row .table-row-data .data {
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data {
     width: 100%;
     padding: 0;
   }
-  .grid-table .table-rows .table-row .table-row-data .data.title {
+  .grid-table .grid-table-rows .grid-table-row .grid-table-row-data .data.title {
     display: none;
+  }
+  .grid-table .grid-table-footer {
+    display: block;
   }
 }
 
 .grid-table-basic {
   background-color: #E6E7E8;
 }
-.grid-table-basic .table-header {
+.grid-table-basic .grid-table-header {
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.25em 0.25rem;
   text-align: left;
 }
-.grid-table-basic .table-rows {
+.grid-table-basic .grid-table-rows {
   border: 1px solid #F9F9F9;
 }
-.grid-table-basic .table-rows .avatar {
+.grid-table-basic .grid-table-rows .avatar {
   width: 48px;
 }
-.grid-table-basic .table-rows .table-row {
+.grid-table-basic .grid-table-rows .grid-table-row {
   padding: 0.25em 0.25rem;
   border-bottom: 1px solid #F9F9F9;
 }
-.grid-table-basic .table-rows .table-row:last-child {
+.grid-table-basic .grid-table-rows .grid-table-row:last-child {
   border-bottom: none;
+}
+.grid-table-basic .grid-table-footer {
+  background-color: #F9F9F9;
+  color: #898989;
+  padding: 0.25em 0.25rem;
+  text-align: left;
+}
+
+.grid-data-admin {
+  background-color: #FFFFFF;
+  color: #898989;
+  padding: 0 1rem;
+}
+.grid-data-admin .cmt-select-wrap {
+  width: 125px;
+}
+.grid-data-admin .cmt-select-wrap .cmt-select .cmt-select-list li {
+  text-align: center !important;
+}
+.grid-data-admin .action-pop {
+  cursor: pointer;
+}
+.grid-data-admin .cmt-choice .label {
+  margin-top: 0.5em;
+}
+.grid-data-admin .grid-search-wrap {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.grid-data-admin .grid-search-wrap .grid-search {
+  text-align: right;
+}
+.grid-data-admin .grid-search-wrap .grid-search .search-field {
+  background-color: #F2F2F2;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+}
+.grid-data-admin .grid-search-wrap .grid-search .search-field input[type=text], .grid-data-admin .grid-search-wrap .grid-search .search-field .cmt-select-wrap {
+  width: 8em;
+  margin-bottom: 0;
+}
+.grid-data-admin .grid-search-wrap .grid-search .search-field input[type=text] {
+  width: 12em;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  border-radius: 3px 0 0 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+}
+.grid-data-admin .grid-search-wrap .grid-search .search-field .cmt-select-wrap {
+  display: inline-block;
+  text-align: left;
+}
+.grid-data-admin .grid-search-wrap .grid-search .search-field .btn {
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  border-radius: 0 5px 5px 0;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+}
+.grid-data-admin .grid-sort-wrap {
+  display: inline-block;
+}
+.grid-data-admin .grid-sort-wrap .grid-sort {
+  display: inline-block;
+}
+.grid-data-admin .grid-filters-wrap {
+  display: inline-block;
+}
+.grid-data-admin .grid-filters-wrap .grid-filters {
+  display: inline-block;
+}
+.grid-data-admin .grid-bulk-wrap {
+  display: inline-block;
+}
+.grid-data-admin .grid-bulk-wrap .grid-bulk {
+  display: inline-block;
+}
+.grid-data-admin .grid-report-wrap {
+  display: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #D1D2D3;
+}
+.grid-data-admin .grid-report-wrap.show-report {
+  display: block;
+}
+.grid-data-admin .grid-report-wrap .grid-report .grid-report-fields > .row:nth-child(odd) {
+  padding-right: 0.5em;
+}
+.grid-data-admin .grid-report-wrap .grid-report .grid-report-fields > .row:nth-child(even) {
+  padding-left: 0.5em;
+}
+.grid-data-admin .grid-report-wrap .grid-report .grid-report-fields .wrap-date:nth-child(odd) {
+  padding-left: 0.5em;
+}
+.grid-data-admin .grid-report-wrap .grid-report .grid-report-fields .wrap-date:nth-child(even) {
+  padding-right: 0.5em;
+}
+.grid-data-admin .grid-report-wrap .grid-report .grid-report-actions {
+  text-align: right;
+}
+.grid-data-admin .grid-head-wrap {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #D1D2D3;
+}
+.grid-data-admin .grid-head-wrap .grid-title {
+  display: none;
+}
+.grid-data-admin .grid-head-wrap .grid-head-options {
+  text-align: right;
+}
+.grid-data-admin .grid-head-wrap .grid-head-options .cmt-select-wrap {
+  margin-right: 0.5em;
+}
+.grid-data-admin .grid-options-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-admin .grid-content-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap {
+  border: 1px solid #D1D2D3;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .colf {
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+  border-bottom: 1px solid #D1D2D3;
+  border-right: 1px solid #D1D2D3;
+  overflow: hidden;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
+  background-color: #F9F9F9;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header .colf:last-child {
+  border-right: none;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .colf:last-child {
+  border-right: none;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data:last-child .colf {
+  border-bottom: none;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card {
+  margin-bottom: 1em;
+  border: 1px solid #D1D2D3;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-header {
+  background-color: #F9F9F9;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-header .grid-card-actions {
+  text-align: right;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data {
+  height: 160px;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data .col, .grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data .colf {
+  padding: 0.25em;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-footer {
+  background-color: #F9F9F9;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+}
+.grid-data-admin .grid-footer-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-admin .grid-footer-wrap .grid-footer {
+  border: 1px solid #D1D2D3;
+  padding: 0.75rem;
+}
+.grid-data-admin .grid-footer-wrap .grid-footer .text {
+  line-height: 2em;
+}
+.grid-data-admin .grid-footer-wrap .grid-footer .grid-footer-options {
+  text-align: right;
+}
+
+.pagination-grid {
+  display: inline-block;
+  text-align: left;
+  margin-top: 0.25em;
+}
+.pagination-grid li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  margin-left: 0.25em;
+  height: 1.4em;
+  line-height: 1.4em;
+}
+.pagination-grid li span, .pagination-grid li a {
+  border: 1px solid #3498DB;
+  color: #898989;
+  padding: 0.3em 0.65em;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.pagination-grid li.prev a, .pagination-grid li.prev span {
+  border-left: 1px solid #3498DB;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.pagination-grid li.next a, .pagination-grid li.next span {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -khtml-border-radius: 5px;
+}
+.pagination-grid .active a {
+  background-color: #3489DB;
+  color: #FFFFFF;
+}
+.pagination-grid a:hover {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.pagination-grid .disabled span {
+  background-color: #7F7F7F;
+  color: #FFFFFF;
 }
 
 .wrap-filters .filter {
