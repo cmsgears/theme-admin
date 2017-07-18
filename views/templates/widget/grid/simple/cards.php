@@ -2,7 +2,7 @@
 $dataProvider	= $widget->dataProvider;
 $models			= $dataProvider->getModels();
 
-$columns		= $widget->columns;
+$columns		= count( $widget->cardColumns ) > 0 ? $widget->cardColumns : $widget->gridColumns;
 $actions		= $widget->actions;
 
 $actionView		= $widget->actionView;
@@ -74,9 +74,6 @@ $actionView		= $widget->actionView;
 		<?php
 				}
 		?>
-		<?php } else { ?>
-			<div class="filler-height filler-height-large"></div>
-			<p><?= $widget->noDataMessage ?></p>
 		<?php } ?>
 	</div>
 </div>

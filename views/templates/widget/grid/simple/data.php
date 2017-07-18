@@ -2,23 +2,24 @@
 $dataProvider	= $widget->dataProvider;
 $models			= $dataProvider->getModels();
 
-$columns		= $widget->columns;
+$gridColumns	= $widget->gridColumns;
 $actions		= $widget->actions;
 
 $actionView		= $widget->actionView;
 ?>
-<div class="grid-rows-wrap grid-rows-zebra <?= $widget->layout == 'data' ? 'active' : null ?>">
-	<?php
-		if( $widget->grid && count( $models ) > 0 ) {
 
-			$gridColumns	= $widget->gridColumns;
-			$root			= $gridColumns[ 'root' ];
-			$factor			= $gridColumns[ 'factor' ];
-			$index			= 0;
-	?>
+<?php
+	if( $widget->grid && count( $models ) > 0 ) {
+
+		$columns		= $widget->columns;
+		$root			= $columns[ 'root' ];
+		$factor			= $columns[ 'factor' ];
+		$index			= 0;
+?>
+<div class="grid-rows-wrap grid-rows-zebra <?= $widget->layout == 'data' ? 'active' : null ?>">
 	<div class="grid-rows-header row">
 		<?php
-			foreach ( $columns as $key => $column ) {
+			foreach ( $gridColumns as $key => $column ) {
 
 				$title = $column;
 
@@ -29,7 +30,7 @@ $actionView		= $widget->actionView;
 
 				if( $key === 'bulk' ) {
 		?>
-					<div class="<?= $root . $factor[ $index ] ?>">
+					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>">
 						<span class="data cmt-choice">
 							<label>
 								<input class="grid-bulk-all" type="checkbox" />
@@ -38,7 +39,7 @@ $actionView		= $widget->actionView;
 						</span>
 					</div>
 				<?php } else { ?>
-					<div class="<?= $root . $factor[ $index ] ?>"><?= $title ?></div>
+					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>"><?= $title ?></div>
 				<?php } ?>
 		<?php
 				$index++;
@@ -48,8 +49,8 @@ $actionView		= $widget->actionView;
 	<div class="grid-rows">
 	<?php
 
-		$root	= $gridColumns[ 'root' ];
-		$factor	= $gridColumns[ 'factor' ];
+		$root	= $columns[ 'root' ];
+		$factor	= $columns[ 'factor' ];
 
 		foreach( $models as $model ) {
 
@@ -59,7 +60,7 @@ $actionView		= $widget->actionView;
 		<div class="grid-row">
 			<div class="grid-row-data row max-cols-50">
 		<?php
-				foreach ( $columns as $key => $column ) {
+				foreach ( $gridColumns as $key => $column ) {
 
 					$title	= null;
 					$value 	= null;
@@ -86,7 +87,7 @@ $actionView		= $widget->actionView;
 					if( $key === 'bulk' ) {
 		?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
-							<span class="data title"><?= $title ?></span>
+							<span class="data data-title"><?= $title ?></span>
 							<span class="data cmt-choice">
 								<label>
 									<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
@@ -96,14 +97,14 @@ $actionView		= $widget->actionView;
 						</div>
 					<?php } else if( $key === 'actions' ) { ?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?> actions">
-							<span class="data title"><?= $title ?></span>
+							<span class="data data-title"><?= $title ?></span>
 							<span class="data">
 								<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>
 							</span>
 						</div>
 					<?php } else { ?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
-							<span class="data title"><?= $title ?></span>
+							<span class="data data-title"><?= $title ?></span>
 							<span class="data"><?= $value ?></span>
 						</div>
 					<?php } ?>
@@ -117,8 +118,8 @@ $actionView		= $widget->actionView;
 		}
 	?>
 	</div>
-	<?php } else { ?>
-		<div class="filler-height filler-height-large"></div>
-		<p><?= $widget->noDataMessage ?></p>
-	<?php } ?>
 </div>
+<?php } else { ?>
+	<div class="filler-height filler-height-large"></div>
+	<p><?= $widget->noDataMessage ?></p>
+<?php } ?>

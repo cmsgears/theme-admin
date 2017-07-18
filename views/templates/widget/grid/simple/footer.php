@@ -15,6 +15,8 @@ $limit			= $widget->limit;
 $import			= $widget->import;
 $export			= $widget->export;
 ?>
+
+<?php if( $pagination->totalCount > 0 ) { ?>
 <div class="grid-footer-wrap">
 	<div class="grid-footer row">
 		<div class="grid-footer-info colf colf12x3">
@@ -60,3 +62,4 @@ $export			= $widget->export;
 		</div>
 	</div>
 </div>
+<?php } ?>

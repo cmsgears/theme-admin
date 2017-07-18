@@ -25,7 +25,7 @@ $microSidebar	= $user->getDataMeta( CoreGlobal::DATA_SIDEBAR_MICRO );
 	</head>
 	<body>
 		<?php $this->beginBody(); ?>
-		<div id="pre-loader-main" class="pre-loader max-area-cover-color fixed">
+		<div id="pre-loader-main" class="pre-loader max-area-cover fixed">
 			<div class="valign-center cmti cmti-4x cmti-spinner-1 spin"></div>
 		</div>
 		<?php include "$themePath/views/headers/private.php"; ?>

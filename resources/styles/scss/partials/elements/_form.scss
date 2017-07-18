@@ -8,6 +8,21 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 	@include rounded( $size-small );
 }
 
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
+	padding: 0.30em 0.5em;
+}
+
+.cmt-select-wrap .cmt-select .cmt-selected {
+
+	.s-text {
+		padding: 0.30em 0.5em
+	}
+
+	.s-icon {
+		padding-right: 0.5em;
+	}
+}
+
 .frm-icon-element {
 
 	.cmti {

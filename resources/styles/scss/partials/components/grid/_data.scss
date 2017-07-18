@@ -182,8 +182,11 @@
 							.colf:last-child {
 								border-right: none;
 							}
+						}
 
-							&:last-child {
+						&:last-child {
+
+							.grid-row-data {
 
 								.colf {
 									border-bottom: none;
