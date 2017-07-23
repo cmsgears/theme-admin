@@ -2505,20 +2505,37 @@ html, body {
   box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
 }
 
-.upd-count.upd-count-rounded {
+.count-sidebar {
+  margin-left: 5px;
+}
+.count-sidebar.count-sidebar-header {
   position: absolute;
-  top: 16px;
-  right: 10px;
+  top: 6px;
+  right: 20px;
+  padding: 3px;
   line-height: 1em !important;
   background: #3489DB;
   color: #FFFFFF;
   border-radius: 5px;
-  margin-left: 5px;
-  padding: 3px;
   font-size: 0.8em;
 }
-.upd-count.upd-count-0 {
-  display: none;
+.count-sidebar.count-sidebar-content {
+  float: right;
+  margin-right: 20px;
+  color: #3489DB;
+}
+
+.count-header {
+  display: inline-block;
+  position: absolute;
+  background-color: #3489DB;
+  color: #FFFFFF;
+  border-radius: 5px;
+  font-size: 0.7em;
+  height: 1.5em;
+  padding: 0 0.25em;
+  line-height: 1.5em;
+  top: 1em;
 }
 
 .disabled {
@@ -3388,8 +3405,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .heading {
   vertical-align: middle;
   line-height: 1.2;
   font-family: opensans-bold, Helvetica, sans-serif;
-  padding: 0;
-  padding-bottom: 0.25em;
 }
 
 p, span, em, div, a {
@@ -4926,6 +4941,9 @@ Details: It defines the custom element styles as listed below:
   color: #898989;
 }
 
+.btn.btn-auto {
+  width: auto;
+}
 .btn.btn-25 {
   width: 25% !important;
 }
@@ -5154,12 +5172,13 @@ Details: It defines the styles of form elements as listed below:
 *
 * Round corner      - This section define classes to make form elements round cornered.
 *
-* Forms				- The form class add required spacing to render the form elements.
-*
 * Ignore 100%       - This class allows form to ignore 100% width of elements.
 *
 * Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
 *                     fields on right side.
+*
+* Forms				- The form class add required spacing to render the form elements.
+*
 ***********************************************************************/
 form {
   margin: 0 auto;
@@ -5176,28 +5195,28 @@ form {
   display: inline-block;
 }
 
-label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
+.btn, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .element, .cmt-select-wrap {
   width: 100%;
 }
-label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
+.element-25.btn, label.element-25, input.element-25[type="text"], input.element-25[type="email"], input.element-25[type="password"], textarea.element-25, select.element-25, input.element-25[type="submit"], input.element-25[type="button"], button.element-25, .element-25.element, .element-25.cmt-select-wrap {
   width: 25% !important;
 }
-label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
+.element-50.btn, label.element-50, input.element-50[type="text"], input.element-50[type="email"], input.element-50[type="password"], textarea.element-50, select.element-50, input.element-50[type="submit"], input.element-50[type="button"], button.element-50, .element-50.element, .element-50.cmt-select-wrap {
   width: 50% !important;
 }
-label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
+.element-75.btn, label.element-75, input.element-75[type="text"], input.element-75[type="email"], input.element-75[type="password"], textarea.element-75, select.element-75, input.element-75[type="submit"], input.element-75[type="button"], button.element-75, .element-75.element, .element-75.cmt-select-wrap {
   width: 75% !important;
 }
-label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
+.element-small.btn, label.element-small, input.element-small[type="text"], input.element-small[type="email"], input.element-small[type="password"], textarea.element-small, select.element-small, input.element-small[type="submit"], input.element-small[type="button"], button.element-small, .element-small.element, .element-small.cmt-select-wrap {
   width: 80px !important;
 }
-label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
+.element-medium.btn, label.element-medium, input.element-medium[type="text"], input.element-medium[type="email"], input.element-medium[type="password"], textarea.element-medium, select.element-medium, input.element-medium[type="submit"], input.element-medium[type="button"], button.element-medium, .element-medium.element, .element-medium.cmt-select-wrap {
   width: 120px !important;
 }
-label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
+.element-large.btn, label.element-large, input.element-large[type="text"], input.element-large[type="email"], input.element-large[type="password"], textarea.element-large, select.element-large, input.element-large[type="submit"], input.element-large[type="button"], button.element-large, .element-large.element, .element-large.cmt-select-wrap {
   width: 180px !important;
 }
-label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
+.element-xlarge.btn, label.element-xlarge, input.element-xlarge[type="text"], input.element-xlarge[type="email"], input.element-xlarge[type="password"], textarea.element-xlarge, select.element-xlarge, input.element-xlarge[type="submit"], input.element-xlarge[type="button"], button.element-xlarge, .element-xlarge.element, .element-xlarge.cmt-select-wrap {
   width: 250px !important;
 }
 
@@ -5432,6 +5451,66 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   -khtml-border-radius-bottom-left: 5px;
 }
 
+.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
+.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
+  float: none;
+  width: auto;
+}
+
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
+  width: 100%;
+}
+
+.frm-split-40-60 label, .element-40 {
+  clear: both;
+  width: 40%;
+  float: left;
+}
+
+.element-40 label {
+  width: 100%;
+}
+
+.frm-split-40-60.ignore-clear label, .frm-split-40-60.ignore-clear .element-40 {
+  clear: none;
+}
+
+.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 .icon-picker {
+  width: 60%;
+  float: left;
+}
+
+.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
+.element-60 textarea, .element-60 select,
+.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+  width: 100%;
+}
+
+.frm-split-40-60 .frm-icon-element {
+  width: 60%;
+  float: left;
+}
+.frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button,
+.frm-split-40-60 .frm-icon-element .btn {
+  float: none;
+}
+.frm-split-40-60 .ignore-40-60 .frm-icon-element {
+  width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
+  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+    width: 100%;
+  }
+
+  .frm-split-40-60 .help-block {
+    padding-left: 0;
+  }
+}
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select {
   margin-bottom: 0.5rem;
 }
@@ -5478,62 +5557,6 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   }
 }
 
-.frm-ignore-100 label, .frm-ignore-100 input[type="text"], .frm-ignore-100 input[type="email"], .frm-ignore-100 input[type="password"], .frm-ignore-100 textarea, .frm-ignore-100 select, .frm-ignore-100 input[type="submit"], .frm-ignore-100 input[type="button"], .frm-ignore-100 button,
-.frm-ignore-100 .btn, .frm-ignore-100 .cmt-checkbox, .frm-ignore-100 .cmt-switch, .frm-ignore-100 .cmt-choice {
-  float: none;
-  width: auto;
-}
-
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
-  width: 100%;
-}
-
-.frm-split-40-60 label, .element-40 {
-  clear: both;
-  width: 40%;
-  float: left;
-}
-
-.element-40 label {
-  width: 100%;
-}
-
-.frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
-.frm-split-40-60 .icon-picker {
-  width: 60%;
-  float: left;
-}
-
-.element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
-.element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
-  width: 100%;
-}
-
-.frm-split-40-60 .frm-icon-element {
-  width: 60%;
-  float: left;
-}
-.frm-split-40-60 .frm-icon-element input[type="text"], .frm-split-40-60 .frm-icon-element input[type="email"], .frm-split-40-60 .frm-icon-element input[type="password"], .frm-split-40-60 .frm-icon-element textarea, .frm-split-40-60 .frm-icon-element select, .frm-split-40-60 .frm-icon-element input[type="submit"], .frm-split-40-60 .frm-icon-element input[type="button"], .frm-split-40-60 .frm-icon-element button,
-.frm-split-40-60 .frm-icon-element .btn {
-  float: none;
-}
-.frm-split-40-60 .ignore-40-60 .frm-icon-element {
-  width: 100%;
-}
-
-@media only screen and (max-width: 480px) {
-  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
-    width: 100%;
-  }
-
-  .frm-split-40-60 .help-block {
-    padding-left: 0;
-  }
-}
 input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -5548,7 +5571,8 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -khtml-border-radius: 3px;
 }
 
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select, input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select,
+input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
   padding: 0.30em 0.5em;
 }
 

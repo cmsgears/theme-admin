@@ -8,22 +8,23 @@ jQuery( document ).ready( function() {
 
 	initPopups();
 
-	initPopouts();
-
 	initSidebar();
 
 	initSidebarTabs();
 
+	initSettings();
+
 	initTemplates();
 
-	activateSettingsBox();
+	initAutoHide();
+
+	initWindowResize();
 });
 
 // == Pre Loaders =========================
 
 function initPreloaders() {
 
-	// Hide global pre-loader spinner
 	jQuery( '.container-main' ).imagesLoaded( { background: true }, function() {
 
 		jQuery( '#pre-loader-main' ).fadeOut( 'slow' );
@@ -63,6 +64,9 @@ function initCmgTools() {
 
 	// Popups
 	jQuery( '.popup' ).cmtPopup();
+
+	// Popouts
+	jQuery( '.popout-group-main' ).cmtPopoutGroup();
 
 	// Auto Fillers
 	jQuery( '.auto-fill' ).cmtAutoFill();
@@ -184,34 +188,6 @@ function bindEditor( selector ) {
 	}
 }
 
-// == Popouts =============================
-
-function initPopouts() {
-
-	jQuery( '.btn-popout' ).click( function() {
-
-		jQuery( '.btn-popout' ).removeClass( 'active' );
-
-		jQuery( this ).addClass( 'active' );
-
-		var popoutId		= "#" + jQuery( this ).attr( 'popout' );
-		var targetPopout 	= jQuery( popoutId );
-
-		if( targetPopout.is( ':visible' ) ) {
-
-			jQuery( this ).removeClass( 'active' );
-
-			targetPopout.slideUp();
-		}
-		else {
-
-			jQuery( '.popout' ).hide();
-
-			targetPopout.slideDown();
-		}
-	});
-}
-
 // == Sidebars ============================
 
 function initSidebar() {
@@ -277,7 +253,7 @@ function initSidebarTabs() {
 
 // == Settings ============================
 
-function activateSettingsBox() {
+function initSettings() {
 
 	jQuery( '.box-settings .box-content-wrap' ).hide();
 
@@ -308,7 +284,7 @@ function activateSettingsBox() {
 function initTemplates() {
 
 	// Templates
-	var templateCheck = jQuery( '.template-file' );
+	var templateCheck = jQuery( '.template-file input[type=checkbox]' );
 
 	if( templateCheck.length > 0 ) {
 
@@ -339,4 +315,41 @@ function initTemplates() {
 			}
 		});
 	}
+}
+
+// == Auto Hide ===========================
+
+function initAutoHide() {
+
+	hideElement( jQuery( '.popout-trigger' ), jQuery( '.popout' ) );
+}
+
+function hideElement( targetElement, hideElement ) {
+
+	jQuery( window ).click( function( e ) {
+
+	    if ( !targetElement.is( e.target ) && targetElement.has( e.target ).length === 0 ) {
+
+			jQuery( hideElement ).slideUp();
+
+	        targetElement.removeClass( 'active' );
+	    }
+	});
+}
+
+// == Window Resize =======================
+
+function initWindowResize() {
+
+	//resizeElements();
+
+	jQuery( window ).resize( function () {
+
+		//resizeElements();
+	});
+}
+
+function resizeElements() {
+
+	// Resize elements on window resize
 }

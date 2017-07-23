@@ -35,12 +35,23 @@ class PrivateAssets extends AssetBundle {
 	];
 
 	// Load Javascript
-	public $js      = [
+	public $js = [
+		// vendor
+		// templates
+		'scripts/templates/public.js',
+		'scripts/templates/private.js',
+		// scripts
 		'scripts/main.js',
 		'scripts/search.js',
-		'scripts/apps/main.js',
-		'scripts/apps/site.js',
-		'scripts/apps/user.js'
+		// apix
+		'scripts/apix/public.js',
+		'scripts/apix/private.js',
+		// apps
+		'scripts/apps/public.js',
+		'scripts/apps/private.js',
+		'scripts/apps/user.js',
+		'scripts/apps/location.js',
+		'scripts/apps/notification.js'
 	];
 
 	// Position to load Javascript

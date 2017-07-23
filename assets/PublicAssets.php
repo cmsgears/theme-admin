@@ -36,8 +36,16 @@ class PublicAssets extends AssetBundle {
 
 	// Load Javascript
 	public $js = [
+		// vendor
+		// templates
+		'scripts/templates/public.js',
+		// scripts
 		'scripts/main.js',
-		'scripts/applications.js'
+		'scripts/search.js',
+		// apix
+		'scripts/apix/public.js',
+		// apps
+		'scripts/apps/public.js'
 	];
 
 	// Position to load Javascript

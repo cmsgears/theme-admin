@@ -7,7 +7,8 @@ InlineAssets::register( $this );
 $this->registerAssetBundle( 'public' );
 
 // Register Child theme Assets
-$this->theme->registerChildAssets( $this );
+//$this->theme->registerChildAssets( $this );
+$this->registerAssetBundle( 'child' );
 
 // Variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();
