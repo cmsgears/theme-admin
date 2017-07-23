@@ -257,7 +257,7 @@ function initSettings() {
 
 	jQuery( '.box-settings .box-content-wrap' ).hide();
 
-	jQuery( '.box-settings .box-btn-collapse' ).click( function() {
+	jQuery( '.box-settings .box-collapse-trigger' ).click( function() {
 
 		var parent		= jQuery( this ).closest( '.box-settings' );
 		var contentWrap = parent.find( '.box-content-wrap' );
