@@ -5094,6 +5094,62 @@ a.btn {
   color: #FFFFFF;
 }
 
+.icon-rounded {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.2em;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #94CBEA;
+  color: #FFFFFF;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-transition: background-color 350ms ease-in-out 0s;
+  -ms-transition: background-color 350ms ease-in-out 0s;
+  -o-transition: background-color 350ms ease-in-out 0s;
+  -webkit-transition: background-color 350ms ease-in-out 0s;
+  transition: background-color 350ms ease-in-out 0s;
+}
+.icon-rounded .icon {
+  font-size: 1em;
+}
+.icon-rounded:hover {
+  background-color: #3489DB;
+  color: #FFFFFF;
+}
+.icon-rounded.icon-rounded-small {
+  width: 2em;
+  height: 2em;
+  line-height: 1.6em;
+}
+.icon-rounded.icon-rounded-small .icon {
+  font-size: 1.5em;
+}
+.icon-rounded.icon-rounded-medium {
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.1em;
+}
+.icon-rounded.icon-rounded-medium .icon {
+  font-size: 2em;
+}
+.icon-rounded.icon-rounded-large {
+  width: 3em;
+  height: 3em;
+  line-height: 2.5em;
+}
+.icon-rounded.icon-rounded-large .icon {
+  font-size: 2.5em;
+}
+
 .btn-group.btn-group-top-left {
   position: absolute;
   top: 0;
@@ -5336,7 +5392,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
 .frm-icon-element .btn {
   padding-left: 2.1em;
-  width: 100%;
+  width: 100% !important;
 }
 .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
   position: absolute;
@@ -5355,6 +5411,17 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 }
 .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
   right: 0;
+}
+
+.frm-field-button {
+  text-align: center;
+}
+.frm-field-button input[type="text"] {
+  width: 70%;
+}
+.frm-field-button input[type="submit"], .frm-field-button input[type="button"], .frm-field-button button, .frm-field-button .btn {
+  width: 30%;
+  margin-left: -4px;
 }
 
 ::-webkit-input-placeholder {
@@ -5459,6 +5526,10 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
   width: 100%;
+}
+.frm-split-40-60 .auto-fill-items-wrap {
+  width: 60%;
+  margin-left: 40%;
 }
 
 .frm-split-40-60 label, .element-40 {

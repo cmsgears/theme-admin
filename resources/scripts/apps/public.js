@@ -8,6 +8,7 @@ jQuery( document ).ready( function() {
 	// Controllers
 	var controllers				= [];
 	controllers[ 'site' ]		= 'SiteController';
+	controllers[ 'auto' ]		= 'AutoController';
 	controllers[ 'settings' ]	= 'SiteSettingsController';
 
 	// Init App
@@ -28,6 +29,77 @@ SiteController.prototype.loginActionPost = function( success, requestElement, re
 	if( success ) {
 
 		window.location = response.data;
+	}
+};
+
+// == Auto Controller =====================
+
+AutoController	= function() {
+
+	this.singleRequest		= true;
+	this.previousLocation	= null;
+};
+
+AutoController.inherits( cmt.api.controllers.BaseController );
+
+AutoController.prototype.autoSearchActionPre = function( requestElement ) {
+
+	var name 	= requestElement.find( '.search-name' );
+	var type 	= requestElement.find( '.search-type' );
+
+	if( type.length == 1 ) {
+
+		this.requestData	= "name=" + name.val() + "&type=" + type.val();
+	}
+	else {
+
+		this.requestData	= "name=" + name.val();
+	}
+
+	return true;
+};
+
+AutoController.prototype.autoSearchActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		var data			= response.data;
+		var listHtml		= '';
+		var wrapItemList	= requestElement.find( '.auto-fill-items-wrap' );
+		var itemList		= requestElement.find( '.auto-fill-items' );
+
+		for( i = 0; i < data.length; i++ ) {
+
+			var obj = data[ i ];
+
+			listHtml += "<li class='auto-fill-item' data-id='" + obj.id + "'>" + obj.name + "</li>";
+		}
+
+		if( listHtml.length == 0 ) {
+
+			listHtml	= "<li class='auto-fill-message'>No matching results found</li>";
+
+			itemList.html( listHtml );
+		}
+		else {
+
+			itemList.html( listHtml );
+
+			requestElement.find( '.auto-fill-item' ).click( function() {
+
+				var target	= requestElement.closest( '.auto-fill' ).find( '.auto-fill-target' );
+				var id		= jQuery( this ).attr( 'data-id' );
+				var name	= jQuery( this ).html();
+
+				itemList.slideUp();
+
+				// Update Id and Name
+				target.find( '.target' ).val( id );
+				requestElement.find( '.auto-fill-text' ).val( name );
+			});
+		}
+
+		itemList.slideDown();
 	}
 };
 

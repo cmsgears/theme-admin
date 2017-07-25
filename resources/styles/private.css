@@ -5094,6 +5094,62 @@ a.btn {
   color: #FFFFFF;
 }
 
+.icon-rounded {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.2em;
+  display: inline-block;
+  cursor: pointer;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #94CBEA;
+  color: #FFFFFF;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-transition: background-color 350ms ease-in-out 0s;
+  -ms-transition: background-color 350ms ease-in-out 0s;
+  -o-transition: background-color 350ms ease-in-out 0s;
+  -webkit-transition: background-color 350ms ease-in-out 0s;
+  transition: background-color 350ms ease-in-out 0s;
+}
+.icon-rounded .icon {
+  font-size: 1em;
+}
+.icon-rounded:hover {
+  background-color: #3489DB;
+  color: #FFFFFF;
+}
+.icon-rounded.icon-rounded-small {
+  width: 2em;
+  height: 2em;
+  line-height: 1.6em;
+}
+.icon-rounded.icon-rounded-small .icon {
+  font-size: 1.5em;
+}
+.icon-rounded.icon-rounded-medium {
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.1em;
+}
+.icon-rounded.icon-rounded-medium .icon {
+  font-size: 2em;
+}
+.icon-rounded.icon-rounded-large {
+  width: 3em;
+  height: 3em;
+  line-height: 2.5em;
+}
+.icon-rounded.icon-rounded-large .icon {
+  font-size: 2.5em;
+}
+
 .btn-group.btn-group-top-left {
   position: absolute;
   top: 0;
@@ -5336,7 +5392,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 .frm-icon-element input[type="text"], .frm-icon-element input[type="email"], .frm-icon-element input[type="password"], .frm-icon-element textarea, .frm-icon-element select, .frm-icon-element input[type="submit"], .frm-icon-element input[type="button"], .frm-icon-element button,
 .frm-icon-element .btn {
   padding-left: 2.1em;
-  width: 100%;
+  width: 100% !important;
 }
 .frm-icon-element .icon, .frm-icon-element .cmti, .frm-icon-element .fa {
   position: absolute;
@@ -5355,6 +5411,17 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 }
 .frm-icon-element.icon-right .icon, .frm-icon-element.icon-right .cmti, .frm-icon-element.icon-right .fa {
   right: 0;
+}
+
+.frm-field-button {
+  text-align: center;
+}
+.frm-field-button input[type="text"] {
+  width: 70%;
+}
+.frm-field-button input[type="submit"], .frm-field-button input[type="button"], .frm-field-button button, .frm-field-button .btn {
+  width: 30%;
+  margin-left: -4px;
 }
 
 ::-webkit-input-placeholder {
@@ -5459,6 +5526,10 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 
 .frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .element-60 {
   width: 100%;
+}
+.frm-split-40-60 .auto-fill-items-wrap {
+  width: 60%;
+  margin-left: 40%;
 }
 
 .frm-split-40-60 label, .element-40 {
@@ -6791,112 +6862,33 @@ Details: It defines the styles for mapper components as listed below:
 .auto-fill {
   position: relative;
 }
-.auto-fill .auto-fill-items-wrap {
+.auto-fill .auto-fill-source {
+  position: relative;
+  z-index: 100000;
+}
+.auto-fill .auto-fill-source .auto-fill-items-wrap {
   position: relative;
 }
-.auto-fill .auto-fill-items-wrap .auto-fill-items {
+.auto-fill .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
   display: none;
-  position: absolute;
-  width: 100%;
 }
-.auto-fill .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
-  background-color: #E6E7E8;
-  color: #6D6E6F;
+.auto-fill .auto-fill-target {
+  position: relative;
 }
 
-.file-uploader {
-  position: relative;
-}
-.file-uploader .postview {
-  position: relative;
-  margin: 0 auto;
-}
-.file-uploader .postview .wrap-file {
-  text-align: center;
-  padding: 1em;
-}
-.file-uploader .postview .wrap-file .cmt-icon {
-  font-size: 10em;
-}
-.file-uploader .postview .message-upload {
-  margin: 1em 0;
-  display: none;
-}
-.file-uploader .postview .btn-show-chooser {
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items {
   position: absolute;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  padding: 1em;
-}
-.file-uploader .wrap-chooser {
-  display: none;
-}
-.file-uploader .chooser, .file-uploader .btn-direct-chooser {
-  position: relative;
-}
-.file-uploader .chooser input[type="file"], .file-uploader .btn-direct-chooser input[type="file"] {
-  opacity: 0;
-  cursor: pointer !important;
-  height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
 }
-.file-uploader .chooser {
-  overflow: hidden;
-  text-align: center;
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
+  background-color: #E6E7E8;
+  color: #6D6E6F;
+  padding: 0.5em;
+  cursor: pointer;
 }
-.file-uploader .preview {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-}
-.file-uploader .preview .wrap-drag {
-  position: relative;
-  margin: 0 auto;
-  width: 120px;
-  height: 120px;
-}
-.file-uploader .preview .wrap-drag .drag {
-  background-color: #F9F9F9;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 120px;
-  height: 120px;
-  z-index: 10;
-  text-align: center;
-  line-height: 120px;
-}
-.file-uploader .preview .wrap-drag .drag.hover {
-  background-color: #94CBEA;
-  color: #FFFFFF;
-}
-.file-uploader .preview .wrap-drag canvas {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 120px;
-  height: 120px;
-  z-index: 50;
-  display: none;
-}
-.file-uploader .preloader {
-  padding-top: 10px;
-}
-.file-uploader .preloader .preloader-bar {
-  background-color: #94CBEA;
-  width: 0%;
-  height: 10px;
-}
-.file-uploader .post-action {
-  display: none;
-  text-align: center;
-}
-.file-uploader .fields {
-  position: relative;
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
+  background-color: #E6E7E8;
+  color: #6D6E6F;
 }
 
 /**********************************************************************
@@ -7041,6 +7033,107 @@ Details: It defines the styles of form box components as listed below:
 
 .box-form-collapsible .box-form-collapsible-trigger {
   cursor: pointer;
+}
+
+.box-file-uploader .btn-chooser {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.box-file-uploader .box-content-wrap .box-content .file-wrap {
+  position: relative;
+  margin: 0 auto;
+}
+.box-file-uploader .box-content-wrap .box-content .chooser-wrap {
+  display: none;
+}
+.box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader {
+  padding-top: 10px;
+}
+.box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader .file-preloader-bar {
+  background-color: #94CBEA;
+  width: 0%;
+  height: 10px;
+}
+.box-file-uploader .box-content-wrap .box-content .form-wrap .post-action {
+  text-align: center;
+}
+.box-file-uploader .box-content-wrap .box-content .form-wrap .file-info, .box-file-uploader .box-content-wrap .box-content .form-wrap .file-fields {
+  position: relative;
+}
+
+.box-file-uploader-direct .btn-chooser {
+  display: none;
+}
+.box-file-uploader-direct .box-content-wrap .box-content .file-wrap {
+  display: none;
+}
+.box-file-uploader-direct .box-content-wrap .box-content .chooser-wrap {
+  display: block;
+}
+
+.card-file {
+  text-align: center;
+  padding: 1em;
+}
+.card-file .card-data .icon {
+  font-size: 10em;
+}
+.card-file .card-footer {
+  margin: 1em 0;
+  display: none;
+}
+
+.card-file-chooser .card-data {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.card-file-chooser .card-data input[type="file"] {
+  opacity: 0;
+  cursor: pointer !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.card-file-dragger {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+.card-file-dragger .card-data .drag-wrap {
+  position: relative;
+  margin: 0 auto;
+  width: 120px;
+  height: 120px;
+}
+.card-file-dragger .card-data .drag-wrap .drag {
+  background-color: #F9F9F9;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  z-index: 10;
+  text-align: center;
+  line-height: 120px;
+}
+.card-file-dragger .card-data .drag-wrap .drag.hover {
+  background-color: #94CBEA;
+  color: #FFFFFF;
+}
+.card-file-dragger .card-data .drag-wrap canvas {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 120px;
+  height: 120px;
+  z-index: 50;
+  display: none;
 }
 
 .box-collapsible {
