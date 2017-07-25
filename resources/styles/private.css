@@ -7505,7 +7505,7 @@ Details: It defines the styles for data table components as listed below:
 .grid-data-admin .cmt-select-wrap .cmt-select .cmt-select-list li {
   text-align: center !important;
 }
-.grid-data-admin .action-pop {
+.grid-data-admin .actions .action {
   cursor: pointer;
 }
 .grid-data-admin .cmt-choice .label {

@@ -2,6 +2,7 @@
 $title	= $widget->title;
 $modal	= $widget->modal;
 $data	= $widget->data;
+$popId	= isset( $data[ 'popupId' ] ) ? $data[ 'popupId' ] : 'popup-grid-bulk';
 
 $model		= $data[ 'model' ];
 $app		= $data[ 'app' ];
@@ -9,7 +10,7 @@ $controller	= $data[ 'controller' ];
 $action		= $data[ 'action' ];
 $url		= $data[ 'url' ];
 ?>
-<div id="popup-grid-bulk" class="popup popup-admin popup-medium <?= $modal ? 'popup-modal' : null ?>">
+<div id="<?= $popId ?>" class="popup popup-admin popup-medium <?= $modal ? 'popup-modal' : null ?>">
 	<div class="popup-screen"></div>
 	<?php if( $widget->bkg ) { ?>
 		<div class="popup-bkg <?= $widget->bkgClass ?>" <?= isset( $widget->bkgUrl ) ? " style=\"background-image:url($widget->bkgUrl);\"" : null ?>></div>

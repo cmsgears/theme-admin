@@ -36,6 +36,14 @@ CrudController.prototype.bulkActionPost = function( success, requestElement, res
 	}
 };
 
+CrudController.prototype.genericActionPost = function( success, requestElement, response ) {
+
+	if( success ) {
+
+		cmt.utils.data.refreshGrid();
+	}
+};
+
 CrudController.prototype.deleteActionPost = function( success, requestElement, response ) {
 
 	if( success ) {

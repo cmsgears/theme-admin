@@ -2,7 +2,7 @@
 $title	= $widget->title;
 $modal	= $widget->modal;
 $data	= $widget->data;
-$popId	= isset( $data[ 'popupId' ] ) ? $data[ 'popupId' ] : 'popup-grid-delete';
+$popId	= isset( $data[ 'popupId' ] ) ? $data[ 'popupId' ] : 'popup-grid-generic';
 
 $model		= $data[ 'model' ];
 $app		= $data[ 'app' ];
@@ -29,14 +29,17 @@ $url		= $data[ 'url' ];
 		<div class="popup-content-wrap">
 			<div class="popup-content">
 				<div class="filler-height filler-height-medium"></div>
-				<form cmt-app="<?= $app ?>" cmt-controller="<?= $controller ?>" cmt-action="<?= $action ?>" action="<?= $url ?>">
+				<form class="form" cmt-app="<?= $app ?>" cmt-controller="<?= $controller ?>" cmt-action="<?= $action ?>" action="<?= $url ?>">
 					<div class="spinner max-area-cover-color">
 						<div class="valign-center cmti cmti-2x cmti-spinner-9 spin"></div>
 					</div>
 					<div class="filler-height"></div>
-					<p class="align align-center">Are you sure you want to delete the selected <?= $model ?> ?</p>
+					<p class="align align-center">Are you sure you want to <b class="action-generic">Generic</b> the selected <?= $model ?> ?</p>
 					<div class="filler-height filler-height-medium"></div>
-					<div class="align align-center"><input class="element-medium" type="submit" value="Delete" /></div>
+					<div class="align align-center">
+						<input class="element-action" type="hidden" name="action" value="generic" />
+						<input class="element-medium element-generic" type="submit" value="Generic" />
+					</div>
 				</form>
 			</div>
 		</div>

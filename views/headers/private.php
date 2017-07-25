@@ -82,7 +82,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 									}
 							?>
 									<li class="align align-center">
-										<a href="<?= Url::to( 'core/notify/notification/all' ) ?>">View All</a>
+										<a href="<?= Url::toRoute( [ '/notify/notification/all' ], true ) ?>">View All</a>
 									</li>
 							<?php
 								}
