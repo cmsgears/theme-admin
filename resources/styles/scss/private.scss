@@ -39,6 +39,16 @@
 
 @import "cmt/elements/table";
 
+@import "cmt/elements/breadcrumbs";
+@import "partials/elements/breadcrumbs";
+
+//@import "cmt/elements/flippers";
+
+@import "cmt/elements/mappers";
+@import "partials/elements/mappers";
+
+@import "cmt/elements/auto-fill";
+
 // ---------------------------------------//
 // Components Division
 // ---------------------------------------//
@@ -48,31 +58,28 @@
 //@import "cmt/components/menus/social";
 @import "partials/components/menus/collapsible";
 
-@import "cmt/components/breadcrumbs";
-@import "partials/components/breadcrumbs";
+@import "cmt/components/headers/basic";
+@import "partials/components/headers/basic";
 
-@import "cmt/components/headers";
-//@import "cmt/components/footers";
-@import "cmt/components/sidebars";
-@import "partials/components/headers";
-@import "partials/components/sidebars";
+//@import "cmt/components/footers/basic";
 
-@import "cmt/components/popups";
-@import "cmt/components/popouts";
-@import "partials/components/popouts";
-@import "partials/components/popups";
+@import "cmt/components/sidebars/basic";
+@import "partials/components/sidebars/basic";
 
-//@import "cmt/components/sliders";
-//@import "cmt/components/galleries";
-//@import "cmt/components/flippers";
-@import "cmt/components/mappers";
-@import "cmt/components/auto-fill";
+@import "cmt/components/popups/basic";
+@import "cmt/components/popups/popouts";
+@import "partials/components/popups/basic";
+@import "partials/components/popups/popouts";
+
+//@import "cmt/components/sliders/basic";
+
+//@import "cmt/components/galleries/basic";
 
 @import "cmt/components/cards/basic";
 
 @import "cmt/components/boxes/basic";
-@import "cmt/components/boxes/form";
 //@import "cmt/components/boxes/login";
+@import "cmt/components/boxes/form";
 @import "cmt/components//boxes/file";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/crud";
@@ -80,21 +87,28 @@
 @import "partials/components/boxes/settings";
 
 //@import "cmt/components/widgets/basic";
+//@import "cmt/components/widgets/blog/post";
+//@import "cmt/components/widgets/cart/cart";
+//@import "cmt/components/widgets/cart/product";
 
 //@import "cmt/components/blocks/basic";
 //@import "partials/components/blocks/basic";
 
-@import "cmt/components/grid/data";
 @import "cmt/components/grid/pagination";
 @import "cmt/components/grid/sorting";
-@import "cmt/components/grid/table";
 @import "cmt/components/grid/filters";
-@import "partials/components/grid/data";
+@import "cmt/components/grid/data";
+@import "cmt/components/grid/table";
 @import "partials/components/grid/pagination";
 @import "partials/components/grid/filters";
+@import "partials/components/grid/data";
 
 //@import "cmt/components/blog/blog";
 //@import "cmt/components/blog/post";
+
+//@import "cmt/components/cart/product";
+//@import "cmt/components/cart/cart";
+//@import "cmt/components/cart/shop";
 
 @import "partials/components/old-admin";
 

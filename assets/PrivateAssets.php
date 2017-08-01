@@ -51,7 +51,8 @@ class PrivateAssets extends AssetBundle {
 		'scripts/apps/private.js',
 		'scripts/apps/user.js',
 		'scripts/apps/location.js',
-		'scripts/apps/notification.js'
+		'scripts/apps/notification.js',
+		'scripts/apps/category.js'
 	];
 
 	// Position to load Javascript

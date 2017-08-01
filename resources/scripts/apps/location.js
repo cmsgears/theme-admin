@@ -1,20 +1,13 @@
-var locationApp	= null;
+// == Application =========================
 
 jQuery( document ).ready( function() {
 
-	// App
-	locationApp	= new cmt.api.Application( { basePath: ajaxUrl } );
+	var app	= cmt.api.root.registerApplication( 'notification', 'cmt.api.Application', { basePath: ajaxUrl } );
 
-	// Controllers
-	var locationControllers				= [];
-	locationControllers[ 'province' ] 	= 'ProvinceController';
-	locationControllers[ 'city' ] 		= 'CityController';
+	app.mapController( 'province', 'cmg.controllers.ProvinceController' );
+	app.mapController( 'city', 'cmg.controllers.CityController' );
 
-	// Init App
-	jQuery( '[cmt-app=location]' ).cmtRequestProcessor({
-		app: userApp,
-		controllers: locationControllers
-	});
+	cmt.api.utils.request.register( app, jQuery( '[cmt-app=location]' ) );
 
 	// Listeners
 	jQuery( '.address-province' ).change( function() {
@@ -26,30 +19,47 @@ jQuery( document ).ready( function() {
 	});
 });
 
-// ProvinceController ---------------------------------------
+// == Controller Namespace ================
 
-ProvinceController	= function() {};
+// == Province Controller =================
 
-ProvinceController.inherits( cmt.api.controllers.BaseController );
+cmg.controllers.ProvinceController	= function() {};
 
-ProvinceController.prototype.provinceActionPost = function( success, requestElement, response ) {
+cmg.controllers.ProvinceController.inherits( cmt.api.controllers.BaseController );
 
-	if( success ) {
+cmg.controllers.ProvinceController.prototype.provinceActionPre = function( requestElement ) {
 
-		jQuery( '.frm-province .cmt-select-wrap select' ).remove();
-		jQuery( '.frm-province .cmt-select-wrap' ).empty();
-		jQuery( '.frm-province ' ).html( "<label>State/Province</label><select id='wrap-province' class='element-60 cmt-select cmt-change' name='Address[provinceId]'>" + response.data.provinceList + "</select>" );
-		jQuery( '.frm-province .cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
-	}
+	this.requestData = { countryId: requestElement.find( 'select' ).val() };
+
+	return true;
 };
 
-// CityController -------------------------------------------
+cmg.controllers.ProvinceController.prototype.provinceActionSuccess = function( requestElement, response ) {
 
-CityController	= function() {};
+	var selectWrap	= requestElement.parent().find( '.wrap-province .cmt-select-wrap' );
 
-CityController.inherits( cmt.api.controllers.BaseController );
+	if( response.data.length <= 0 ) {
 
-CityController.prototype.autoSearchActionPre = function( requestElement ) {
+		response.data	= '<option value="0">Choose Province</option>';
+	}
+
+	jQuery.fn.cmtSelect.resetSelect( selectWrap, response.data );
+
+	// OR
+
+	jQuery( '.frm-province .cmt-select-wrap select' ).remove();
+	jQuery( '.frm-province .cmt-select-wrap' ).empty();
+	jQuery( '.frm-province ' ).html( "<label>State/Province</label><select id='wrap-province' class='element-60 cmt-select cmt-change' name='Address[provinceId]'>" + response.data.provinceList + "</select>" );
+	jQuery( '.frm-province .cmt-select' ).cmtSelect( { iconHtml: '<span class="cmti cmti-chevron-down"></span>' } );
+};
+
+// == City Controller =====================
+
+cmg.controllers.CityController	= function() {};
+
+cmg.controllers.CityController.inherits( cmt.api.controllers.BaseController );
+
+cmg.controllers.CityController.prototype.autoSearchActionPre = function( requestElement ) {
 
 	var form			= requestElement.closest( '.frm-address' );
 	var provinceId 		= form.find( '.address-province' ).val();
@@ -60,92 +70,61 @@ CityController.prototype.autoSearchActionPre = function( requestElement ) {
 	return true;
 };
 
-CityController.prototype.autoSearchActionPost = function( success, requestElement, response ) {
+cmg.controllers.CityController.prototype.autoSearchActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	var data			= response.data;
+	var listHtml		= '';
+	var wrapItemList	= requestElement.find( '.wrap-auto-list' );
+	var itemList		= requestElement.find( '.auto-list' );
 
-		var data			= response.data;
-		var listHtml		= '';
-		var wrapItemList	= requestElement.find( '.wrap-auto-list' );
-		var itemList		= requestElement.find( '.auto-list' );
+	for( i = 0; i < data.length; i++ ) {
 
-		for( i = 0; i < data.length; i++ ) {
+		var obj = data[ i ];
 
-			var obj = data[ i ];
-
-			listHtml += "<li data-id='" + obj.id + "' data-lat='" + obj.latitude + "' data-lon='" + obj.longitude + "' data-zip='" + obj.postal + "'>" + obj.name + "</li>";
-		}
-
-		if( listHtml.length == 0 ) {
-
-			listHtml	= '<li>No matching results found</li>';
-
-			itemList.html( listHtml );
-		}
-		else {
-
-			itemList.html( listHtml );
-
-			requestElement.find( '.auto-list li' ).click( function() {
-
-				var wrapper		= requestElement.parent().find( '.wrap-field-auto' );
-				var id			= jQuery( this ).attr( 'data-id' );
-				var name		= jQuery( this ).html();
-
-				var lat			= jQuery( this ).attr( 'data-lat' );
-				var lon			= jQuery( this ).attr( 'data-lon' );
-				var zip			= jQuery( this ).attr( 'data-zip' );
-				zip				= zip.split( ' ' );
-
-				wrapItemList.slideUp();
-
-				// Update City Id and Name
-				wrapper.find( '.id' ).val( id );
-				requestElement.find( '.auto-fill-text' ).val( name );
-
-				// Update Map
-				var parent		= jQuery( this ).closest( '.frm-address' );
-				var address		= lat + ',' + lon;
-
-				parent.find( '.search-ll' ).val( address ).trigger( 'change' );
-
-				// Update City Zip
-				parent.find( '.address-zip' ).val( zip[ 0 ] );
-			});
-		}
-
-		wrapItemList.slideDown();
+		listHtml += "<li data-id='" + obj.id + "' data-lat='" + obj.latitude + "' data-lon='" + obj.longitude + "' data-zip='" + obj.postal + "'>" + obj.name + "</li>";
 	}
-};
 
+	if( listHtml.length == 0 ) {
 
+		listHtml	= '<li>No matching results found</li>';
 
-
-
-// AddressController ----------------------------------------
-
-AddressController	= function() {};
-
-AddressController.inherits( cmt.api.controllers.DefaultController );
-
-AddressController.prototype.provinceActionPre = function( requestElement ) {
-
-	this.requestData = { countryId: requestElement.find( 'select' ).val() };
-
-	return true;
-};
-
-AddressController.prototype.provinceActionPost = function( success, requestElement, response ) {
-
-	if( success ) {
-
-		var selectWrap	= requestElement.parent().find( '.wrap-province .cmt-select-wrap' );
-
-		if( response.data.length <= 0 ) {
-
-			response.data	= '<option value="0">Choose Province</option>';
-		}
-
-		jQuery.fn.cmtSelect.resetSelect( selectWrap, response.data );
+		itemList.html( listHtml );
 	}
+	else {
+
+		itemList.html( listHtml );
+
+		requestElement.find( '.auto-list li' ).click( function() {
+
+			var wrapper		= requestElement.parent().find( '.wrap-field-auto' );
+			var id			= jQuery( this ).attr( 'data-id' );
+			var name		= jQuery( this ).html();
+
+			var lat			= jQuery( this ).attr( 'data-lat' );
+			var lon			= jQuery( this ).attr( 'data-lon' );
+			var zip			= jQuery( this ).attr( 'data-zip' );
+			zip				= zip.split( ' ' );
+
+			wrapItemList.slideUp();
+
+			// Update City Id and Name
+			wrapper.find( '.id' ).val( id );
+			requestElement.find( '.auto-fill-text' ).val( name );
+
+			// Update Map
+			var parent		= jQuery( this ).closest( '.frm-address' );
+			var address		= lat + ',' + lon;
+
+			parent.find( '.search-ll' ).val( address ).trigger( 'change' );
+
+			// Update City Zip
+			parent.find( '.address-zip' ).val( zip[ 0 ] );
+		});
+	}
+
+	wrapItemList.slideDown();
 };
+
+// == Direct Calls ========================
+
+// == Additional Methods ==================

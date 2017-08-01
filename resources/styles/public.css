@@ -977,6 +977,12 @@ Notes:
 .border.border-default {
   border: 1px solid #D1D2D3;
 }
+.border.border-default-l {
+  border: 1px solid #A5A5A5;
+}
+.border.border-default-d {
+  border: 1px solid #F4F4F4;
+}
 .border.border-small {
   border: 3px solid #D1D2D3;
 }
@@ -3581,6 +3587,12 @@ html, body {
   }
 }
 
+.note {
+  background-color: #F9F9F9;
+  color: #3F62A0;
+  padding: 0.5em;
+}
+
 /**********************************************************************
 Description: This file define the grid system and basic containers of CMT-UI css framework.
 
@@ -5094,7 +5106,7 @@ a.btn {
   color: #FFFFFF;
 }
 
-.icon-rounded {
+.btn-icon-o {
   position: absolute;
   top: 0.25em;
   right: 0.25em;
@@ -5118,35 +5130,35 @@ a.btn {
   -webkit-transition: background-color 350ms ease-in-out 0s;
   transition: background-color 350ms ease-in-out 0s;
 }
-.icon-rounded .icon {
+.btn-icon-o .icon {
   font-size: 1em;
 }
-.icon-rounded:hover {
+.btn-icon-o:hover {
   background-color: #3489DB;
   color: #FFFFFF;
 }
-.icon-rounded.icon-rounded-small {
+.btn-icon-o.btn-icon-o-small {
   width: 2em;
   height: 2em;
   line-height: 1.6em;
 }
-.icon-rounded.icon-rounded-small .icon {
+.btn-icon-o.btn-icon-o-small .icon {
   font-size: 1.5em;
 }
-.icon-rounded.icon-rounded-medium {
+.btn-icon-o.btn-icon-o-medium {
   width: 2.5em;
   height: 2.5em;
   line-height: 2.1em;
 }
-.icon-rounded.icon-rounded-medium .icon {
+.btn-icon-o.btn-icon-o-medium .icon {
   font-size: 2em;
 }
-.icon-rounded.icon-rounded-large {
+.btn-icon-o.btn-icon-o-large {
   width: 3em;
   height: 3em;
   line-height: 2.5em;
 }
-.icon-rounded.icon-rounded-large .icon {
+.btn-icon-o.btn-icon-o-large .icon {
   font-size: 2.5em;
 }
 
@@ -5197,6 +5209,61 @@ a.btn {
 .list-radio label {
   width: auto;
   clear: none;
+}
+
+.splitter {
+  margin: 0 auto;
+}
+.splitter.splitter-h {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #D1D2D3;
+}
+.splitter.splitter-h.splitter-h-25 {
+  width: 25%;
+}
+.splitter.splitter-h.splitter-h-50 {
+  width: 50%;
+}
+.splitter.splitter-h.splitter-h-75 {
+  width: 75%;
+}
+.splitter.splitter-h.splitter-h-80 {
+  width: 80%;
+}
+.splitter.splitter-h.splitter-h-small {
+  width: 25px;
+}
+.splitter.splitter-h.splitter-h-medium {
+  width: 50px;
+}
+.splitter.splitter-h.splitter-h-large {
+  width: 150px;
+}
+.splitter.splitter-v {
+  border-right: 1px solid #D1D2D3;
+  width: 1px;
+}
+.splitter.splitter-v.splitter-v-25 {
+  height: 25%;
+}
+.splitter.splitter-v.splitter-v-50 {
+  height: 50%;
+}
+.splitter.splitter-v.splitter-v-75 {
+  height: 75%;
+}
+.splitter.splitter-v.splitter-v-80 {
+  height: 80%;
+}
+.splitter.splitter-v.splitter-v-small {
+  height: 125px;
+}
+.splitter.splitter-v.splitter-v-medium {
+  height: 250px;
+}
+.splitter.splitter-v.splitter-v-large {
+  height: 500px;
 }
 
 /**********************************************************************

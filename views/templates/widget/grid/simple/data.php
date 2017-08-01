@@ -16,7 +16,7 @@ $actionView		= $widget->actionView;
 		$factor			= $columns[ 'factor' ];
 		$index			= 0;
 ?>
-<div class="grid-rows-wrap grid-rows-zebra <?= $widget->layout == 'data' ? 'active' : null ?>">
+<div class="grid-rows-wrap <?= $widget->layout == 'data' ? 'active' : null ?>">
 	<div class="grid-rows-header row">
 		<?php
 			foreach ( $gridColumns as $key => $column ) {
@@ -46,7 +46,7 @@ $actionView		= $widget->actionView;
 			}
 		?>
 	</div>
-	<div class="grid-rows">
+	<div class="grid-rows grid-rows-zebra">
 	<?php
 
 		$root	= $columns[ 'root' ];

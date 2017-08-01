@@ -1,98 +1,78 @@
-var userApp	= null;
+// == Application =========================
 
 jQuery( document ).ready( function() {
 
-	// App
-	userApp	= new cmt.api.Application( { basePath: ajaxUrl } );
+	var app	= cmt.api.root.registerApplication( 'user', 'cmt.api.Application', { basePath: ajaxUrl } );
 
-	// Controllers
-	var controllers			= [];
-	controllers[ 'user' ]	= 'UserController';
+	app.mapController( 'user', 'cmg.controllers.UserController' );
 
-	// Init App
-	jQuery( '[cmt-app=user]' ).cmtRequestProcessor({
-		app: userApp,
-		controllers: controllers
-	});
+	cmt.api.utils.request.register( app, jQuery( '[cmt-app=user]' ) );
 });
+
+// == Controller Namespace ================
 
 // == User Controller =====================
 
-UserController	= function() {};
+cmg.controllers.UserController	= function() {};
 
-UserController.inherits( cmt.api.controllers.BaseController );
+cmg.controllers.UserController.inherits( cmt.api.controllers.RequestController );
 
-UserController.prototype.avatarActionPost = function( success, requestElement, response ) {
+cmg.controllers.UserController.prototype.avatarActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
+	jQuery( '.wrap-popout-actions .wrap-user .user-avatar' ).remove();
 
-		jQuery( '.wrap-popout-actions .wrap-user .cmti-user' ).remove();
-		jQuery( '.wrap-popout-actions .wrap-user .user-avatar' ).remove();
-
-		jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
-	}
+	jQuery( '.wrap-popout-actions .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.fileUrl + '" />' );
 };
 
-UserController.prototype.profileActionPost = function( success, requestElement, response ) {
+cmg.controllers.UserController.prototype.profileActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	var source 		= document.getElementById( 'userProfileTemplate' ).innerHTML;
+	var template 	= Handlebars.compile( source );
+	var output 		= template( response.data );
+	var parent		= requestElement.closest( '.box-form' );
 
-		var source 		= document.getElementById( 'userProfileTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var output 		= template( response.data );
-		var parent		= requestElement.closest( '.box-form' );
+	parent.find( '.wrap-info' ).html( output );
 
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	parent.find( '.btn-edit' ).click();
 };
 
-UserController.prototype.accountActionPost = function( success, requestElement, response ) {
+cmg.controllers.UserController.prototype.accountActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	var source 		= document.getElementById( 'userAccountTemplate' ).innerHTML;
+	var template 	= Handlebars.compile( source );
+	var output 		= template( response.data );
+	var parent		= requestElement.closest( '.box-form' );
 
-		var source 		= document.getElementById( 'userAccountTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var output 		= template( response.data );
-		var parent		= requestElement.closest( '.box-form' );
+	parent.find( '.wrap-info' ).html( output );
 
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	parent.find( '.btn-edit' ).click();
 };
 
-UserController.prototype.settingsActionPost = function( success, requestElement, response ) {
+cmg.controllers.UserController.prototype.settingsActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	var source 		= document.getElementById( 'userSettingsTemplate' ).innerHTML;
+	var template 	= Handlebars.compile( source );
+	var data		= { settings: response.data };
+	var output 		= template( data );
+	var parent		= requestElement.closest( '.box-form' );
 
-		var source 		= document.getElementById( 'userSettingsTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var data		= { settings: response.data };
-		var output 		= template( data );
-		var parent		= requestElement.closest( '.box-form' );
+	parent.find( '.wrap-info' ).html( output );
 
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	parent.find( '.btn-edit' ).click();
 };
 
-UserController.prototype.addressActionPost = function( success, requestElement, response ) {
+cmg.controllers.UserController.prototype.addressActionSuccess = function( requestElement, response ) {
 
-	if( success ) {
+	var source 		= document.getElementById( 'userAddressTemplate' ).innerHTML;
+	var template 	= Handlebars.compile( source );
+	var data		= { address: response.data };
+	var output 		= template( data );
+	var parent		= requestElement.closest( '.box-form' );
 
-		var source 		= document.getElementById( 'userAddressTemplate' ).innerHTML;
-		var template 	= Handlebars.compile( source );
-		var data		= { address: response.data };
-		var output 		= template( data );
-		var parent		= requestElement.closest( '.box-form' );
+	parent.find( '.wrap-info' ).html( output );
 
-		parent.find( '.wrap-info' ).html( output );
-
-		parent.find( '.btn-edit' ).click();
-	}
+	parent.find( '.btn-edit' ).click();
 };
 
 // == Direct Calls ========================
@@ -108,3 +88,5 @@ function removeUserMeta( key ) {
 	// Trigger - Set Sidebar
 	cmt.utils.ajax.triggerPost( ajaxUrl + "user/remove-meta", "Meta[key]=" + key );
 }
+
+// == Additional Methods ==================
