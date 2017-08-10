@@ -109,7 +109,7 @@
 					padding-left: 0.5em;
 				}
 
-				.wrap-date {
+				.date-wrap, .range-wrap {
 
 					&:nth-child( odd ) {
 						padding-left: 0.5em;
@@ -184,6 +184,10 @@
 
 							.colf:last-child {
 								border-right: none;
+							}
+
+							.icon {
+								text-align: center;
 							}
 						}
 

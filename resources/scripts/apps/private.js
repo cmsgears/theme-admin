@@ -23,14 +23,29 @@ cmg.controllers.CrudController.prototype.bulkActionSuccess = function( requestEl
 	cmt.utils.data.refreshGrid();
 };
 
+cmg.controllers.CrudController.prototype.bulkActionFailure = function( requestElement, response ) {
+
+	alert( 'Failed to process your request.' );
+};
+
 cmg.controllers.CrudController.prototype.genericActionSuccess = function( requestElement, response ) {
 
 	cmt.utils.data.refreshGrid();
 };
 
+cmg.controllers.CrudController.prototype.genericActionFailure = function( requestElement, response ) {
+
+	alert( 'Failed to process your request.' );
+};
+
 cmg.controllers.CrudController.prototype.deleteActionSuccess = function( requestElement, response ) {
 
 	cmt.utils.data.refreshGrid();
+};
+
+cmg.controllers.CrudController.prototype.deleteActionFailure = function( requestElement, response ) {
+
+	alert( 'Failed to process your request.' );
 };
 
 // == Gallery Controller ==================

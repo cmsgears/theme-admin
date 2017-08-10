@@ -101,7 +101,7 @@ cmg.controllers.CategoryController.prototype.mapModelCategoryActionSuccess = fun
 	var itemsArr	= mapperItems.find( '.mapper-item' );
 	var itemsLength	= itemsArr.length;
 
-	var id			= response.data.id;
+	var cid			= response.data.cid;
 	var name		= response.data.name;
 
 	// Reset search field
@@ -111,9 +111,9 @@ cmg.controllers.CategoryController.prototype.mapModelCategoryActionSuccess = fun
 
 	for( var i = 0; i < itemsLength; i++ ) {
 
-		var test	= jQuery( itemsArr[ i ] ).find( '.id' ).val();
+		var test	= jQuery( itemsArr[ i ] ).find( '.cid' ).val();
 
-		if( id == test ) {
+		if( cid == test ) {
 
 			create = false;
 
@@ -124,7 +124,7 @@ cmg.controllers.CategoryController.prototype.mapModelCategoryActionSuccess = fun
 	if( create ) {
 
 		// Generate View
-		var data		= { id: id, name: name };
+		var data		= { cid: cid, name: name };
 		var output 		= template( data );
 
 		mapperItems.append( output );

@@ -61,6 +61,23 @@ $report			= Yii::$app->request->getQueryParam( 'report' );
 		<?php
 						break;
 					}
+					case 'range': {
+
+						$start	= Yii::$app->request->getQueryParam( $key . '-start' );
+						$end	= Yii::$app->request->getQueryParam(  $key . '-end' );
+		?>
+						<div class="colf colf2 row">
+							<div class="colf colf3 bold"><?= $title ?></div>
+							<div class="colf colf3 range-wrap">
+								<input class="report-field" type="text" name="<?= $key ?>-start" value="<?= isset( $start ) ? $start : null ?>" placeholder="Start" />
+							</div>
+							<div class="colf colf3 range-wrap">
+								<input class="report-field" type="text" name="<?= $key ?>-end" value="<?= isset( $end ) ? $end : null ?>" placeholder="End" />
+							</div>
+						</div>
+		<?php
+						break;
+					}
 					case 'date': {
 
 						$start	= Yii::$app->request->getQueryParam( $key . '-start' );
@@ -68,13 +85,13 @@ $report			= Yii::$app->request->getQueryParam( 'report' );
 		?>
 						<div class="colf colf2 row">
 							<div class="colf colf3 bold"><?= $title ?></div>
-							<div class="colf colf3 wrap-date">
+							<div class="colf colf3 date-wrap">
 								<div class="frm-icon-element icon-right">
 									<span class="cmti cmti-calendar-o"></span>
 									<input class="report-field <?= $dateClass ?>" type="text" name="<?= $key ?>-start" value="<?= isset( $start ) ? $start : null ?>" placeholder="Start Date" />
 								</div>
 							</div>
-							<div class="colf colf3 wrap-date">
+							<div class="colf colf3 date-wrap">
 								<div class="frm-icon-element icon-right">
 									<span class="cmti cmti-calendar-o"></span>
 									<input class="report-field <?= $dateClass ?>" type="text" name="<?= $key ?>-end" value="<?= isset( $end ) ? $end : null ?>" placeholder="End Date" />
