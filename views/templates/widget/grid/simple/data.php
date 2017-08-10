@@ -38,7 +38,7 @@ $actionView		= $widget->actionView;
 							</label>
 						</span>
 					</div>
-				<?php } else if( count( $factor ) != $index ) { ?>
+				<?php } else { ?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>"><?= $title ?></div>
 				<?php } ?>
 		<?php
@@ -95,14 +95,14 @@ $actionView		= $widget->actionView;
 								</label>
 							</span>
 						</div>
-					<?php } else if( $key === 'actions' && count( $factor ) != $index ) { ?>
+					<?php } else if( $key === 'actions' ) { ?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?> actions">
 							<span class="data data-title"><?= $title ?></span>
 							<span class="data">
 								<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>
 							</span>
 						</div>
-					<?php } else if( count( $factor ) != $index ) { ?>
+					<?php } else { ?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
 							<span class="data"><?= $value ?></span>
