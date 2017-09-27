@@ -28,7 +28,7 @@ $child 		= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 		<div id="sidebar-settings" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-settings' ) == 0 ) echo 'active'; ?>">
 			<span class="marker"></span>
 			<div class="tab-header">
-				<a href="<?php echo Url::toRoute( [ '/core/settings' ] ); ?>">
+				<a href="<?php echo Url::toRoute( [ '/settings/index' ] ); ?>">
 					<div class="tab-icon"><span class="cmti cmti-setting"></span></div>
 					<div class="tab-title">Settings</div>
 				</a>
