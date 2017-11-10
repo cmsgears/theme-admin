@@ -43,3 +43,9 @@
 		color: $color-white !important;
 	}
 }
+
+#pre-loader-main {
+	z-index: 1000;
+	position: absolute;
+	width: 100%;
+}

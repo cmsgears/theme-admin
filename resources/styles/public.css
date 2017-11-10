@@ -1595,6 +1595,14 @@ Details: It defines the transition mixins and default implementation as listed b
   transition: color 350ms ease-in-out 0s, background-color 350ms ease-in-out 0s;
 }
 
+.transit-background {
+  -moz-transition: background 350ms ease-in-out 0s;
+  -ms-transition: background 350ms ease-in-out 0s;
+  -o-transition: background 350ms ease-in-out 0s;
+  -webkit-transition: background 350ms ease-in-out 0s;
+  transition: background 350ms ease-in-out 0s;
+}
+
 .transit-padding {
   -moz-transition: padding 350ms ease-out 0s;
   -ms-transition: padding 350ms ease-out 0s;
@@ -2551,6 +2559,12 @@ html, body {
 .disabled:hover {
   background-color: #C5C5C5 !important;
   color: #FFFFFF !important;
+}
+
+#pre-loader-main {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
 }
 
 /**********************************************************************
@@ -5381,6 +5395,7 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
 .btn:disabled, .btn-icon:disabled, input[type="submit"]:disabled, input[type="button"]:disabled, button:disabled {
   background-color: #808080;
   color: #E6E7E8;
+  cursor: default;
 }
 
 label {
