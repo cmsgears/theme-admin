@@ -122,7 +122,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 									}
 							?>
 									<li class="align align-center">
-										<a href="<?= Url::to( 'core/notify/reminder/all' ) ?>">View All</a>
+										<a href="<?= Url::toRoute( [ '/notify/reminder/all' ], true ) ?>">View All</a>
 									</li>
 							<?php
 								}
@@ -140,7 +140,38 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 				<div class="popout-content-wrap">
 					<div class="popout-content">
 						<ul>
-							<li>No new activities at this time.</li>
+							<?php
+								if( count( $activities ) > 0 ) {
+
+									foreach( $activities as $activity ) {
+
+										if( isset( $activity->adminLink ) ) {
+							?>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/activity/toggle-read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>" redirect="<?= Url::toRoute( $activity->adminLink ) ?>">
+											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>"><?= $activity->content ?></span>
+										</li>
+							<?php
+										}
+										else {
+							?>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/activity/toggle-read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>">
+											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>"><?= $activity->content ?></span>
+										</li>
+							<?php
+										}
+									}
+							?>
+									<li class="align align-center">
+										<a href="<?= Url::toRoute( [ '/notify/activity/all' ], true ) ?>">View All</a>
+									</li>
+							<?php
+								}
+								else {
+							?>
+									<li>No new activities at this time.</li>
+							<?php
+								}
+							?>
 						</ul>
 					</div>
 				</div>
