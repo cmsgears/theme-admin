@@ -7,6 +7,7 @@ jQuery( document ).ready( function() {
 	app.mapController( 'site', 'cmg.controllers.SiteController' );
 	app.mapController( 'auto', 'cmg.controllers.AutoController' );
 	app.mapController( 'settings', 'cmg.controllers.SiteSettingsController' );
+	app.mapController( 'members', 'cmg.controllers.MembersController' );
 
 	cmt.api.utils.request.register( app, jQuery( '[cmt-app=site]' ) );
 });
@@ -142,6 +143,69 @@ cmg.controllers.SiteSettingsController.prototype.updateActionSuccess = function(
 	parent.find( '.box-form-info-wrap' ).html( output );
 
 	parent.find( '.box-form-trigger' ).click();
+};
+
+cmg.controllers.MembersController	= function() {};
+
+cmg.controllers.MembersController.inherits( cmt.api.controllers.RequestController );
+
+cmg.controllers.MembersController.prototype.memberActionPre = function( requestElement ) {
+
+	var autoFill	= requestElement.closest( '.auto-fill' );
+	var type 		= autoFill.find( 'input[name=type]' ).val();
+	var keyword 	= autoFill.find( '.auto-fill-text' ).val();
+
+	if( keyword.length <= 0 ) {
+
+		autoFill.find( '.auto-fill-items' ).slideUp();
+
+		return false;
+	}
+
+	this.requestData	= 'name=' + keyword;
+
+	return true;
+};
+
+cmg.controllers.MembersController.prototype.memberActionSuccess = function( requestElement, response ) {
+
+	var data		= response.data;
+	var listHtml	= '';
+	var autoFill	= requestElement.closest( '.auto-fill' );
+	var itemList	= requestElement.find( '.auto-fill-items' );
+	var username	= data.username || '';
+	
+	if( username.length > 0 ) {
+
+		var obj = data;
+
+		listHtml += "<li class='auto-fill-item' data-id='" + obj.id + "'>" + obj.username + "</li>";
+	}
+
+	if( listHtml.length == 0 ) {
+
+		listHtml	= "<li class='auto-fill-message'>No matching results found</li>";
+
+		itemList.html( listHtml );
+	}
+	else {
+
+		itemList.html( listHtml );
+
+		requestElement.find( '.auto-fill-item' ).click( function() {
+
+			var userId		= data.id;
+			var username	= data.username;
+
+			itemList.slideUp();
+			autoFill.find('.site-member').show();
+			autoFill.find( '.site-member #sitemember-userid' ).val( userId );
+			autoFill.find( '.site-member #username' ).val( username );
+
+		});
+	}
+
+	itemList.slideDown();
 };
 
 // == Direct Calls ========================
