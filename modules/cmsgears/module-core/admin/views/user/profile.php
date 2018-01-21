@@ -23,35 +23,35 @@ $address 		= new Address();
 <div class="tabs-default">
 	<ul>
 		<li><a href="#tabs-1" class="btn btn-medium">Profile</a></li>
-	    <li><a href="#tabs-2" class="btn btn-medium">Account</a></li>
-	    <li><a href="#tabs-3" class="btn btn-medium">Address</a></li>
+		<li><a href="#tabs-2" class="btn btn-medium">Account</a></li>
+		<li><a href="#tabs-3" class="btn btn-medium">Address</a></li>
 	</ul>
 
 	<div id="tabs-1" class="box-form box-form-regular content-80 max-content-100">
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Basic Profile</h4>
 		<div class="wrap-info">
-			<div class="info-row clearfix">
-				<div class="col12x5">Email</div><div class="col12x7"><?= $user->email ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Email</div><div class="col col12x10"><?= $user->email ?></div>
 			</div>
-			<div class="info-row clearfix">
-				<div class="col12x5">Username</div><div class="col12x7"><?= $user->username ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Username</div><div class="col col12x10"><?= $user->username ?></div>
 			</div>
-			<div class="info-row clearfix">
-				<div class="col12x5">Firstname</div><div class="col12x7"><?= $user->firstName ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Firstname</div><div class="col col12x10"><?= $user->firstName ?></div>
 			</div>
-			<div class="info-row clearfix">
-				<div class="col12x5">Lastname</div><div class="col12x7"><?= $user->lastName ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Lastname</div><div class="col col12x10"><?= $user->lastName ?></div>
 			</div>
-			<div class="info-row clearfix">
-				<div class="col12x5">Gender</div><div class="col12x7"><?= $user->getGenderStr() ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Gender</div><div class="col col12x10"><?= $user->getGenderStr() ?></div>
 			</div>
-			<div class="info-row clearfix">
-				<div class="col12x5">Phone</div><div class="col12x7"><?= $user->phone ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Phone</div><div class="col col12x10"><?= $user->phone ?></div>
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="profile" action="user/profile" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="profile" action="user/profile" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>
@@ -114,15 +114,15 @@ $address 		= new Address();
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Account</h4>
 		<div class="wrap-info">
-			<div class="info-row clearfix">
-				<div class="col12x5">Email</div><div class="col12x7"><?= $user->email ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Email</div><div class="col col12x10"><?= $user->email ?></div>
 			</div>
 			<div class="note">
 				Note: Click on edit icon to change password.
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="account" action="user/account" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="account" action="user/account" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>
@@ -152,56 +152,56 @@ $address 		= new Address();
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Address</h4>
 		<div class="wrap-info">
-			<div class="info-row clearfix">
+			<div class="info-row">
 			<?php if( count( $addressList ) <= 0 ) { ?>
-				<div class="info-row clearfix">
-					<div class="col12x5">Line 1</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">Line 1</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Line 2</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">Line 2</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">City</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">City</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Country</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">Country</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">State/Province</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">State/Province</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Phone</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">Phone</div><div class="col col12x10"></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Zip/Postal</div><div class="col12x7"></div>
+				<div class="row info-row">
+					<div class="col col12x2">Zip/Postal</div><div class="col col12x10"></div>
 				</div>
 			<?php } else { $address = $addressList[ 0 ]->address; ?>
-				<div class="info-row clearfix">
-					<div class="col12x5">Line 1</div><div class="col12x7"><?= $address->line1 ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">Line 1</div><div class="col col12x10"><?= $address->line1 ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Line 2</div><div class="col12x7"><?= $address->line2 ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">Line 2</div><div class="col col12x10"><?= $address->line2 ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">City</div><div class="col12x7"><?= $address->cityName ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">City</div><div class="col col12x10"><?= $address->cityName ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Country</div><div class="col12x7"><?= $address->countryName ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">Country</div><div class="col col12x10"><?= $address->countryName ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">State/Province</div><div class="col12x7"><?= $address->provinceName ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">State/Province</div><div class="col col12x10"><?= $address->provinceName ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Phone</div><div class="col12x7"><?= $address->phone ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">Phone</div><div class="col col12x10"><?= $address->phone ?></div>
 				</div>
-				<div class="info-row clearfix">
-					<div class="col12x5">Zip/Postal</div><div class="col12x7"><?= $address->zip ?></div>
+				<div class="row info-row">
+					<div class="col col12x2">Zip/Postal</div><div class="col col12x10"><?= $address->zip ?></div>
 				</div>
 			<?php } ?>
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-controller="user" cmt-action="address" action="user/address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
+			<form class="cmt-form frm-rounded-all frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="address" action="user/address?type=<?= Address::TYPE_PRIMARY ?>" cmt-keep>
 				<div class="spinner max-area-cover">
 					<div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div>
 				</div>

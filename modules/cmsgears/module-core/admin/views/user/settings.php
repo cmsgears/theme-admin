@@ -10,22 +10,22 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 ?>
 <div class="tabs-default">
 	<ul>
-	    <li><a href="#tabs-1" class="btn btn-medium">Privacy</a></li>
-	    <li><a href="#tabs-2" class="btn btn-medium">Notifications</a></li>
-	    <li><a href="#tabs-3" class="btn btn-medium">Reminders</a></li>
+		<li><a href="#tabs-1" class="btn btn-medium">Privacy</a></li>
+		<li><a href="#tabs-2" class="btn btn-medium">Notifications</a></li>
+		<li><a href="#tabs-3" class="btn btn-medium">Reminders</a></li>
 	</ul>
 
 	<div id="tabs-1" class="box-form box-form-regular content-80 max-content-100">
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Privacy Settings</h4>
 		<div class="wrap-info">
-			<div class="info-row row clearfix">
-				<div class="col12x5">Show Address</div>
-				<div class="col12x7"><?php if( isset( $privacy[ 'show_address' ] ) ) echo $privacy[ 'show_address' ]->getFieldValue(); else echo 'No'; ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Show Address</div>
+				<div class="col col12x10"><?php if( isset( $privacy[ 'show_address' ] ) ) echo $privacy[ 'show_address' ]->getFieldValue(); else echo 'No'; ?></div>
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-split-40-60" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
+			<form class="frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Show Address</label>
@@ -50,13 +50,13 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Notification Settings</h4>
 		<div class="wrap-info">
-			<div class="info-row row clearfix">
-				<div class="col12x5">Receive Mail</div>
-				<div class="col12x7"><?php if( isset( $notification[ 'receive_mail' ] ) ) echo $notification[ 'receive_mail' ]->getFieldValue(); else echo 'No'; ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Receive Mail</div>
+				<div class="col col12x10"><?php if( isset( $notification[ 'receive_mail' ] ) ) echo $notification[ 'receive_mail' ]->getFieldValue(); else echo 'No'; ?></div>
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-split-40-60" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
+			<form class="frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Receive Mail</label>
@@ -81,13 +81,13 @@ $this->title 	= 'Settings | ' . $coreProperties->getSiteTitle();
 		<span class="cmti cmti-edit btn-edit"></span>
 		<h4>Reminder Settings</h4>
 		<div class="wrap-info">
-			<div class="info-row row clearfix">
-				<div class="col12x5">Receive Mail</div>
-				<div class="col12x7"><?php if( isset( $reminder[ 'receive_mail' ] ) ) echo $reminder[ 'receive_mail' ]->getFieldValue(); else echo 'No'; ?></div>
+			<div class="row info-row">
+				<div class="col col12x2">Receive Mail</div>
+				<div class="col col12x10"><?php if( isset( $reminder[ 'receive_mail' ] ) ) echo $reminder[ 'receive_mail' ]->getFieldValue(); else echo 'No'; ?></div>
 			</div>
 		</div>
 		<div class="wrap-form">
-			<form class="cmt-form frm-split-40-60" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
+			<form class="frm-split-40-60" cmt-app="user" cmt-controller="user" cmt-action="settings" action="user/settings" cmt-keep>
 				<div class="spinner max-area-cover"><div class="valign-center cmti cmti-3x cmti-spinner-1 spin"></div></div>
 				<div class="frm-field">
 					<label>Receive Mail</label>

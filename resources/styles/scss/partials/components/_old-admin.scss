@@ -5,8 +5,20 @@
     background-color: $color-primary-l;
     color: $color-primary-text-l;
 
+    .header-actions {
+        min-height: 1em;
+
+        .cmti, a {
+            color: $color-white;
+        }
+    }
+
     .header-search {
         text-align: right;
+
+        .cmti {
+            color: $color-white;
+        }
     }
 }
 
@@ -22,7 +34,7 @@
 }
 
 .icon-up {
-  
+
 }
 
 .icon-up-active {
@@ -43,6 +55,8 @@
 .box-cud {
     width: 640px;
     margin: 0 auto;
+	margin-top: 1em;
+	padding-bottom: 1em;
     background-color: $color-primary-l;
     color: $color-primary-text-l;
 
@@ -51,7 +65,7 @@
         color: $color-secondary-text;
         font-size: $font-size-7;
         padding: 0.5rem 1rem;
-        text-align: center; 
+        text-align: center;
     }
 
     .box-wrap-header {
@@ -67,7 +81,7 @@
         .form-group {
             clear: both;
         }
-        
+
         .cleditorMain {
             border: none;
         }
@@ -96,7 +110,7 @@
 
         .box-half {
             width: 45%;
-            display: inline-block;  
+            display: inline-block;
             text-align: left;
             float: left;
             padding-left: 5%;
@@ -108,7 +122,7 @@
             }
         }
     }
-    
+
     .render-file {
         display: none;
     }
@@ -132,17 +146,25 @@
 
 .data-grid {
     padding: 0.5rem 1rem;
+	background-color: $color-primary-l;
 
     .grid-header, .grid-footer {
-        background-color: $color-secondary;
-        color: $color-secondary-text;
-        
+        background-color: $color-primary-l;
+        color: $color-primary-text-l;
+
+        .info {
+            color: $color-secondary-text;
+            margin: 1em 0.5em;
+        }
+
         .pagination {
             text-align: right;
+            margin-top: 0.5em;
 
             a {
                 background-color: $color-secondary-l;
                 color: $color-secondary-text-l;
+                font-size: $font-size-8;
             }
 
             .active {

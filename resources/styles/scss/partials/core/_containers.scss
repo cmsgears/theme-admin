@@ -10,7 +10,15 @@ html, body {
 
 .container-private {
 
-    .sidebar-private, .wrap-content {
-        padding-top: 95px;
+    .sidebar-private, .content-wrap {
+        padding-top: 62px;
     }
+
+	.content-main-wrap-micro {
+		position: absolute;
+		width: 100%;
+		padding-top: 62px;
+		padding-left: 40px;
+		z-index: 5;
+	}
 }

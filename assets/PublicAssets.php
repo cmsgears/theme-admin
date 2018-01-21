@@ -2,68 +2,83 @@
 namespace themes\admin\assets;
 
 // Yii Imports
-use \Yii;
 use yii\web\AssetBundle;
 use yii\web\View;
-use yii\helpers\Url;
 
 class PublicAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
-	// Public ----
+	// Globals -------------------------------
+
+	// Constants --------------
+
+	// Public -----------------
+
+	// Protected --------------
+
+	// Variables -----------------------------
+
+	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath	= '@themes/admin/resources';
+	public $sourcePath = '@themes/admin/resources';
 
 	// Load css
-    public $css     = [
+	public $css = [
 		'styles/public.css'
-    ];
+	];
 
 	// Position to load css
-    public $cssOptions = [
-        "position" => View::POS_HEAD
-    ];
+	public $cssOptions = [
+		'position' => View::POS_HEAD
+	];
 
 	// Load Javascript
-    public $js      = [
-        'scripts/main.js',
-        'scripts/applications.js'
-    ];
+	public $js = [
+		// vendor
+		// templates
+		'scripts/templates/public.js',
+		// scripts
+		'scripts/main.js',
+		'scripts/search.js',
+		// apix
+		'scripts/apix/public.js',
+		// apps
+		'scripts/apps/public.js'
+	];
 
 	// Position to load Javascript
-    public $jsOptions = [
-        'position' => View::POS_END
-    ];
+	public $jsOptions = [
+		'position' => View::POS_END
+	];
 
 	// Define dependent Asset Loaders
-    public $depends = [
-		'yii\web\JqueryAsset',
+	public $depends = [
+		'cmsgears\core\common\assets\Jquery',
 		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\CmgToolsJs'
-    ];
+		'cmsgears\core\common\assets\CmgToolsJs',
+		'cmsgears\icons\assets\IconAssets'
+	];
+
+	// Protected --------------
+
+	// Private ----------------
+
+	// Traits ------------------------------------------------------
 
 	// Constructor and Initialisation ------------------------------
 
-	public function __construct()  {
+	// Instance methods --------------------------------------------
 
-		parent::__construct();
-	}
+	// Yii interfaces ------------------------
 
-	// Additional Assets Registration ------------------------------
+	// Yii parent classes --------------------
 
-	public function registerAssetFiles( $view ) {
+	// CMG interfaces ------------------------
 
-		parent::registerAssetFiles( $view );
+	// CMG parent classes --------------------
 
-		$rootUrl = Url::toRoute( '/', true );
+	// PublicAssets --------------------------
 
-    	$siteUrl = "var siteUrl 	= '$rootUrl';
-					var ajaxUrl 	= '" . $rootUrl ."apix/';";
-
-		$view->registerJs( $siteUrl, View::POS_END );
-	}
 }
-
-?>

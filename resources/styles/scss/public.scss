@@ -1,12 +1,12 @@
-// Vendor -----------------------------------
-
-// Core -------------------------------------
+// ---------------------------------------//
+// Core Division
+// ---------------------------------------//
 
 @import "cmt/core/variables";
 @import "partials/core/fonts";
 @import "partials/core/variables";
+
 @import "cmt/core/variables-ext";
-@import "partials/core/variables-ext";
 
 @import "cmt/core/mixins";
 @import "cmt/core/transitions";
@@ -17,31 +17,108 @@
 @import "cmt/core/basic";
 @import "partials/core/basic";
 
+@import "cmt/core/coloring";
+@import "cmt/core/spacing";
+
 @import "cmt/core/typography";
 @import "partials/core/typography";
 
 @import "cmt/core/containers";
 @import "partials/core/containers";
 
-// Elements ---------------------------------
+// ---------------------------------------//
+// Elements Division
+// ---------------------------------------//
 
-@import "cmt/elements/common";
+@import "cmt/elements/basic";
 
-@import "cmt/elements/table";
+@import "cmt/elements/custom";
 
 @import "cmt/elements/form";
 @import "partials/elements/form";
 
-@import "cmt/elements/custom";
+@import "cmt/elements/table";
 
-// Components -------------------------------
+//@import "cmt/elements/breadcrumbs";
+//@import "partials/elements/breadcrumbs";
 
-@import "cmt/components/headers";
-@import "partials/components/headers";
+//@import "cmt/elements/flippers";
 
-@import "cmt/components/blocks";
-@import "partials/components/blocks";
+//@import "cmt/elements/mappers";
+//@import "partials/elements/mappers";
 
-// Extensions -------------------------------
+//@import "cmt/elements/auto-fill";
 
-@import "cmt/extensions/m-custom-scrollbar";
+// ---------------------------------------//
+// Components Division
+// ---------------------------------------//
+
+//@import "cmt/components/menus/basic";
+//@import "cmt/components/menus/collapsible";
+//@import "cmt/components/menus/social";
+//@import "partials/components/menus/collapsible";
+
+@import "cmt/components/headers/basic";
+@import "partials/components/headers/basic";
+
+//@import "cmt/components/footers/basic";
+
+//@import "cmt/components/sidebars/basic";
+//@import "partials/components/sidebars/basic";
+
+//@import "cmt/components/popups/basic";
+//@import "cmt/components/popups/popouts";
+//@import "partials/components/popups/basic";
+//@import "partials/components/popups/popouts";
+
+//@import "cmt/components/sliders/basic";
+
+//@import "cmt/components/galleries/basic";
+
+//@import "cmt/components/cards/basic";
+
+//@import "cmt/components/boxes/basic";
+//@import "cmt/components/boxes/login";
+//@import "cmt/components/boxes/form";
+//@import "cmt/components//boxes/file";
+//@import "partials/components/boxes/basic";
+//@import "partials/components/boxes/crud";
+//@import "partials/components/boxes/form";
+//@import "partials/components/boxes/settings";
+
+//@import "cmt/components/widgets/basic";
+//@import "cmt/components/widgets/blog/post";
+//@import "cmt/components/widgets/cart/cart";
+//@import "cmt/components/widgets/cart/product";
+
+@import "cmt/components/blocks/basic";
+@import "partials/components/blocks/basic";
+
+//@import "cmt/components/grid/pagination";
+//@import "cmt/components/grid/sorting";
+//@import "cmt/components/grid/filters";
+//@import "cmt/components/grid/data";
+//@import "cmt/components/grid/table";
+//@import "partials/components/grid/pagination";
+//@import "partials/components/grid/filters";
+//@import "partials/components/grid/data";
+
+//@import "cmt/components/blog/blog";
+//@import "cmt/components/blog/post";
+
+//@import "cmt/components/cart/product";
+//@import "cmt/components/cart/cart";
+//@import "cmt/components/cart/shop";
+
+//@import "partials/components/old-admin";
+
+// ---------------------------------------//
+// Extensions Division
+// ---------------------------------------//
+
+//@import "cmt/extensions/m-custom-scrollbar";
+//@import "partials/extensions/m-custom-scrollbar";
+
+//@import "cmt/extensions/jquery/datepicker";
+//@import "partials/extensions/jquery/datepicker";
+//@import "partials/extensions/jquery/tabs";
