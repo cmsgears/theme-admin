@@ -20,34 +20,32 @@ cmg.controllers.NotificationController.inherits( cmt.api.controllers.BaseControl
 cmg.controllers.NotificationController.prototype.toggleReadActionSuccess = function( requestElement, response ) {
 
 	location.reload( true );
+};
 
-	/*
+cmg.controllers.NotificationController.prototype.hreadActionSuccess = function( requestElement, response ) {
+
 	var clickBtn	= requestElement.find( '.cmt-click' );
+	var type		= clickBtn.attr( 'type' );
 	var count		= response.data.unread;
-	var less		= count - 1;
-	var more		= count + 1;
-
+	
 	if( response.data.consumed ) {
 
-		clickBtn.attr( 'title', 'Mark Unread' );
-		clickBtn.removeClass( 'cmti-envelope' );
-		clickBtn.addClass( 'cmti-envelope-o' );
+		jQuery( ".count-header.count-" + type ).html( count );
+		jQuery( ".count-sidebar.count-sidebar-header.count-" + type ).html( count );
+		jQuery( ".count-sidebar.count-sidebar-content.count-" + type ).html( count );
 
-		jQuery( ".upd-count-notification-all" ).removeClass( "upd-count-" + more );
-		jQuery( ".upd-count-notification-all" ).addClass( "upd-count-" + count );
-	}
-	else {
-
-		clickBtn.attr( 'title', 'Mark Read' );
-		clickBtn.removeClass( 'cmti-envelope-o' );
-		clickBtn.addClass( 'cmti-envelope' );
-
-		jQuery( ".upd-count-notification-all" ).removeClass( "upd-count-" + less );
-		jQuery( ".upd-count-notification-all" ).addClass( "upd-count-" + count );
+		if( count == 0 ) {
+			
+			jQuery( ".count-header.count-" + type ).fadeOut( 'fast' );
+			jQuery( ".count-sidebar.count-sidebar-header.count-" + type ).fadeOut( 'fast' );
+			jQuery( ".count-sidebar.count-sidebar-content.count-" + type ).fadeOut( 'fast' );
+		}
 	}
 
-	jQuery( ".upd-count-notification-all" ).html( count );
-	*/
+	if( requestElement.is( '[redirect]' ) ) {
+
+		window.location = requestElement.attr( 'redirect' );
+	}
 };
 
 cmg.controllers.NotificationController.prototype.readActionSuccess = function( requestElement, response ) {

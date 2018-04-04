@@ -67,15 +67,15 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 
 										if( isset( $notification->adminLink ) ) {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/notification/toggle-read?id=<?= $notification->id ?>" consumed="<?= $notification->consumed ?>" redirect="<?= Url::toRoute( $notification->adminLink ) ?>">
-											<span class="cmt-click <?= $notification->consumed ? 'text text-gray' : 'link' ?>"><?= $notification->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/notification/read?id=<?= $notification->id ?>" consumed="<?= $notification->consumed ?>" redirect="<?= Url::toRoute( $notification->adminLink ) ?>">
+											<span class="cmt-click <?= $notification->consumed ? 'text text-gray' : 'link' ?>" type="notification"><b><?= $notification->title ?></b> - <?= $notification->content ?></span>
 										</li>
 							<?php
 										}
 										else {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/notification/toggle-read?id=<?= $notification->id ?>" consumed="<?= $notification->consumed ?>">
-											<span class="cmt-click <?= $notification->consumed ? 'text text-gray' : 'link' ?>"><?= $notification->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/notification/read?id=<?= $notification->id ?>" consumed="<?= $notification->consumed ?>">
+											<span class="cmt-click <?= $notification->consumed ? 'text text-gray' : 'link' ?>" type="notification"><b><?= $notification->title ?></b> - <?= $notification->content ?></span>
 										</li>
 							<?php
 										}
@@ -107,15 +107,15 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 
 										if( isset( $reminder->adminLink ) ) {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/reminder/toggle-read?id=<?= $reminder->id ?>" consumed="<?= $reminder->consumed ?>" redirect="<?= Url::toRoute( $reminder->adminLink ) ?>">
-											<span class="cmt-click <?= $reminder->consumed ? 'text text-gray' : 'link' ?>"><?= $reminder->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/reminder/read?id=<?= $reminder->id ?>" consumed="<?= $reminder->consumed ?>" redirect="<?= Url::toRoute( $reminder->adminLink ) ?>">
+											<span class="cmt-click <?= $reminder->consumed ? 'text text-gray' : 'link' ?>" type="reminder"><b><?= $reminder->title ?></b> - <?= $reminder->content ?></span>
 										</li>
 							<?php
 										}
 										else {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/reminder/toggle-read?id=<?= $reminder->id ?>" consumed="<?= $reminder->consumed ?>">
-											<span class="cmt-click <?= $reminder->consumed ? 'text text-gray' : 'link' ?>"><?= $reminder->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/reminder/read?id=<?= $reminder->id ?>" consumed="<?= $reminder->consumed ?>">
+											<span class="cmt-click <?= $reminder->consumed ? 'text text-gray' : 'link' ?>" type="reminder"><b><?= $reminder->title ?></b> - <?= $reminder->content ?></span>
 										</li>
 							<?php
 										}
@@ -147,15 +147,15 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 
 										if( isset( $activity->adminLink ) ) {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/activity/toggle-read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>" redirect="<?= Url::toRoute( $activity->adminLink ) ?>">
-											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>"><?= $activity->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/activity/read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>" redirect="<?= Url::toRoute( $activity->adminLink ) ?>">
+											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>" type="activity"><b><?= $activity->title ?></b> - <?= $activity->content ?></span>
 										</li>
 							<?php
 										}
 										else {
 							?>
-										<li cmt-app="notification" cmt-controller="notification" cmt-action="read" action="notify/activity/toggle-read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>">
-											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>"><?= $activity->content ?></span>
+										<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/activity/read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>">
+											<span class="cmt-click <?= $activity->consumed ? 'text text-gray' : 'link' ?>" type="activity"><?= $activity->title ?></b> - <?= $activity->content ?></span>
 										</li>
 							<?php
 										}

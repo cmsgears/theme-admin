@@ -34,7 +34,7 @@ $url		= $data[ 'url' ];
 						<div class="valign-center cmti cmti-2x cmti-spinner-9 spin"></div>
 					</div>
 					<div class="filler-height"></div>
-					<p class="align align-center">Are you sure you want to apply <b class='action'></b> action on selected <?= $model ?>s ?</p>
+					<p class="align align-center">Are you sure you want to apply <b class='action'></b> action on selected <?= $model ?> ?</p>
 					<input type="hidden" name="action" />
 					<input type="hidden" name="column" />
 					<input type="hidden" name="target" />
