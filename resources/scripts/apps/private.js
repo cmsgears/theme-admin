@@ -50,11 +50,16 @@ cmg.controllers.CrudController.prototype.deleteActionFailure = function( request
 
 // == Gallery Controller ==================
 
-cmg.controllers.GalleryController	= function() {};
+cmg.controllers.GalleryController = function() {};
 
 cmg.controllers.GalleryController.inherits( cmt.api.controllers.RequestController );
 
 cmg.controllers.GalleryController.prototype.updateItemActionSuccess = function( requestElement, response ) {
+
+	location.reload( true );
+};
+
+cmg.controllers.GalleryController.prototype.deleteItemActionSuccess = function( requestElement, response ) {
 
 	location.reload( true );
 };

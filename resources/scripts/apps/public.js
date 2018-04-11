@@ -7,7 +7,7 @@ jQuery( document ).ready( function() {
 	app.mapController( 'site', 'cmg.controllers.SiteController' );
 	app.mapController( 'auto', 'cmg.controllers.AutoController' );
 	app.mapController( 'settings', 'cmg.controllers.SiteSettingsController' );
-	app.mapController( 'members', 'cmg.controllers.MembersController' );
+	app.mapController( 'member', 'cmg.controllers.MemberController' );
 
 	cmt.api.utils.request.register( app, jQuery( '[cmt-app=site]' ) );
 });
@@ -41,16 +41,26 @@ cmg.controllers.AutoController.inherits( cmt.api.controllers.RequestController )
 
 cmg.controllers.AutoController.prototype.autoSearchActionPre = function( requestElement ) {
 
-	var name 	= requestElement.find( '.search-name' );
-	var type 	= requestElement.find( '.search-type' );
+	var autoFill = requestElement.closest( '.auto-fill' );
+
+	var name = autoFill.find( '.search-name' ).val();
+	var type = autoFill.find( '.search-type' );
+
+	if( name.length <= 0 ) {
+
+		autoFill.find( '.auto-fill-items' ).slideUp();
+		autoFill.find( '.auto-fill-target .target' ).val( '' );
+
+		return false;
+	}
 
 	if( type.length == 1 ) {
 
-		this.requestData	= "name=" + name.val() + "&type=" + type.val();
+		this.requestData = "name=" + name + "&type=" + type.val();
 	}
 	else {
 
-		this.requestData	= "name=" + name.val();
+		this.requestData = "name=" + name;
 	}
 
 	return true;
@@ -145,11 +155,13 @@ cmg.controllers.SiteSettingsController.prototype.updateActionSuccess = function(
 	parent.find( '.box-form-trigger' ).click();
 };
 
-cmg.controllers.MembersController	= function() {};
+// == Member Controller ===================
 
-cmg.controllers.MembersController.inherits( cmt.api.controllers.RequestController );
+cmg.controllers.MemberController = function() {};
 
-cmg.controllers.MembersController.prototype.memberActionPre = function( requestElement ) {
+cmg.controllers.MemberController.inherits( cmt.api.controllers.RequestController );
+
+cmg.controllers.MemberController.prototype.autoSearchActionPre = function( requestElement ) {
 
 	var autoFill	= requestElement.closest( '.auto-fill' );
 	var type 		= autoFill.find( 'input[name=type]' ).val();
@@ -162,29 +174,28 @@ cmg.controllers.MembersController.prototype.memberActionPre = function( requestE
 		return false;
 	}
 
-	this.requestData	= 'name=' + keyword;
+	this.requestData = 'name=' + keyword;
 
 	return true;
 };
 
-cmg.controllers.MembersController.prototype.memberActionSuccess = function( requestElement, response ) {
+cmg.controllers.MemberController.prototype.autoSearchActionSuccess = function( requestElement, response ) {
 
 	var data		= response.data;
 	var listHtml	= '';
 	var autoFill	= requestElement.closest( '.auto-fill' );
 	var itemList	= requestElement.find( '.auto-fill-items' );
-	var username	= data.username || '';
 	
-	if( username.length > 0 ) {
+	for( i = 0; i < data.length; i++ ) {
 
-		var obj = data;
+		var obj = data[ i ];
 
-		listHtml += "<li class='auto-fill-item' data-id='" + obj.id + "'>" + obj.username + "</li>";
+		listHtml += "<li class='auto-fill-item' data-id='" + obj.id + "'>" + obj.name + "</li>";
 	}
 
 	if( listHtml.length == 0 ) {
 
-		listHtml	= "<li class='auto-fill-message'>No matching results found</li>";
+		listHtml = "<li class='auto-fill-message'>No matching results found</li>";
 
 		itemList.html( listHtml );
 	}
@@ -194,14 +205,15 @@ cmg.controllers.MembersController.prototype.memberActionSuccess = function( requ
 
 		requestElement.find( '.auto-fill-item' ).click( function() {
 
-			var userId		= data.id;
-			var username	= data.username;
+			var id		= jQuery( this ).attr( 'data-id' );
+			var name	= jQuery( this ).html();
 
 			itemList.slideUp();
-			autoFill.find('.site-member').show();
-			autoFill.find( '.site-member #sitemember-userid' ).val( userId );
-			autoFill.find( '.site-member #username' ).val( username );
 
+			autoFill.find( '.site-member' ).fadeIn( 'slow' );
+
+			autoFill.find( '#sitemember-userid' ).val( id );
+			autoFill.find( '#sitemember-name' ).val( name );
 		});
 	}
 

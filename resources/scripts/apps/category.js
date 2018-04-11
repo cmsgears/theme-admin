@@ -27,11 +27,12 @@ cmg.controllers.CategoryController.prototype.autoSearchActionPre = function( req
 	if( keyword.length <= 0 ) {
 
 		autoFill.find( '.auto-fill-items' ).slideUp();
+		autoFill.find( '.trigger-map-category input[name=categoryId]' ).val( '' );
 
 		return false;
 	}
 
-	this.requestData	= 'type=' + type + '&name=' + keyword;
+	this.requestData = 'type=' + type + '&name=' + keyword;
 
 	return true;
 };
@@ -52,7 +53,7 @@ cmg.controllers.CategoryController.prototype.autoSearchActionSuccess = function(
 
 	if( listHtml.length == 0 ) {
 
-		listHtml	= "<li class='auto-fill-message'>No matching results found</li>";
+		listHtml	= "<li class='auto-fill-message'>No matching results found.</li>";
 
 		itemList.html( listHtml );
 	}

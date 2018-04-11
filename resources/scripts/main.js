@@ -14,8 +14,6 @@ jQuery( document ).ready( function() {
 
 	initSettings();
 
-	initTemplates();
-
 	initAutoHide();
 
 	initWindowResize();
@@ -58,6 +56,7 @@ function initCmgTools() {
 
 	// Custom Checkbox
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
+	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
 	// File Uploader
 	jQuery( '.file-uploader' ).cmtFileUploader();
@@ -277,44 +276,6 @@ function initSettings() {
 			}
 		}
 	});
-}
-
-// == Templates ===========================
-
-function initTemplates() {
-
-	// Templates
-	var templateCheck = jQuery( '.template-file input[type=checkbox]' );
-
-	if( templateCheck.length > 0 ) {
-
-		var templateCheckParent	= templateCheck.closest( '#frm-template' );
-
-		if( templateCheck.prop( 'checked' ) ) {
-
-			templateCheckParent.find( '.render-file' ).show();
-			templateCheckParent.find( '.render-content' ).hide();
-		}
-		else {
-
-			templateCheckParent.find( '.render-file' ).hide();
-			templateCheckParent.find( '.render-content' ).show();
-		}
-
-		templateCheck.click( function() {
-
-			if( templateCheck.prop( 'checked' ) ) {
-
-				templateCheckParent.find( '.render-file' ).fadeIn( 'slow' );
-				templateCheckParent.find( '.render-content' ).fadeOut( 'fast' );
-			}
-			else {
-
-				templateCheckParent.find( '.render-content' ).fadeIn( 'slow' );
-				templateCheckParent.find( '.render-file' ).fadeOut( 'fast' );
-			}
-		});
-	}
 }
 
 // == Auto Hide ===========================
