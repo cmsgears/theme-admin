@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 // CMG Imports
-use cmsgears\widgets\block\BasicBlock;
+use cmsgears\widgets\block\Block;
 
 $coreProperties = $this->context->getCoreProperties();
 $this->title 	= 'Login | ' . $coreProperties->getSiteTitle();
 ?>
 
-<?php BasicBlock::begin([
+<?php Block::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
 	'contentWrapClass' => 'align align-center', 'content' => true
 ]);?>
@@ -36,4 +36,4 @@ $this->title 	= 'Login | ' . $coreProperties->getSiteTitle();
 
 	<?php ActiveForm::end(); ?>
 
-<?php BasicBlock::end(); ?>
+<?php Block::end(); ?>

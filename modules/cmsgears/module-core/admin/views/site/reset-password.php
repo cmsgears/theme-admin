@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 // CMG Imports
-use cmsgears\widgets\block\BasicBlock;
+use cmsgears\widgets\block\Block;
 
 $coreProperties = $this->context->getCoreProperties();
 $this->title 	= 'Reset Password | ' . $coreProperties->getSiteTitle();
 ?>
 
-<?php BasicBlock::begin([
+<?php Block::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
 	'contentWrapClass' => 'align align-center', 'content' => true
 ]);?>
@@ -45,4 +45,4 @@ $this->title 	= 'Reset Password | ' . $coreProperties->getSiteTitle();
 		}
 	?>
 
-<?php BasicBlock::end(); ?>
+<?php Block::end(); ?>
