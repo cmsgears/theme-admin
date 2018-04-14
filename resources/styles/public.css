@@ -3583,7 +3583,7 @@ a:active, a:hover, .link:active, .link:hover {
 }
 
 html, body {
-  font-size: 12px;
+  font-size: 11px;
 }
 @media only screen and (min-width: 481px) {
   html, body {
@@ -3592,12 +3592,12 @@ html, body {
 }
 @media only screen and (min-width: 1025px) {
   html, body {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 @media only screen and (min-width: 1601px) {
   html, body {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
