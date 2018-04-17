@@ -69,14 +69,64 @@ cmg.controllers.CategoryController.prototype.autoSearchActionSuccess = function(
 
 			itemList.slideUp();
 
-			autoFill.find( '.trigger-map-category input[name=categoryId]' ).val( id );
-
-			autoFill.find( '.trigger-map-category .cmt-click' )[ 0 ].click();
+			processCategoryResponse( id, name );
 		});
 	}
 
 	itemList.slideDown();
 };
+
+function processCategoryResponse( id, name ) {
+
+	// Template
+	var source 		= document.getElementById( 'categoryMapperTemplate' ).innerHTML;
+	var template 	= Handlebars.compile( source );
+	// Map
+	var mapperItems	= jQuery( '.mapper-auto-categories' ).find( '.mapper-items' );
+	var itemsArr	= mapperItems.find( '.mapper-item' );
+	var itemsLength	= itemsArr.length;
+
+	// Reset search field
+	jQuery( '.mapper-auto-categories .search-name' ).val( '' );
+
+	if( itemsLength >= 5 ) {
+
+		alert( "No more mappings allowed." );
+
+		return;
+	}
+
+	var create	= true;
+
+	for( var i = 0; i < itemsLength; i++ ) {
+
+		var test	= jQuery( itemsArr[ i ] ).find( '.id' ).val();
+
+		if( id == test ) {
+
+			create = false;
+
+			break;
+		}
+	}
+
+	if( create ) {
+
+		// Generate View
+		var data		= { id: id, name: name };
+		var output 		= template( data );
+
+		mapperItems.append( output );
+
+		itemsArr	= mapperItems.find( '.mapper-item' );
+		itemsLength	= itemsArr.length;
+
+		itemsArr.last().find( '.mapper-item-remove' ).click( function() {
+
+			jQuery( this ).closest( '.mapper-item' ).remove();
+		});
+	}
+}
 
 cmg.controllers.CategoryController.prototype.mapModelCategoryActionPre = function( requestElement ) {
 
