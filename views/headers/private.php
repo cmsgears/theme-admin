@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 // CMG Imports
-use cmsgears\widgets\nav\Nav;
+use cmsgears\widgets\nav\BasicNav;
 
 use cmsgears\core\common\utilities\CodeGenUtil;
 
@@ -179,7 +179,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 			<div id="popout-user" class="popout">
 				<div class="popout-content-wrap">
 					<div class="popout-content">
-						<?= Nav::widget([
+						<?= BasicNav::widget([
 							'options' => [ 'class' => 'vnav' ],
 							'items' => $menuItems
 						])?>
