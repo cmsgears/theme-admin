@@ -70,7 +70,7 @@ cmg.controllers.AutoController.prototype.autoSearchActionSuccess = function( req
 
 	var data			= response.data;
 	var listHtml		= '';
-	var wrapItemList	= requestElement.find( '.auto-fill-items-wrap' );
+	//var wrapItemList	= requestElement.find( '.auto-fill-items-wrap' );
 	var itemList		= requestElement.find( '.auto-fill-items' );
 
 	for( i = 0; i < data.length; i++ ) {
@@ -82,7 +82,7 @@ cmg.controllers.AutoController.prototype.autoSearchActionSuccess = function( req
 
 	if( listHtml.length == 0 ) {
 
-		listHtml	= "<li class='auto-fill-message'>No matching results found</li>";
+		listHtml = "<li class='auto-fill-message'>No matching results found.</li>";
 
 		itemList.html( listHtml );
 	}

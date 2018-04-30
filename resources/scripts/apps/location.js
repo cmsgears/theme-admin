@@ -61,11 +61,21 @@ cmg.controllers.CityController.inherits( cmt.api.controllers.BaseController );
 
 cmg.controllers.CityController.prototype.autoSearchActionPre = function( requestElement ) {
 
-	var form			= requestElement.closest( '.frm-address' );
-	var provinceId 		= form.find( '.address-province' ).val();
-	var cityName 		= form.find( '.auto-fill-text' ).val();
+	var form		= requestElement.closest( '.frm-address' );
+	var autoFill	= requestElement.closest( '.auto-fill' );
 
-	this.requestData	= "province-id=" + provinceId + "&name=" + cityName;
+	var provinceId 	= form.find( '.address-province' ).val();
+	var cityName 	= form.find( '.auto-fill-text' ).val();
+
+	if( cityName.length <= 0 ) {
+
+		autoFill.find( '.auto-fill-items' ).slideUp();
+		autoFill.find( '.auto-fill-target .target' ).val( '' );
+
+		return false;
+	}
+
+	this.requestData = "province-id=" + provinceId + "&name=" + cityName;
 
 	return true;
 };
@@ -74,19 +84,20 @@ cmg.controllers.CityController.prototype.autoSearchActionSuccess = function( req
 
 	var data			= response.data;
 	var listHtml		= '';
-	var wrapItemList	= requestElement.find( '.wrap-auto-list' );
-	var itemList		= requestElement.find( '.auto-list' );
+	var autoFill		= requestElement.closest( '.auto-fill' );
+	//var wrapItemList	= autoFill.find( '.auto-fill-items-wrap' );
+	var itemList		= autoFill.find( '.auto-fill-items' );
 
 	for( i = 0; i < data.length; i++ ) {
 
 		var obj = data[ i ];
 
-		listHtml += "<li data-id='" + obj.id + "' data-lat='" + obj.latitude + "' data-lon='" + obj.longitude + "' data-zip='" + obj.postal + "'>" + obj.name + "</li>";
+		listHtml += "<li class='auto-fill-item' data-id='" + obj.id + "' data-lat='" + obj.latitude + "' data-lon='" + obj.longitude + "' data-zip='" + obj.postal + "'>" + obj.name + "</li>";
 	}
 
 	if( listHtml.length == 0 ) {
 
-		listHtml	= '<li>No matching results found</li>';
+		listHtml = "<li class='auto-fill-message'>No matching results found.</li>";
 
 		itemList.html( listHtml );
 	}
@@ -94,21 +105,21 @@ cmg.controllers.CityController.prototype.autoSearchActionSuccess = function( req
 
 		itemList.html( listHtml );
 
-		requestElement.find( '.auto-list li' ).click( function() {
+		requestElement.find( '.auto-fill-item' ).click( function() {
 
-			var wrapper		= requestElement.parent().find( '.wrap-field-auto' );
-			var id			= jQuery( this ).attr( 'data-id' );
-			var name		= jQuery( this ).html();
+			var target	= autoFill.find( '.auto-fill-target .target' );
+			var id		= jQuery( this ).attr( 'data-id' );
+			var name	= jQuery( this ).html();
 
-			var lat			= jQuery( this ).attr( 'data-lat' );
-			var lon			= jQuery( this ).attr( 'data-lon' );
-			var zip			= jQuery( this ).attr( 'data-zip' );
-			zip				= zip.split( ' ' );
+			var lat		= jQuery( this ).attr( 'data-lat' );
+			var lon		= jQuery( this ).attr( 'data-lon' );
+			var zip		= jQuery( this ).attr( 'data-zip' );
+			zip			= zip.split( ' ' );
 
-			wrapItemList.slideUp();
+			itemList.slideUp();
 
 			// Update City Id and Name
-			wrapper.find( '.id' ).val( id );
+			target.val( id );
 			requestElement.find( '.auto-fill-text' ).val( name );
 
 			// Update Map
@@ -122,7 +133,7 @@ cmg.controllers.CityController.prototype.autoSearchActionSuccess = function( req
 		});
 	}
 
-	wrapItemList.slideDown();
+	itemList.slideDown();
 };
 
 // == Direct Calls ========================
