@@ -1,10 +1,23 @@
 <?php
+/**
+ * This file is part of CMSGears Framework. Please view License file distributed
+ * with the source code for license details.
+ *
+ * @link https://www.cmsgears.org/
+ * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
+ */
+
 namespace themes\admin\assets;
 
 // Yii Imports
 use yii\web\AssetBundle;
 use yii\web\View;
 
+/**
+ * PublicAssets registers the public assets required for public pages.
+ *
+ * @since 1.0.0
+ */
 class PublicAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
@@ -29,12 +42,12 @@ class PublicAssets extends AssetBundle {
 		'styles/public.css'
 	];
 
-	// Position to load css
+	// CSS Position
 	public $cssOptions = [
 		'position' => View::POS_HEAD
 	];
 
-	// Load Javascript
+	// Load JS
 	public $js = [
 		// vendor
 		// templates
@@ -48,12 +61,12 @@ class PublicAssets extends AssetBundle {
 		'scripts/apps/public.js'
 	];
 
-	// Position to load Javascript
+	// JS Position
 	public $jsOptions = [
 		'position' => View::POS_END
 	];
 
-	// Define dependent Asset Loaders
+	// Dependent Assets
 	public $depends = [
 		'cmsgears\core\common\assets\Jquery',
 		'cmsgears\core\common\assets\ImagesLoaded',

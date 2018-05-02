@@ -42,8 +42,6 @@
 @import "cmt/elements/breadcrumbs";
 @import "partials/elements/breadcrumbs";
 
-//@import "cmt/elements/flippers";
-
 @import "cmt/elements/mappers";
 @import "partials/elements/mappers";
 
@@ -80,7 +78,7 @@
 @import "cmt/components/boxes/basic";
 //@import "cmt/components/boxes/login";
 @import "cmt/components/boxes/form";
-@import "cmt/components//boxes/file";
+@import "cmt/components/boxes/file";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/crud";
 @import "partials/components/boxes/form";
@@ -109,6 +107,8 @@
 //@import "cmt/components/cart/product";
 //@import "cmt/components/cart/cart";
 //@import "cmt/components/cart/shop";
+
+//@import "cmt/components/flippers/basic";
 
 @import "partials/components/old-admin";
 
