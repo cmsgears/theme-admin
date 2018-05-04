@@ -700,6 +700,11 @@ Notes:
   -moz-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
   box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
 }
+.shadow.shadow-ignore {
+  -webkit-box-shadow: 0 0 0 0 white;
+  -moz-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white;
+}
 .shadow.shadow-primary {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
   -moz-box-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
@@ -1139,6 +1144,21 @@ Notes:
   text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
 }
 
+.border.border-ignore {
+  border: none !important;
+}
+.border.border-top-ignore {
+  border-top: none !important;
+}
+.border.border-right-ignore {
+  border-right: none !important;
+}
+.border.border-bottom-ignore {
+  border-bottom: none !important;
+}
+.border.border-left-ignore {
+  border-left: none !important;
+}
 .border.border-default {
   border: 1px solid #D1D2D3;
 }
@@ -3074,6 +3094,16 @@ Details: It defines the text and background colors as listed below:
   background-color: #003653 !important;
 }
 
+.bkg-transparent.bkg-transparent-black {
+  background-color: rgba(0, 0, 0, 0.6) !important;
+}
+.bkg-transparent.bkg-transparent-black-l {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+}
+.bkg-transparent.bkg-transparent-black-h {
+  background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
 .text.text-primary {
   color: #898989 !important;
 }
@@ -3590,29 +3620,16 @@ html, body {
 }
 
 /**
- * Standard Fonts - The font classes default, heading and code based on font families defined in variables file.
- */
-.font {
-  font-family: opensans-regular, Helvetica, sans-serif;
-}
-.font .font-light {
-  font-weight: lighter;
-}
-.font .font-bold {
-  font-weight: bold;
-}
-.font.font-heading {
-  font-family: opensans-bold, Helvetica, sans-serif;
-}
-.font.font-code {
-  font-family: "Courier New", Courier, monospace;
-}
-
-/**
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
-.text .text-default {
-  font-size: 1em;
+.text.text-default {
+  font-family: opensans-regular, Helvetica, sans-serif;
+}
+.text.text-heading {
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.text.text-code {
+  font-family: "Courier New", Courier, monospace;
 }
 .text.text-xxlarge {
   font-size: 7.2em;
@@ -3640,6 +3657,9 @@ html, body {
 }
 .text.text-large-6 {
   font-size: 1.08em;
+}
+.text.text-regular {
+  font-size: 1em;
 }
 .text.text-small {
   font-size: 0.8em;

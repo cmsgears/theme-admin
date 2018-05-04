@@ -13,7 +13,7 @@ jQuery( document ).ready( function() {
 
 // == User Controller =====================
 
-cmg.controllers.UserController	= function() {};
+cmg.controllers.UserController = function() {};
 
 cmg.controllers.UserController.inherits( cmt.api.controllers.RequestController );
 
@@ -27,8 +27,8 @@ cmg.controllers.UserController.prototype.avatarActionSuccess = function( request
 
 cmg.controllers.UserController.prototype.profileActionSuccess = function( requestElement, response ) {
 
-	var source 		= document.getElementById( 'userProfileTemplate' ).innerHTML;
-	var template 	= Handlebars.compile( source );
+	var source		= document.getElementById( 'userProfileTemplate' ).innerHTML;
+	var template	= Handlebars.compile( source );
 	var output 		= template( response.data );
 	var parent		= requestElement.closest( '.box-form' );
 

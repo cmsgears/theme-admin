@@ -14,11 +14,11 @@ use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
- * PrivateAssets registers the private assets required for private pages.
+ * CmtJsAssets registers the JS assets provided by CMGTools.
  *
  * @since 1.0.0
  */
-class PrivateAssets extends AssetBundle {
+class CmtJsAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -35,51 +35,20 @@ class PrivateAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@themes/admin/resources';
-
-	// Load css
-	public $css = [
-		'styles/private.css'
-	];
-
-	// CSS Position
-	public $cssOptions = [
-		'position' => View::POS_HEAD
-	];
+	public $sourcePath = '@bower/cmt-js/src/cmg';
 
 	// Load JS
 	public $js = [
-		// vendor
-		// templates
-		'scripts/templates/public.js',
-		'scripts/templates/private.js',
-		// scripts
-		'scripts/main.js',
-		'scripts/search.js',
-		// apix
-		'scripts/apix/public.js',
-		'scripts/apix/private.js',
-		// apps
-		'scripts/apps/public.js',
-		'scripts/apps/private.js',
-		'scripts/apps/user.js'
+		'apps/core/grid.js',
+		'apps/core/mapper.js',
+		'apps/core/location.js',
+		'apps/core/notify/base.js',
+		'apps/core/notify/notification.js',
 	];
 
 	// JS Position
 	public $jsOptions = [
 		'position' => View::POS_END
-	];
-
-	// Dependent Assets
-	public $depends = [
-		'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\JqueryUi',
-		'cmsgears\core\common\assets\JqueryMouseWheel',
-		'cmsgears\core\common\assets\MCustomScrollbar',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\Handlebars',
-		'cmsgears\core\common\assets\CmgToolsJs',
-		'cmsgears\icons\assets\IconAssets'
 	];
 
 	// Protected --------------
@@ -100,6 +69,6 @@ class PrivateAssets extends AssetBundle {
 
 	// CMG parent classes --------------------
 
-	// PrivateAssets -------------------------
+	// CmtJsAssets ---------------------------
 
 }

@@ -42,9 +42,6 @@
 @import "cmt/elements/breadcrumbs";
 @import "partials/elements/breadcrumbs";
 
-@import "cmt/elements/mappers";
-@import "partials/elements/mappers";
-
 @import "cmt/elements/auto-fill";
 
 // ---------------------------------------//
@@ -63,6 +60,8 @@
 
 @import "cmt/components/sidebars/basic";
 @import "partials/components/sidebars/basic";
+
+@import "cmt/components/mappers/basic";
 
 @import "cmt/components/popups/basic";
 @import "cmt/components/popups/popouts";
