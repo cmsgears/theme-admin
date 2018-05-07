@@ -1,28 +1,28 @@
-// Get ready on page load ----------
-
 jQuery( document ).ready( function() {
 
 	initSearch();
 });
 
-// Sort/Search/Filter --------------
+// Initialize Search -----------------------------------------------------------
 
 function initSearch() {
 
 	var pageUrl	= window.location.href;
 
-	jQuery( "#btn-search" ).click( function() {
+	jQuery( '#btn-search' ).click( function() {
 
-		searchBro( "#search-terms", pageUrl );
+		searchBro( '#search-terms', pageUrl );
 	});
 
 	// Init Default Filters
-	initTextFilter( ".filter-text" );
+	initTextFilter( '.filter-text' );
+	initCheckboxFilter( '.filter-checkbox' );
+	initRangeFilter( '.filter-range' );
 }
 
 function searchBro( selector, pageUrl ) {
 
-	var keywords	= jQuery( selector ).val();
+	var keywords = jQuery( selector ).val();
 
 	// Search Keywords
 	if( null != keywords && keywords.length > 0 ) {
@@ -37,9 +37,26 @@ function searchBro( selector, pageUrl ) {
 	window.location	= pageUrl;
 }
 
-function initCheckboxFilter( selector, param ) {
+// Search Filters --------------------------------------------------------------
+
+function initTextFilter( selector ) {
+
+	jQuery( selector ).click( function() {
+
+		var pageUrl	= window.location.href;
+		var param	= jQuery( this ).attr( 'column' );
+		var value	= jQuery( this ).attr( 'filter' );
+
+		window.location = cmt.utils.data.updateUrlParam( pageUrl, param, value );
+	});
+}
+
+function initCheckboxFilter( selector ) {
 
 	jQuery( selector ).change( function() {
+
+		var pageUrl	= window.location.href;
+		var param	= jQuery( this ).attr( 'column' );
 
 		var checked	= [];
 
@@ -55,7 +72,7 @@ function initCheckboxFilter( selector, param ) {
 
 		if( checked.length > 0 ) {
 
-			checked			= checked.join();
+			checked = checked.join();
 
 			window.location = cmt.utils.data.updateUrlParam( pageUrl, param, checked );
 		}
@@ -66,14 +83,35 @@ function initCheckboxFilter( selector, param ) {
 	});
 }
 
-function initTextFilter( selector ) {
+function initRangeFilter( selector ) {
 
-	jQuery( selector ).click( function() {
+    jQuery( selector ).each( function( index ) {
+
+		var filter	= jQuery( this );
 
 		var pageUrl	= window.location.href;
-		var param	= jQuery( this ).attr( 'column' );
-		var value	= jQuery( this ).attr( 'filter' );
+		var param	= filter.attr( 'column' );
 
-		window.location = cmt.utils.data.updateUrlParam( pageUrl, param, value );
-	});
+        var start	= parseFloat( filter.attr( 'start' ) );
+        var end		= parseFloat( filter.attr( 'end' ) );
+        var min		= parseFloat( filter.attr( 'min' ) );
+        var max		= parseFloat( filter.attr( 'max' ) );
+
+        noUiSlider.create( selector, {
+            start: [ start, end ],
+            connect: true,
+            behaviour: 'tap',
+            range: {
+                'min': [ min ],
+                'max': [ max ]
+            }
+        });
+
+        selector.noUiSlider.on( 'update', function( values, handle ) {
+
+			var value = values[ 0 ] + "," + values[ 1 ];
+
+            window.location = cmt.utils.data.updateUrlParam( pageUrl, param, value );
+        });
+    });
 }

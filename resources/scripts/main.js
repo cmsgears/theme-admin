@@ -15,8 +15,6 @@ jQuery( document ).ready( function() {
 	initSettings();
 
 	initAutoHide();
-
-	initWindowResize();
 });
 
 // == Pre Loaders =========================
@@ -54,8 +52,10 @@ function initCmgTools() {
 	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
 	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
 
-	// Custom Checkbox
+	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
+	
+	// Field Groups
 	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
 	// File Uploader
@@ -93,12 +93,21 @@ function initListeners() {
 	// Datepicker
 	if( jQuery().datepicker ) {
 
-		var start 	= jQuery( '.datepicker' ).attr( 'start' );
+		var start = jQuery( '.datepicker' ).attr( 'start' );
 
-		jQuery( '.datepicker' ).datepicker({
-			dateFormat: 'yy-mm-dd',
-			minDate: start
-		});
+		if( null != start ) {
+
+			jQuery( '.datepicker' ).datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: start
+			});
+		}
+		else {
+			
+			jQuery( '.datepicker' ).datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+		}
 	}
 
 	// Custom Scroller
@@ -298,7 +307,7 @@ function hideElement( targetElement, hideElement ) {
 	});
 }
 
-// == Window Resize =======================
+// == Window Resize, Scroll ===============
 
 function initWindowResize() {
 
@@ -307,6 +316,16 @@ function initWindowResize() {
 	jQuery( window ).resize( function () {
 
 		//resizeElements();
+	});
+}
+
+function initWindowScroll() {
+
+	jQuery( window ).scroll(function() {
+
+		var scrolledY = jQuery( window ).scrollTop();
+
+	  	// Do scroll specific tasks
 	});
 }
 
