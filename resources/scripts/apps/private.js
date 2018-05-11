@@ -33,7 +33,7 @@ cmg.controllers.SiteSettingsController.prototype.getContentActionPre = function(
 
 	var contentWrap	= requestElement.attr( 'content' );
 
-	var content = jQuery( '#' + contentWrap + ' .box-content' );
+	var content = jQuery( '#' + contentWrap + ' .box-content-data' );
 
 	if( !content.is( ':empty' ) ) {
 
@@ -48,7 +48,7 @@ cmg.controllers.SiteSettingsController.prototype.getContentActionSuccess = funct
 	var contentWrap	= requestElement.attr( 'content' );
 	contentWrap		= jQuery( '#' + contentWrap );
 	
-	var content = contentWrap.find( '.box-content' );
+	var content = contentWrap.find( '.box-content-data' );
 
 	content.html( response.data );
 

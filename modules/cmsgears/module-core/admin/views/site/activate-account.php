@@ -12,7 +12,7 @@ $this->title 	= 'Activate Account | ' . $coreProperties->getSiteTitle();
 
 <?php BasicBlock::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'contentWrapClass' => 'align align-center', 'content' => true
+	'content' => true
 ]);?>
 
 	<h2 class="align align-center">Activate Account</h2>

@@ -83,7 +83,7 @@ function initCmgTools() {
 	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 
 	// Icon Picker
-	jQuery( '.icon-picker' ).cmtIconPicker();
+	jQuery( '.icon-picker, .texture-picker' ).cmtIconPicker();
 }
 
 // == JS Listeners ========================
@@ -263,13 +263,13 @@ function initSidebarTabs() {
 
 function initSettings() {
 
-	jQuery( '.box-settings .box-content-wrap' ).hide();
+	jQuery( '.box-settings .box-content-wrap .box-content' ).hide();
 
 	jQuery( '.box-settings .box-collapse-trigger' ).click( function() {
 
 		var parent		= jQuery( this ).closest( '.box-settings' );
-		var contentWrap = parent.find( '.box-content-wrap' );
-		var content		= contentWrap.find( '.box-content' );
+		var contentWrap = parent.find( '.box-content-wrap .box-content' );
+		var content		= contentWrap.find( '.box-content-data' );
 
 		if( contentWrap.is( ':visible' ) ) {
 

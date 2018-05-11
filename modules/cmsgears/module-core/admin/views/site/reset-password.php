@@ -12,7 +12,7 @@ $this->title 	= 'Reset Password | ' . $coreProperties->getSiteTitle();
 
 <?php BasicBlock::begin([
 	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'contentWrapClass' => 'align align-center', 'content' => true
+	'content' => true
 ]);?>
 
 	<h2 class="align align-center">Reset Password</h2>

@@ -1605,7 +1605,7 @@ Notes:
   max-height: 100%;
 }
 
-.texture {
+.texture.texture-default {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAD5JREFUeNpisLKy2QcQQAwgAiCAGMEsIAAIIDCPCcQACCCEEBAABBDj////YWwGJgYkgMIBCDAUZThVESUBABoFDS/HAzk5AAAAAElFTkSuQmCC");
 }
 .texture.texture-bar-s {
@@ -6765,14 +6765,16 @@ Details: It defines the styles for header components as listed below:
 }
 .header-basic .header-logo {
   cursor: pointer;
-  margin: 5px;
-  width: 140px;
-  display: inline-block;
+  padding: 10px;
+  display: block;
   position: absolute;
   z-index: 2;
 }
+.header-basic .header-logo .logo {
+  width: 140px;
+}
 .header-basic #menu-main {
-  margin-top: 5px;
+  padding: 10px;
   text-align: right;
   display: block;
   z-index: 1;
@@ -6784,7 +6786,7 @@ Details: It defines the styles for header components as listed below:
   position: absolute;
   right: 0px;
   cursor: pointer;
-  margin: 10px;
+  padding: 10px;
   display: none;
   z-index: 2;
 }
@@ -7570,6 +7572,8 @@ Details: It defines the styles of box components as listed below:
 *
 * Basic       - The basic box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
+*				The Avatar, Banner and Video can be placed any any position within the Box. The possible postions 
+*				are before header, within header, within content, within footer.
 *
 * Collapsible - The collapsible boxes are similar to basic, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
@@ -7577,33 +7581,55 @@ Details: It defines the styles of box components as listed below:
 .box {
   position: relative;
 }
-.box .box-header {
-  position: relative;
+.box .box-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.box > .texture {
+  z-index: 10;
 }
 .box .box-content-wrap {
+  position: relative;
+  z-index: 15;
+}
+.box .box-content-wrap .box-header {
   position: relative;
 }
 .box .box-content-wrap .box-content {
   position: relative;
 }
-.box .box-footer {
+.box .box-content-wrap .box-content .box-content-data {
+  position: relative;
+}
+.box .box-content-wrap .box-footer {
   position: relative;
 }
 
 .box-basic {
   padding: 1rem;
 }
-.box-basic .box-header {
+.box-basic .box-content-wrap .box-header {
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.5rem;
 }
-.box-basic .box-content-wrap {
+.box-basic .box-content-wrap .box-content {
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.5rem;
 }
-.box-basic .box-footer {
+.box-basic .box-content-wrap .box-footer {
   background-color: #FFFFFF;
   color: #898989;
   padding: 0.25rem;
@@ -7612,17 +7638,17 @@ Details: It defines the styles of box components as listed below:
 .box-basic-icon {
   padding: 1rem;
 }
-.box-basic-icon .box-header .box-header-icon {
+.box-basic-icon .box-content-wrap .box-header .box-header-icon {
   position: absolute;
   display: inline-block;
   top: 0.5rem;
   left: 0.5rem;
 }
-.box-basic-icon .box-header .box-header-title {
+.box-basic-icon .box-content-wrap .box-header .box-header-title {
   padding-left: 1.5rem;
 }
 
-.box-collapsible .box-header .box-collapse-trigger {
+.box-collapsible .box-content-wrap .box-header .box-collapse-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
@@ -7630,7 +7656,7 @@ Details: It defines the styles of box components as listed below:
   color: #898989;
   cursor: pointer;
 }
-.box-collapsible .box-header .box-collapse-trigger:hover {
+.box-collapsible .box-content-wrap .box-header .box-collapse-trigger:hover {
   color: #E74343;
 }
 
@@ -7690,35 +7716,35 @@ Details: It defines the styles of form box components as listed below:
   cursor: pointer;
   z-index: 10;
 }
-.box-file-uploader .box-content-wrap .box-content .file-wrap {
+.box-file-uploader .box-content .box-content-data .file-wrap {
   position: relative;
   margin: 0 auto;
 }
-.box-file-uploader .box-content-wrap .box-content .chooser-wrap {
+.box-file-uploader .box-content .box-content-data .chooser-wrap {
   display: none;
 }
-.box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader {
+.box-file-uploader .box-content .box-content-data .chooser-wrap .file-preloader {
   padding-top: 10px;
 }
-.box-file-uploader .box-content-wrap .box-content .chooser-wrap .file-preloader .file-preloader-bar {
+.box-file-uploader .box-content .box-content-data .chooser-wrap .file-preloader .file-preloader-bar {
   background-color: #94CBEA;
   width: 0%;
   height: 10px;
 }
-.box-file-uploader .box-content-wrap .box-content .form-wrap .post-action {
+.box-file-uploader .box-content .box-content-data .form-wrap .post-action {
   text-align: center;
 }
-.box-file-uploader .box-content-wrap .box-content .form-wrap .file-info, .box-file-uploader .box-content-wrap .box-content .form-wrap .file-fields {
+.box-file-uploader .box-content .box-content-data .form-wrap .file-info, .box-file-uploader .box-content .box-content-data .form-wrap .file-fields {
   position: relative;
 }
 
 .box-file-uploader-direct .btn-chooser {
   display: none;
 }
-.box-file-uploader-direct .box-content-wrap .box-content .file-wrap {
+.box-file-uploader-direct .box-content .box-content-data .file-wrap {
   display: none;
 }
-.box-file-uploader-direct .box-content-wrap .box-content .chooser-wrap {
+.box-file-uploader-direct .box-content .box-content-data .chooser-wrap {
   display: block;
 }
 
