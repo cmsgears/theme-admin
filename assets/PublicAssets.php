@@ -68,9 +68,9 @@ class PublicAssets extends AssetBundle {
 
 	// Dependent Assets
 	public $depends = [
-		'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\CmgToolsJs',
+		'cmsgears\assets\jquery\Jquery',
+		'cmsgears\assets\utilities\ImagesLoaded',
+		'cmsgears\assets\cmgtools\Velocity',
 		'cmsgears\icons\assets\IconAssets'
 	];
 

@@ -41,9 +41,10 @@ class CmtJsAssets extends AssetBundle {
 	public $js = [
 		'apps/core/grid.js',
 		'apps/core/mapper.js',
+		'apps/core/comment.js',
 		'apps/core/location.js',
-		'apps/notify/base.js',
-		'apps/notify/notification.js',
+		'apps/core/notify/base.js',
+		'apps/core/notify/notification.js',
 	];
 
 	// JS Position

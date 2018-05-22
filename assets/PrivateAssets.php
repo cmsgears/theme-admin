@@ -72,13 +72,13 @@ class PrivateAssets extends AssetBundle {
 
 	// Dependent Assets
 	public $depends = [
-		'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\JqueryUi',
-		'cmsgears\core\common\assets\JqueryMouseWheel',
-		'cmsgears\core\common\assets\MCustomScrollbar',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\Handlebars',
-		'cmsgears\core\common\assets\CmgToolsJs',
+		'cmsgears\assets\jquery\Jquery',
+		'cmsgears\assets\jquery\JqueryUi',
+		'cmsgears\assets\jquery\JqueryMouseWheel',
+		'cmsgears\assets\components\MCustomScrollbar',
+		'cmsgears\assets\utilities\ImagesLoaded',
+		'cmsgears\assets\templates\Handlebars',
+		'cmsgears\assets\cmgtools\Velocity',
 		'cmsgears\icons\assets\IconAssets'
 	];
 
