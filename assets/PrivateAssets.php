@@ -79,7 +79,10 @@ class PrivateAssets extends AssetBundle {
 		'cmsgears\assets\utilities\ImagesLoaded',
 		'cmsgears\assets\templates\Handlebars',
 		'cmsgears\assets\cmgtools\Velocity',
-		'cmsgears\icons\assets\IconAssets'
+		'cmsgears\icons\assets\IconAssets',
+		'themes\admin\assets\vapps\BaseAssets',
+		'themes\admin\assets\vapps\CoreAssets',
+		'themes\admin\assets\vapps\NotifyAssets'
 	];
 
 	// Protected --------------

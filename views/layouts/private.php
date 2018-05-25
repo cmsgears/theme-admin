@@ -7,7 +7,6 @@ use themes\admin\assets\InlineAssets;
 InlineAssets::register( $this );
 
 $this->registerAssetBundle( 'private' );
-$this->registerAssetBundle( 'cmtjs' );
 
 // Register Child theme Assets
 //$this->theme->registerChildAssets( $this );
