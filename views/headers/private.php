@@ -15,6 +15,10 @@ $menuItems = [
 		[ 'label' => 'Logout', 'url' => [ '/logout' ] ]
 	];
 
+$user		= Yii::$app->user->getIdentity();
+
+$notifyFlag = $user->isPermitted(NotifyGlobal::PERM_NOTIFY_ADMIN);
+
 $stats			= Yii::$app->eventManager->getAdminStats();
 $notifications	= $stats[ 'notifications' ];
 $reminders		= $stats[ 'reminders' ];
@@ -32,6 +36,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 	</div>
 	<div class="colf colf15x11 header-menu popout-group popout-group-main">
 		<div class="popout-actions align align-right">
+			<?php if( $notifyFlag ) { ?>
 			<span class="popout-trigger" popout="popout-notification" title="Notifications">
 				<span class="cmti cmti-flag-o"></span>
 				<?php if( $stats[ 'notificationCount' ] > 0 ) { ?>
@@ -50,6 +55,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 					<span class="count-header count-activity"><?= $stats[ 'activityCount' ] ?></span>
 				<?php } ?>
 			</span>
+			<?php } ?>
 			<span class="popout-trigger wrap-user" popout="popout-user">
 				<?= $avatarThumb ?>
 				<span class="fa fa-caret-down"></span>
