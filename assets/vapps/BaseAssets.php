@@ -35,13 +35,13 @@ class BaseAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-js/src/cmg';
+	public $sourcePath = '@bower/cmt-vapps/src';
 
 	// Load JS
 	public $js = [
-		'apps/core/grid.js',
-		'apps/core/comment.js',
-		'apps/core/location.js'
+		'core/grid.js',
+		'core/comment.js',
+		'core/location.js'
 	];
 
 	// JS Position

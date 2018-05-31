@@ -35,12 +35,12 @@ class NotifyAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-js/src/cmg';
+	public $sourcePath = '@bower/cmt-vapps/src';
 
 	// Load JS
 	public $js = [
-		'apps/notify/base.js',
-		'apps/notify/notification.js',
+		'notify/base.js',
+		'notify/notification.js',
 	];
 
 	// JS Position
