@@ -4,6 +4,8 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 
 // CMG Imports
+use cmsgears\notify\common\config\NotifyGlobal;
+
 use cmsgears\widgets\nav\BasicNav;
 
 use cmsgears\core\common\utilities\CodeGenUtil;
@@ -55,7 +57,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 						<span class="count-header count-activity"><?= $stats[ 'activityCount' ] ?></span>
 					<?php } ?>
 				</span>
-			<? } ?>
+			<?php } ?>
 			<span class="popout-trigger wrap-user" popout="popout-user">
 				<?= $avatarThumb ?>
 				<span class="fa fa-caret-down"></span>
@@ -69,9 +71,9 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 							<ul>
 								<?php
 									if( count( $notifications ) > 0 ) {
-	
+
 										foreach( $notifications as $notification ) {
-	
+
 											if( isset( $notification->adminLink ) ) {
 								?>
 											<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/notification/read?id=<?= $notification->id ?>" consumed="<?= $notification->consumed ?>" redirect="<?= Url::toRoute( $notification->adminLink ) ?>">
@@ -109,9 +111,9 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 							<ul>
 								<?php
 									if( count( $reminders ) > 0 ) {
-	
+
 										foreach( $reminders as $reminder ) {
-	
+
 											if( isset( $reminder->adminLink ) ) {
 								?>
 											<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/reminder/read?id=<?= $reminder->id ?>" consumed="<?= $reminder->consumed ?>" redirect="<?= Url::toRoute( $reminder->adminLink ) ?>">
@@ -149,9 +151,9 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 							<ul>
 								<?php
 									if( count( $activities ) > 0 ) {
-	
+
 										foreach( $activities as $activity ) {
-	
+
 											if( isset( $activity->adminLink ) ) {
 								?>
 											<li cmt-app="notification" cmt-controller="notification" cmt-action="hread" action="notify/activity/read?id=<?= $activity->id ?>" consumed="<?= $activity->consumed ?>" redirect="<?= Url::toRoute( $activity->adminLink ) ?>">
@@ -183,7 +185,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 						</div>
 					</div>
 				</div>
-			<? } ?>
+			<?php } ?>
 			<div id="popout-user" class="popout">
 				<div class="popout-content-wrap">
 					<div class="popout-content">
