@@ -2,112 +2,131 @@
 // Core Division
 // ---------------------------------------//
 
-@import "cmt/core/variables";
+@import "breeze/core/variables";
 @import "partials/core/fonts";
 @import "partials/core/variables";
 
-@import "cmt/core/variables-ext";
+@import "breeze/core/variables-ext";
 
-@import "cmt/core/mixins";
-@import "cmt/core/transitions";
-@import "cmt/core/transformations";
-@import "cmt/core/animations";
+@import "breeze/core/mixins";
+@import "breeze/core/transitions";
+@import "breeze/core/transformations";
+@import "breeze/core/animations";
 
-@import "cmt/core/reset";
-@import "cmt/core/basic";
+@import "breeze/core/reset";
+@import "breeze/core/basic";
 @import "partials/core/basic";
 
-@import "cmt/core/coloring";
-@import "cmt/core/spacing";
+@import "breeze/core/coloring";
+@import "breeze/core/spacing";
 
-@import "cmt/core/typography";
+@import "breeze/core/typography";
 @import "partials/core/typography";
 
-@import "cmt/core/containers";
+@import "breeze/core/containers";
 @import "partials/core/containers";
+
+// ---------------------------------------//
+// Effects Division
+// ---------------------------------------//
+
+@import "breeze/effects/hover/color";
+@import "breeze/effects/hover/transform";
+@import "breeze/effects/hover/animate";
+
+@import "breeze/effects/animations/basic";
 
 // ---------------------------------------//
 // Elements Division
 // ---------------------------------------//
 
-@import "cmt/elements/basic";
+@import "breeze/elements/basic";
 
-@import "cmt/elements/custom";
+@import "breeze/elements/icon-picker";
+@import "breeze/elements/time-picker";
+@import "breeze/elements/list";
+@import "breeze/elements/select";
+@import "breeze/elements/choice";
+@import "breeze/elements/rating";
+@import "breeze/elements/switch";
+@import "breeze/elements/button";
 
-@import "cmt/elements/form";
+@import "breeze/elements/form";
+@import "breeze/elements/table";
 @import "partials/elements/form";
 
-@import "cmt/elements/table";
-
-@import "cmt/elements/breadcrumbs";
-@import "partials/elements/breadcrumbs";
-
-@import "cmt/elements/auto-fill";
+@import "breeze/elements/splitter";
+@import "breeze/elements/tabs";
+@import "breeze/elements/accordian";
+@import "breeze/elements/breadcrumb";
+@import "breeze/elements/auto-fill";
+@import "breeze/elements/uploader";
+@import "breeze/elements/flipper";
+@import "partials/elements/breadcrumb";
 
 // ---------------------------------------//
 // Components Division
 // ---------------------------------------//
 
-@import "cmt/components/menus/basic";
-@import "cmt/components/menus/collapsible";
-//@import "cmt/components/menus/social";
+@import "breeze/components/data/zigzag";
+
+@import "breeze/components/menus/basic";
+@import "breeze/components/menus/collapsible";
+//@import "breeze/components/menus/social";
 @import "partials/components/menus/collapsible";
 
-@import "cmt/components/headers/basic";
+@import "breeze/components/headers/basic";
 @import "partials/components/headers/basic";
 
-//@import "cmt/components/footers/basic";
+//@import "breeze/components/footers/basic";
 
-@import "cmt/components/sidebars/basic";
+@import "breeze/components/sidebars/basic";
 @import "partials/components/sidebars/basic";
 
-@import "cmt/components/mappers/basic";
+@import "breeze/components/mappers/basic";
 
-@import "cmt/components/popups/basic";
-@import "cmt/components/popups/popouts";
+@import "breeze/components/popups/basic";
+@import "breeze/components/popups/popouts";
 @import "partials/components/popups/basic";
 @import "partials/components/popups/popouts";
 
-@import "cmt/components/sliders/basic";
+@import "breeze/components/sliders/basic";
 
-//@import "cmt/components/galleries/basic";
+//@import "breeze/components/galleries/basic";
 
-@import "cmt/components/cards/basic";
+@import "breeze/components/cards/basic";
+@import "breeze/components/cards/panel";
 
-@import "cmt/components/boxes/basic";
-//@import "cmt/components/boxes/login";
-@import "cmt/components/boxes/form";
-@import "cmt/components/boxes/file";
+@import "breeze/components/boxes/basic";
+@import "breeze/components/boxes/panel";
+//@import "breeze/components/boxes/login";
+@import "breeze/components/boxes/form";
+@import "breeze/components/boxes/file";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/crud";
 @import "partials/components/boxes/form";
 @import "partials/components/boxes/settings";
 
-//@import "cmt/components/widgets/basic";
-//@import "cmt/components/widgets/blog/post";
-//@import "cmt/components/widgets/cart/cart";
-//@import "cmt/components/widgets/cart/product";
+//@import "breeze/components/widgets/basic";
+//@import "breeze/components/widgets/cart";
 
-//@import "cmt/components/blocks/basic";
+//@import "breeze/components/blocks/basic";
 //@import "partials/components/blocks/basic";
 
-@import "cmt/components/grid/pagination";
-@import "cmt/components/grid/sorting";
-@import "cmt/components/grid/filters";
-@import "cmt/components/grid/data";
-@import "cmt/components/grid/table";
+@import "breeze/components/grid/pagination";
+@import "breeze/components/grid/sorting";
+@import "breeze/components/grid/filters";
+@import "breeze/components/grid/data";
+@import "breeze/components/grid/table";
 @import "partials/components/grid/pagination";
 @import "partials/components/grid/filters";
 @import "partials/components/grid/data";
 
-//@import "cmt/components/blog/blog";
-//@import "cmt/components/blog/post";
+//@import "breeze/components/page/basic";
 
-//@import "cmt/components/cart/product";
-//@import "cmt/components/cart/cart";
-//@import "cmt/components/cart/shop";
-
-//@import "cmt/components/flippers/basic";
+//@import "breeze/components/cart/product";
+//@import "breeze/components/cart/cart";
+//@import "breeze/components/cart/shop";
 
 @import "partials/components/old-admin";
 
@@ -115,9 +134,9 @@
 // Extensions Division
 // ---------------------------------------//
 
-@import "cmt/extensions/m-custom-scrollbar";
+@import "breeze/extensions/m-custom-scrollbar";
 @import "partials/extensions/m-custom-scrollbar";
 
-@import "cmt/extensions/jquery/datepicker";
+@import "breeze/extensions/jquery/datepicker";
 @import "partials/extensions/jquery/datepicker";
 @import "partials/extensions/jquery/tabs";

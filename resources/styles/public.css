@@ -150,16 +150,16 @@ Blur				-	Blus is another mixin adding lens effect to blur underlying content an
 Media Queries		-	These mixins are pre-defined media queries using the screen sizes declared in variables file. This 
 						section includes mixins for in-between, desktop first and mobile first approaches.
 ***********************************************************************/
-.clearfix, .row, .frm-split-40-60 .form-group {
+.clearfix, .row, .frm-split-40-60 .form-group, .header-basic {
   zoom: 1;
 }
-.clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after {
+.clearfix:before, .row:before, .frm-split-40-60 .form-group:before, .header-basic:before, .clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after, .row:after, .frm-split-40-60 .form-group:after {
+.clearfix:after, .row:after, .frm-split-40-60 .form-group:after, .header-basic:after {
   clear: both;
 }
 
@@ -720,6 +720,11 @@ Notes:
   -moz-box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
   box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
 }
+.shadow.shadow-white {
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+}
 .shadow.shadow-gray {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
   -moz-box-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -831,6 +836,11 @@ Notes:
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
 }
+.shadow-inset.shadow-inset-white {
+  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+}
 .shadow-inset.shadow-inset-gray {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -941,6 +951,11 @@ Notes:
   -webkit-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+}
+.text-shadow.text-shadow-white {
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
 }
 .text-shadow.text-shadow-gray {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -1551,6 +1566,7 @@ Notes:
   left: -50%;
   width: 200%;
   height: 200%;
+  overflow: hidden;
 }
 .bkg-element img {
   position: absolute;
@@ -1570,6 +1586,7 @@ Notes:
   left: -30%;
   width: 160%;
   height: 160%;
+  overflow: hidden;
 }
 .bkg-element-medium img {
   position: absolute;
@@ -1591,6 +1608,7 @@ Notes:
   left: -20%;
   width: 140%;
   height: 140%;
+  overflow: hidden;
 }
 .bkg-element-small img {
   position: absolute;
@@ -1647,6 +1665,42 @@ Notes:
 .texture.texture-diagonal-b-r {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAAGXy9/eAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAEJJREFUeNpi+P//PwNAADGACIAAAhNWVjYxAAHECCLAPIAAAnNBDBAGCCAGGAMuDZNFUQYQYCgyKKrQBeBmYVMNwgAzHVRKHzdAdAAAAABJRU5ErkJggg==");
 }
+.texture.texture-black {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYGBgaAAIMAAAhQCB69VMmQAAAABJRU5ErkJggg==");
+}
+.texture.texture-white {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABBJREFUeNpi+P//fwNAgAEACXwDfugyhDIAAAAASUVORK5CYII=");
+}
+.texture.texture-purple {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HQ7kgYQYAAE6QH6X645SgAAAABJRU5ErkJggg==");
+}
+.texture.texture-red {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+O9o5gsQYAAFfQHETi5yBwAAAABJRU5ErkJggg==");
+}
+.texture.texture-yellow {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+H+HwQEgwAAG1QIc8QQ4ogAAAABJRU5ErkJggg==");
+}
+.texture.texture-blue {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiYCi5mQYQYAADeQG02sTEiAAAAABJRU5ErkJggg==");
+}
+.texture.texture-brown {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi6HYV9gUIMAADcwEx4AygWgAAAABJRU5ErkJggg==");
+}
+.texture.texture-gray {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqK+vbwAIMAAE/AH+bxqbQAAAAABJRU5ErkJggg==");
+}
+.texture.texture-green {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpiqFml6wsQYAAEmgGhkKzKGgAAAABJRU5ErkJggg==");
+}
+.texture.texture-magenta {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi2MSwyRcgwAAEfgGye9u+TgAAAABJRU5ErkJggg==");
+}
+.texture.texture-orange {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpi+N8q7QsQYAAGEwHtbBCh8wAAAABJRU5ErkJggg==");
+}
+.texture.texture-pink {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9JREFUeNpieKJR4wsQYAAFUgHWLezVJwAAAABJRU5ErkJggg==");
+}
 
 .blur {
   transform: scale(1.1);
@@ -1685,8 +1739,8 @@ Notes:
   filter: blur(13px);
 }
 
-.pattern {
-  background-image: url("../images/pattern-default.jpg");
+.pattern.pattern-default {
+  background-image: url("../images/pattern-default.png");
 }
 
 /**********************************************************************
@@ -1935,58 +1989,57 @@ Flip		-	It flip an element either vertically or horizontally.
 }
 
 .scale-small {
-  -webkit-transform: scale(3px, 3px);
-  -moz-transform: scale(3px, 3px);
-  -ms-transform: scale(3px, 3px);
-  -o-transform: scale(3px, 3px);
-  transform: scale(3px, 3px);
+  -webkit-transform: scale(1.25, 1.25);
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
 }
 
 .scale-medium {
-  -webkit-transform: scale(5px, 5px);
-  -moz-transform: scale(5px, 5px);
-  -ms-transform: scale(5px, 5px);
-  -o-transform: scale(5px, 5px);
-  transform: scale(5px, 5px);
+  -webkit-transform: scale(1.5, 1.5);
+  -moz-transform: scale(1.5, 1.5);
+  -ms-transform: scale(1.5, 1.5);
+  -o-transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5);
 }
 
 .scale-large {
-  -webkit-transform: scale(8px, 8px);
-  -moz-transform: scale(8px, 8px);
-  -ms-transform: scale(8px, 8px);
-  -o-transform: scale(8px, 8px);
-  transform: scale(8px, 8px);
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+  transform: scale(2, 2);
 }
 
 .scale-xlarge {
-  -webkit-transform: scale(13px, 13px);
-  -moz-transform: scale(13px, 13px);
-  -ms-transform: scale(13px, 13px);
-  -o-transform: scale(13px, 13px);
-  transform: scale(13px, 13px);
+  -webkit-transform: scale(3, 3);
+  -moz-transform: scale(3, 3);
+  -ms-transform: scale(3, 3);
+  -o-transform: scale(3, 3);
+  transform: scale(3, 3);
 }
 
 .scale-xxlarge {
-  -webkit-transform: scale(21px, 21px);
-  -moz-transform: scale(21px, 21px);
-  -ms-transform: scale(21px, 21px);
-  -o-transform: scale(21px, 21px);
-  transform: scale(21px, 21px);
+  -webkit-transform: scale(5, 5);
+  -moz-transform: scale(5, 5);
+  -ms-transform: scale(5, 5);
+  -o-transform: scale(5, 5);
+  transform: scale(5, 5);
 }
 
 .scale-xxxlarge {
-  -webkit-transform: scale(34px, 34px);
-  -moz-transform: scale(34px, 34px);
-  -ms-transform: scale(34px, 34px);
-  -o-transform: scale(34px, 34px);
-  transform: scale(34px, 34px);
+  -webkit-transform: scale(10, 10);
+  -moz-transform: scale(10, 10);
+  -ms-transform: scale(10, 10);
+  -o-transform: scale(10, 10);
+  transform: scale(10, 10);
 }
 
-.flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
+.skew {
+  -webkit-transform: skew(5deg, 5deg);
+  -ms-transform: skew(5deg, 5deg);
+  transform: skew(5deg, 5deg);
 }
 
 .skew-left {
@@ -2001,6 +2054,13 @@ Flip		-	It flip an element either vertically or horizontally.
   transform: skewX(-5deg);
 }
 
+.flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
 .flip-vertical {
   filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
   -webkit-transform: scale(1, -1);
@@ -2008,64 +2068,121 @@ Flip		-	It flip an element either vertically or horizontally.
   transform: scale(1, -1);
 }
 
-.grow {
-  -webkit-transition: all 420ms ease-in-out 0s;
-  -moz-transition: all 420ms ease-in-out 0s;
-  -ms-transition: all 420ms ease-in-out 0s;
-  -o-transition: all 420ms ease-in-out 0s;
-  transition: all 420ms ease-in-out 0s;
-}
-.grow:hover {
-  -webkit-transform: scale(1.2, 1.2);
-  -moz-transform: scale(1.2, 1.2);
-  -ms-transform: scale(1.2, 1.2);
-  -o-transform: scale(1.2, 1.2);
-  transform: scale(1.2, 1.2);
-}
-
 /**********************************************************************
-Description: This file define the animation effects available in CMT-UI css framework. These animations give
-			 smooth and nice visual effects to an element.
+Description: This file define the basic animation effects available in CMT-UI css framework. These 
+			 animations give smooth and nice visual effects to an element. The animations within effects 
+			 section can be used for more advanced animations.
 
 Dependencies: none
 
 Details: It defines the animation mixins and default implementation as listed below:
 
 * Spin      - The spin animation spins an element infinitely.
+* Zoom		- The zoom animation use the scale property to zoom in and zoom out an element.
 ***********************************************************************/
 @-moz-keyframes spin {
-  0% {
+  from {
     -moz-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  100% {
+  to {
     -moz-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @-webkit-keyframes spin {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
   }
 }
 @keyframes spin {
-  0% {
+  from {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  100% {
+  to {
     -webkit-transform: rotate(359deg);
     transform: rotate(359deg);
+  }
+}
+@-moz-keyframes zoom-in {
+  from {
+    opacity: 0;
+    -moz-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoom-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+  }
+  75% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes zoom-out {
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -moz-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+  }
+}
+@-webkit-keyframes zoom-out {
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
+  }
+}
+@keyframes zoom-out {
+  25% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(0.25, 0.25);
+    transform: scale(0.25, 0.25);
   }
 }
 .spin {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
+}
+
+.zoom-in {
+  -webkit-animation: zoom-in 2s infinite linear;
+  animation: zoom-in 2s infinite linear;
+}
+
+.zoom-out {
+  -webkit-animation: zoom-out 2s infinite linear;
+  animation: zoom-out 2s infinite linear;
 }
 
 /**********************************************************************
@@ -2699,6 +2816,25 @@ html, body {
 
 .fixed {
   position: fixed !important;
+}
+
+.layer {
+  z-index: 1;
+}
+.layer.layer-1 {
+  z-index: 10;
+}
+.layer.layer-2 {
+  z-index: 20;
+}
+.layer.layer-3 {
+  z-index: 30;
+}
+.layer.layer-4 {
+  z-index: 40;
+}
+.layer.layer-5 {
+  z-index: 50;
 }
 
 .block {
@@ -3623,13 +3759,13 @@ html, body {
  * Standard Font Size - The font size for headers h1 to h6, default and small.
  */
 .text.text-default {
-  font-family: opensans-regular, Helvetica, sans-serif;
+  font-family: opensans-regular, Helvetica, sans-serif !important;
 }
 .text.text-heading {
-  font-family: opensans-bold, Helvetica, sans-serif;
+  font-family: opensans-bold, Helvetica, sans-serif !important;
 }
 .text.text-code {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Courier New", Courier, monospace !important;
 }
 .text.text-xxlarge {
   font-size: 7.2em;
@@ -3733,6 +3869,34 @@ p, span, em, div, a {
 }
 .reader h1, .reader h2, .reader h3, .reader h4, .reader h5, .reader h6, .reader .h1, .reader .h2, .reader .h3, .reader .h4, .reader .h5, .reader .h6, .reader .heading {
   padding: 0.5em 0;
+}
+.reader .reader-left {
+  text-align: left !important;
+}
+.reader .reader-center {
+  text-align: center !important;
+}
+.reader .reader-right {
+  text-align: right !important;
+}
+.reader .reader-justify {
+  text-align: justify !important;
+}
+.reader ol li {
+  list-style-position: inside;
+  list-style-type: decimal;
+  line-height: 2.5;
+}
+.reader ol ul, .reader ol ol {
+  margin-left: 2em;
+}
+.reader ul li {
+  list-style-position: inside;
+  list-style-type: disc;
+  line-height: 2.5;
+}
+.reader ul ul, .reader ul ol {
+  margin-left: 2em;
 }
 
 .cmti, .fa {
@@ -3966,7 +4130,7 @@ Details: It defines the grid system and basic containers as listed below:
   width: 17%;
 }
 @media only screen and (max-width: 1024px) {
-  .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5 {
+  .row.row-inline.max-cols-50 > .col3, .row.row-inline.max-cols-50 > .col4, .row.row-inline.max-cols-50 > .col5, .row.row-inline.max-cols-50s > .col3, .row.row-inline.max-cols-50s > .col4, .row.row-inline.max-cols-50s > .col5 {
     width: 47%;
   }
   .row.row-inline.max-cols-100 > .col3, .row.row-inline.max-cols-100 > .col4, .row.row-inline.max-cols-100 > .col5 {
@@ -4060,17 +4224,17 @@ Details: It defines the grid system and basic containers as listed below:
     width: 100%;
   }
 
-  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15 {
+  .max-cols-25 > .col1, .max-cols-25 > .col2, .max-cols-25 > .col3, .max-cols-25 > .col4, .max-cols-25 > .col5, .max-cols-25 > .col6, .max-cols-25 > .col7, .max-cols-25 > .col8, .max-cols-25 > .col9, .max-cols-25 > .col10, .max-cols-25 > .col11, .max-cols-25 > .col12, .max-cols-25 > .col13, .max-cols-25 > .col14, .max-cols-25 > .col15, .max-cols-25s > .col1, .max-cols-25s > .col2, .max-cols-25s > .col3, .max-cols-25s > .col4, .max-cols-25s > .col5, .max-cols-25s > .col6, .max-cols-25s > .col7, .max-cols-25s > .col8, .max-cols-25s > .col9, .max-cols-25s > .col10, .max-cols-25s > .col11, .max-cols-25s > .col12, .max-cols-25s > .col13, .max-cols-25s > .col14, .max-cols-25s > .col15 {
     width: 23%;
   }
-  .max-cols-25 > .col:nth-child(4) {
+  .max-cols-25 > .col:nth-child(4), .max-cols-25s > .col:nth-child(4) {
     clear: both;
   }
 
-  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15 {
+  .max-cols-50 > .col1, .max-cols-50 > .col2, .max-cols-50 > .col3, .max-cols-50 > .col4, .max-cols-50 > .col5, .max-cols-50 > .col6, .max-cols-50 > .col7, .max-cols-50 > .col8, .max-cols-50 > .col9, .max-cols-50 > .col10, .max-cols-50 > .col11, .max-cols-50 > .col12, .max-cols-50 > .col13, .max-cols-50 > .col14, .max-cols-50 > .col15, .max-cols-50s > .col1, .max-cols-50s > .col2, .max-cols-50s > .col3, .max-cols-50s > .col4, .max-cols-50s > .col5, .max-cols-50s > .col6, .max-cols-50s > .col7, .max-cols-50s > .col8, .max-cols-50s > .col9, .max-cols-50s > .col10, .max-cols-50s > .col11, .max-cols-50s > .col12, .max-cols-50s > .col13, .max-cols-50s > .col14, .max-cols-50s > .col15 {
     width: 48%;
   }
-  .max-cols-50 > .col:nth-child(odd) {
+  .max-cols-50 > .col:nth-child(odd), .max-cols-50s > .col:nth-child(odd) {
     clear: both;
   }
 
@@ -4217,11 +4381,11 @@ Details: It defines the grid system and basic containers as listed below:
 
 /* full width for mobile, tablet */
 @media only screen and (max-width: 1024px) {
-  .max-cols-25 > .col3x2, .max-cols-25 > .col4x2, .max-cols-25 > .col4x3, .max-cols-25 > .col5x2, .max-cols-25 > .col5x3, .max-cols-25 > .col5x4, .max-cols-25 > .col6x2, .max-cols-25 > .col6x3, .max-cols-25 > .col6x4, .max-cols-25 > .col6x5, .max-cols-25 > .col12x2, .max-cols-25 > .col12x3, .max-cols-25 > .col12x4, .max-cols-25 > .col12x5, .max-cols-25 > .col12x6, .max-cols-25 > .col12x7, .max-cols-25 > .col12x8, .max-cols-25 > .col12x9, .max-cols-25 > .col12x10, .max-cols-25 > .col12x11, .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14 {
+  .max-cols-25 > .col3x2, .max-cols-25 > .col4x2, .max-cols-25 > .col4x3, .max-cols-25 > .col5x2, .max-cols-25 > .col5x3, .max-cols-25 > .col5x4, .max-cols-25 > .col6x2, .max-cols-25 > .col6x3, .max-cols-25 > .col6x4, .max-cols-25 > .col6x5, .max-cols-25 > .col12x2, .max-cols-25 > .col12x3, .max-cols-25 > .col12x4, .max-cols-25 > .col12x5, .max-cols-25 > .col12x6, .max-cols-25 > .col12x7, .max-cols-25 > .col12x8, .max-cols-25 > .col12x9, .max-cols-25 > .col12x10, .max-cols-25 > .col12x11, .max-cols-25 > .col15x2, .max-cols-25 > .col15x3, .max-cols-25 > .col15x4, .max-cols-25 > .col15x5, .max-cols-25 > .col15x6, .max-cols-25 > .col15x7, .max-cols-25 > .col15x8, .max-cols-25 > .col15x9, .max-cols-25 > .col15x10, .max-cols-25 > .col15x11, .max-cols-25 > .col15x12, .max-cols-25 > .col15x13, .max-cols-25 > .col15x14, .max-cols-25s > .col3x2, .max-cols-25s > .col4x2, .max-cols-25s > .col4x3, .max-cols-25s > .col5x2, .max-cols-25s > .col5x3, .max-cols-25s > .col5x4, .max-cols-25s > .col6x2, .max-cols-25s > .col6x3, .max-cols-25s > .col6x4, .max-cols-25s > .col6x5, .max-cols-25s > .col12x2, .max-cols-25s > .col12x3, .max-cols-25s > .col12x4, .max-cols-25s > .col12x5, .max-cols-25s > .col12x6, .max-cols-25s > .col12x7, .max-cols-25s > .col12x8, .max-cols-25s > .col12x9, .max-cols-25s > .col12x10, .max-cols-25s > .col12x11, .max-cols-25s > .col15x2, .max-cols-25s > .col15x3, .max-cols-25s > .col15x4, .max-cols-25s > .col15x5, .max-cols-25s > .col15x6, .max-cols-25s > .col15x7, .max-cols-25s > .col15x8, .max-cols-25s > .col15x9, .max-cols-25s > .col15x10, .max-cols-25s > .col15x11, .max-cols-25s > .col15x12, .max-cols-25s > .col15x13, .max-cols-25s > .col15x14 {
     width: 23%;
   }
 
-  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5, .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11, .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14 {
+  .max-cols-50 > .col3x2, .max-cols-50 > .col4x2, .max-cols-50 > .col4x3, .max-cols-50 > .col5x2, .max-cols-50 > .col5x3, .max-cols-50 > .col5x4, .max-cols-50 > .col6x2, .max-cols-50 > .col6x3, .max-cols-50 > .col6x4, .max-cols-50 > .col6x5, .max-cols-50 > .col12x2, .max-cols-50 > .col12x3, .max-cols-50 > .col12x4, .max-cols-50 > .col12x5, .max-cols-50 > .col12x6, .max-cols-50 > .col12x7, .max-cols-50 > .col12x8, .max-cols-50 > .col12x9, .max-cols-50 > .col12x10, .max-cols-50 > .col12x11, .max-cols-50 > .col15x2, .max-cols-50 > .col15x3, .max-cols-50 > .col15x4, .max-cols-50 > .col15x5, .max-cols-50 > .col15x6, .max-cols-50 > .col15x7, .max-cols-50 > .col15x8, .max-cols-50 > .col15x9, .max-cols-50 > .col15x10, .max-cols-50 > .col15x11, .max-cols-50 > .col15x12, .max-cols-50 > .col15x13, .max-cols-50 > .col15x14, .max-cols-50s > .col3x2, .max-cols-50s > .col4x2, .max-cols-50s > .col4x3, .max-cols-50s > .col5x2, .max-cols-50s > .col5x3, .max-cols-50s > .col5x4, .max-cols-50s > .col6x2, .max-cols-50s > .col6x3, .max-cols-50s > .col6x4, .max-cols-50s > .col6x5, .max-cols-50s > .col12x2, .max-cols-50s > .col12x3, .max-cols-50s > .col12x4, .max-cols-50s > .col12x5, .max-cols-50s > .col12x6, .max-cols-50s > .col12x7, .max-cols-50s > .col12x8, .max-cols-50s > .col12x9, .max-cols-50s > .col12x10, .max-cols-50s > .col12x11, .max-cols-50s > .col15x2, .max-cols-50s > .col15x3, .max-cols-50s > .col15x4, .max-cols-50s > .col15x5, .max-cols-50s > .col15x6, .max-cols-50s > .col15x7, .max-cols-50s > .col15x8, .max-cols-50s > .col15x9, .max-cols-50s > .col15x10, .max-cols-50s > .col15x11, .max-cols-50s > .col15x12, .max-cols-50s > .col15x13, .max-cols-50s > .col15x14 {
     width: 48%;
   }
 
@@ -4303,10 +4467,10 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12 {
+  .max-cols-50 > .colc1, .max-cols-50 > .colc2, .max-cols-50 > .colc3, .max-cols-50 > .colc4, .max-cols-50 > .colc5, .max-cols-50 > .colc6, .max-cols-50 > .colc7, .max-cols-50 > .colc8, .max-cols-50 > .colc9, .max-cols-50 > .colc10, .max-cols-50 > .colc11, .max-cols-50 > .colc12, .max-cols-50s > .colc1, .max-cols-50s > .colc2, .max-cols-50s > .colc3, .max-cols-50s > .colc4, .max-cols-50s > .colc5, .max-cols-50s > .colc6, .max-cols-50s > .colc7, .max-cols-50s > .colc8, .max-cols-50s > .colc9, .max-cols-50s > .colc10, .max-cols-50s > .colc11, .max-cols-50s > .colc12 {
     width: 48%;
   }
-  .max-cols-50 > .colc:nth-child(odd) {
+  .max-cols-50 > .colc:nth-child(odd), .max-cols-50s > .colc:nth-child(odd) {
     clear: both;
   }
 
@@ -4332,7 +4496,7 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-50 > .colc3x2, .max-cols-50 > .colc4x2, .max-cols-50 > .colc4x3, .max-cols-50 > .colc12x2, .max-cols-50 > .colc12x3, .max-cols-50 > .colc12x4, .max-cols-50 > .colc12x5, .max-cols-50 > .colc12x6, .max-cols-50 > .colc12x7, .max-cols-50 > .colc12x8, .max-cols-50 > .colc12x9, .max-cols-50 > .colc12x10, .max-cols-50 > .colc12x11 {
+  .max-cols-50 > .colc3x2, .max-cols-50 > .colc4x2, .max-cols-50 > .colc4x3, .max-cols-50 > .colc12x2, .max-cols-50 > .colc12x3, .max-cols-50 > .colc12x4, .max-cols-50 > .colc12x5, .max-cols-50 > .colc12x6, .max-cols-50 > .colc12x7, .max-cols-50 > .colc12x8, .max-cols-50 > .colc12x9, .max-cols-50 > .colc12x10, .max-cols-50 > .colc12x11, .max-cols-50s > .colc3x2, .max-cols-50s > .colc4x2, .max-cols-50s > .colc4x3, .max-cols-50s > .colc12x2, .max-cols-50s > .colc12x3, .max-cols-50s > .colc12x4, .max-cols-50s > .colc12x5, .max-cols-50s > .colc12x6, .max-cols-50s > .colc12x7, .max-cols-50s > .colc12x8, .max-cols-50s > .colc12x9, .max-cols-50s > .colc12x10, .max-cols-50s > .colc12x11 {
     width: 48%;
   }
 
@@ -4414,17 +4578,17 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15 {
+  .max-cols-25 > .colf1, .max-cols-25 > .colf2, .max-cols-25 > .colf3, .max-cols-25 > .colf4, .max-cols-25 > .colf5, .max-cols-25 > .colf6, .max-cols-25 > .colf7, .max-cols-25 > .colf8, .max-cols-25 > .colf9, .max-cols-25 > .colf10, .max-cols-25 > .colf11, .max-cols-25 > .colf12, .max-cols-25 > .colf13, .max-cols-25 > .colf14, .max-cols-25 > .colf15, .max-cols-25s > .colf1, .max-cols-25s > .colf2, .max-cols-25s > .colf3, .max-cols-25s > .colf4, .max-cols-25s > .colf5, .max-cols-25s > .colf6, .max-cols-25s > .colf7, .max-cols-25s > .colf8, .max-cols-25s > .colf9, .max-cols-25s > .colf10, .max-cols-25s > .colf11, .max-cols-25s > .colf12, .max-cols-25s > .colf13, .max-cols-25s > .colf14, .max-cols-25s > .colf15 {
     width: 25%;
   }
-  .max-cols-25 > .colf:nth-child(4) {
+  .max-cols-25 > .colf:nth-child(4), .max-cols-25s > .colf:nth-child(4) {
     clear: both;
   }
 
-  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15 {
+  .max-cols-50 > .colf1, .max-cols-50 > .colf2, .max-cols-50 > .colf3, .max-cols-50 > .colf4, .max-cols-50 > .colf5, .max-cols-50 > .colf6, .max-cols-50 > .colf7, .max-cols-50 > .colf8, .max-cols-50 > .colf9, .max-cols-50 > .colf10, .max-cols-50 > .colf11, .max-cols-50 > .colf12, .max-cols-50 > .colf13, .max-cols-50 > .colf14, .max-cols-50 > .colf15, .max-cols-50s > .colf1, .max-cols-50s > .colf2, .max-cols-50s > .colf3, .max-cols-50s > .colf4, .max-cols-50s > .colf5, .max-cols-50s > .colf6, .max-cols-50s > .colf7, .max-cols-50s > .colf8, .max-cols-50s > .colf9, .max-cols-50s > .colf10, .max-cols-50s > .colf11, .max-cols-50s > .colf12, .max-cols-50s > .colf13, .max-cols-50s > .colf14, .max-cols-50s > .colf15 {
     width: 50%;
   }
-  .max-cols-50 > .colf:nth-child(odd) {
+  .max-cols-50 > .colf:nth-child(odd), .max-cols-50s > .colf:nth-child(odd) {
     clear: both;
   }
 
@@ -4570,11 +4734,11 @@ Details: It defines the grid system and basic containers as listed below:
 }
 
 @media only screen and (max-width: 1024px) {
-  .max-cols-25 > .colf3x2, .max-cols-25 > .colf4x2, .max-cols-25 > .colf4x3, .max-cols-25 > .colf5x2, .max-cols-25 > .colf5x3, .max-cols-25 > .colf5x4, .max-cols-25 > .colf6x2, .max-cols-25 > .colf6x3, .max-cols-25 > .colf6x4, .max-cols-25 > .colf6x5, .max-cols-25 > .colf12x2, .max-cols-25 > .colf12x3, .max-cols-25 > .colf12x4, .max-cols-25 > .colf12x5, .max-cols-25 > .colf12x6, .max-cols-25 > .colf12x7, .max-cols-25 > .colf12x8, .max-cols-25 > .colf12x9, .max-cols-25 > .colf12x10, .max-cols-25 > .colf12x11, .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 > .colf15x14 {
+  .max-cols-25 > .colf3x2, .max-cols-25 > .colf4x2, .max-cols-25 > .colf4x3, .max-cols-25 > .colf5x2, .max-cols-25 > .colf5x3, .max-cols-25 > .colf5x4, .max-cols-25 > .colf6x2, .max-cols-25 > .colf6x3, .max-cols-25 > .colf6x4, .max-cols-25 > .colf6x5, .max-cols-25 > .colf12x2, .max-cols-25 > .colf12x3, .max-cols-25 > .colf12x4, .max-cols-25 > .colf12x5, .max-cols-25 > .colf12x6, .max-cols-25 > .colf12x7, .max-cols-25 > .colf12x8, .max-cols-25 > .colf12x9, .max-cols-25 > .colf12x10, .max-cols-25 > .colf12x11, .max-cols-25 > .colf15x2, .max-cols-25 > .colf15x3, .max-cols-25 > .colf15x4, .max-cols-25 > .colf15x5, .max-cols-25 > .colf15x6, .max-cols-25 > .colf15x7, .max-cols-25 > .colf15x8, .max-cols-25 > .colf15x9, .max-cols-25 > .colf15x10, .max-cols-25 > .colf15x11, .max-cols-25 > .colf15x12, .max-cols-25 > .colf15x13, .max-cols-25 > .colf15x14, .max-cols-25s > .colf3x2, .max-cols-25s > .colf4x2, .max-cols-25s > .colf4x3, .max-cols-25s > .colf5x2, .max-cols-25s > .colf5x3, .max-cols-25s > .colf5x4, .max-cols-25s > .colf6x2, .max-cols-25s > .colf6x3, .max-cols-25s > .colf6x4, .max-cols-25s > .colf6x5, .max-cols-25s > .colf12x2, .max-cols-25s > .colf12x3, .max-cols-25s > .colf12x4, .max-cols-25s > .colf12x5, .max-cols-25s > .colf12x6, .max-cols-25s > .colf12x7, .max-cols-25s > .colf12x8, .max-cols-25s > .colf12x9, .max-cols-25s > .colf12x10, .max-cols-25s > .colf12x11, .max-cols-25s > .colf15x2, .max-cols-25s > .colf15x3, .max-cols-25s > .colf15x4, .max-cols-25s > .colf15x5, .max-cols-25s > .colf15x6, .max-cols-25s > .colf15x7, .max-cols-25s > .colf15x8, .max-cols-25s > .colf15x9, .max-cols-25s > .colf15x10, .max-cols-25s > .colf15x11, .max-cols-25s > .colf15x12, .max-cols-25s > .colf15x13, .max-cols-25s > .colf15x14 {
     width: 25%;
   }
 
-  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5, .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11, .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14 {
+  .max-cols-50 > .colf3x2, .max-cols-50 > .colf4x2, .max-cols-50 > .colf4x3, .max-cols-50 > .colf5x2, .max-cols-50 > .colf5x3, .max-cols-50 > .colf5x4, .max-cols-50 > .colf6x2, .max-cols-50 > .colf6x3, .max-cols-50 > .colf6x4, .max-cols-50 > .colf6x5, .max-cols-50 > .colf12x2, .max-cols-50 > .colf12x3, .max-cols-50 > .colf12x4, .max-cols-50 > .colf12x5, .max-cols-50 > .colf12x6, .max-cols-50 > .colf12x7, .max-cols-50 > .colf12x8, .max-cols-50 > .colf12x9, .max-cols-50 > .colf12x10, .max-cols-50 > .colf12x11, .max-cols-50 > .colf15x2, .max-cols-50 > .colf15x3, .max-cols-50 > .colf15x4, .max-cols-50 > .colf15x5, .max-cols-50 > .colf15x6, .max-cols-50 > .colf15x7, .max-cols-50 > .colf15x8, .max-cols-50 > .colf15x9, .max-cols-50 > .colf15x10, .max-cols-50 > .colf15x11, .max-cols-50 > .colf15x12, .max-cols-50 > .colf15x13, .max-cols-50 > .colf15x14, .max-cols-50s > .colf3x2, .max-cols-50s > .colf4x2, .max-cols-50s > .colf4x3, .max-cols-50s > .colf5x2, .max-cols-50s > .colf5x3, .max-cols-50s > .colf5x4, .max-cols-50s > .colf6x2, .max-cols-50s > .colf6x3, .max-cols-50s > .colf6x4, .max-cols-50s > .colf6x5, .max-cols-50s > .colf12x2, .max-cols-50s > .colf12x3, .max-cols-50s > .colf12x4, .max-cols-50s > .colf12x5, .max-cols-50s > .colf12x6, .max-cols-50s > .colf12x7, .max-cols-50s > .colf12x8, .max-cols-50s > .colf12x9, .max-cols-50s > .colf12x10, .max-cols-50s > .colf12x11, .max-cols-50s > .colf15x2, .max-cols-50s > .colf15x3, .max-cols-50s > .colf15x4, .max-cols-50s > .colf15x5, .max-cols-50s > .colf15x6, .max-cols-50s > .colf15x7, .max-cols-50s > .colf15x8, .max-cols-50s > .colf15x9, .max-cols-50s > .colf15x10, .max-cols-50s > .colf15x11, .max-cols-50s > .colf15x12, .max-cols-50s > .colf15x13, .max-cols-50s > .colf15x14 {
     width: 50%;
   }
 
@@ -4771,6 +4935,598 @@ html, body {
   z-index: 5;
 }
 
+.hover-color-primary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-primary:hover {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+
+.hover-color-secondary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-secondary:hover {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+
+.hover-color-tertiary {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-tertiary:hover {
+  background-color: #94CBEA;
+  color: #FFFFFF;
+}
+
+.hover-color-white {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-white:hover {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.hover-color-black {
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+.hover-color-black:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.hover-bkg-primary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-primary:hover {
+  background-color: #F9F9F9;
+}
+
+.hover-bkg-secondary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-secondary:hover {
+  background-color: #F9F9F9;
+}
+
+.hover-bkg-tertiary {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-tertiary:hover {
+  background-color: #94CBEA;
+}
+
+.hover-bkg-white {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-white:hover {
+  background-color: #FFFFFF;
+}
+
+.hover-bkg-black {
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.hover-bkg-black:hover {
+  background-color: #000000;
+}
+
+.hover-text-primary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-primary:hover {
+  color: #898989;
+}
+
+.hover-text-secondary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-secondary:hover {
+  color: #898989;
+}
+
+.hover-text-tertiary {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-tertiary:hover {
+  color: #FFFFFF;
+}
+
+.hover-text-white {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-white:hover {
+  color: #FFFFFF;
+}
+
+.hover-text-black {
+  -moz-transition: color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s;
+}
+.hover-text-black:hover {
+  color: #000000;
+}
+
+.hover-move {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-move:hover {
+  -webkit-transform: translate(5px, 5px);
+  -moz-transform: translate(5px, 5px);
+  -ms-transform: translate(5px, 5px);
+  transform: translate(5px, 5px);
+}
+
+.hover-move-x {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-move-x:hover {
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
+
+.hover-move-y {
+  -webkit-transition: transform ease-in-out 5px 420ms;
+  -moz-transition: transform ease-in-out 5px 420ms;
+  -ms-transition: transform ease-in-out 5px 420ms;
+  -o-transition: transform ease-in-out 5px 420ms;
+  transition: transform ease-in-out 5px 420ms;
+}
+.hover-move-y:hover {
+  -webkit-transform: translateY(5px);
+  -moz-transform: translateY(5px);
+  -ms-transform: translateY(5px);
+  transform: translateY(5px);
+}
+
+.hover-rotate-45 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-45:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0.5 );
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.hover-rotate-90 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-90:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=1 );
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.hover-rotate-135 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-135:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=1.5 );
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.hover-rotate-180 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-180:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.hover-rotate-225 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-225:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2.5 );
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.hover-rotate-270 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-270:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=3 );
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.hover-rotate-315 {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-rotate-315:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=3.5 );
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.hover-scale {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-scale:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+
+.hover-scale-x {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-scale-x:hover {
+  -webkit-transform: scaleX(1.25);
+  -moz-transform: scaleX(1.25);
+  -ms-transform: scaleX(1.25);
+  -o-transform: scaleX(1.25);
+  transform: scaleX(1.25);
+}
+
+.hover-scale-y {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-scale-y:hover {
+  -webkit-transform: scaleY(1.25);
+  -moz-transform: scaleY(1.25);
+  -ms-transform: scaleY(1.25);
+  -o-transform: scaleY(1.25);
+  transform: scaleY(1.25);
+}
+
+.hover-grow {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-grow:hover {
+  -webkit-transform: scale(1.2, 1.2);
+  -moz-transform: scale(1.2, 1.2);
+  -ms-transform: scale(1.2, 1.2);
+  -o-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+}
+
+.hover-shrink {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-shrink:hover {
+  -webkit-transform: scale(0.8, 0.8);
+  -moz-transform: scale(0.8, 0.8);
+  -ms-transform: scale(0.8, 0.8);
+  -o-transform: scale(0.8, 0.8);
+  transform: scale(0.8, 0.8);
+}
+
+.hover-skew {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-skew:hover {
+  -webkit-transform: skew(5deg, 5deg);
+  -ms-transform: skew(5deg, 5deg);
+  transform: skew(5deg, 5deg);
+}
+
+.hover-skew-left {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-skew-left:hover {
+  -webkit-transform: skewX(5deg);
+  -ms-transform: skewX(5deg);
+  transform: skewX(5deg);
+}
+
+.hover-skew-right {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-skew-right:hover {
+  -webkit-transform: skewX(-5deg);
+  -ms-transform: skewX(-5deg);
+  transform: skewX(-5deg);
+}
+
+.hover-flip-horizontal {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-flip-horizontal:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=0 );
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.hover-flip-vertical {
+  -webkit-transition: transform 420ms ease-in-out 0s;
+  -moz-transition: transform 420ms ease-in-out 0s;
+  -ms-transition: transform 420ms ease-in-out 0s;
+  -o-transition: transform 420ms ease-in-out 0s;
+  transition: transform 420ms ease-in-out 0s;
+}
+.hover-flip-vertical:hover {
+  filter: progid:DXImageTransform.Microsoft.BasicImage( rotation=2 );
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+.hover-spin:hover {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes width {
+  from {
+    width: 0;
+  }
+}
+@-webkit-keyframes width {
+  from {
+    width: 0;
+  }
+}
+@keyframes width {
+  from {
+    width: 0;
+  }
+}
+@-moz-keyframes height {
+  from {
+    height: 0;
+  }
+}
+@-webkit-keyframes height {
+  from {
+    height: 0;
+  }
+}
+@keyframes height {
+  from {
+    height: 0;
+  }
+}
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-micro {
+  -webkit-animation-duration: 0.25s;
+  animation-duration: 0.25s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-tiny {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-small {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-medium {
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-large {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animate.animate-ease {
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+}
+.animate.animate-linear {
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+.animate.animate-ei {
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+.animate.animate-eo {
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+.animate.animate-eio {
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.animate-spin {
+  -webkit-animation-name: spin;
+  animation-name: spin;
+}
+
+.animate-zoom-in {
+  -webkit-animation-name: zoom-in;
+  animation-name: zoom-in;
+}
+
+.animate-zoom-out {
+  -webkit-animation-name: zoom-out;
+  animation-name: zoom-out;
+}
+
+.animate-width {
+  -webkit-animation-name: width;
+  animation-name: width;
+}
+
+.animate-height {
+  -webkit-animation-name: height;
+  animation-name: height;
+}
+
 /**********************************************************************
 Description: It defines the styles for html elements except form and table for CMT-UI css framework.
 
@@ -4856,87 +5612,26 @@ Dependencies: variables, mixins, transitions, transformation
 
 Details: It defines the custom element styles as listed below:
 
-* Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
-*                   plugin available in CMT-JS framework.
-*
+* List		  - 
+***********************************************************************/
+.list-radio label {
+  width: auto;
+  clear: none;
+}
+
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
 * Select          - The custom select allows user to select an item. It override the default select ui dependent
 *                   on browsers. It depends on cmtSelect jQuery plugin available in CMT-JS framework.
 *
-* Choice          - The choice allows user to select single or multiple options from available options. It include
-*                   radio and checkbox html components and change their default behaviour by showing good looking
-*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
-*
-* Rating          - The rating element can be used to provide ratings.
-*
-* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
-*
-* Button          - This class turns an element into button and does not need any JS to work.
-*
-* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
-*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
-*                   appropriate postion.
-*
-* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
-*
 ***********************************************************************/
-.icon-picker-wrap {
-  width: 100%;
-}
-.icon-picker-wrap .icon-picker {
-  position: relative;
-  display: inline-block;
-}
-.icon-picker-wrap .icon-picker .picker-icon-wrap {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-  text-align: center;
-  cursor: pointer;
-  background-color: #F9F9F9;
-  color: #898989;
-  -moz-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -ms-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -o-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  -webkit-transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-  transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
-}
-.icon-picker-wrap .icon-picker .picker-icon-wrap:hover {
-  background-color: #3498DB;
-  color: #FFFFFF;
-}
-.icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
-  display: inline-block;
-  height: 64px;
-  line-height: 64px;
-  font-size: 48px;
-  cursor: pointer;
-}
-.icon-picker-wrap .icon-picker .picker-icon-sets {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 64px;
-  width: 264px;
-  padding: 5px;
-  height: 216px;
-  background-color: #E6E7E8;
-  z-index: 1000000;
-}
-.icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap {
-  margin: 2px;
-  width: 48px;
-  height: 48px;
-}
-.icon-picker-wrap .icon-picker .picker-icon-sets .picker-icon-wrap .picker-icon {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  font-size: 36px;
-  cursor: pointer;
-}
-
 .cmt-select-wrap {
   width: 100%;
   display: inline-block;
@@ -5090,6 +5785,20 @@ Details: It defines the custom element styles as listed below:
   margin: 0;
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Choice          - The choice allows user to select single or multiple options from available options. It include
+*                   radio and checkbox html components and change their default behaviour by showing good looking
+*                   icons instead of browser dependentent graphics. These are indepedent of JS and purely css solutions.
+*
+***********************************************************************/
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
   cursor: pointer;
@@ -5153,6 +5862,18 @@ Details: It defines the custom element styles as listed below:
   content: "\3a";
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Rating          - The rating element can be used to provide ratings.
+*
+***********************************************************************/
 .cmt-rating {
   text-align: left;
 }
@@ -5184,6 +5905,17 @@ Details: It defines the custom element styles as listed below:
   content: "\e0f3";
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Switch          - It's an advanced and custom element overriding default behavoir of radio to act like a switch.
+***********************************************************************/
 .cmt-switch {
   position: relative;
   display: inline-block;
@@ -5244,6 +5976,21 @@ Details: It defines the custom element styles as listed below:
   margin-left: 3.5em;
 }
 
+/**********************************************************************
+Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
+			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
+			 for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformation
+
+Details: It defines the custom element styles as listed below:
+
+* Button          - This class turns an element into button and does not need any JS to work.
+*
+* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
+*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
+*                   appropriate postion.
+***********************************************************************/
 .btn.btn-auto {
   width: auto;
 }
@@ -5393,8 +6140,11 @@ Details: It defines the custom element styles as listed below:
   color: #FFFFFF !important;
 }
 
-a.btn {
+a.btn, .link.btn {
   color: #FFFFFF;
+}
+a:hover, .link:hover {
+  color: #42A8E2;
 }
 
 .btn-icon-o {
@@ -5490,71 +6240,11 @@ a.btn {
   color: #42A8E2;
 }
 
-.splitter {
-  margin: 0 auto;
-}
-.splitter.splitter-h {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #D1D2D3;
-}
-.splitter.splitter-h.splitter-h-25 {
-  width: 25%;
-}
-.splitter.splitter-h.splitter-h-50 {
-  width: 50%;
-}
-.splitter.splitter-h.splitter-h-75 {
-  width: 75%;
-}
-.splitter.splitter-h.splitter-h-80 {
-  width: 80%;
-}
-.splitter.splitter-h.splitter-h-small {
-  width: 25px;
-}
-.splitter.splitter-h.splitter-h-medium {
-  width: 50px;
-}
-.splitter.splitter-h.splitter-h-large {
-  width: 150px;
-}
-.splitter.splitter-v {
-  border-right: 1px solid #D1D2D3;
-  width: 1px;
-}
-.splitter.splitter-v.splitter-v-25 {
-  height: 25%;
-}
-.splitter.splitter-v.splitter-v-50 {
-  height: 50%;
-}
-.splitter.splitter-v.splitter-v-75 {
-  height: 75%;
-}
-.splitter.splitter-v.splitter-v-80 {
-  height: 80%;
-}
-.splitter.splitter-v.splitter-v-small {
-  height: 125px;
-}
-.splitter.splitter-v.splitter-v-medium {
-  height: 250px;
-}
-.splitter.splitter-v.splitter-v-large {
-  height: 500px;
-}
-
 .cmt-click {
   cursor: pointer;
 }
 .cmt-click.disabled {
   cursor: default;
-}
-
-.list-radio label {
-  width: auto;
-  clear: none;
 }
 
 /**********************************************************************
@@ -5932,16 +6622,20 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
 }
 
 .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60,
-.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
+.frm-split-40-60 textarea, .frm-split-40-60 select, .element-60, .frm-split-40-60 .list-radio, .frm-split-40-60 .cmt-switch, .frm-split-40-60 .cmt-select-wrap,
 .frm-split-40-60 .icon-picker {
   width: 60%;
   float: left;
 }
 
+.frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-checkbox label {
+  width: 100%;
+  float: left;
+}
+
 .element-60 input[type="text"], .element-60 input[type="email"], .element-60 input[type="password"],
 .element-60 textarea, .element-60 select,
-.element-60 .cmt-checkbox, .element-60 .cmt-select-wrap, .element-60 .icon-picker {
+.element-60 .cmt-select-wrap, .element-60 .icon-picker {
   width: 100%;
 }
 
@@ -5967,7 +6661,7 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     padding-left: 0;
   }
 }
-.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select {
+.form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap {
   margin-bottom: 0.5rem;
 }
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
@@ -6011,52 +6705,6 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
     width: 80%;
     padding: 2rem 2%;
   }
-}
-
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-input[type="submit"], input[type="button"], button, .btn, .btn-icon {
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select,
-input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
-  padding: 0.30em 0.5em;
-}
-
-.cmt-select-wrap .cmt-select .cmt-selected .s-text {
-  padding: 0.3em 0.5em;
-}
-.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
-  padding-right: 0.5em;
-}
-
-.frm-icon-element .cmti {
-  border-radius: 3px 0 0 3px;
-  -webkit-border-radius-top-left: 3px;
-  -webkit-border-radius-bottom-left: 3px;
-  -khtml-border-radius-top-left: 3px;
-  -khtml-border-radius-bottom-left: 3px;
-  -moz-border-radius-top-left: 3px;
-  -moz-border-radius-bottom-left: 3px;
-}
-.frm-icon-element .icon {
-  border-radius: 3px 0 0 3px;
-  -webkit-border-radius-top-left: 3px;
-  -webkit-border-radius-bottom-left: 3px;
-  -khtml-border-radius-top-left: 3px;
-  -khtml-border-radius-bottom-left: 3px;
-  -moz-border-radius-top-left: 3px;
-  -moz-border-radius-bottom-left: 3px;
-  border-right: 1px solid #F2F2F2;
 }
 
 /**********************************************************************
@@ -6133,6 +6781,52 @@ table td {
   }
 }
 
+input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-select, .cmt-selected {
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+input[type="submit"], input[type="button"], button, .btn, .btn-icon {
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn, .btn-icon, label, input[type="text"], input[type="email"], input[type="password"], textarea, select,
+input[type="submit"], input[type="button"], button, .cmt-checkbox, .cmt-switch {
+  padding: 0.30em 0.5em;
+}
+
+.cmt-select-wrap .cmt-select .cmt-selected .s-text {
+  padding: 0.3em 0.5em;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  padding-right: 0.5em;
+}
+
+.frm-icon-element .cmti {
+  border-radius: 3px 0 0 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+}
+.frm-icon-element .icon {
+  border-radius: 3px 0 0 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+  border-right: 1px solid #F2F2F2;
+}
+
 /**********************************************************************
 Description: It defines the styles for header components available in CMT-UI css framework.
 
@@ -6151,63 +6845,143 @@ Details: It defines the styles for header components as listed below:
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 10001;
 }
 .header.header-absolute {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10000;
+  z-index: 10001;
 }
 
-/* Basic Header having fixed width logo, main menu and mobile menu icon.
- * Responsive approach - Desktop first
+/* Basic Header having fixed height logo, main menu and mobile menu.
  * Logo - Placed on left side
  * Main Menu - Placed on right side, hidden for tablet and mobile
- * Mobile Menu - Placed on right side, hidden for desktop - Use it only if required.
- * Main menu can alone do the job in most of the cases.
+ * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
   background-color: #FFFFFF;
   color: #6D6E6F;
   position: relative;
-  z-index: 10000;
+  z-index: 10001;
 }
 .header-basic .header-logo {
   cursor: pointer;
-  padding: 10px;
   display: block;
-  position: absolute;
   z-index: 2;
-}
-.header-basic .header-logo .logo {
-  width: 140px;
-}
-.header-basic #menu-main {
-  padding: 10px;
-  text-align: right;
-  display: block;
-  z-index: 1;
-}
-.header-basic #menu-main-mobile {
-  display: none;
-}
-.header-basic #btn-menu-mobile {
-  position: absolute;
-  right: 0px;
-  cursor: pointer;
-  padding: 10px;
-  display: none;
-  z-index: 2;
+  float: left;
 }
 @media only screen and (max-width: 1024px) {
+  .header-basic {
+    height: 50px;
+  }
   .header-basic .header-logo {
-    width: 70px;
+    padding: 5px 10px;
+  }
+  .header-basic .header-logo .logo img {
+    height: 40px;
   }
   .header-basic #menu-main {
-    margin-top: 55px;
     display: none;
   }
+  .header-basic #menu-main-mobile {
+    position: absolute;
+    display: none;
+    width: 320px;
+    right: 0;
+  }
+  .header-basic #menu-main-mobile li {
+    box-shadow: 0 -4px 2px -5px #94CBEA;
+  }
+  .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
+    background-color: #FFFFFF;
+    color: #898989;
+    padding: 1em 0;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+  }
+  .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
+    background-color: #E6E7E8;
+    color: #3498DB;
+  }
+  .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
+    background-color: #94CBEA;
+    color: #FFFFFF;
+  }
+  .header-basic #mobile-actions {
+    margin: 5px 10px;
+    line-height: 40px;
+    text-align: right;
+    display: block;
+    z-index: 1;
+    float: right;
+  }
+  .header-basic #mobile-actions .mobile-action {
+    color: #898989;
+    cursor: pointer;
+    margin-left: 0.5em;
+    font-size: 2em;
+    -webkit-transition: all 250ms ease-in-out 0s;
+    -moz-transition: all 250ms ease-in-out 0s;
+    -ms-transition: all 250ms ease-in-out 0s;
+    -o-transition: all 250ms ease-in-out 0s;
+    transition: all 250ms ease-in-out 0s;
+  }
+  .header-basic #mobile-actions .mobile-action:hover {
+    color: #3498DB;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header-basic #menu-main-mobile {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .header-basic {
+    height: 80px;
+    padding: 0 5%;
+  }
+  .header-basic .header-logo {
+    padding: 5px 10px 5px 0;
+  }
+  .header-basic .header-logo .logo img {
+    height: 70px;
+  }
+  .header-basic #menu-main {
+    padding: 10px;
+    padding-right: 0;
+    text-align: right;
+    display: block;
+    z-index: 1;
+    float: right;
+  }
+  .header-basic #mobile-actions, .header-basic #menu-mobile-wrap {
+    display: none;
+  }
+  .header-basic.header-small {
+    height: 50px;
+  }
+  .header-basic.header-small #menu-main {
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+  }
+}
+
+.header-basic-duo .header-logo .logo-small {
+  display: none;
+}
+.header-basic-duo.header-small .logo {
+  display: none;
+}
+.header-basic-duo.header-small .header-logo .logo-small {
+  display: inline-block;
+}
+.header-basic-duo.header-small .header-logo .logo-small img {
+  height: 40px;
 }
 
 .header {
@@ -6289,9 +7063,9 @@ Details: It defines the styles for header components as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of the block components forming the page. We can devide the entire page in one or
-			 more blocks. Each block can have background image with or without parallax effect, a content wrapper which
-			 wraps block header and content.
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
 
@@ -6300,13 +7074,12 @@ Details: It defines the styles for header components as listed below:
 * Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
 *               listed options:
 *                   - It can have background image with or without parallax effects.
-*                   - The content wrapper wraps the block header and block content. This gives opportunity to set block
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
 *                     background and even content wrapper background in the form of image or texture.
-*                   - Height of block must not be set using min-height to get background with parallax working.
 *
 * Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
 *               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
-*               by CMT-JS framework.
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
 ***********************************************************************/
 .block {
   position: relative;
@@ -6377,6 +7150,29 @@ Details: It defines the styles for header components as listed below:
 .block .block-content-wrap {
   position: relative;
   z-index: 15;
+}
+.block .block-content-wrap .block-header-wrap {
+  position: relative;
+}
+.block .block-content-wrap .block-header-wrap .block-header {
+  position: relative;
+  z-index: 20;
+}
+.block .block-content-wrap .block-content {
+  position: relative;
+}
+.block .block-content-wrap .block-content .block-content-data {
+  position: relative;
+}
+.block .block-content-wrap .block-content .block-content-buffer {
+  position: relative;
+}
+.block .block-content-wrap .block-footer-wrap {
+  position: relative;
+}
+.block .block-content-wrap .block-footer-wrap .block-footer {
+  position: relative;
+  z-index: 20;
 }
 .block .block-splitter {
   position: absolute;
