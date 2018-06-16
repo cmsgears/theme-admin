@@ -70,11 +70,11 @@ function initCmgTools() {
 	// Auto Fillers
 	jQuery( '.auto-fill' ).cmtAutoFill();
 
+	// Tabs
+	jQuery( '.tabs,.box-crud-tabs-v' ).cmtTabs();
+
 	// Form with Info
 	jQuery( '.box-form' ).cmtFormInfo();
-
-	// Tabs
-	jQuery( '.box-crud-tabs-v' ).cmtTabs();
 
 	// Grid
 	jQuery( '.grid-data' ).cmtGrid();
