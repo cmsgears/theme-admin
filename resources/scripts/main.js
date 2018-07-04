@@ -204,11 +204,11 @@ function initSidebar() {
 
 		if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-micro' ) ) {
 
-			updateUserMeta( 'microSidebar', 0 );
+			updateUserConfig( 'microSidebar', 0 );
 		}
 		else {
 
-			updateUserMeta( 'microSidebar', 1 );
+			updateUserConfig( 'microSidebar', 1 );
 		}
 
 		jQuery( '#sidebar-main' ).toggleClass( 'sidebar-micro' );

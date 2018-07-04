@@ -77,16 +77,16 @@ cmg.controllers.UserController.prototype.addressActionSuccess = function( reques
 
 // == Direct Calls ========================
 
-function updateUserMeta( key, value ) {
+function updateUserConfig( key, value ) {
 
 	// Trigger - Set Sidebar
-	cmt.utils.ajax.triggerPost( ajaxUrl + "user/set-meta", "Meta[key]=" + key + "&Meta[value]=" + value );
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/set-config", "Meta[key]=" + key + "&Meta[value]=" + value );
 }
 
-function removeUserMeta( key ) {
+function removeUserConfig( key ) {
 
 	// Trigger - Set Sidebar
-	cmt.utils.ajax.triggerPost( ajaxUrl + "user/remove-meta", "Meta[key]=" + key );
+	cmt.utils.ajax.triggerPost( ajaxUrl + "user/remove-config", "Meta[key]=" + key );
 }
 
 // == Additional Methods ==================

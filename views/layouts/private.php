@@ -16,7 +16,7 @@ $this->registerAssetBundle( 'child' );
 $coreProperties = $this->context->getCoreProperties();
 $themePath		= Yii::getAlias( '@themes/admin' );
 $user			= Yii::$app->user->getIdentity();
-$microSidebar	= $user->getDataMeta( CoreGlobal::DATA_SIDEBAR_MICRO );
+$microSidebar	= $user->getDataConfigMeta( CoreGlobal::DATA_SIDEBAR_MICRO );
 ?>
 <?php $this->beginPage(); ?>
 <!DOCTYPE html>
