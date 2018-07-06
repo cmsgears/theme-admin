@@ -35,7 +35,7 @@ class BaseAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-vapps/src';
+	public $sourcePath = '@bower/cmt-velocity-apps/src';
 
 	// Load JS
 	public $js = [
