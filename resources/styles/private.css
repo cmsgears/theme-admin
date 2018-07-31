@@ -2729,6 +2729,31 @@ html, body {
   height: 75%;
 }
 
+.avatar {
+  width: 32px;
+}
+.avatar img {
+  width: 32px;
+}
+.avatar.avatar-small {
+  width: 48px;
+}
+.avatar.avatar-small img {
+  width: 48px;
+}
+.avatar.avatar-medium {
+  width: 64px;
+}
+.avatar.avatar-medium img {
+  width: 64px;
+}
+.avatar.avatar-large {
+  width: 100px;
+}
+.avatar.avatar-large img {
+  width: 100px;
+}
+
 /**
  * Alignments for centered box and text.
  */
@@ -3004,15 +3029,6 @@ html, body {
   top: 1em;
 }
 
-.disabled {
-  background-color: #C5C5C5 !important;
-  color: #FFFFFF !important;
-}
-.disabled:hover {
-  background-color: #C5C5C5 !important;
-  color: #FFFFFF !important;
-}
-
 #pre-loader-main {
   z-index: 1000;
   position: absolute;
@@ -3099,6 +3115,70 @@ Details: It defines the text and background colors as listed below:
 }
 .color.color-black {
   background-color: #000000;
+  color: #FFFFFF;
+}
+.color.color-blue {
+  background-color: #0074D9;
+  color: #FFFFFF;
+}
+.color.color-purple {
+  background-color: #8946C4;
+  color: #FFFFFF;
+}
+.color.color-orange {
+  background-color: #FF851B;
+  color: #FFFFFF;
+}
+.color.color-yellow {
+  background-color: #FFDC00;
+  color: #FFFFFF;
+}
+.color.color-red {
+  background-color: #FF4136;
+  color: #FFFFFF;
+}
+.color.color-pink {
+  background-color: #E4287C;
+  color: #FFFFFF;
+}
+.color.color-magenta {
+  background-color: #B200B2;
+  color: #FFFFFF;
+}
+.color.color-green {
+  background-color: #7CAA2D;
+  color: #FFFFFF;
+}
+.color.color-brown {
+  background-color: #8B4513;
+  color: #FFFFFF;
+}
+.color.color-aqua {
+  background-color: #8AE2E3;
+  color: #FFFFFF;
+}
+.color.color-golden {
+  background-color: #E9C011;
+  color: #FFFFFF;
+}
+.color.color-silver {
+  background-color: #E7E8E7;
+  color: #FFFFFF;
+}
+.color.color-maroon {
+  background-color: #542628;
+  color: #FFFFFF;
+}
+.color.color-olive {
+  background-color: #A3A54C;
+  color: #FFFFFF;
+}
+.color.color-lime {
+  background-color: #D3F235;
+  color: #FFFFFF;
+}
+.color.color-navy {
+  background-color: #003653;
   color: #FFFFFF;
 }
 
@@ -6601,6 +6681,15 @@ label {
   display: inline-block;
 }
 
+.disabled {
+  background-color: #808080 !important;
+  color: #E6E7E8 !important;
+}
+.disabled:hover {
+  background-color: #808080 !important;
+  color: #E6E7E8 !important;
+}
+
 input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
   line-height: 1.4em;
 }
@@ -7086,6 +7175,20 @@ Details: It defines the custom element styles as listed below:
   height: 500px;
 }
 
+/**********************************************************************
+Description: It defines the styles of tab components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of tab components as listed below:
+
+Tabs - The barebone card class with minimum styles defining tab links and content.
+
+Basic - It define the styles of basic tab with borders. The bordered tabs are commonly 
+used for bordered boxes and panels.
+
+Underline - The underlined tabs use underline to hightlight the tabs and active tab.
+***********************************************************************/
 .tabs-basic .tab-links-wrap {
   border-bottom: 1px solid #A5A5A5;
 }
@@ -7104,6 +7207,41 @@ Details: It defines the custom element styles as listed below:
   display: none;
 }
 
+.tabs-underline .tab-links-wrap {
+  border-bottom: 1px solid #D1D2D3;
+}
+.tabs-underline .tab-links-wrap .tab-link {
+  display: inline-block;
+  padding: 0.75em 1.25em;
+  cursor: pointer;
+}
+.tabs-underline .tab-links-wrap .tab-link.active {
+  color: #3489DB;
+  border-bottom: 2px solid #3489DB;
+}
+.tabs-underline .tab-links-wrap .tab-link:hover {
+  color: #3489DB;
+}
+.tabs-underline .tab-content-wrap .tab-content {
+  display: none;
+}
+
+/**********************************************************************
+Description: It defines the styles of accordial element. The accordian is a multi 
+section arrangement keeping only one section visible at a time.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of accordian elements as listed below:
+
+Accordian - The barebone accordian class with minimum styles common for all the accordians. 
+The base class define the structure of accordian having tab with trigger and view.
+
+Basic Accordian - It arrange the accordian sections vertically and provide options to select 
+multiple themes using the color scheme.
+
+Border Accordian - It's extension of Basic Accordian with default borders.
+***********************************************************************/
 .accordian {
   position: relative;
 }
@@ -7211,8 +7349,13 @@ Details: It defines the custom element styles as listed below:
 .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item {
   background-color: #E6E7E8;
   color: #6D6E6F;
+  border: 1px solid #D1D2D3;
   padding: 0.5em;
   cursor: pointer;
+}
+.auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item:hover {
+  background-color: #F9F9F9;
+  color: #898989;
 }
 .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
   background-color: #E6E7E8;
@@ -7306,10 +7449,20 @@ Details: It defines the styles for flipper components as listed below:
   margin-bottom: 0.35em;
 }
 
+/**********************************************************************
+Description: It defines the styles of data zigzag components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of zigzag components as listed below:
+
+ZigZag - The barebone zigzag class with minimum styles with each section having either 
+100% width or sub-divided into two parts having 50% width.
+***********************************************************************/
 .data-zigzag .data-zigzag-row {
   margin-bottom: 2em;
 }
-.data-zigzag .data-zigzag-row img {
+.data-zigzag .data-zigzag-row .data-zigzag-banner {
   width: 100%;
   height: auto;
 }
@@ -7317,27 +7470,27 @@ Details: It defines the styles for flipper components as listed below:
   width: 100%;
   display: inline-block;
 }
-.data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+.data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
   display: block;
 }
 .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
   width: 100%;
   display: inline-block;
 }
-.data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+.data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
   display: none;
 }
 @media only screen and (min-width: 1025px) {
   .data-zigzag .data-zigzag-row .data-zigzag-part-1 {
     width: 50%;
   }
-  .data-zigzag .data-zigzag-row .data-zigzag-part-1 img {
+  .data-zigzag .data-zigzag-row .data-zigzag-part-1 .data-zigzag-banner {
     display: none;
   }
   .data-zigzag .data-zigzag-row .data-zigzag-part-2 {
     width: 50%;
   }
-  .data-zigzag .data-zigzag-row .data-zigzag-part-2 img {
+  .data-zigzag .data-zigzag-row .data-zigzag-part-2 .data-zigzag-banner {
     display: block;
   }
   .data-zigzag .data-zigzag-row:nth-child(odd) .data-zigzag-part-1 {
@@ -8814,7 +8967,7 @@ Details: It defines the styles of card components as listed below:
 }
 
 .card-basic .card-content-wrap .card-header {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .card-basic .card-content-wrap .card-header .card-header-title {
   font-size: 1.33em;
@@ -8824,19 +8977,19 @@ Details: It defines the styles of card components as listed below:
   font-size: 1.08em;
 }
 .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-title, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-icon + .card-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-header .card-header-title + .card-header-info, .card-basic .card-content-wrap .card-header .card-header-title + .card-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-header .card-header-info + .card-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-data {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .card-basic .card-content-wrap .card-content {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .card-basic .card-content-wrap .card-content .card-content-title {
   font-size: 1.33em;
@@ -8845,17 +8998,20 @@ Details: It defines the styles of card components as listed below:
 .card-basic .card-content-wrap .card-content .card-content-info {
   font-size: 1.08em;
 }
-.card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
-  margin-top: 1rem;
+.card-basic .card-content-wrap .card-content .card-content-title + .card-content-info, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-title + .card-content-data {
+  margin-top: 0.5rem;
 }
-.card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
-  margin-top: 1rem;
+.card-basic .card-content-wrap .card-content .card-content-info + .card-content-summary, .card-basic .card-content-wrap .card-content .card-content-info + .card-content-data {
+  margin-top: 0.5rem;
+}
+.card-basic .card-content-wrap .card-content .card-content-summary + .card-content-data {
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-content .card-content-data {
   padding: 1rem 0;
 }
 .card-basic .card-content-wrap .card-footer {
-  padding: 1rem 0;
+  padding: 1rem;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-title {
   font-size: 1.17em;
@@ -8865,13 +9021,13 @@ Details: It defines the styles of card components as listed below:
   font-size: 1.08em;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-title, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-info, .card-basic .card-content-wrap .card-footer .card-footer-icon + .card-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-info, .card-basic .card-content-wrap .card-footer .card-footer-title + .card-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .card-basic .card-content-wrap .card-footer .card-footer-info + .card-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /**********************************************************************
@@ -9004,13 +9160,13 @@ Details: It defines the styles of box components as listed below:
   font-size: 1.08em;
 }
 .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-title, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-icon + .box-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-info, .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-title + .box-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-header-wrap .box-header .box-header-info + .box-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-data {
   padding: 1rem 0;
@@ -9026,10 +9182,10 @@ Details: It defines the styles of box components as listed below:
   font-size: 1.08em;
 }
 .box-basic .box-content-wrap .box-content .box-content-title + .box-content-info, .box-basic .box-content-wrap .box-content .box-content-title + .box-content-data {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-content .box-content-info + .box-content-data {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-content .box-content-data {
   padding: 1rem 0;
@@ -9045,13 +9201,13 @@ Details: It defines the styles of box components as listed below:
   font-size: 1.08em;
 }
 .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-title, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-icon + .box-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-info, .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-title + .box-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .box-basic .box-content-wrap .box-footer-wrap .box-footer .box-footer-info + .box-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 /**********************************************************************
@@ -9159,11 +9315,14 @@ Details: It defines the styles of form box components as listed below:
   cursor: pointer;
 }
 
-.box-file-uploader .btn-chooser {
+.box-file-uploader .uploader-actions {
   position: absolute;
   right: 0;
   cursor: pointer;
   z-index: 10;
+}
+.box-file-uploader .uploader-actions .uploader-action {
+  display: inline-block;
 }
 .box-file-uploader .box-content .box-content-data .file-wrap {
   position: relative;
@@ -9318,17 +9477,17 @@ Details: It defines the styles of form box components as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of the pagination components having links to navigate pages.
+Description: It defines the styles of the pagination having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for pagination components as listed below:
+Details: It defines the styles of pagination components as listed below:
 
-* Pagination  - The barebone pagination class with minimum styles common for all the data grids.
-*
-* Basic       - The basic pagination. It uses button colors to decorate pagination states.
-*
-* Full        - Full pagination having both info and pagination links.
+Pagination - The barebone pagination class with minimum styles common for all the data grids.
+
+Basic - The basic pagination. It uses button colors to decorate pagination states.
+
+Full - Full pagination having both info and pagination links.
 ***********************************************************************/
 .pagination {
   display: inline-block;
@@ -9417,13 +9576,13 @@ Details: It defines the styles for pagination components as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of the sorting components available in CMT-UI css framework.
+Description: It defines the styles of the grid sort.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles of sorting components as listed below:
+Details: It defines the styles of grid sort as listed below:
 
-* Sort        - The barebone sort class with minimum styles common for all the sorting.
+Grid Sort - The barebone sort class with minimum styles common for all the sorting.
 ***********************************************************************/
 .grid-sort .sort {
   cursor: pointer;
@@ -9439,15 +9598,24 @@ Details: It defines the styles of sorting components as listed below:
 }
 
 /**********************************************************************
+Description: It defines the styles of grid filters.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of grid filters as listed below:
+
+Grid Filter - The barebone grid filter class with minimum styles common for all the filters.
+***********************************************************************/
+/**********************************************************************
 Description: It defines the styles of the data grid components forming the grid without html tables.
 
 Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for data grid components as listed below:
 
-* Data Grid   - The barebone grid class with minimum styles common for all the data grids.
-*
-* Basic       - The basic data grid having default coloring.
+Data Grid - The barebone grid class with minimum styles common for all the data grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-data .grid-content-wrap .grid-content .grid-rows-wrap {
   display: none;
@@ -9457,6 +9625,7 @@ Details: It defines the styles for data grid components as listed below:
 }
 .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
   display: none;
+  font-size: 1.08em;
   font-weight: bold;
 }
 .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows.grid-rows-zebra .grid-row:nth-child(even) {
@@ -9502,7 +9671,7 @@ Details: It defines the styles for data grid components as listed below:
     display: none;
   }
   .grid-data .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-footer {
-    display: block;
+    display: flex;
   }
 }
 
@@ -9542,15 +9711,15 @@ Details: It defines the styles for data grid components as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of the table grid components forming the grid using html tables.
+Description: It defines the styles of the grid table forming the grid using html tables.
 
 Dependencies: variables, variables-ext, mixins
 
-Details: It defines the styles for data table components as listed below:
+Details: It defines the styles of grid table as listed below:
 
-* Table Grid  - The barebone grid class with minimum styles common for all the table grids.
-*
-* Basic       - The basic data grid having default coloring.
+Table Grid - The barebone grid class with minimum styles common for all the table grids.
+
+Basic - The basic data grid having default coloring.
 ***********************************************************************/
 .grid-table .grid-table-header {
   display: none;
@@ -10208,16 +10377,28 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 
 .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-title {
   display: inline-block;
-  padding: 1em;
   color: #FFFFFF;
+}
+
+.ui-datepicker-title {
+  padding: 0.5em;
+}
+.ui-datepicker-title .ui-datepicker-month, .ui-datepicker-title .ui-datepicker-year {
+  width: 72px;
+  display: inline-block;
+}
+.ui-datepicker-title .ui-datepicker-month {
+  margin-right: 5px;
 }
 
 .ui-datepicker-prev {
   float: left;
+  padding: 1em;
 }
 
 .ui-datepicker-next {
   float: right;
+  padding: 1em;
 }
 
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {

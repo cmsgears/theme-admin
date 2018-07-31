@@ -2729,6 +2729,31 @@ html, body {
   height: 75%;
 }
 
+.avatar {
+  width: 32px;
+}
+.avatar img {
+  width: 32px;
+}
+.avatar.avatar-small {
+  width: 48px;
+}
+.avatar.avatar-small img {
+  width: 48px;
+}
+.avatar.avatar-medium {
+  width: 64px;
+}
+.avatar.avatar-medium img {
+  width: 64px;
+}
+.avatar.avatar-large {
+  width: 100px;
+}
+.avatar.avatar-large img {
+  width: 100px;
+}
+
 /**
  * Alignments for centered box and text.
  */
@@ -3004,15 +3029,6 @@ html, body {
   top: 1em;
 }
 
-.disabled {
-  background-color: #C5C5C5 !important;
-  color: #FFFFFF !important;
-}
-.disabled:hover {
-  background-color: #C5C5C5 !important;
-  color: #FFFFFF !important;
-}
-
 #pre-loader-main {
   z-index: 1000;
   position: absolute;
@@ -3099,6 +3115,70 @@ Details: It defines the text and background colors as listed below:
 }
 .color.color-black {
   background-color: #000000;
+  color: #FFFFFF;
+}
+.color.color-blue {
+  background-color: #0074D9;
+  color: #FFFFFF;
+}
+.color.color-purple {
+  background-color: #8946C4;
+  color: #FFFFFF;
+}
+.color.color-orange {
+  background-color: #FF851B;
+  color: #FFFFFF;
+}
+.color.color-yellow {
+  background-color: #FFDC00;
+  color: #FFFFFF;
+}
+.color.color-red {
+  background-color: #FF4136;
+  color: #FFFFFF;
+}
+.color.color-pink {
+  background-color: #E4287C;
+  color: #FFFFFF;
+}
+.color.color-magenta {
+  background-color: #B200B2;
+  color: #FFFFFF;
+}
+.color.color-green {
+  background-color: #7CAA2D;
+  color: #FFFFFF;
+}
+.color.color-brown {
+  background-color: #8B4513;
+  color: #FFFFFF;
+}
+.color.color-aqua {
+  background-color: #8AE2E3;
+  color: #FFFFFF;
+}
+.color.color-golden {
+  background-color: #E9C011;
+  color: #FFFFFF;
+}
+.color.color-silver {
+  background-color: #E7E8E7;
+  color: #FFFFFF;
+}
+.color.color-maroon {
+  background-color: #542628;
+  color: #FFFFFF;
+}
+.color.color-olive {
+  background-color: #A3A54C;
+  color: #FFFFFF;
+}
+.color.color-lime {
+  background-color: #D3F235;
+  color: #FFFFFF;
+}
+.color.color-navy {
+  background-color: #003653;
   color: #FFFFFF;
 }
 
@@ -6456,6 +6536,15 @@ label {
   display: inline-block;
 }
 
+.disabled {
+  background-color: #808080 !important;
+  color: #E6E7E8 !important;
+}
+.disabled:hover {
+  background-color: #808080 !important;
+  color: #E6E7E8 !important;
+}
+
 input[type="submit"], input[type="button"], button, .btn, .cmt-select-wrap {
   line-height: 1.4em;
 }
@@ -7269,13 +7358,13 @@ Details: It defines the styles for header components as listed below:
   font-size: 1.08em;
 }
 .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-title, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info + .block-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-content .block-content-title {
   font-size: 2em;
@@ -7288,10 +7377,10 @@ Details: It defines the styles for header components as listed below:
   font-size: 1.08em;
 }
 .block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-content .block-content-data {
   padding: 1rem 0;
@@ -7310,13 +7399,13 @@ Details: It defines the styles for header components as listed below:
   font-size: 1.08em;
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-header-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 .block .block-content-wrap {

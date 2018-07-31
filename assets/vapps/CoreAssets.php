@@ -39,7 +39,8 @@ class CoreAssets extends AssetBundle {
 
 	// Load JS
 	public $js = [
-		'core/mapper.js'
+		'core/mapper.js',
+		'core/address.js'
 	];
 
 	// JS Position
