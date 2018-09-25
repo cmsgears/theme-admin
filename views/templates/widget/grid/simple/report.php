@@ -5,7 +5,7 @@ use yii\helpers\Html;
 $reportColumns	= $widget->reportColumns;
 $dateClass		= $widget->dateClass;
 
-$report			= Yii::$app->request->getQueryParam( 'report' );
+$report = Yii::$app->request->getQueryParam( 'report' );
 ?>
 <?php if( count( $reportColumns ) > 0 ) { ?>
 <div class="grid-report-wrap form <?= $report ? 'show-report' : null ?>">
