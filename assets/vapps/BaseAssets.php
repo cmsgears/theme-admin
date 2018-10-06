@@ -39,9 +39,10 @@ class BaseAssets extends AssetBundle {
 
 	// Load JS
 	public $js = [
-		'core/grid.js',
-		'core/comment.js',
-		'core/location.js'
+		'apps/core/base.js',
+		'apps/core/comment.js',
+		'apps/core/grid.js',
+		'apps/core/location.js'
 	];
 
 	// JS Position
