@@ -35,12 +35,12 @@ class NotifyAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath = '@bower/cmt-velocity-apps/src/apps';
+	public $sourcePath = '@bower/cmt-velocity-apps/src';
 
 	// Load JS
 	public $js = [
-		'notify/base.js',
-		'notify/notification.js',
+		'apps/notify/base.js',
+		'apps/notify/notification.js',
 	];
 
 	// JS Position
