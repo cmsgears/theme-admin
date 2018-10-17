@@ -32,7 +32,7 @@ $url		= $data[ 'url' ];
 				<div class="clear filler-height"></div>
 				<h5 class="align align-center">Are you sure you want to terminate the selected <?= $model ?> ?</h5>
 				<div class="clear filler-height"></div>
-				<div class="align align-center"><input class="element-medium" type="submit" value="Terminate" /></div>
+				<div class="align align-center"><input class="frm-element-medium" type="submit" value="Terminate" /></div>
 			</form>
 		</div>
 	</div>

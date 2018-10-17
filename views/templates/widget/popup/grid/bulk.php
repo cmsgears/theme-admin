@@ -39,7 +39,7 @@ $url		= $data[ 'url' ];
 					<input type="hidden" name="column" />
 					<input type="hidden" name="target" />
 					<div class="filler-height filler-height-medium"></div>
-					<div class="align align-center"><input class="element-medium" type="submit" value="Apply" /></div>
+					<div class="align align-center"><input class="frm-element-medium" type="submit" value="Apply" /></div>
 				</form>
 			</div>
 		</div>

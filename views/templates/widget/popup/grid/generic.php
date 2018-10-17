@@ -38,7 +38,7 @@ $url		= $data[ 'url' ];
 					<div class="filler-height filler-height-medium"></div>
 					<div class="align align-center">
 						<input class="element-action" type="hidden" name="action" value="generic" />
-						<input class="element-medium element-generic" type="submit" value="Generic" />
+						<input class="frm-element-medium element-generic" type="submit" value="Generic" />
 					</div>
 				</form>
 			</div>
