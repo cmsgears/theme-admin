@@ -45,7 +45,7 @@ class CoreAssets extends AssetBundle {
 		'apps/core/gallery.js',
 		'apps/core/mapper.js',
 		'apps/core/meta.js',
-		'apps/core/model.js',
+		'apps/core/controllers/model.js',
 		'apps/core/social.js'
 	];
 
