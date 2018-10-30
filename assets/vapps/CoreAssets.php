@@ -39,9 +39,9 @@ class CoreAssets extends AssetBundle {
 
 	// Load JS
 	public $js = [
-		'apps/core/address.js',
+		'apps/core/controllers/address.js',
 		'apps/core/data.js',
-		'apps/core/file.js',
+		'apps/core/controllers/file.js',
 		'apps/core/gallery.js',
 		'apps/core/mapper.js',
 		'apps/core/meta.js',
