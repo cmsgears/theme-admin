@@ -11,7 +11,7 @@ $this->title 	= 'Forgot Password | ' . $coreProperties->getSiteTitle();
 ?>
 
 <?php BasicBlock::begin([
-	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
+	'options' => [ 'id' => 'block-public', 'class' => 'cmt-block block block-basic' ],
 	'content' => true
 ]);?>
 

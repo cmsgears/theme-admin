@@ -53,16 +53,19 @@ class PrivateAssets extends AssetBundle {
 		// templates
 		'scripts/templates/public.js',
 		'scripts/templates/private.js',
-		// scripts
-		'scripts/main.js',
-		'scripts/search.js',
 		// apix
 		'scripts/apix/public.js',
 		'scripts/apix/private.js',
 		// apps
 		'scripts/apps/public.js',
 		'scripts/apps/private.js',
-		'scripts/apps/user.js'
+		'scripts/apps/core/services/user.js',
+		'scripts/apps/core/controllers/site.js',
+		'scripts/apps/core/controllers/main.js',
+		'scripts/apps/core/controllers/user.js',
+		// scripts
+		'scripts/main.js',
+		'scripts/search.js'
 	];
 
 	// JS Position

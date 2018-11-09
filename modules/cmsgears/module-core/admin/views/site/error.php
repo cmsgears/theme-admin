@@ -13,7 +13,7 @@ $message = nl2br( Html::encode( $message ) );
 <?php if ( Yii::$app->user->isGuest ) { ?>
 
 <?= BasicBlock::widget([
-	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
+	'options' => [ 'id' => 'block-public', 'class' => 'cmt-block block block-basic' ],
 	'content' => true,
 	'contentData' => "<h2 class=\"align align-center\">Error</h2><div class=\"filler-height\"></div><p>$message</p>"
 ]) ?>

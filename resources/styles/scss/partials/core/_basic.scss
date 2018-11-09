@@ -3,7 +3,7 @@
 
 	&.count-sidebar-header {
 		position: absolute;
-		top: 6px;
+		top: 1em;
 		right: 20px;
 		padding: $size-small;
 		line-height: 1em !important;
@@ -37,4 +37,15 @@
 	z-index: 1000;
 	position: absolute;
 	width: 100%;
+}
+
+.rp-map {
+
+	.col4 {
+		margin-bottom: 1em;
+
+		input[type=checkbox] {
+			margin-right: 0.5em;
+		}
+	}
 }

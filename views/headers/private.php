@@ -1,7 +1,6 @@
 <?php
 // Yii Imports
 use yii\helpers\Html;
-use yii\helpers\Url;
 
 // CMG Imports
 use cmsgears\notify\common\config\NotifyGlobal;
@@ -11,18 +10,19 @@ use cmsgears\widgets\nav\BasicNav;
 use cmsgears\core\common\utilities\CodeGenUtil;
 
 $menuItems = [
-		[ 'label' => 'Dashboard', 'url' => [ '/dashboard' ] ],
-		[ 'label' => 'Profile', 'url' => [ '/core/user/profile' ] ],
-		[ 'label' => 'Settings', 'url' => [ '/core/user/settings' ] ],
-		[ 'label' => 'Logout', 'url' => [ '/logout' ] ]
-	];
+	[ 'label' => 'Dashboard', 'url' => [ '/dashboard' ] ],
+	[ 'label' => 'Profile', 'url' => [ '/core/user/profile' ] ],
+	[ 'label' => 'Settings', 'url' => [ '/core/user/settings' ] ],
+	[ 'label' => 'Logout', 'url' => [ '/logout' ] ]
+];
 
-$user		= Yii::$app->user->getIdentity();
+$user = Yii::$app->core->getUser();
 
 $notifyFlag	= $user->isPermitted( NotifyGlobal::PERM_NOTIFY_ADMIN );
 
+$themeIncludes	= Yii::getAlias( '@themes/admin/views/includes' );
 $userAvatar		= isset( $user->avatar ) ? $user->avatar : null;
-$avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-user icon', 'class' => 'avatar' ] );
+$avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 'image' => 'avatar-user.png', 'class' => 'user-avatar' ] );
 ?>
 <header id="header-main" class="header header-absolute header-private row">
 	<div class="colf colf15x4 header-logo">
@@ -35,25 +35,25 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 		<div class="popout-actions align align-right">
 			<?php if( $notifyFlag ) { ?>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="notificationData" action="notify/stats/stats">
-					<span class="popout-trigger cmt-click" popout="popout-notification" title="Notifications"  >
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-notification" title="Notifications" ldata-target="#popout-notification">
 						<span class="cmti cmti-flag-o"></span>
 						<span class="count-header count-notification">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="reminderData" action="notify/stats/stats">
-					<span class="popout-trigger cmt-click" popout="popout-reminder" title="Reminders" >
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-reminder" title="Reminders" ldata-target="#popout-reminder">
 						<span class="cmti cmti-bell-o "></span>
 						<span class="count-header count-reminder">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="activityData" action="notify/stats/stats">
-					<span class="popout-trigger cmt-click" popout="popout-activity" title="Activities" >
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-activity" title="Activities" ldata-target="#popout-activity">
 						<span class="cmti cmti-sliders"></span>
 						<span class="count-header count-activity">0</span>
 					</span>
 				</span>
 			<?php } ?>
-			<span class="popout-trigger wrap-user" popout="popout-user">
+			<span class="popout-trigger cmt-auto-hide wrap-user" popout="popout-user" ldata-target="#popout-user">
 				<?= $avatarThumb ?>
 				<span class="fa fa-caret-down"></span>
 			</span>
@@ -102,5 +102,4 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'icon' => 'fa fa-us
 	</div>
 </header>
 
-
-<?php include "includes/templates.php"; ?>
+<?php include "$themeIncludes/handlebars/header.php"; ?>

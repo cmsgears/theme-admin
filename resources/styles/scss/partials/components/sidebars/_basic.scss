@@ -1,6 +1,6 @@
 .sidebar-filler {
-    background-color: $color-secondary-d;
-	color: $color-secondary-text-d;
+    background-color: $color-secondary;
+	color: $color-secondary-text;
 	padding-top: 62px;
 
 	&.sidebar-filler-micro {
@@ -9,13 +9,17 @@
 }
 
 #sidebar-main {
-    background-color: $color-secondary-d;
-	color: $color-secondary-text-d;
+    background-color: $color-secondary;
+	color: $color-secondary-text;
 	padding-top: 62px;
 
 	&.sidebar-micro {
 		position: relative;
 		z-index: 10;
 		width: 40px;
+	}
+	
+	@include responsive-max( screen-tablet-small ) {
+		padding-top: 81px;
 	}
 }

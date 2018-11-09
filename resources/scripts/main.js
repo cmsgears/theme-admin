@@ -5,6 +5,8 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
+	
+	initDatePickers();
 
 	initPopups();
 
@@ -13,8 +15,8 @@ jQuery( document ).ready( function() {
 	initSidebarTabs();
 
 	initSettings();
-
-	initAutoHide();
+	
+	initGallery();
 });
 
 // == Pre Loaders =========================
@@ -31,13 +33,23 @@ function initPreloaders() {
 
 function initCmgTools() {
 
-	// Page Blocks
-	jQuery( '.block' ).cmtBlock({
+	// Blocks
+	jQuery( '.cmt-block' ).cmtBlock({
 		// Generic
-		fullHeight: true,
+		halfHeight: true,
+		heightAuto: true,
 		// Block Specific - Ignores generic
 		blocks: {
-			'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+			'block-auto': { autoHeight: true, heightAuto: true },
+			'block-half': { halfHeight: true },
+			'block-qtf': { qtfHeight: true },
+			'block-full': { fullHeight: true },
+			'block-half-auto': { halfHeight: true, heightAuto: true },
+			'block-qtf-auto': { qtfHeight: true, heightAuto: true },
+			'block-full-auto': { fullHeight: true, heightAuto: true },
+			'block-half-mauto': { halfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-qtf-mauto': { qtfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-full-mauto': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
 		}
 	});
 
@@ -82,45 +94,83 @@ function initCmgTools() {
 	// Collapsible Menu
 	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 
+	// Actions
+	jQuery( '.cmt-actions' ).cmtActions();
+
+	// Auto Hide
+	jQuery( '.cmt-auto-hide' ).cmtAutoHide();
+
 	// Icon Picker
-	jQuery( '.icon-picker, .texture-picker' ).cmtIconPicker();
+	jQuery( '.cmt-icon-picker, .cmt-texture-picker' ).cmtIconPicker();
 }
 
 // == JS Listeners ========================
 
 function initListeners() {
 
+	// Custom scroller
+	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
+
+	// Auto save checkbox action
+	jQuery( '.cmt-checkbox input' ).on( 'input', function() {
+
+		jQuery( this ).parent().find( '.cmt-click' ).click();
+	});
+	
+	if( jQuery( '#popout-settings-trigger' ).length == 1 ) {
+
+		jQuery( '#popout-settings-trigger' ).click( function() {
+
+			jQuery( '#popout-settings' ).slideToggle();
+		});
+
+		jQuery( '#popout-settings .popout-setting-core .cmt-click' ).trigger( 'click' );
+	}
+}
+
+// == Datepickers =========================
+
+function initDatePickers() {
+
 	// Datepicker
-	if( jQuery().datepicker ) {
+	var datepickers = jQuery( '.datepicker' );
 
-		var start = jQuery( '.datepicker' ).attr( 'start' );
+	datepickers.each( function() {
 
-		if( null != start ) {
+		var datepicker = jQuery( this );
 
-			jQuery( '.datepicker' ).datepicker({
+		var start	= datepicker.attr( 'ldata-start' );
+		var end		= datepicker.attr( 'ldata-end' );
+
+		if( null != start && null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: start,
+				maxDate: end
+			});
+		}
+		else if( null != start ) {
+
+			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
 				minDate: start
 			});
 		}
+		else if( null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				maxDate: end
+			});
+		}
 		else {
-			
-			jQuery( '.datepicker' ).datepicker({
+
+			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd'
 			});
 		}
-	}
-
-	// Custom Scroller
-	if( jQuery().mCustomScrollbar ) {
-
-		jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
-	}
-
-	// Profile tabs
-	if( jQuery().tabs ) {
-
-		jQuery( '.tabs-default' ).tabs();
-	}
+	});
 }
 
 // == Popups ==============================
@@ -136,7 +186,7 @@ function initPopups() {
 
 function bindPopups( trigger ) {
 
-	var selector	= trigger.attr( 'popup' );
+	var selector = trigger.attr( 'popup' );
 
 	showPopup( '#' + selector );
 
@@ -204,11 +254,11 @@ function initSidebar() {
 
 		if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-micro' ) ) {
 
-			updateUserConfig( 'microSidebar', 0 );
+			setUserConfig( 'microSidebar', 0 );
 		}
 		else {
 
-			updateUserConfig( 'microSidebar', 1 );
+			setUserConfig( 'microSidebar', 1 );
 		}
 
 		jQuery( '#sidebar-main' ).toggleClass( 'sidebar-micro' );
@@ -287,24 +337,26 @@ function initSettings() {
 	});
 }
 
-// == Auto Hide ===========================
+function initGallery() {
 
-function initAutoHide() {
+	var gallery = jQuery( '#data-crud-gallery' );
 
-	hideElement( jQuery( '.popout-trigger' ), jQuery( '.popout' ) );
-}
+	if( gallery.length == 1 ) {
 
-function hideElement( targetElement, hideElement ) {
+		var form = gallery.find( '.form-gallery' );
 
-	jQuery( window ).click( function( e ) {
+		gallery.find( '.data-crud-title .action-update' ).click( function() {
 
-	    if ( !targetElement.is( e.target ) && targetElement.has( e.target ).length === 0 ) {
+			form.slideToggle();
+		});
 
-			jQuery( hideElement ).slideUp();
+		var app		= cmt.api.root.getApplication( 'gallery' );
+		var service = app.getService( 'item' );
 
-	        targetElement.removeClass( 'active' );
-	    }
-	});
+		service.hiddenForm = false;
+
+		service.initAddForm( gallery );
+	}
 }
 
 // == Window Resize, Scroll ===============
@@ -321,15 +373,20 @@ function initWindowResize() {
 
 function initWindowScroll() {
 
-	jQuery( window ).scroll(function() {
+	jQuery( window ).scroll( function() {
 
 		var scrolledY = jQuery( window ).scrollTop();
 
-	  	// Do scroll specific tasks
+		configScrollAt( scrolledY );
 	});
 }
 
 function resizeElements() {
 
 	// Resize elements on window resize
+}
+
+function configScrollAt() {
+
+	// Show hidden elements with animation effects
 }

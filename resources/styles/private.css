@@ -52,18 +52,18 @@ Social network		-	This section define the standard colors used by social network
 						snapchat, twitter, tumblr, vimeo, vine, vk, whatsapp, youtube.
 ***********************************************************************/
 @font-face {
-  font-family: opensans-regular;
+  font-family: 'opensans-regular';
   src: url("../fonts/opensans/opensans-regular.eot");
-  src: url("../fonts/opensans/opensans-regular.svg");
-  src: url("../fonts/opensans/opensans-regular.ttf");
-  src: url("../fonts/opensans/opensans-regular.woff");
+  src: url("../fonts/opensans/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-regular.woff") format("woff"), url("../fonts/opensans/opensans-regular.ttf") format("truetype"), url("../fonts/opensans/opensans-regular.svg#opensans-reg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-  font-family: opensans-bold;
+  font-family: 'opensans-bold';
   src: url("../fonts/opensans/opensans-bold.eot");
-  src: url("../fonts/opensans/opensans-bold.svg");
-  src: url("../fonts/opensans/opensans-bold.ttf");
-  src: url("../fonts/opensans/opensans-bold.woff");
+  src: url("../fonts/opensans/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-bold.woff") format("woff"), url("../fonts/opensans/opensans-bold.ttf") format("truetype"), url("../fonts/opensans/opensans-bold.svg#opensans-bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 /**********************************************************************
 Description	:	This file define the extended variables used by CMT-UI css framework. These are derived 
@@ -301,7 +301,7 @@ Notes:
   background-color: rgba(249, 249, 249, 0.6);
 }
 .transparent-bkg.transparent-bkg-tertiary {
-  background-color: rgba(148, 203, 234, 0.6);
+  background-color: rgba(2, 110, 183, 0.6);
 }
 .transparent-bkg.transparent-bkg-gray {
   background-color: rgba(127, 127, 127, 0.6);
@@ -716,9 +716,9 @@ Notes:
   box-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .shadow.shadow-tertiary {
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .shadow.shadow-white {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -832,9 +832,9 @@ Notes:
   box-shadow: inset 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .shadow-inset.shadow-inset-tertiary {
-  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .shadow-inset.shadow-inset-white {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -948,9 +948,9 @@ Notes:
   text-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .text-shadow.text-shadow-tertiary {
-  -webkit-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .text-shadow.text-shadow-white {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -1064,9 +1064,9 @@ Notes:
   text-shadow: inset 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .text-shadow-inset.text-shadow-inset-tertiary {
-  -webkit-text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .text-shadow-inset.text-shadow-inset-gray {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -1202,7 +1202,7 @@ Notes:
   border: 1px solid #F9F9F9;
 }
 .border.border-tertiary {
-  border: 1px solid #94CBEA;
+  border: 1px solid #026eb7;
 }
 .border.border-top {
   border-top: 1px solid #D1D2D3;
@@ -1226,7 +1226,7 @@ Notes:
   border-top: 1px solid #F9F9F9;
 }
 .border.border-top.border-top-tertiary {
-  border-top: 1px solid #94CBEA;
+  border-top: 1px solid #026eb7;
 }
 .border.border-right {
   border-right: 1px solid #D1D2D3;
@@ -1250,7 +1250,7 @@ Notes:
   border-right: 1px solid #F9F9F9;
 }
 .border.border-right.border-right-tertiary {
-  border-right: 1px solid #94CBEA;
+  border-right: 1px solid #026eb7;
 }
 .border.border-bottom {
   border-bottom: 1px solid #D1D2D3;
@@ -1274,7 +1274,7 @@ Notes:
   border-bottom: 1px solid #F9F9F9;
 }
 .border.border-bottom.border-bottom-tertiary {
-  border-bottom: 1px solid #94CBEA;
+  border-bottom: 1px solid #026eb7;
 }
 .border.border-left {
   border-left: 1px solid #D1D2D3;
@@ -1298,7 +1298,7 @@ Notes:
   border-left: 1px solid #F9F9F9;
 }
 .border.border-left.border-left-tertiary {
-  border-left: 1px solid #94CBEA;
+  border-left: 1px solid #026eb7;
 }
 
 .gradient.gradient-linear {
@@ -2965,7 +2965,7 @@ html, body {
   visibility: hidden !important;
 }
 
-.pointer {
+.pointer, .cmt-click {
   cursor: pointer;
 }
 
@@ -3060,7 +3060,7 @@ html, body {
 }
 .count-sidebar.count-sidebar-header {
   position: absolute;
-  top: 6px;
+  top: 1em;
   right: 20px;
   padding: 3px;
   line-height: 1em !important;
@@ -3094,6 +3094,13 @@ html, body {
   width: 100%;
 }
 
+.rp-map .col4 {
+  margin-bottom: 1em;
+}
+.rp-map .col4 input[type=checkbox] {
+  margin-right: 0.5em;
+}
+
 /**********************************************************************
 Description: This file define the text and background colors used by CMT-UI css framework.
 
@@ -3124,7 +3131,7 @@ Details: It defines the text and background colors as listed below:
    * 10. secondary text light: #898989
    * 11. secondary dark: #F2F2F2
    * 12. secondary text dark: #6D6E6F
-   * 13. tertiary: #94CBEA
+   * 13. tertiary: #026eb7
    * 14. tertiary text: #FFFFFF
    * 15. tertiary light: #FFFFFF
    * 16. tertiary text light: #3489DB
@@ -3157,7 +3164,7 @@ Details: It defines the text and background colors as listed below:
   color: #6D6E6F !important;
 }
 .color.color-tertiary {
-  background-color: #94CBEA !important;
+  background-color: #026eb7 !important;
   color: #FFFFFF !important;
 }
 .color.color-tertiary-l {
@@ -3296,7 +3303,7 @@ Details: It defines the text and background colors as listed below:
   background-color: #F2F2F2 !important;
 }
 .bkg.bkg-tertiary {
-  background-color: #94CBEA !important;
+  background-color: #026eb7 !important;
 }
 .bkg.bkg-tertiary-l {
   background-color: #FFFFFF !important;
@@ -3463,7 +3470,7 @@ Details: It defines the text and background colors as listed below:
   color: #FFFFFF !important;
 }
 .text.text-link {
-  color: #3498DB !important;
+  color: #0074D9 !important;
 }
 .text.text-black {
   color: #000000 !important;
@@ -4202,7 +4209,7 @@ code, pre {
 }
 
 a, .link {
-  color: #3498DB;
+  color: #0074D9;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -4214,7 +4221,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:link, a:visited, .link:link, .link:visited {
-  color: #3498DB;
+  color: #0074D9;
 }
 a:active, a:hover, .link:active, .link:hover {
   color: #E74343;
@@ -5297,6 +5304,8 @@ Details: It defines the grid system and basic containers as listed below:
 html, body {
   width: 100%;
   height: 100%;
+  background-color: #F2F2F2;
+  color: #6D6E6F;
 }
 
 .container-main {
@@ -5313,6 +5322,162 @@ html, body {
   padding-top: 62px;
   padding-left: 40px;
   z-index: 5;
+}
+@media only screen and (max-width: 768px) {
+  .container-private .sidebar-private, .container-private .content-wrap {
+    padding-top: 81px;
+  }
+  .container-private .content-main-wrap-micro {
+    padding-top: 81px;
+  }
+}
+
+.shape.shape-square.shape-square-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-square.shape-square-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-square.shape-square-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-square.shape-square-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-rectangle.shape-rectangle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 75px;
+  height: 50px;
+}
+.shape.shape-rectangle.shape-rectangle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 150px;
+  height: 100px;
+}
+.shape.shape-rectangle.shape-rectangle-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 325px;
+  height: 250px;
+}
+.shape.shape-rectangle.shape-rectangle-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 750px;
+  height: 500px;
+}
+.shape.shape-circle {
+  border-radius: 50%;
+}
+.shape.shape-circle.shape-circle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-circle.shape-circle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-circle.shape-circle-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-circle.shape-circle-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-oval {
+  border-radius: 100%/50%;
+}
+.shape.shape-oval.shape-oval-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-oval.shape-oval-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-oval.shape-oval-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-oval.shape-oval-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-triangle {
+  width: 0;
+  height: 0;
+}
+.shape.shape-triangle.shape-triangle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 25px;
+  height: 50px;
+}
+.shape.shape-triangle.shape-triangle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 100px;
+}
+.shape.shape-hexagon {
+  width: 50px;
+  height: 29px;
+  background: #FFFFFF;
+  position: relative;
+  top: -12px;
+}
+.shape.shape-hexagon:before {
+  content: "";
+  position: absolute;
+  top: -11.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 12.5px solid #FFFFFF;
+  border-left: 25px solid rgba(0, 0, 0, 0);
+  border-right: 25px solid rgba(0, 0, 0, 0);
+}
+.shape.shape-hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 13.5px solid #FFFFFF;
 }
 
 .hover-color-primary {
@@ -5347,7 +5512,7 @@ html, body {
   transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
 }
 .hover-color-tertiary:hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 
@@ -5405,7 +5570,7 @@ html, body {
   transition: background-color 420ms ease-in-out 0s;
 }
 .hover-bkg-tertiary:hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
 }
 
 .hover-bkg-white {
@@ -6368,7 +6533,7 @@ of JS and purely css solutions.
 }
 .cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=checkbox]:checked + .label::before,
 .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-choice input[type=radio]:checked + .label::before {
-  color: #42A8E2;
+  color: #0059A6;
 }
 .cmt-choice input[type=checkbox]:disabled + .label::before,
 .cmt-choice input[type=radio]:disabled + .label::before {
@@ -6529,7 +6694,7 @@ Details: It defines the custom element styles as listed below:
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn:active {
@@ -6582,7 +6747,7 @@ Details: It defines the custom element styles as listed below:
   color: #6D6E6F;
 }
 .btn.btn-tertiary {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .btn.btn-tertiary:hover {
@@ -6590,7 +6755,7 @@ Details: It defines the custom element styles as listed below:
   color: #FFFFFF;
 }
 .btn.btn-link {
-  background-color: #3498DB;
+  background-color: #0074D9;
   color: #FFFFFF;
 }
 .btn.btn-link:hover {
@@ -6746,24 +6911,24 @@ Details: It defines the custom element styles as listed below:
   background-color: #F9F9F9;
 }
 .btn-border.btn-border-tertiary {
-  color: #94CBEA;
-  -webkit-box-shadow: inset 0 0 0 1px #94CBEA;
-  -moz-box-shadow: inset 0 0 0 1px #94CBEA;
-  box-shadow: inset 0 0 0 1px #94CBEA;
+  color: #026eb7;
+  -webkit-box-shadow: inset 0 0 0 1px #026eb7;
+  -moz-box-shadow: inset 0 0 0 1px #026eb7;
+  box-shadow: inset 0 0 0 1px #026eb7;
 }
 .btn-border.btn-border-tertiary:hover {
   color: #FFFFFF;
-  background-color: #94CBEA;
+  background-color: #026eb7;
 }
 .btn-border.btn-border-link {
-  color: #3498DB;
-  -webkit-box-shadow: inset 0 0 0 1px #3498DB;
-  -moz-box-shadow: inset 0 0 0 1px #3498DB;
-  box-shadow: inset 0 0 0 1px #3498DB;
+  color: #0074D9;
+  -webkit-box-shadow: inset 0 0 0 1px #0074D9;
+  -moz-box-shadow: inset 0 0 0 1px #0074D9;
+  box-shadow: inset 0 0 0 1px #0074D9;
 }
 .btn-border.btn-border-link:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0074D9;
 }
 .btn-border.btn-border-white {
   color: #000000;
@@ -6950,7 +7115,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:hover, .link:hover {
-  color: #42A8E2;
+  color: #0059A6;
 }
 
 .btn-icon-o {
@@ -6965,7 +7130,7 @@ a:hover, .link:hover {
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   -webkit-border-radius: 100%;
   -khtml-border-radius: 100%;
@@ -7043,7 +7208,7 @@ a:hover, .link:hover {
   transition: color 250ms ease-in-out 0s;
 }
 .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
-  color: #42A8E2;
+  color: #0059A6;
 }
 
 .click {
@@ -7051,6 +7216,26 @@ a:hover, .link:hover {
 }
 .click.disabled {
   cursor: default;
+}
+
+.cmt-select-wrap .cmt-select .cmt-selected {
+  padding: 0.5em;
+}
+
+.cmt-switch .cmt-toggle-round + label {
+  height: 1.75em;
+  padding: 0.75em;
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round + label:before {
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round + label:after {
+  width: 2.75em;
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round:checked + label:after {
+  margin-left: 2em;
 }
 
 /**********************************************************************
@@ -7196,7 +7381,7 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   cursor: pointer;
 }
 .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
@@ -7622,6 +7807,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  padding: 0.5em;
+  line-height: 1.75em;
 }
 
 input[type="submit"], input[type="button"], button, .btn, .btn-icon {
@@ -7629,6 +7816,8 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  padding: 0.5em 0.75em;
+  line-height: 1.75em;
 }
 
 .frm-icon-element .cmti {
@@ -7641,6 +7830,7 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-bottom-left: 5px;
 }
 .frm-icon-element .icon {
+  padding: 0.65em 0.40em;
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -7649,6 +7839,13 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
   border-right: 1px solid #F2F2F2;
+}
+
+.form .cmt-select-wrap .cmt-selected {
+  padding: 0.5em;
+}
+.form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
+  margin-bottom: 0;
 }
 
 /**********************************************************************
@@ -7838,7 +8035,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 }
 
 .accordian-basic .accordian-tab .accordian-trigger {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   font-family: opensans-bold, Helvetica, sans-serif;
   font-size: 1.08em;
@@ -7852,7 +8049,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 }
 .accordian-basic.accordian-primary .accordian-tab .accordian-trigger {
   background-color: #F9F9F9;
-  color: #94CBEA;
+  color: #026eb7;
 }
 .accordian-basic.accordian-primary .accordian-tab .accordian-view {
   background-color: #F9F9F9;
@@ -7868,13 +8065,79 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 }
 
 .accordian-border .accordian-tab .accordian-trigger.active {
-  border-left: 2px solid #94CBEA;
+  border-left: 2px solid #026eb7;
 }
 .accordian-border .accordian-tab .accordian-view {
   border: 1px solid #D1D2D3;
 }
 .accordian-border .accordian-tab .accordian-view.active {
-  border-left: 2px solid #94CBEA;
+  border-left: 2px solid #026eb7;
+}
+
+.actions-list .actions-list-title {
+  cursor: pointer;
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+
+.actions-list-data {
+  position: absolute;
+  display: none;
+  z-index: 10000;
+}
+.actions-list-data .action {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+.actions-list-data .action a, .actions-list-data .action .link, .actions-list-data .action .action-title {
+  display: inline-block;
+  width: 100%;
+}
+
+.actions-list-settings .actions-list-title {
+  background-color: #F9F9F9;
+  color: #898989;
+  width: 64px;
+  height: 35px;
+  padding: 5px 8px;
+  border: 1px solid #D1D2D3;
+  cursor: pointer;
+  -moz-transition: background-color 420ms ease-in-out 0s;
+  -ms-transition: background-color 420ms ease-in-out 0s;
+  -o-transition: background-color 420ms ease-in-out 0s;
+  -webkit-transition: background-color 420ms ease-in-out 0s;
+  transition: background-color 420ms ease-in-out 0s;
+}
+.actions-list-settings .actions-list-title .icon {
+  line-height: 25px;
+}
+.actions-list-settings .actions-list-title .icon-setting {
+  float: left;
+}
+.actions-list-settings .actions-list-title .icon-caret {
+  float: right;
+}
+.actions-list-settings .actions-list-title:hover {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+
+.actions-list-data-settings {
+  width: 120px;
+  border: 1px solid #D1D2D3;
+}
+.actions-list-data-settings .action a, .actions-list-data-settings .action .link, .actions-list-data-settings .action .action-title {
+  background-color: #F9F9F9;
+  color: #898989;
+  padding: 0.5em;
+}
+.actions-list-data-settings .action:hover a, .actions-list-data-settings .action:hover .link, .actions-list-data-settings .action:hover .action-title {
+  background-color: #026eb7;
+  color: #FFFFFF;
 }
 
 /**********************************************************************
@@ -8161,11 +8424,279 @@ Details: It defines the styles for flipper components as listed below:
   height: 100%;
 }
 
+/**********************************************************************
+Description: It defines the styles for mapper components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
+*
+* List        - The list mapper allows user to map multiple resources to active resource. The mappings
+*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
+*
+* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
+*				when user click on one of the auto suggest item.
+*
+* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
+*
+* Action	  - The action mapper will allow users to toggle each item individually by click.
+*
+***********************************************************************/
+.mapper {
+  position: relative;
+}
+.mapper .mapper-items .mapper-item {
+  position: relative;
+}
+
+.mapper-list {
+  width: 100%;
+  margin: 0 auto;
+}
+.mapper-list .mapper-items {
+  height: 250px;
+  background-color: #F9F9F9;
+}
+.mapper-list .mapper-items .mapper-item {
+  display: inline-block;
+  width: 100%;
+  margin: 10px;
+  background-color: #FFFFFF;
+}
+.mapper-list .mapper-items .mapper-item.depth-1 {
+  padding-left: 15px;
+}
+.mapper-list .mapper-items .mapper-item.depth-2 {
+  padding-left: 30px;
+}
+.mapper-list .mapper-items .mapper-item.depth-3 {
+  padding-left: 45px;
+}
+
+.mapper-auto .mapper-items .mapper-item {
+  background-color: #F9F9F9;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mapper-auto-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em;
+}
+.mapper-auto-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: #E6E7E8;
+  color: #6D6E6F;
+  padding: 0.25em;
+}
+
+.mapper-submit {
+  width: 100%;
+  margin: 0 auto;
+}
+.mapper-submit .mapper-items .mapper-item {
+  background-color: #F9F9F9;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mapper-submit-items .mapper-items .mapper-item {
+  padding-right: 2.5em;
+  margin-bottom: 0.5em;
+}
+.mapper-submit-items .spinner {
+  position: absolute;
+  top: 0.25em;
+  right: 0.25em;
+  z-index: 1;
+  background: #E6E7E8;
+  color: #6D6E6F;
+  padding: 0.25em;
+}
+
+.mapper-action {
+  width: 100%;
+  margin: 0 auto;
+}
+.mapper-action .mapper-items .mapper-item {
+  background-color: #F9F9F9;
+  display: inline-block;
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .breadcrumb {
   background-color: #FFFFFF;
   color: #898989;
-  padding: 0.35em;
-  margin-bottom: 0.35em;
+  padding: 0;
+  margin-bottom: 0.75em;
+  font-size: 1.08em;
+  position: relative;
+}
+.breadcrumb .link {
+  display: inline-block;
+  padding: 0.5em;
+}
+.breadcrumb .link a {
+  color: #FFFFFF !important;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.breadcrumb .separator {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 1em solid transparent;
+  border-bottom: 1em solid transparent;
+}
+.breadcrumb .wrap-link {
+  display: inline-block;
+  position: relative;
+  margin-left: -1em;
+}
+.breadcrumb .wrap-link .link {
+  padding-left: 1.5em;
+}
+.breadcrumb .wrap-link:nth-of-type(1) {
+  z-index: 100;
+  margin-left: 0;
+}
+.breadcrumb .wrap-link:nth-of-type(1) .link {
+  background-color: #003653;
+  padding-left: 0.5em;
+}
+.breadcrumb .wrap-link:nth-of-type(1) .separator {
+  border-left: 1em solid #003653;
+}
+.breadcrumb .wrap-link:nth-of-type(2) {
+  z-index: 75;
+}
+.breadcrumb .wrap-link:nth-of-type(2) .link {
+  background-color: #0074D9;
+}
+.breadcrumb .wrap-link:nth-of-type(2) .separator {
+  border-left: 1em solid #0074D9;
+}
+.breadcrumb .wrap-link:nth-of-type(3) {
+  z-index: 50;
+}
+.breadcrumb .wrap-link:nth-of-type(3) .link {
+  background-color: #7CAA2D;
+}
+.breadcrumb .wrap-link:nth-of-type(3) .separator {
+  border-left: 1em solid #7CAA2D;
+}
+.breadcrumb .wrap-link:nth-of-type(4) {
+  z-index: 25;
+}
+.breadcrumb .wrap-link:nth-of-type(4) .link {
+  background-color: #FF851B;
+}
+.breadcrumb .wrap-link:nth-of-type(4) .separator {
+  border-left: 1em solid #FF851B;
+}
+.breadcrumb .wrap-link:nth-of-type(5) {
+  z-index: 5;
+}
+.breadcrumb .wrap-link:nth-of-type(5) .link {
+  background-color: #FFDC00;
+}
+.breadcrumb .wrap-link:nth-of-type(5) .separator {
+  border-left: 1em solid #FFDC00;
+}
+.breadcrumb .current {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+/**********************************************************************
+Description: It defines the styles of core data components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of data components as listed below:
+
+* Data		-	The barebone card class with minimum styles.
+***********************************************************************/
+.data.data-primary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.data.data-secondary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.data.data-tertiary {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+
+/**********************************************************************
+Description: It defines the styles of CRUD components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of CRUD components as listed below:
+
+CRUD - The barebone class with minimum styles having main and sidebar container
+to show forms and widgets.
+***********************************************************************/
+.data-crud-wrap {
+  position: relative;
+}
+.data-crud-wrap .data-crud {
+  position: relative;
+}
+.data-crud-wrap .data-crud .data-crud-title {
+  position: relative;
+}
+.data-crud-wrap .data-crud .data-crud-form {
+  position: relative;
+}
+.data-crud-wrap .data-crud .data-crud-content {
+  position: relative;
+}
+.data-crud-wrap .data-crud .data-crud-message {
+  position: relative;
+}
+.data-crud-wrap .data-crud .data-crud-actions {
+  position: relative;
+}
+
+.data-crud-wrap-basic {
+  background-color: #FFFFFF;
+  color: #898989;
+  padding: 1em;
+}
+.data-crud-wrap-basic .data-crud {
+  margin-bottom: 2em;
+}
+.data-crud-wrap-basic .data-crud .data-crud-title {
+  background-color: #026eb7;
+  color: #FFFFFF;
+  padding: 1rem 0;
+  margin-bottom: 1em;
+  font-size: 1.58em;
+}
+.data-crud-wrap-basic .data-crud .data-crud-form {
+  padding: 1rem;
+}
+.data-crud-wrap-basic .data-crud .data-crud-content {
+  padding: 1rem;
+}
+.data-crud-wrap-basic .data-crud .data-crud-message {
+  padding: 1rem;
+}
+.data-crud-wrap-basic .data-crud .data-crud-actions {
+  padding: 1rem;
 }
 
 /**********************************************************************
@@ -8228,6 +8759,88 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
     float: left;
     padding-right: 1em;
   }
+}
+
+.data-crud-wrap-basic .data-crud {
+  border: 1px solid #D1D2D3;
+}
+.data-crud-wrap-basic .data-crud .data-crud-title {
+  background-color: #F9F9F9;
+  color: #898989;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+  border-bottom: 1px solid #D1D2D3;
+}
+.data-crud-wrap-basic .data-crud .data-crud-title .data-crud-title-actions {
+  float: right;
+}
+.data-crud-wrap-basic .data-crud .data-crud-actions {
+  text-align: right;
+}
+
+#data-crud-settings .data-crud-title {
+  z-index: 100;
+}
+#data-crud-settings .data-crud-title .wrap-popout-title {
+  position: relative;
+}
+#data-crud-settings .data-crud-title .wrap-popout-settings {
+  position: relative;
+}
+#data-crud-settings .data-crud-title .wrap-popout-settings #popout-settings {
+  background-color: #FFFFFF;
+  color: #898989;
+  position: absolute;
+  top: 0.5em;
+  width: 100%;
+  padding: 0.5em;
+  line-height: 1em;
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(209, 210, 211, 0.25);
+  -moz-box-shadow: 0px 0px 6px 3px rgba(209, 210, 211, 0.25);
+  box-shadow: 0px 0px 6px 3px rgba(209, 210, 211, 0.25);
+}
+#data-crud-settings .data-crud-title .wrap-popout-settings #popout-settings .popout-setting {
+  font-size: 0.8em;
+  padding: 0.5em;
+  cursor: pointer;
+  -moz-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -ms-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -o-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+  transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
+}
+#data-crud-settings .data-crud-title .wrap-popout-settings #popout-settings .popout-setting:hover {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+#data-crud-settings .data-crud-form {
+  z-index: 50;
+}
+#data-crud-settings .data-crud-form .form .frm-field {
+  display: inline-block;
+  width: 50%;
+  margin-bottom: 0.5em;
+}
+#data-crud-settings .data-crud-form .form .frm-field:nth-child(even) {
+  padding-right: 0.5em;
+}
+#data-crud-settings .data-crud-form .form .frm-field:nth-child(odd) {
+  padding-left: 0.5em;
+}
+#data-crud-settings .data-crud-form .form .frm-actions {
+  text-align: right !important;
+}
+
+#data-crud-gallery .data-crud-wrap-main {
+  padding-right: 1em;
+}
+#data-crud-gallery .data-crud-wrap-sidebar {
+  padding: 1em;
+  border: 1px solid #D1D2D3;
+}
+#data-crud-gallery .data-crud-wrap-sidebar .uploader {
+  margin: 0 auto;
 }
 
 /**********************************************************************
@@ -8336,7 +8949,7 @@ Details: It defines the menu components as listed below:
   text-transform: uppercase;
 }
 .hnav-basic > li:hover > a {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .hnav-basic li a {
@@ -8442,7 +9055,7 @@ Details: It defines the menu components as listed below:
   transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
 }
 .vnav-basic li:hover > a {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .vnav-basic li:hover > .nav-sub {
@@ -8541,7 +9154,7 @@ Details: It defines the menu components as listed below:
   text-align: left;
 }
 .vnav-slider-wrap .vnav-slider-content ul li a:hover {
-  color: #3498DB;
+  color: #0074D9;
 }
 
 /**********************************************************************
@@ -8644,17 +9257,18 @@ Details: It defines the collapsible menu components as listed below:
   padding-left: 40px;
   padding-right: 8px;
   cursor: pointer;
-  height: 2em;
+  height: 3em;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header .tab-icon {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 0.5em 10px;
+  padding: 1em 10px;
   color: #6D6E6F;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header .tab-title {
   color: #6D6E6F;
+  line-height: 2em;
 }
 .collapsible-menu-admin .collapsible-tab .tab-content {
   padding-left: 40px;
@@ -8785,7 +9399,7 @@ Details: It defines the styles for header components as listed below:
     right: 0;
   }
   .header-basic #menu-main-mobile li {
-    box-shadow: 0 -4px 2px -5px #94CBEA;
+    box-shadow: 0 -4px 2px -5px #026eb7;
   }
   .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
     background-color: #FFFFFF;
@@ -8799,10 +9413,10 @@ Details: It defines the styles for header components as listed below:
   }
   .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
     background-color: #E6E7E8;
-    color: #3498DB;
+    color: #0074D9;
   }
   .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
-    background-color: #94CBEA;
+    background-color: #026eb7;
     color: #FFFFFF;
   }
   .header-basic #mobile-actions {
@@ -8825,7 +9439,7 @@ Details: It defines the styles for header components as listed below:
     transition: all 250ms ease-in-out 0s;
   }
   .header-basic #mobile-actions .mobile-action:hover {
-    color: #3498DB;
+    color: #0074D9;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -8904,7 +9518,7 @@ Details: It defines the styles for header components as listed below:
   height: 60px;
 }
 .header-private .header-logo #btn-sidebar-main {
-  color: #3498DB;
+  color: #0074D9;
   display: inline-block;
   width: 40px;
   height: 60px;
@@ -8918,7 +9532,7 @@ Details: It defines the styles for header components as listed below:
   text-align: center;
 }
 .header-private .header-logo #btn-sidebar-main:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .header-private .header-logo .logo {
@@ -9038,7 +9652,7 @@ Details: It defines the styles for sidebar components as listed below:
   display: none;
 }
 .sidebar-control .sidebar-content-wrap .sidebar-header .sidebar-title {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   line-height: 1.33em;
   padding: 0.5rem;
   font-size: 1.17em;
@@ -9060,9 +9674,20 @@ Details: It defines the styles for sidebar components as listed below:
   }
 }
 
+/**********************************************************************
+Description: The Default Sidebar with/without background image with default alignment.
+
+Details: Default Sidebar to be used as page sidebars as listed below:
+
+1. Sidebar - Overrides the breeze sidebar and add more basic options to it.
+
+2. Default Sidebar - The default sidebar.
+
+Usage: Sidebars can be used to manage page widgets on sidebars.
+***********************************************************************/
 .sidebar-filler {
-  background-color: #F2F2F2;
-  color: #6D6E6F;
+  background-color: #F9F9F9;
+  color: #898989;
   padding-top: 62px;
 }
 .sidebar-filler.sidebar-filler-micro {
@@ -9070,8 +9695,8 @@ Details: It defines the styles for sidebar components as listed below:
 }
 
 #sidebar-main {
-  background-color: #F2F2F2;
-  color: #6D6E6F;
+  background-color: #F9F9F9;
+  color: #898989;
   padding-top: 62px;
 }
 #sidebar-main.sidebar-micro {
@@ -9079,113 +9704,10 @@ Details: It defines the styles for sidebar components as listed below:
   z-index: 10;
   width: 40px;
 }
-
-/**********************************************************************
-Description: It defines the styles for mapper components available in CMT-UI css framework.
-
-Dependencies: variables, variables-ext, mixins
-
-Details: It defines the styles for mapper components as listed below:
-
-* Mapper      - The barebone mapper class with minimum styles common for all the mappers.
-*
-* List        - The list mapper allows user to map multiple resources to active resource. The mappings
-*               can also maintain resource hierarchy with depth. A depth of max 3 is preffered for better performance.
-*
-* Auto        - The auto mapper will use auto fill component to auto suggest mapping. The mapping will be formed
-*				when user click on one of the auto suggest item.
-*
-* Submit      - The submit mapper allows user to submit the mappings. These will be mapped to active resource.
-*
-* Action	  - The action mapper will allow users to toggle each item individually by click.
-*
-***********************************************************************/
-.mapper {
-  position: relative;
-}
-.mapper .mapper-items .mapper-item {
-  position: relative;
-}
-
-.mapper-list {
-  width: 100%;
-  margin: 0 auto;
-}
-.mapper-list .mapper-items {
-  height: 250px;
-  background-color: #F9F9F9;
-}
-.mapper-list .mapper-items .mapper-item {
-  display: inline-block;
-  width: 100%;
-  margin: 10px;
-  background-color: #FFFFFF;
-}
-.mapper-list .mapper-items .mapper-item.depth-1 {
-  padding-left: 15px;
-}
-.mapper-list .mapper-items .mapper-item.depth-2 {
-  padding-left: 30px;
-}
-.mapper-list .mapper-items .mapper-item.depth-3 {
-  padding-left: 45px;
-}
-
-.mapper-auto .mapper-items .mapper-item {
-  background-color: #F9F9F9;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mapper-auto-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em;
-}
-.mapper-auto-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: #E6E7E8;
-  color: #6D6E6F;
-  padding: 0.25em;
-}
-
-.mapper-submit {
-  width: 100%;
-  margin: 0 auto;
-}
-.mapper-submit .mapper-items .mapper-item {
-  background-color: #F9F9F9;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mapper-submit-items .mapper-items .mapper-item {
-  padding-right: 2.5em;
-  margin-bottom: 0.5em;
-}
-.mapper-submit-items .spinner {
-  position: absolute;
-  top: 0.25em;
-  right: 0.25em;
-  z-index: 1;
-  background: #E6E7E8;
-  color: #6D6E6F;
-  padding: 0.25em;
-}
-
-.mapper-action {
-  width: 100%;
-  margin: 0 auto;
-}
-.mapper-action .mapper-items .mapper-item {
-  background-color: #F9F9F9;
-  display: inline-block;
-  padding: 0.5rem;
-  margin-right: 0.5rem;
+@media only screen and (max-width: 768px) {
+  #sidebar-main {
+    padding-top: 81px;
+  }
 }
 
 /**********************************************************************
@@ -9298,7 +9820,7 @@ Details: It defines the styles for popup components as listed below:
   color: #898989;
 }
 .popup-basic .popup-data .popup-header {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   padding: 1rem;
 }
@@ -9407,7 +9929,7 @@ Details: It defines the styles for popout components as listed below:
   transition: all 250ms ease-in-out 0s;
 }
 .popout-group-main .popout-actions .popout-trigger:hover {
-  background-color: #42A8E2;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .popout-group-main .popout-actions .popout-trigger.active, .popout-group-main .popout-actions .popout-trigger.active:hover {
@@ -9566,7 +10088,7 @@ Details: It defines the styles of cmt slider as listed below:
   text-align: center;
 }
 .slider-basic .slider-control {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   top: 35px;
   width: 64px;
@@ -9743,7 +10265,7 @@ Details: It defines the styles of card components as listed below:
   color: #898989;
 }
 .card.card-tertiary {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 
@@ -9822,7 +10344,7 @@ Details: It defines the styles of card panels as listed below:
 *			content within content box. The content is aligned center by default.
 ***********************************************************************/
 .card-panel .card-content-wrap .card-header {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   padding: 0.5rem;
 }
@@ -9848,6 +10370,242 @@ Details: It defines the styles of card panels as listed below:
 }
 .card-panel-icon .card-content-wrap .card-header .card-header-title {
   padding-left: 1.5rem;
+}
+
+/**********************************************************************
+Description: The Default Card with/without background image with default alignment.
+
+Details: Default Card to be used to show data as listed below:
+
+1. Card - Overrides the breeze card and add more basic options to it.
+
+2. Default Card - The default card.
+
+Usage: Cards can be used to to show data of models.
+***********************************************************************/
+/**********************************************************************
+Description: The Info Card with icon, avatar and text aligned at center to display text content.
+
+Details: Info Card to be used as content card as listed below:
+
+1. Info Card - The barebone card class with minimum styles common for all the info cards. The base 
+class specifies below listed options:
+1.1. Header - Text aligned at center with default padding.
+1.2. Data - Text aligned at center with default padding.
+1.3. Footer - Same as Header.
+1.4. Tiny xxx - Classes to specify fixed height cards.
+
+2. Info Icon Card - The info card with header icon/avatar aligned at center of header followed by header 
+title, description and summary.
+2.1. Header Icon - The icon/avatar will be displayed at center of header.
+2.2. Tiny Icon xxx - The classes to specify different sized icons.
+2.3. Color xxx - The classes to specify the icon color.
+
+3. Info Icon Box Card - Info icon card with icon having 1px square or rectangular border.
+3.1. Fat Border - Fat 5px border.
+3.2. Filled Box - Icon background filled with color.
+
+4. Info Icon Circle Card - Info icon card with icon having 1px circle border.
+4.1. Fat Border - Fat 5px border.
+4.2. Filled Box - Icon background filled with color.
+
+Usage: 
+1. Info Cards can be used with Max Block to show text content with icon and title at top with/without 
+background banner of Block.
+2. Can be used as standalone components arranged in grid.
+***********************************************************************/
+.card-info .card-content-wrap .card-header {
+  text-align: center;
+}
+.card-info .card-content-wrap .card-content {
+  text-align: center;
+  overflow: hidden;
+}
+.card-info .card-content-wrap .card-footer {
+  text-align: center;
+}
+.card-info.card-info-tiny {
+  height: 120px;
+}
+.card-info.card-info-small {
+  height: 180px;
+}
+.card-info.card-info-medium {
+  height: 220px;
+}
+.card-info.card-info-large {
+  height: 320px;
+}
+.card-info.card-info-xlarge {
+  height: 480px;
+}
+@media only screen and (max-width: 1024px) {
+  .card-info {
+    margin-bottom: 1em;
+  }
+}
+
+.card-info-icon .card-content-wrap .card-header .card-header-icon {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+.card-info-icon .card-content-wrap .card-header .card-header-icon img {
+  width: 100%;
+  height: auto;
+}
+.card-info-icon .card-content-wrap .card-header .card-header-icon .icon {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #026eb7;
+  font-size: 60px;
+}
+.card-info-icon.card-info-icon-itiny .card-content-wrap .card-header .card-header-icon {
+  width: 50px;
+  height: 50px;
+}
+.card-info-icon.card-info-icon-itiny .card-content-wrap .card-header .card-header-icon .icon {
+  font-size: 25px;
+}
+.card-info-icon.card-info-icon-ismall .card-content-wrap .card-header .card-header-icon {
+  width: 80px;
+  height: 80px;
+}
+.card-info-icon.card-info-icon-ismall .card-content-wrap .card-header .card-header-icon .icon {
+  font-size: 40px;
+}
+.card-info-icon.card-info-icon-imedium .card-content-wrap .card-header .card-header-icon {
+  width: 120px;
+  height: 120px;
+}
+.card-info-icon.card-info-icon-imedium .card-content-wrap .card-header .card-header-icon .icon {
+  font-size: 60px;
+}
+.card-info-icon.card-info-icon-ilarge .card-content-wrap .card-header .card-header-icon {
+  width: 150px;
+  height: 150px;
+}
+.card-info-icon.card-info-icon-ilarge .card-content-wrap .card-header .card-header-icon .icon {
+  font-size: 75px;
+}
+.card-info-icon.card-info-icon-ixlarge .card-content-wrap .card-header .card-header-icon {
+  width: 180px;
+  height: 180px;
+}
+.card-info-icon.card-info-icon-ixlarge .card-content-wrap .card-header .card-header-icon .icon {
+  font-size: 90px;
+}
+.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+  color: #F9F9F9;
+}
+.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+  color: #F9F9F9;
+}
+.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+  color: #026eb7;
+}
+@media only screen and (max-width: 1024px) {
+  .card-info-icon .card-header-icon {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .card-info-icon .card-header-icon .icon {
+    font-size: 40px !important;
+  }
+}
+
+.card-info-icon-box .card-header-icon {
+  border: 1px solid #F2F2F2;
+}
+.card-info-icon-box.card-info-icon-fbox .card-header-icon {
+  border: 5px solid #F2F2F2;
+}
+.card-info-icon-box .card-info-icon-bbox-primary .card-header-icon {
+  background-color: #F9F9F9;
+}
+.card-info-icon-box .card-info-icon-bbox-secondary .card-header-icon {
+  background-color: #F9F9F9;
+}
+.card-info-icon-box .card-info-icon-bbox-tertiary .card-header-icon {
+  background-color: #026eb7;
+}
+
+.card-info-icon-round .card-header-icon {
+  border: 1px solid #F2F2F2;
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: "transparent";
+  color: #898989;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.card-info-icon-round.card-info-icon-fround .card-header-icon {
+  border: 5px solid #F2F2F2;
+}
+.card-info-icon-round .card-info-icon-bround .card-header-icon {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #F9F9F9;
+  color: #898989;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.card-info-icon-round .card-info-icon-bround .card-header-icon {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #F9F9F9;
+  color: #898989;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+.card-info-icon-round .card-info-icon-bround .card-header-icon {
+  overflow: hidden;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #026eb7;
+  color: #FFFFFF;
+  -webkit-border-radius: 100%;
+  -khtml-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.card-gallery-item {
+  display: inline-block;
+  padding: 1em;
+}
+.card-gallery-item .card-content-wrap {
+  width: 180px;
+  height: 210px;
+  -webkit-box-shadow: 0px 0px 5px 1px #7F7F7F;
+  -moz-box-shadow: 0px 0px 5px 1px #7F7F7F;
+  box-shadow: 0px 0px 5px 1px #7F7F7F;
+}
+.card-gallery-item .card-content-wrap .card-header {
+  background-color: #F9F9F9;
+  color: #898989;
+  padding: 5px;
+  line-height: 20px;
+}
+.card-gallery-item .card-content-wrap .card-data {
+  height: 180px;
+}
+.card-gallery-item .card-content-wrap .card-data .card-image {
+  width: 180px;
+  height: 180px;
 }
 
 /**********************************************************************
@@ -9923,7 +10681,7 @@ Details: It defines the styles of box components as listed below:
   color: #898989;
 }
 .box.box-tertiary {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 
@@ -10010,7 +10768,7 @@ Details: It defines the styles of box components as listed below:
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
 ***********************************************************************/
 .box-panel .box-content-wrap .box-header-wrap {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   padding: 0.5rem;
 }
@@ -10087,7 +10845,7 @@ Details: It defines the styles of form box components as listed below:
   display: inline-block;
   top: 0.5rem;
   right: 0.5rem;
-  color: #3498DB;
+  color: #0074D9;
   cursor: pointer;
   z-index: 20;
 }
@@ -10119,7 +10877,7 @@ Details: It defines the styles of form box components as listed below:
   padding-top: 10px;
 }
 .box-file-uploader .box-content .box-content-data .chooser-wrap .file-preloader .file-preloader-bar {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   width: 0%;
   height: 10px;
 }
@@ -10190,7 +10948,7 @@ Details: It defines the styles of form box components as listed below:
   line-height: 120px;
 }
 .card-file-dragger .card-data .drag-wrap .drag.hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .card-file-dragger .card-data .drag-wrap canvas {
@@ -10203,6 +10961,17 @@ Details: It defines the styles of form box components as listed below:
   display: none;
 }
 
+/**********************************************************************
+Description: The Default Box with/without background image with default alignment.
+
+Details: Default Box to be used to show data as listed below:
+
+1. Box - Overrides the breeze box and add more basic options to it.
+
+2. Default Box - The default box.
+
+Usage: Boxes can be used to to show data of models.
+***********************************************************************/
 .box-collapsible {
   -webkit-box-shadow: 0px 0px 4px 1px rgba(209, 210, 211, 0.25);
   -moz-box-shadow: 0px 0px 4px 1px rgba(209, 210, 211, 0.25);
@@ -10261,6 +11030,437 @@ Details: It defines the styles of form box components as listed below:
 }
 
 /**********************************************************************
+Description: It defines the styles of widget components available in Breeze Framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of widget components as listed below:
+
+Widget - The barebone widget with minimum styles.
+
+Basic - The basic widget defines the styles of widget having text and background colors.
+
+***********************************************************************/
+.widget {
+  position: relative;
+}
+.widget .box-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.widget > .texture {
+  z-index: 10;
+}
+.widget .widget-content-wrap {
+  position: relative;
+  z-index: 15;
+}
+.widget .widget-content-wrap .widget-header {
+  position: relative;
+}
+.widget .widget-content-wrap .widget-content {
+  position: relative;
+}
+.widget .widget-content-wrap .widget-content .widget-content-data {
+  position: relative;
+}
+.widget .widget-content-wrap .widget-content .widget-content-buffer {
+  position: relative;
+}
+.widget.widget-primary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.widget.widget-secondary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.widget.widget-tertiary {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+
+.widget-basic .widget-content-wrap .widget-header {
+  padding: 1rem 0;
+}
+.widget-basic .widget-content-wrap .widget-header .widget-header-title {
+  font-size: 1.33em;
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.widget-basic .widget-content-wrap .widget-header .widget-header-info {
+  font-size: 1.08em;
+}
+.widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-title, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-icon + .widget-header-content {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-info, .widget-basic .widget-content-wrap .widget-header .widget-header-title + .widget-header-content {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-header .widget-header-info + .widget-header-content {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-content {
+  padding: 1rem 0;
+}
+.widget-basic .widget-content-wrap .widget-content .widget-content-data {
+  padding: 1rem 0;
+}
+.widget-basic .widget-content-wrap .widget-content .widget-content-data + .widget-content-buffer {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-footer {
+  padding: 1rem 0;
+}
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-title {
+  font-size: 1.17em;
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-info {
+  font-size: 1.08em;
+}
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-title, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-icon + .widget-footer-content {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-info, .widget-basic .widget-content-wrap .widget-footer .widget-footer-title + .widget-footer-content {
+  margin-top: 0.5rem;
+}
+.widget-basic .widget-content-wrap .widget-footer .widget-footer-info + .widget-footer-content {
+  margin-top: 0.5rem;
+}
+
+/**********************************************************************
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for header components as listed below:
+
+* Block       - The barebone block class with minimum styles common for all the blocks. The base class can have below
+*               listed options:
+*                   - It can have background image with or without parallax effects.
+*                   - The content wrapper wraps header, content and footer. This gives opportunity to set block
+*                     background and even content wrapper background in the form of image or texture.
+*
+* Basic       - It occupy 100% width and height of it's parent. The height in % won't work in case parent's min-height
+*               property is set. In such cases we need JS based solution. It works well with cmtBlock jQuery plugin provided
+*               by Velocity Framework. The cmtBlock can configure block height to occupy full, quarter to full or half height.
+***********************************************************************/
+.block {
+  position: relative;
+}
+.block .block-bkg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-fixed {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-scroll {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-position: 50% 50% 9 !important;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.block .block-bkg-parallax {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  z-index: 5;
+}
+.block > .texture {
+  z-index: 10;
+}
+.block .block-content-wrap {
+  position: relative;
+  z-index: 15;
+}
+.block .block-content-wrap .block-header-wrap {
+  position: relative;
+}
+.block .block-content-wrap .block-header-wrap .block-header {
+  position: relative;
+  z-index: 20;
+}
+.block .block-content-wrap .block-content {
+  position: relative;
+}
+.block .block-content-wrap .block-content .block-content-data {
+  position: relative;
+}
+.block .block-content-wrap .block-content .block-content-buffer {
+  position: relative;
+}
+.block .block-content-wrap .block-footer-wrap {
+  position: relative;
+}
+.block .block-content-wrap .block-footer-wrap .block-footer {
+  position: relative;
+  z-index: 20;
+}
+.block .block-splitter {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  z-index: 10000;
+}
+.block .block-splitter.block-splitter-top {
+  top: 0;
+  margin-top: -50px;
+}
+.block .block-splitter.block-splitter-bottom {
+  bottom: 0;
+  margin-bottom: -50px;
+}
+.block .block-splitter .block-splitter-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+.block.block-primary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.block.block-secondary {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.block.block-tertiary {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+
+.block-basic .block-content-wrap .block-header-wrap {
+  padding: 1rem 0;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title {
+  font-size: 2em;
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info {
+  font-size: 1.33em;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-content {
+  font-size: 1.08em;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-title, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-icon + .block-header-content {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-info, .block-basic .block-content-wrap .block-header-wrap .block-header .block-header-title + .block-header-content {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-header-wrap .block-header .block-header-info + .block-header-content {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-content .block-content-title {
+  font-size: 2em;
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.block-basic .block-content-wrap .block-content .block-content-info {
+  font-size: 1.33em;
+}
+.block-basic .block-content-wrap .block-content .block-content-summary {
+  font-size: 1.08em;
+}
+.block-basic .block-content-wrap .block-content .block-content-title + .block-content-info, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-title + .block-content-data {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-content .block-content-info + .block-content-summary, .block-basic .block-content-wrap .block-content .block-content-info + .block-content-data {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-content .block-content-summary + .block-content-data {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-content .block-content-data {
+  padding: 1rem 0;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer {
+  padding: 1rem 0;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title {
+  font-size: 1.33em;
+  font-family: opensans-bold, Helvetica, sans-serif;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info {
+  font-size: 1.17em;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-content {
+  font-size: 1.08em;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-title, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-icon + .block-footer-content {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-info, .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-title + .block-footer-content {
+  margin-top: 0.5rem;
+}
+.block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
+  margin-top: 0.5rem;
+}
+
+/**********************************************************************
+Description: The Default Block with/without background image with default alignment.
+
+Details: Default Block to be used as page sections as listed below:
+
+1. Block - Overrides the breeze block and add more basic options to it.
+
+2. Default Block - The default block.
+
+Usage: Blocks can be used to divide page into multiple sections.
+***********************************************************************/
+/**********************************************************************
+Description: The Max Block with/without background image divides the page into various 
+independent sections.
+
+Details: Max Block to be used as page sections as listed below:
+
+1. Max Block - The barebone card class with minimum styles common for all the max blocks. The base 
+class specifies below listed options:
+1.1. Header - Text aligned at center with default padding with h1 font size.
+1.2. Data - Data wrapping boxes and cards.
+1.3. Footer - Same as Header.
+
+Usage: Max Blocks can be used to divide page into multiple sections.
+***********************************************************************/
+.block-max {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.block-max .block-content-wrap {
+  padding: 3em 0;
+  width: 100%;
+  height: 100%;
+}
+.block-max .block-content-wrap .block-header-wrap {
+  padding-bottom: 3em;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header {
+  text-align: center;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-title {
+  font-size: 2.67em;
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-info {
+  font-size: 1.58em;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-content {
+  font-size: 1.08em;
+}
+.block-max .block-content-wrap .block-footer-wrap .block-footer {
+  text-align: center;
+}
+
+.block-max-area .block-content-wrap {
+  padding: 0;
+}
+.block-max-area .block-content-wrap .block-content {
+  width: 100%;
+  height: 100%;
+}
+.block-max-area .block-content-wrap .block-content .block-content-buffer {
+  width: 100%;
+  height: 100%;
+}
+
+.block .block-content-wrap {
+  height: 100%;
+}
+
+#block-public {
+  padding-top: 140px;
+}
+#block-public .block-content {
+  background-color: #FFFFFF;
+  color: #898989;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
+  box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
+}
+@media only screen and (max-width: 480px) {
+  #block-public .block-content {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 481px) {
+  #block-public {
+    padding-top: 180px;
+  }
+  #block-public .block-content {
+    width: 320px;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  #block-public {
+    padding-top: 240px;
+  }
+  #block-public .block-content {
+    width: 420px;
+  }
+}
+
+/**********************************************************************
 Description: It defines the styles of the pagination having links to navigate pages.
 
 Dependencies: variables, variables-ext, mixins
@@ -10290,7 +11490,7 @@ Full - Full pagination having both info and pagination links.
   color: #FFFFFF;
 }
 .pagination-basic li span:hover, .pagination-basic li a:hover, .pagination-basic .page-link span:hover, .pagination-basic .page-link a:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
@@ -10338,7 +11538,7 @@ Full - Full pagination having both info and pagination links.
   line-height: 2.1em;
 }
 .pagination-full .page-links .pagination li span, .pagination-full .page-links .pagination li a, .pagination-full .page-links .pagination .page-link span, .pagination-full .page-links .pagination .page-link a {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #898989;
   padding: 0.5em 0.75em;
   text-decoration: none;
@@ -10574,10 +11774,238 @@ Basic - The basic data grid having default coloring.
   text-align: left;
 }
 
-.pagination-grid {
+.pagination-grid-default {
   display: inline-block;
   text-align: left;
   margin-top: 0.25em;
+}
+.pagination-grid-default li {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  margin-left: 0.25em;
+  height: 1.4em;
+  line-height: 1.4em;
+}
+.pagination-grid-default li span, .pagination-grid-default li a {
+  border: 1px solid #0074D9;
+  color: #898989;
+  padding: 0.3em 0.65em;
+  text-decoration: none;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.pagination-grid-default li.prev a, .pagination-grid-default li.prev span {
+  border-left: 1px solid #0074D9;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.pagination-grid-default li.next a, .pagination-grid-default li.next span {
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.pagination-grid-default .active a {
+  background-color: #3489DB;
+  color: #FFFFFF;
+}
+.pagination-grid-default a:hover {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.pagination-grid-default .link-disabled span {
+  background-color: #7F7F7F;
+  color: #FFFFFF;
+}
+
+/**********************************************************************
+Description: It defines the styles of default data grid. It's specially designed for 
+frontend applications favouring rows using tabular arrangement.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles of default data grid as listed below:
+
+Default Data Grid - The grid class fully implemented for application data grids.
+***********************************************************************/
+.grid-data-default {
+  background-color: #FFFFFF;
+  color: #898989;
+  padding: 0 1rem;
+}
+.grid-data-default .cmt-select-wrap {
+  width: 8em;
+}
+.grid-data-default .cmt-select-wrap .cmt-select .cmt-select-list li {
+  text-align: center !important;
+}
+.grid-data-default .actions .action {
+  cursor: pointer;
+}
+.grid-data-default .cmt-choice .label {
+  margin-top: 0.5em;
+}
+.grid-data-default .grid-search-wrap {
+  display: inline-block;
+}
+.grid-data-default .grid-search-wrap .grid-search {
+  text-align: right;
+}
+.grid-data-default .grid-search-wrap .grid-search .search-field {
+  background-color: #F2F2F2;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.grid-data-default .grid-search-wrap .grid-search .search-field input[type=text], .grid-data-default .grid-search-wrap .grid-search .search-field .cmt-select-wrap {
+  width: 8em;
+}
+.grid-data-default .grid-search-wrap .grid-search .search-field input[type=text] {
+  width: 12em;
+  border-radius: 3px 0 0 3px;
+  -webkit-border-radius-top-left: 3px;
+  -webkit-border-radius-bottom-left: 3px;
+  -khtml-border-radius-top-left: 3px;
+  -khtml-border-radius-bottom-left: 3px;
+  -moz-border-radius-top-left: 3px;
+  -moz-border-radius-bottom-left: 3px;
+}
+.grid-data-default .grid-search-wrap .grid-search .search-field .cmt-select-wrap {
+  display: inline-block;
+  text-align: left;
+}
+.grid-data-default .grid-search-wrap .grid-search .search-field .btn {
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
+}
+.grid-data-default .grid-sort-wrap {
+  display: inline-block;
+}
+.grid-data-default .grid-sort-wrap .grid-sort {
+  display: inline-block;
+}
+.grid-data-default .grid-filters-wrap {
+  display: inline-block;
+}
+.grid-data-default .grid-filters-wrap .grid-filters {
+  display: inline-block;
+}
+.grid-data-default .grid-bulk-wrap {
+  display: inline-block;
+}
+.grid-data-default .grid-bulk-wrap .grid-bulk {
+  display: inline-block;
+}
+.grid-data-default .grid-report-wrap {
+  display: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #D1D2D3;
+}
+.grid-data-default .grid-report-wrap.show-report {
+  display: block;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-fields > .row:nth-child(odd) {
+  padding-right: 0.5em;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-fields > .row:nth-child(even) {
+  padding-left: 0.5em;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-fields .date-wrap:nth-child(odd), .grid-data-default .grid-report-wrap .grid-report .grid-report-fields .range-wrap:nth-child(odd) {
+  padding-left: 0.5em;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-fields .date-wrap:nth-child(even), .grid-data-default .grid-report-wrap .grid-report .grid-report-fields .range-wrap:nth-child(even) {
+  padding-right: 0.5em;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-fields .field-title {
+  line-height: 2em;
+}
+.grid-data-default .grid-report-wrap .grid-report .grid-report-actions {
+  text-align: right;
+}
+.grid-data-default .grid-head-wrap {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #D1D2D3;
+}
+.grid-data-default .grid-head-wrap .grid-title {
+  font-size: 1.33em;
+  line-height: 2em;
+}
+.grid-data-default .grid-head-wrap .grid-head-options {
+  text-align: right;
+}
+.grid-data-default .grid-head-wrap .grid-head-options .cmt-select-wrap {
+  margin-right: 0.5em;
+}
+.grid-data-default .grid-options-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-default .grid-content-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-rows-wrap .colf {
+  line-height: 1.8em;
+  padding: 0.5em;
+  overflow: hidden;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row {
+  border-top: 1px solid #D1D2D3;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .icon {
+  text-align: center;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card {
+  margin-bottom: 1em;
+  border: 1px solid #D1D2D3;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-header {
+  background-color: #F9F9F9;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-header .grid-card-actions {
+  text-align: right;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data {
+  height: 160px;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data .col, .grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-data .colf {
+  padding: 0.25em;
+}
+.grid-data-default .grid-content-wrap .grid-content .grid-cards-wrap .grid-cards .grid-card .grid-card-footer {
+  background-color: #F9F9F9;
+  height: 2.3em;
+  line-height: 1.8em;
+  padding: 0.25em;
+}
+.grid-data-default .grid-footer-wrap {
+  padding: 0.75rem 0;
+}
+.grid-data-default .grid-footer-wrap .grid-footer {
+  padding: 0.75rem;
+}
+.grid-data-default .grid-footer-wrap .grid-footer .text {
+  line-height: 2em;
+}
+.grid-data-default .grid-footer-wrap .grid-footer .grid-footer-options {
+  text-align: right;
+}
+
+.pagination-grid {
+  display: inline-block;
+  text-align: left;
+  margin-top: 0.55em;
 }
 .pagination-grid li {
   display: inline-block;
@@ -10588,9 +12016,9 @@ Basic - The basic data grid having default coloring.
   line-height: 1.4em;
 }
 .pagination-grid li span, .pagination-grid li a {
-  border: 1px solid #3498DB;
+  border: 1px solid #0074D9;
   color: #898989;
-  padding: 0.3em 0.65em;
+  padding: 0.6em 0.65em;
   text-decoration: none;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
@@ -10598,7 +12026,7 @@ Basic - The basic data grid having default coloring.
   border-radius: 5px;
 }
 .pagination-grid li.prev a, .pagination-grid li.prev span {
-  border-left: 1px solid #3498DB;
+  border-left: 1px solid #0074D9;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -10615,8 +12043,8 @@ Basic - The basic data grid having default coloring.
   color: #FFFFFF;
 }
 .pagination-grid a:hover {
-  background-color: #F9F9F9;
-  color: #898989;
+  background-color: #0059A6;
+  color: #FFFFFF;
 }
 .pagination-grid .disabled span {
   background-color: #7F7F7F;
@@ -11158,7 +12586,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-header {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   text-align: center;
 }
 
@@ -11220,7 +12648,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   color: #3489DB;
 }
 .ui-datepicker-calendar td a:hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .ui-datepicker-calendar td a.ui-state-active {
@@ -11228,7 +12656,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   color: #FFFFFF;
 }
 .ui-datepicker-calendar .ui-state-disabled span {
-  background: #94CBEA;
+  background: #026eb7;
   color: #F9F9F9;
 }
 

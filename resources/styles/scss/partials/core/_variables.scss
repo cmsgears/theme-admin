@@ -22,12 +22,12 @@ $color-secondary-text-l: #898989;
 $color-secondary-text-d: #6D6E6F;
 
 // Tertiary Color:
-$color-tertiary: #94CBEA;
+$color-tertiary: #026eb7;
 $color-tertiary-l: #FFFFFF;
 $color-tertiary-d: #3489DB;
 
 // Tertiary Text Color:
-$color-tertiary-text: #FFFFFF;
+$color-tertiary-text: $color-white;
 $color-tertiary-text-l: #3489DB;
 $color-tertiary-text-d: #FFFFFF;
 
@@ -50,7 +50,8 @@ $color-shadow-inset-d: #CCCCCC; // Inset color for disabled field
 // Buttons
 $color-btn: #3498DB;
 $color-btn-text: #FFFFFF;
-$color-btn-h: #42A8E2;    // Button Hover
+//$color-btn-h: #42A8E2;    // Button Hover
+$color-btn-h: $color-blue-d;
 $color-btn-text-h: #FFFFFF;
 $color-btn-a: #2980B9;    // Active Button
 $color-btn-text-a: #FFFFFF;
@@ -64,7 +65,8 @@ $color-header-text: #6D6E6F;
 $color-footer: #000000;
 $color-footer-text: #AAAAAA;
 
-$color-link: #3498DB;
+//$color-link: #3498DB;
+$color-link: $color-blue;
 
 $color-border: #D1D2D3;
 $color-border-l: #F4F4F4; // Light border color

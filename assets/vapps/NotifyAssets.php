@@ -40,7 +40,7 @@ class NotifyAssets extends AssetBundle {
 	// Load JS
 	public $js = [
 		'apps/notify/base.js',
-		'apps/notify/controllers/notification.js',
+		'apps/notify/controllers/notification.js'
 	];
 
 	// JS Position

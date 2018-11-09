@@ -52,18 +52,18 @@ Social network		-	This section define the standard colors used by social network
 						snapchat, twitter, tumblr, vimeo, vine, vk, whatsapp, youtube.
 ***********************************************************************/
 @font-face {
-  font-family: opensans-regular;
+  font-family: 'opensans-regular';
   src: url("../fonts/opensans/opensans-regular.eot");
-  src: url("../fonts/opensans/opensans-regular.svg");
-  src: url("../fonts/opensans/opensans-regular.ttf");
-  src: url("../fonts/opensans/opensans-regular.woff");
+  src: url("../fonts/opensans/opensans-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-regular.woff") format("woff"), url("../fonts/opensans/opensans-regular.ttf") format("truetype"), url("../fonts/opensans/opensans-regular.svg#opensans-reg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-  font-family: opensans-bold;
+  font-family: 'opensans-bold';
   src: url("../fonts/opensans/opensans-bold.eot");
-  src: url("../fonts/opensans/opensans-bold.svg");
-  src: url("../fonts/opensans/opensans-bold.ttf");
-  src: url("../fonts/opensans/opensans-bold.woff");
+  src: url("../fonts/opensans/opensans-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans/opensans-bold.woff") format("woff"), url("../fonts/opensans/opensans-bold.ttf") format("truetype"), url("../fonts/opensans/opensans-bold.svg#opensans-bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 /**********************************************************************
 Description	:	This file define the extended variables used by CMT-UI css framework. These are derived 
@@ -301,7 +301,7 @@ Notes:
   background-color: rgba(249, 249, 249, 0.6);
 }
 .transparent-bkg.transparent-bkg-tertiary {
-  background-color: rgba(148, 203, 234, 0.6);
+  background-color: rgba(2, 110, 183, 0.6);
 }
 .transparent-bkg.transparent-bkg-gray {
   background-color: rgba(127, 127, 127, 0.6);
@@ -716,9 +716,9 @@ Notes:
   box-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .shadow.shadow-tertiary {
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  box-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  box-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .shadow.shadow-white {
   -webkit-box-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -832,9 +832,9 @@ Notes:
   box-shadow: inset 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .shadow-inset.shadow-inset-tertiary {
-  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  box-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  box-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .shadow-inset.shadow-inset-white {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -948,9 +948,9 @@ Notes:
   text-shadow: 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .text-shadow.text-shadow-tertiary {
-  -webkit-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  text-shadow: 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .text-shadow.text-shadow-white {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
@@ -1064,9 +1064,9 @@ Notes:
   text-shadow: inset 1px 1px 5px 0 rgba(249, 249, 249, 0.6);
 }
 .text-shadow-inset.text-shadow-inset-tertiary {
-  -webkit-text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  -moz-text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
-  text-shadow: inset 1px 1px 5px 0 rgba(148, 203, 234, 0.6);
+  -webkit-text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  -moz-text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
+  text-shadow: inset 1px 1px 5px 0 rgba(2, 110, 183, 0.6);
 }
 .text-shadow-inset.text-shadow-inset-gray {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(127, 127, 127, 0.6);
@@ -1202,7 +1202,7 @@ Notes:
   border: 1px solid #F9F9F9;
 }
 .border.border-tertiary {
-  border: 1px solid #94CBEA;
+  border: 1px solid #026eb7;
 }
 .border.border-top {
   border-top: 1px solid #D1D2D3;
@@ -1226,7 +1226,7 @@ Notes:
   border-top: 1px solid #F9F9F9;
 }
 .border.border-top.border-top-tertiary {
-  border-top: 1px solid #94CBEA;
+  border-top: 1px solid #026eb7;
 }
 .border.border-right {
   border-right: 1px solid #D1D2D3;
@@ -1250,7 +1250,7 @@ Notes:
   border-right: 1px solid #F9F9F9;
 }
 .border.border-right.border-right-tertiary {
-  border-right: 1px solid #94CBEA;
+  border-right: 1px solid #026eb7;
 }
 .border.border-bottom {
   border-bottom: 1px solid #D1D2D3;
@@ -1274,7 +1274,7 @@ Notes:
   border-bottom: 1px solid #F9F9F9;
 }
 .border.border-bottom.border-bottom-tertiary {
-  border-bottom: 1px solid #94CBEA;
+  border-bottom: 1px solid #026eb7;
 }
 .border.border-left {
   border-left: 1px solid #D1D2D3;
@@ -1298,7 +1298,7 @@ Notes:
   border-left: 1px solid #F9F9F9;
 }
 .border.border-left.border-left-tertiary {
-  border-left: 1px solid #94CBEA;
+  border-left: 1px solid #026eb7;
 }
 
 .gradient.gradient-linear {
@@ -2965,7 +2965,7 @@ html, body {
   visibility: hidden !important;
 }
 
-.pointer {
+.pointer, .cmt-click {
   cursor: pointer;
 }
 
@@ -3060,7 +3060,7 @@ html, body {
 }
 .count-sidebar.count-sidebar-header {
   position: absolute;
-  top: 6px;
+  top: 1em;
   right: 20px;
   padding: 3px;
   line-height: 1em !important;
@@ -3094,6 +3094,13 @@ html, body {
   width: 100%;
 }
 
+.rp-map .col4 {
+  margin-bottom: 1em;
+}
+.rp-map .col4 input[type=checkbox] {
+  margin-right: 0.5em;
+}
+
 /**********************************************************************
 Description: This file define the text and background colors used by CMT-UI css framework.
 
@@ -3124,7 +3131,7 @@ Details: It defines the text and background colors as listed below:
    * 10. secondary text light: #898989
    * 11. secondary dark: #F2F2F2
    * 12. secondary text dark: #6D6E6F
-   * 13. tertiary: #94CBEA
+   * 13. tertiary: #026eb7
    * 14. tertiary text: #FFFFFF
    * 15. tertiary light: #FFFFFF
    * 16. tertiary text light: #3489DB
@@ -3157,7 +3164,7 @@ Details: It defines the text and background colors as listed below:
   color: #6D6E6F !important;
 }
 .color.color-tertiary {
-  background-color: #94CBEA !important;
+  background-color: #026eb7 !important;
   color: #FFFFFF !important;
 }
 .color.color-tertiary-l {
@@ -3296,7 +3303,7 @@ Details: It defines the text and background colors as listed below:
   background-color: #F2F2F2 !important;
 }
 .bkg.bkg-tertiary {
-  background-color: #94CBEA !important;
+  background-color: #026eb7 !important;
 }
 .bkg.bkg-tertiary-l {
   background-color: #FFFFFF !important;
@@ -3463,7 +3470,7 @@ Details: It defines the text and background colors as listed below:
   color: #FFFFFF !important;
 }
 .text.text-link {
-  color: #3498DB !important;
+  color: #0074D9 !important;
 }
 .text.text-black {
   color: #000000 !important;
@@ -4202,7 +4209,7 @@ code, pre {
 }
 
 a, .link {
-  color: #3498DB;
+  color: #0074D9;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -4214,7 +4221,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:link, a:visited, .link:link, .link:visited {
-  color: #3498DB;
+  color: #0074D9;
 }
 a:active, a:hover, .link:active, .link:hover {
   color: #E74343;
@@ -5297,6 +5304,8 @@ Details: It defines the grid system and basic containers as listed below:
 html, body {
   width: 100%;
   height: 100%;
+  background-color: #F2F2F2;
+  color: #6D6E6F;
 }
 
 .container-main {
@@ -5313,6 +5322,162 @@ html, body {
   padding-top: 62px;
   padding-left: 40px;
   z-index: 5;
+}
+@media only screen and (max-width: 768px) {
+  .container-private .sidebar-private, .container-private .content-wrap {
+    padding-top: 81px;
+  }
+  .container-private .content-main-wrap-micro {
+    padding-top: 81px;
+  }
+}
+
+.shape.shape-square.shape-square-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-square.shape-square-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-square.shape-square-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-square.shape-square-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-rectangle.shape-rectangle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 75px;
+  height: 50px;
+}
+.shape.shape-rectangle.shape-rectangle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 150px;
+  height: 100px;
+}
+.shape.shape-rectangle.shape-rectangle-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 325px;
+  height: 250px;
+}
+.shape.shape-rectangle.shape-rectangle-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 750px;
+  height: 500px;
+}
+.shape.shape-circle {
+  border-radius: 50%;
+}
+.shape.shape-circle.shape-circle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-circle.shape-circle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-circle.shape-circle-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-circle.shape-circle-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-oval {
+  border-radius: 100%/50%;
+}
+.shape.shape-oval.shape-oval-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+}
+.shape.shape-oval.shape-oval-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 100px;
+  height: 100px;
+}
+.shape.shape-oval.shape-oval-large {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 250px;
+  height: 250px;
+}
+.shape.shape-oval.shape-oval-xlarge {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 500px;
+  height: 500px;
+}
+.shape.shape-triangle {
+  width: 0;
+  height: 0;
+}
+.shape.shape-triangle.shape-triangle-small {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 25px;
+  height: 50px;
+}
+.shape.shape-triangle.shape-triangle-medium {
+  background: #026eb7;
+  color: #FFFFFF;
+  width: 50px;
+  height: 100px;
+}
+.shape.shape-hexagon {
+  width: 50px;
+  height: 29px;
+  background: #FFFFFF;
+  position: relative;
+  top: -12px;
+}
+.shape.shape-hexagon:before {
+  content: "";
+  position: absolute;
+  top: -11.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 12.5px solid #FFFFFF;
+  border-left: 25px solid rgba(0, 0, 0, 0);
+  border-right: 25px solid rgba(0, 0, 0, 0);
+}
+.shape.shape-hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -12.5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 13.5px solid #FFFFFF;
 }
 
 .hover-color-primary {
@@ -5347,7 +5512,7 @@ html, body {
   transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
 }
 .hover-color-tertiary:hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 
@@ -5405,7 +5570,7 @@ html, body {
   transition: background-color 420ms ease-in-out 0s;
 }
 .hover-bkg-tertiary:hover {
-  background-color: #94CBEA;
+  background-color: #026eb7;
 }
 
 .hover-bkg-white {
@@ -6223,7 +6388,7 @@ of JS and purely css solutions.
 }
 .cmt-choice input[type=checkbox]:hover + .label::before, .cmt-choice input[type=checkbox] + .label:hover::before, .cmt-choice input[type=checkbox]:checked + .label::before,
 .cmt-choice input[type=radio]:hover + .label::before, .cmt-choice input[type=radio] + .label:hover::before, .cmt-choice input[type=radio]:checked + .label::before {
-  color: #42A8E2;
+  color: #0059A6;
 }
 .cmt-choice input[type=checkbox]:disabled + .label::before,
 .cmt-choice input[type=radio]:disabled + .label::before {
@@ -6384,7 +6549,7 @@ Details: It defines the custom element styles as listed below:
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn:active {
@@ -6437,7 +6602,7 @@ Details: It defines the custom element styles as listed below:
   color: #6D6E6F;
 }
 .btn.btn-tertiary {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 .btn.btn-tertiary:hover {
@@ -6445,7 +6610,7 @@ Details: It defines the custom element styles as listed below:
   color: #FFFFFF;
 }
 .btn.btn-link {
-  background-color: #3498DB;
+  background-color: #0074D9;
   color: #FFFFFF;
 }
 .btn.btn-link:hover {
@@ -6601,24 +6766,24 @@ Details: It defines the custom element styles as listed below:
   background-color: #F9F9F9;
 }
 .btn-border.btn-border-tertiary {
-  color: #94CBEA;
-  -webkit-box-shadow: inset 0 0 0 1px #94CBEA;
-  -moz-box-shadow: inset 0 0 0 1px #94CBEA;
-  box-shadow: inset 0 0 0 1px #94CBEA;
+  color: #026eb7;
+  -webkit-box-shadow: inset 0 0 0 1px #026eb7;
+  -moz-box-shadow: inset 0 0 0 1px #026eb7;
+  box-shadow: inset 0 0 0 1px #026eb7;
 }
 .btn-border.btn-border-tertiary:hover {
   color: #FFFFFF;
-  background-color: #94CBEA;
+  background-color: #026eb7;
 }
 .btn-border.btn-border-link {
-  color: #3498DB;
-  -webkit-box-shadow: inset 0 0 0 1px #3498DB;
-  -moz-box-shadow: inset 0 0 0 1px #3498DB;
-  box-shadow: inset 0 0 0 1px #3498DB;
+  color: #0074D9;
+  -webkit-box-shadow: inset 0 0 0 1px #0074D9;
+  -moz-box-shadow: inset 0 0 0 1px #0074D9;
+  box-shadow: inset 0 0 0 1px #0074D9;
 }
 .btn-border.btn-border-link:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0074D9;
 }
 .btn-border.btn-border-white {
   color: #000000;
@@ -6805,7 +6970,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:hover, .link:hover {
-  color: #42A8E2;
+  color: #0059A6;
 }
 
 .btn-icon-o {
@@ -6820,7 +6985,7 @@ a:hover, .link:hover {
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
   -webkit-border-radius: 100%;
   -khtml-border-radius: 100%;
@@ -6898,7 +7063,7 @@ a:hover, .link:hover {
   transition: color 250ms ease-in-out 0s;
 }
 .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
-  color: #42A8E2;
+  color: #0059A6;
 }
 
 .click {
@@ -6906,6 +7071,26 @@ a:hover, .link:hover {
 }
 .click.disabled {
   cursor: default;
+}
+
+.cmt-select-wrap .cmt-select .cmt-selected {
+  padding: 0.5em;
+}
+
+.cmt-switch .cmt-toggle-round + label {
+  height: 1.75em;
+  padding: 0.75em;
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round + label:before {
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round + label:after {
+  width: 2.75em;
+  border-radius: 0.75em;
+}
+.cmt-switch .cmt-toggle-round:checked + label:after {
+  margin-left: 2em;
 }
 
 /**********************************************************************
@@ -7051,7 +7236,7 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   cursor: pointer;
 }
 .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
@@ -7477,6 +7662,8 @@ input[type="text"], input[type="email"], input[type="password"], textarea, selec
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  padding: 0.5em;
+  line-height: 1.75em;
 }
 
 input[type="submit"], input[type="button"], button, .btn, .btn-icon {
@@ -7484,6 +7671,8 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  padding: 0.5em 0.75em;
+  line-height: 1.75em;
 }
 
 .frm-icon-element .cmti {
@@ -7496,6 +7685,7 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-bottom-left: 5px;
 }
 .frm-icon-element .icon {
+  padding: 0.65em 0.40em;
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -7504,6 +7694,13 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
   border-right: 1px solid #F2F2F2;
+}
+
+.form .cmt-select-wrap .cmt-selected {
+  padding: 0.5em;
+}
+.form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
+  margin-bottom: 0;
 }
 
 /**********************************************************************
@@ -7570,7 +7767,7 @@ Details: It defines the styles for header components as listed below:
     right: 0;
   }
   .header-basic #menu-main-mobile li {
-    box-shadow: 0 -4px 2px -5px #94CBEA;
+    box-shadow: 0 -4px 2px -5px #026eb7;
   }
   .header-basic #menu-main-mobile li a, .header-basic #menu-main-mobile li .link {
     background-color: #FFFFFF;
@@ -7584,10 +7781,10 @@ Details: It defines the styles for header components as listed below:
   }
   .header-basic #menu-main-mobile li a:hover, .header-basic #menu-main-mobile li .link:hover {
     background-color: #E6E7E8;
-    color: #3498DB;
+    color: #0074D9;
   }
   .header-basic #menu-main-mobile li:active a, .header-basic #menu-main-mobile li:active .link {
-    background-color: #94CBEA;
+    background-color: #026eb7;
     color: #FFFFFF;
   }
   .header-basic #mobile-actions {
@@ -7610,7 +7807,7 @@ Details: It defines the styles for header components as listed below:
     transition: all 250ms ease-in-out 0s;
   }
   .header-basic #mobile-actions .mobile-action:hover {
-    color: #3498DB;
+    color: #0074D9;
   }
 }
 @media only screen and (max-width: 480px) {
@@ -7689,7 +7886,7 @@ Details: It defines the styles for header components as listed below:
   height: 60px;
 }
 .header-private .header-logo #btn-sidebar-main {
-  color: #3498DB;
+  color: #0074D9;
   display: inline-block;
   width: 40px;
   height: 60px;
@@ -7703,7 +7900,7 @@ Details: It defines the styles for header components as listed below:
   text-align: center;
 }
 .header-private .header-logo #btn-sidebar-main:hover {
-  background-color: #42A8E2;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .header-private .header-logo .logo {
@@ -7882,7 +8079,7 @@ Details: It defines the styles for header components as listed below:
   color: #898989;
 }
 .block.block-tertiary {
-  background-color: #94CBEA;
+  background-color: #026eb7;
   color: #FFFFFF;
 }
 
@@ -7951,6 +8148,76 @@ Details: It defines the styles for header components as listed below:
 }
 .block-basic .block-content-wrap .block-footer-wrap .block-footer .block-footer-info + .block-footer-content {
   margin-top: 0.5rem;
+}
+
+/**********************************************************************
+Description: The Default Block with/without background image with default alignment.
+
+Details: Default Block to be used as page sections as listed below:
+
+1. Block - Overrides the breeze block and add more basic options to it.
+
+2. Default Block - The default block.
+
+Usage: Blocks can be used to divide page into multiple sections.
+***********************************************************************/
+/**********************************************************************
+Description: The Max Block with/without background image divides the page into various 
+independent sections.
+
+Details: Max Block to be used as page sections as listed below:
+
+1. Max Block - The barebone card class with minimum styles common for all the max blocks. The base 
+class specifies below listed options:
+1.1. Header - Text aligned at center with default padding with h1 font size.
+1.2. Data - Data wrapping boxes and cards.
+1.3. Footer - Same as Header.
+
+Usage: Max Blocks can be used to divide page into multiple sections.
+***********************************************************************/
+.block-max {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.block-max .block-content-wrap {
+  padding: 3em 0;
+  width: 100%;
+  height: 100%;
+}
+.block-max .block-content-wrap .block-header-wrap {
+  padding-bottom: 3em;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header {
+  text-align: center;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-title {
+  font-size: 2.67em;
+  -webkit-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  -moz-text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+  text-shadow: 1px 1px 5px 0 rgba(255, 255, 255, 0.6);
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-info {
+  font-size: 1.58em;
+}
+.block-max .block-content-wrap .block-header-wrap .block-header .block-header-content {
+  font-size: 1.08em;
+}
+.block-max .block-content-wrap .block-footer-wrap .block-footer {
+  text-align: center;
+}
+
+.block-max-area .block-content-wrap {
+  padding: 0;
+}
+.block-max-area .block-content-wrap .block-content {
+  width: 100%;
+  height: 100%;
+}
+.block-max-area .block-content-wrap .block-content .block-content-buffer {
+  width: 100%;
+  height: 100%;
 }
 
 .block .block-content-wrap {

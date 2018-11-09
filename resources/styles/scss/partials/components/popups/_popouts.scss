@@ -16,8 +16,8 @@
 			@include transit-all( $transit-eio, $transit-time-small );
 
 			&:hover {
-				background-color: $color-btn-h;
-				color: $color-btn-text-h;
+				background-color: $color-tertiary;
+				color: $color-tertiary-text;
 			}
 
 			&.active, &.active:hover {
