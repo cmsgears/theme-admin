@@ -1602,10 +1602,10 @@ Notes:
 .bkg-element-medium {
   display: block;
   position: relative;
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
   overflow: hidden;
 }
 .bkg-element-medium img {
@@ -1615,8 +1615,8 @@ Notes:
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 70%;
-  min-height: 70%;
+  min-width: 80%;
+  min-height: 80%;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1624,10 +1624,10 @@ Notes:
 .bkg-element-small {
   display: block;
   position: relative;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
   overflow: hidden;
 }
 .bkg-element-small img {
@@ -1637,8 +1637,8 @@ Notes:
   right: 0;
   bottom: 0;
   margin: auto;
-  min-width: 80%;
-  min-height: 80%;
+  min-width: 90%;
+  min-height: 90%;
   max-width: 100%;
   max-height: 100%;
 }
@@ -1731,11 +1731,11 @@ Notes:
   filter: blur(1px);
 }
 .blur.blur-small {
-  -webkit-filter: blur(3px);
-  -moz-filter: blur(3px);
-  -o-filter: blur(3px);
-  -ms-filter: blur(3px);
-  filter: blur(3px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .blur.blur-medium {
   -webkit-filter: blur(5px);
@@ -1752,11 +1752,11 @@ Notes:
   filter: blur(8px);
 }
 .blur.blur-xlarge {
-  -webkit-filter: blur(13px);
-  -moz-filter: blur(13px);
-  -o-filter: blur(13px);
-  -ms-filter: blur(13px);
-  filter: blur(13px);
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
 }
 
 .pattern.pattern-default {
@@ -2452,14 +2452,15 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0;
 }
 
+/*
 input[type="radio"] {
-  vertical-align: text-bottom;
+	vertical-align: text-bottom;
 }
 
 input[type="checkbox"] {
-  vertical-align: bottom;
+	vertical-align: bottom;
 }
-
+*/
 .wysiwyg {
   color: #898989;
 }
@@ -2932,6 +2933,21 @@ html, body {
 .layer.layer-5 {
   z-index: 50;
 }
+.layer.layer-6 {
+  z-index: 60;
+}
+.layer.layer-7 {
+  z-index: 70;
+}
+.layer.layer-8 {
+  z-index: 80;
+}
+.layer.layer-9 {
+  z-index: 90;
+}
+.layer.layer-10 {
+  z-index: 100;
+}
 
 .block {
   display: block !important;
@@ -3018,6 +3034,11 @@ html, body {
 .fluid {
   max-width: 100%;
   height: auto;
+}
+
+.fluid-both {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .warning, .error, .success, .info, .help-block {
@@ -4007,6 +4028,9 @@ html, body {
 }
 .text.text-micro {
   font-size: 0.5em;
+}
+.text.text-bottom {
+  vertical-align: text-bottom;
 }
 
 .line-height {
@@ -5939,6 +5963,56 @@ html, body {
   transform: scale(1, -1);
 }
 
+.hover-zoom-in.hover-zoom-in-small {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-small:hover {
+  transform: scale(1.05);
+}
+.hover-zoom-in.hover-zoom-in-medium {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-medium:hover {
+  transform: scale(1.1);
+}
+.hover-zoom-in.hover-zoom-in-large {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-large:hover {
+  transform: scale(1.25);
+}
+.hover-zoom-in.hover-zoom-in-xlarge {
+  transition: transform 420ms;
+}
+.hover-zoom-in.hover-zoom-in-xlarge:hover {
+  transform: scale(1.5);
+}
+
+.hover-zoom-out.hover-zoom-out-small {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-small:hover {
+  transform: scale(0.95);
+}
+.hover-zoom-out.hover-zoom-out-medium {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-medium:hover {
+  transform: scale(0.9);
+}
+.hover-zoom-out.hover-zoom-out-large {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-large:hover {
+  transform: scale(0.75);
+}
+.hover-zoom-out.hover-zoom-out-xlarge {
+  transition: transform 420ms;
+}
+.hover-zoom-out.hover-zoom-out-xlarge:hover {
+  transform: scale(0.5);
+}
+
 .hover-spin:hover {
   -webkit-animation: spin 2s infinite linear;
   animation: spin 2s infinite linear;
@@ -6446,6 +6520,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-native {
   position: relative;
   display: inline-block;
+  width: 100%;
 }
 .cmt-select-native select {
   -webkit-appearance: none;
@@ -6888,227 +6963,227 @@ Details: It defines the custom element styles as listed below:
 }
 
 .btn-border {
-  background: transparent;
+  background: transparent !important;
 }
 .btn-border.btn-border-primary {
-  color: #F9F9F9;
+  color: #F9F9F9 !important;
   -webkit-box-shadow: inset 0 0 0 1px #F9F9F9;
   -moz-box-shadow: inset 0 0 0 1px #F9F9F9;
   box-shadow: inset 0 0 0 1px #F9F9F9;
 }
 .btn-border.btn-border-primary:hover {
-  color: #898989;
-  background-color: #F9F9F9;
+  color: #898989 !important;
+  background-color: #F9F9F9 !important;
 }
 .btn-border.btn-border-secondary {
-  color: #F9F9F9;
+  color: #F9F9F9 !important;
   -webkit-box-shadow: inset 0 0 0 1px #F9F9F9;
   -moz-box-shadow: inset 0 0 0 1px #F9F9F9;
   box-shadow: inset 0 0 0 1px #F9F9F9;
 }
 .btn-border.btn-border-secondary:hover {
-  color: #898989;
-  background-color: #F9F9F9;
+  color: #898989 !important;
+  background-color: #F9F9F9 !important;
 }
 .btn-border.btn-border-tertiary {
-  color: #026eb7;
+  color: #026eb7 !important;
   -webkit-box-shadow: inset 0 0 0 1px #026eb7;
   -moz-box-shadow: inset 0 0 0 1px #026eb7;
   box-shadow: inset 0 0 0 1px #026eb7;
 }
 .btn-border.btn-border-tertiary:hover {
-  color: #FFFFFF;
-  background-color: #026eb7;
+  color: #FFFFFF !important;
+  background-color: #026eb7 !important;
 }
 .btn-border.btn-border-link {
-  color: #0074D9;
+  color: #0074D9 !important;
   -webkit-box-shadow: inset 0 0 0 1px #0074D9;
   -moz-box-shadow: inset 0 0 0 1px #0074D9;
   box-shadow: inset 0 0 0 1px #0074D9;
 }
 .btn-border.btn-border-link:hover {
-  color: #FFFFFF;
-  background-color: #0074D9;
+  color: #FFFFFF !important;
+  background-color: #0074D9 !important;
 }
 .btn-border.btn-border-white {
-  color: #000000;
+  color: #000000 !important;
   -webkit-box-shadow: inset 0 0 0 1px #000000;
   -moz-box-shadow: inset 0 0 0 1px #000000;
   box-shadow: inset 0 0 0 1px #000000;
 }
 .btn-border.btn-border-white:hover {
-  color: #FFFFFF;
-  background-color: #000000;
+  color: #FFFFFF !important;
+  background-color: #000000 !important;
 }
 .btn-border.btn-border-black {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
   -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
 }
 .btn-border.btn-border-black:hover {
-  color: #FFFFFF;
-  background-color: #FFFFFF;
+  color: #FFFFFF !important;
+  background-color: #FFFFFF !important;
 }
 .btn-border.btn-border-blue {
-  color: #0074D9;
+  color: #0074D9 !important;
   -webkit-box-shadow: inset 0 0 0 1px #0074D9;
   -moz-box-shadow: inset 0 0 0 1px #0074D9;
   box-shadow: inset 0 0 0 1px #0074D9;
 }
 .btn-border.btn-border-blue:hover {
-  color: #FFFFFF;
-  background-color: #0074D9;
+  color: #FFFFFF !important;
+  background-color: #0074D9 !important;
 }
 .btn-border.btn-border-purple {
-  color: #8946C4;
+  color: #8946C4 !important;
   -webkit-box-shadow: inset 0 0 0 1px #8946C4;
   -moz-box-shadow: inset 0 0 0 1px #8946C4;
   box-shadow: inset 0 0 0 1px #8946C4;
 }
 .btn-border.btn-border-purple:hover {
-  color: #FFFFFF;
-  background-color: #8946C4;
+  color: #FFFFFF !important;
+  background-color: #8946C4 !important;
 }
 .btn-border.btn-border-orange {
-  color: #FF851B;
+  color: #FF851B !important;
   -webkit-box-shadow: inset 0 0 0 1px #FF851B;
   -moz-box-shadow: inset 0 0 0 1px #FF851B;
   box-shadow: inset 0 0 0 1px #FF851B;
 }
 .btn-border.btn-border-orange:hover {
-  color: #FFFFFF;
-  background-color: #FF851B;
+  color: #FFFFFF !important;
+  background-color: #FF851B !important;
 }
 .btn-border.btn-border-yellow {
-  color: #FFDC00;
+  color: #FFDC00 !important;
   -webkit-box-shadow: inset 0 0 0 1px #FFDC00;
   -moz-box-shadow: inset 0 0 0 1px #FFDC00;
   box-shadow: inset 0 0 0 1px #FFDC00;
 }
 .btn-border.btn-border-yellow:hover {
-  color: #FFFFFF;
-  background-color: #FFDC00;
+  color: #FFFFFF !important;
+  background-color: #FFDC00 !important;
 }
 .btn-border.btn-border-red {
-  color: #FF4136;
+  color: #FF4136 !important;
   -webkit-box-shadow: inset 0 0 0 1px #FF4136;
   -moz-box-shadow: inset 0 0 0 1px #FF4136;
   box-shadow: inset 0 0 0 1px #FF4136;
 }
 .btn-border.btn-border-red:hover {
-  color: #FFFFFF;
-  background-color: #FF4136;
+  color: #FFFFFF !important;
+  background-color: #FF4136 !important;
 }
 .btn-border.btn-border-pink {
-  color: #E4287C;
+  color: #E4287C !important;
   -webkit-box-shadow: inset 0 0 0 1px #E4287C;
   -moz-box-shadow: inset 0 0 0 1px #E4287C;
   box-shadow: inset 0 0 0 1px #E4287C;
 }
 .btn-border.btn-border-pink:hover {
-  color: #FFFFFF;
-  background-color: #E4287C;
+  color: #FFFFFF !important;
+  background-color: #E4287C !important;
 }
 .btn-border.btn-border-magenta {
-  color: #B200B2;
+  color: #B200B2 !important;
   -webkit-box-shadow: inset 0 0 0 1px #B200B2;
   -moz-box-shadow: inset 0 0 0 1px #B200B2;
   box-shadow: inset 0 0 0 1px #B200B2;
 }
 .btn-border.btn-border-magenta:hover {
-  color: #FFFFFF;
-  background-color: #B200B2;
+  color: #FFFFFF !important;
+  background-color: #B200B2 !important;
 }
 .btn-border.btn-border-aqua {
-  color: #8AE2E3;
+  color: #8AE2E3 !important;
   -webkit-box-shadow: inset 0 0 0 1px #8AE2E3;
   -moz-box-shadow: inset 0 0 0 1px #8AE2E3;
   box-shadow: inset 0 0 0 1px #8AE2E3;
 }
 .btn-border.btn-border-aqua:hover {
-  color: #FFFFFF;
-  background-color: #8AE2E3;
+  color: #FFFFFF !important;
+  background-color: #8AE2E3 !important;
 }
 .btn-border.btn-border-green {
-  color: #7CAA2D;
+  color: #7CAA2D !important;
   -webkit-box-shadow: inset 0 0 0 1px #7CAA2D;
   -moz-box-shadow: inset 0 0 0 1px #7CAA2D;
   box-shadow: inset 0 0 0 1px #7CAA2D;
 }
 .btn-border.btn-border-green:hover {
-  color: #FFFFFF;
-  background-color: #7CAA2D;
+  color: #FFFFFF !important;
+  background-color: #7CAA2D !important;
 }
 .btn-border.btn-border-brown {
-  color: #8B4513;
+  color: #8B4513 !important;
   -webkit-box-shadow: inset 0 0 0 1px #8B4513;
   -moz-box-shadow: inset 0 0 0 1px #8B4513;
   box-shadow: inset 0 0 0 1px #8B4513;
 }
 .btn-border.btn-border-brown:hover {
-  color: #FFFFFF;
-  background-color: #8B4513;
+  color: #FFFFFF !important;
+  background-color: #8B4513 !important;
 }
 .btn-border.btn-border-golden {
-  color: #E9C011;
+  color: #E9C011 !important;
   -webkit-box-shadow: inset 0 0 0 1px #E9C011;
   -moz-box-shadow: inset 0 0 0 1px #E9C011;
   box-shadow: inset 0 0 0 1px #E9C011;
 }
 .btn-border.btn-border-golden:hover {
-  color: #FFFFFF;
-  background-color: #E9C011;
+  color: #FFFFFF !important;
+  background-color: #E9C011 !important;
 }
 .btn-border.btn-border-silver {
-  color: #E7E8E7;
+  color: #E7E8E7 !important;
   -webkit-box-shadow: inset 0 0 0 1px #E7E8E7;
   -moz-box-shadow: inset 0 0 0 1px #E7E8E7;
   box-shadow: inset 0 0 0 1px #E7E8E7;
 }
 .btn-border.btn-border-silver:hover {
-  color: #FFFFFF;
-  background-color: #E7E8E7;
+  color: #FFFFFF !important;
+  background-color: #E7E8E7 !important;
 }
 .btn-border.btn-border-maroon {
-  color: #542628;
+  color: #542628 !important;
   -webkit-box-shadow: inset 0 0 0 1px #542628;
   -moz-box-shadow: inset 0 0 0 1px #542628;
   box-shadow: inset 0 0 0 1px #542628;
 }
 .btn-border.btn-border-maroon:hover {
-  color: #FFFFFF;
-  background-color: #542628;
+  color: #FFFFFF !important;
+  background-color: #542628 !important;
 }
 .btn-border.btn-border-olive {
-  color: #A3A54C;
+  color: #A3A54C !important;
   -webkit-box-shadow: inset 0 0 0 1px #A3A54C;
   -moz-box-shadow: inset 0 0 0 1px #A3A54C;
   box-shadow: inset 0 0 0 1px #A3A54C;
 }
 .btn-border.btn-border-olive:hover {
-  color: #FFFFFF;
-  background-color: #A3A54C;
+  color: #FFFFFF !important;
+  background-color: #A3A54C !important;
 }
 .btn-border.btn-border-lime {
-  color: #D3F235;
+  color: #D3F235 !important;
   -webkit-box-shadow: inset 0 0 0 1px #D3F235;
   -moz-box-shadow: inset 0 0 0 1px #D3F235;
   box-shadow: inset 0 0 0 1px #D3F235;
 }
 .btn-border.btn-border-lime:hover {
-  color: #FFFFFF;
-  background-color: #D3F235;
+  color: #FFFFFF !important;
+  background-color: #D3F235 !important;
 }
 .btn-border.btn-border-navy {
-  color: #003653;
+  color: #003653 !important;
   -webkit-box-shadow: inset 0 0 0 1px #003653;
   -moz-box-shadow: inset 0 0 0 1px #003653;
   box-shadow: inset 0 0 0 1px #003653;
 }
 .btn-border.btn-border-navy:hover {
-  color: #FFFFFF;
-  background-color: #003653;
+  color: #FFFFFF !important;
+  background-color: #003653 !important;
 }
 
 a.btn, .link.btn {
@@ -10241,6 +10316,12 @@ Details: It defines the styles of card components as listed below:
 .card .card-content-wrap .card-header {
   position: relative;
 }
+.card .card-content-wrap .card-header .card-bkg {
+  z-index: 1;
+}
+.card .card-content-wrap .card-header > .texture {
+  z-index: 10;
+}
 .card .card-content-wrap .card-data {
   position: relative;
 }
@@ -10649,6 +10730,12 @@ Details: It defines the styles of box components as listed below:
 .box .box-content-wrap .box-header-wrap .box-header {
   position: relative;
   z-index: 20;
+}
+.box .box-content-wrap .box-header-wrap .box-header .box-bkg {
+  z-index: 1;
+}
+.box .box-content-wrap .box-header-wrap .box-header > .texture {
+  z-index: 10;
 }
 .box .box-content-wrap .box-data {
   position: relative;
@@ -11235,6 +11322,21 @@ Details: It defines the styles for header components as listed below:
   position: relative;
   z-index: 20;
 }
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-fixed {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-scroll {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-header .block-bkg-parallax {
+  z-index: 5;
+}
+.block .block-content-wrap .block-header-wrap .block-header > .texture {
+  z-index: 10;
+}
 .block .block-content-wrap .block-content {
   position: relative;
 }
@@ -11481,6 +11583,7 @@ Full - Full pagination having both info and pagination links.
   list-style: none;
 }
 .pagination li span, .pagination li a, .pagination .page-link span, .pagination .page-link a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -12583,6 +12686,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   -webkit-box-shadow: inset 0 0 0 1px #FFFFFF;
   -moz-box-shadow: inset 0 0 0 1px #FFFFFF;
   box-shadow: inset 0 0 0 1px #FFFFFF;
+  border: 1px solid #D1D2D3;
 }
 
 .ui-datepicker-header {
@@ -12596,7 +12700,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-title {
-  padding: 0.5em;
+  padding: 1em 0;
 }
 .ui-datepicker-title .ui-datepicker-month, .ui-datepicker-title .ui-datepicker-year {
   width: 72px;
