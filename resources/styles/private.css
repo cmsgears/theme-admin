@@ -2743,16 +2743,16 @@ html, body {
   height: 75%;
 }
 .height.height-default {
-  width: 64px;
+  height: 64px;
 }
 .height.height-small {
-  width: 128px;
+  height: 128px;
 }
 .height.height-medium {
-  width: 256px;
+  height: 256px;
 }
 .height.height-large {
-  width: 512px;
+  height: 512px;
 }
 
 /**
@@ -6409,7 +6409,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-wrap .cmt-select .cmt-selected {
   cursor: pointer;
   position: relative;
-  z-index: 100000;
+  z-index: 99999;
   width: 100%;
   padding: 0.30em;
   background-color: #F2F2F2;
@@ -6566,7 +6566,7 @@ by showing good looking icons instead of browser dependentent graphics. These ar
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: top;
+  vertical-align: middle;
 }
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
@@ -8976,6 +8976,12 @@ Details: It defines the menu components as listed below:
   width: 100%;
   text-align: center;
 }
+.vnav.vnav-left li a, .vnav.vnav-left li .link {
+  text-align: left;
+}
+.vnav.vnav-right li a, .vnav.vnav-right li .link {
+  text-align: right;
+}
 
 .nav-table {
   display: table;
@@ -9917,11 +9923,19 @@ Details: It defines the styles for popup components as listed below:
 
 .popup-modal {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 999999999;
+  overflow-y: auto;
+}
+.popup-modal .popup-screen, .popup-modal .popup-screen-listener {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 /**********************************************************************
@@ -10134,6 +10148,11 @@ Details: It defines the styles of cmt slider as listed below:
   top: 0px;
   left: 0px;
   overflow: hidden;
+}
+.slider .slider-slides-wrap .slider-slides .wrap-slide-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 .slider .slider-control {
   cursor: pointer;

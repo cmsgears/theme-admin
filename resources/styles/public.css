@@ -2743,16 +2743,16 @@ html, body {
   height: 75%;
 }
 .height.height-default {
-  width: 64px;
+  height: 64px;
 }
 .height.height-small {
-  width: 128px;
+  height: 128px;
 }
 .height.height-medium {
-  width: 256px;
+  height: 256px;
 }
 .height.height-large {
-  width: 512px;
+  height: 512px;
 }
 
 /**
@@ -6264,7 +6264,7 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 .cmt-select-wrap .cmt-select .cmt-selected {
   cursor: pointer;
   position: relative;
-  z-index: 100000;
+  z-index: 99999;
   width: 100%;
   padding: 0.30em;
   background-color: #F2F2F2;
@@ -6421,7 +6421,7 @@ by showing good looking icons instead of browser dependentent graphics. These ar
 of JS and purely css solutions.
 ***********************************************************************/
 .cmt-choice span, .cmt-choice a {
-  vertical-align: top;
+  vertical-align: middle;
 }
 .cmt-choice input[type=checkbox],
 .cmt-choice input[type=radio] {
