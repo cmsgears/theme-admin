@@ -2344,12 +2344,6 @@ textarea {
 pre {
   white-space: pre;
   /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 2.1 and 3 */
-  word-wrap: break-word;
-  /* IE */
 }
 
 td img {
@@ -8298,14 +8292,22 @@ Usage: Max Blocks can be used to divide page into multiple sections.
   text-align: center;
 }
 
-.block-max-area .block-content-wrap {
+.block-max-content .block-content-wrap {
   padding: 0;
 }
-.block-max-area .block-content-wrap .block-content {
+.block-max-content .block-content-wrap .block-content {
   width: 100%;
   height: 100%;
 }
-.block-max-area .block-content-wrap .block-content .block-content-buffer {
+
+.block-max-buffer .block-content-wrap {
+  padding: 0;
+}
+.block-max-buffer .block-content-wrap .block-content {
+  width: 100%;
+  height: 100%;
+}
+.block-max-buffer .block-content-wrap .block-content .block-content-buffer {
   width: 100%;
   height: 100%;
 }
@@ -8347,6 +8349,19 @@ Usage: Max Blocks can be used to divide page into multiple sections.
   #block-public .block-content {
     width: 420px;
   }
+}
+
+.mce-tinymce {
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+  -moz-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white;
+}
+.mce-tinymce .mce-container {
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+  -moz-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white;
 }
 
 /*# sourceMappingURL=public.css.map */

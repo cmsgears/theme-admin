@@ -2344,12 +2344,6 @@ textarea {
 pre {
   white-space: pre;
   /* CSS2 */
-  white-space: pre-wrap;
-  /* CSS 2.1 */
-  white-space: pre-line;
-  /* CSS 2.1 and 3 */
-  word-wrap: break-word;
-  /* IE */
 }
 
 td img {
@@ -10484,7 +10478,8 @@ Details: Default Card to be used to show data as listed below:
 Usage: Cards can be used to to show data of models.
 ***********************************************************************/
 /**********************************************************************
-Description: The Info Card with icon, avatar and text aligned at center to display text content.
+Description: The Info Card with icon, avatar, title and text aligned at center to display 
+text content with/without icon/avatar. It also provide top level classes to decorate the icon/avatar.
 
 Details: Info Card to be used as content card as listed below:
 
@@ -10499,7 +10494,7 @@ class specifies below listed options:
 title, description and summary.
 2.1. Header Icon - The icon/avatar will be displayed at center of header.
 2.2. Tiny Icon xxx - The classes to specify different sized icons.
-2.3. Color xxx - The classes to specify the icon color.
+2.3. Color Icon xxx - The classes to specify the icon color.
 
 3. Info Icon Box Card - Info icon card with icon having 1px square or rectangular border.
 3.1. Fat Border - Fat 5px border.
@@ -10602,10 +10597,10 @@ background banner of Block.
 .card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
   color: #F9F9F9;
 }
-.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+.card-info-icon.card-info-icon-secondary .card-content-wrap .card-header .card-header-icon .icon {
   color: #F9F9F9;
 }
-.card-info-icon.card-info-icon-primary .card-content-wrap .card-header .card-header-icon .icon {
+.card-info-icon.card-info-icon-tertiary .card-content-wrap .card-header .card-header-icon .icon {
   color: #026eb7;
 }
 @media only screen and (max-width: 1024px) {
@@ -11530,14 +11525,22 @@ Usage: Max Blocks can be used to divide page into multiple sections.
   text-align: center;
 }
 
-.block-max-area .block-content-wrap {
+.block-max-content .block-content-wrap {
   padding: 0;
 }
-.block-max-area .block-content-wrap .block-content {
+.block-max-content .block-content-wrap .block-content {
   width: 100%;
   height: 100%;
 }
-.block-max-area .block-content-wrap .block-content .block-content-buffer {
+
+.block-max-buffer .block-content-wrap {
+  padding: 0;
+}
+.block-max-buffer .block-content-wrap .block-content {
+  width: 100%;
+  height: 100%;
+}
+.block-max-buffer .block-content-wrap .block-content .block-content-buffer {
   width: 100%;
   height: 100%;
 }
@@ -12844,6 +12847,19 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 .tabs-jquery .ui-tabs-active .btn {
   background-color: #FFFFFF !important;
   color: #3498DB;
+}
+
+.mce-tinymce {
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+  -moz-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white;
+}
+.mce-tinymce .mce-container {
+  border: none;
+  -webkit-box-shadow: 0 0 0 0 white;
+  -moz-box-shadow: 0 0 0 0 white;
+  box-shadow: 0 0 0 0 white;
 }
 
 /*# sourceMappingURL=private.css.map */
