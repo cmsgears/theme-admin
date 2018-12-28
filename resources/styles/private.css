@@ -1579,6 +1579,12 @@ Notes:
   background-size: cover;
 }
 
+.bkg-element-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
 .bkg-element {
   display: block;
   position: relative;
@@ -12850,7 +12856,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .mce-tinymce {
-  border: none;
+  border: 1px solid #D1D2D3;
   -webkit-box-shadow: 0 0 0 0 white;
   -moz-box-shadow: 0 0 0 0 white;
   box-shadow: 0 0 0 0 white;
