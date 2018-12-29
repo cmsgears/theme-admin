@@ -39,8 +39,8 @@
 
 	.box-content-wysiwyg {
 
-		.cleditorMain {
-			border: none;
+		.cleditorMain, .mce-tinymce {
+			border: none !important;
 		}
 	}
 }

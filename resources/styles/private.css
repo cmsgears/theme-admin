@@ -11115,8 +11115,8 @@ Usage: Boxes can be used to to show data of models.
   max-width: 240px;
   margin: 0 auto;
 }
-.box-crud .box-content-wysiwyg .cleditorMain {
-  border: none;
+.box-crud .box-content-wysiwyg .cleditorMain, .box-crud .box-content-wysiwyg .mce-tinymce {
+  border: none !important;
 }
 
 .box-form .frm-field {
