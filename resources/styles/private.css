@@ -4124,6 +4124,17 @@ p, span, em, div, a {
 .reader ul ul, .reader ul ol {
   margin-left: 2em;
 }
+.reader p {
+  min-height: 1em;
+}
+.reader .wrap-editor-image {
+  margin: 1em 0;
+  text-align: center;
+}
+.reader .wrap-editor-image .image-caption {
+  text-align: center;
+  margin-top: 0.5em;
+}
 
 .cmti, .fa {
   vertical-align: middle;
@@ -4133,6 +4144,8 @@ code, pre {
   font-family: "Courier New", Courier, monospace;
   background-color: #363636;
   color: #FFFFFF;
+  overflow-x: auto;
+  padding: 1em;
 }
 
 .normal {
