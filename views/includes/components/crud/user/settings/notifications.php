@@ -7,7 +7,7 @@ use cmsgears\core\common\config\CoreGlobal;
 	<div class="data-crud-form">
 		<div class="row">
 			<div class="col col2">
-				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="user/toggle-meta?key=receive_mail&ctype=<?= CoreGlobal::SETTINGS_NOTIFICATION ?>" cmt-keep>
+				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="admin/toggle-meta?key=receive_mail&ctype=<?= CoreGlobal::SETTINGS_NOTIFICATION ?>" cmt-keep>
 					<span class="cmt-switch cmt-checkbox">
 						<input id="notify_receive_mail" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for="notify_receive_mail"></label>

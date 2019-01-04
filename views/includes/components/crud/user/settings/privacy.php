@@ -7,7 +7,7 @@ use cmsgears\core\common\config\CoreGlobal;
 	<div class="data-crud-form">
 		<div class="row">
 			<div class="col col2">
-				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="user/toggle-meta?key=show_email&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
+				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="admin/toggle-meta?key=show_email&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
 					<span class="cmt-switch cmt-checkbox">
 						<input id="privacy_show_email" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for="privacy_show_email"></label>
@@ -17,7 +17,7 @@ use cmsgears\core\common\config\CoreGlobal;
 				</div>
 			</div>
 			<div class="col col2">
-				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="user/toggle-meta?key=show_mobile&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
+				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="admin/toggle-meta?key=show_mobile&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
 					<span class="cmt-switch cmt-checkbox">
 						<input id="privacy_show_mobile" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for="privacy_show_mobile"></label>
@@ -30,7 +30,7 @@ use cmsgears\core\common\config\CoreGlobal;
 		<div class="filler-height filler-height-small"></div>
 		<div class="row">
 			<div class="col col2">
-				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="user/toggle-meta?key=show_address&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
+				<div class="frm-field row" cmt-app="core" cmt-controller="user" cmt-action="settings" action="admin/toggle-meta?key=show_address&ctype=<?= CoreGlobal::SETTINGS_PRIVACY ?>" cmt-keep>
 					<span class="cmt-switch cmt-checkbox">
 						<input id="privacy_show_address" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
 						<label for="privacy_show_address"></label>

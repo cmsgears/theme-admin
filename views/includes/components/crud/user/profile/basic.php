@@ -7,14 +7,14 @@ use cmsgears\files\widgets\AvatarUploader;
 ?>
 <div class="data-crud">
 	<div class="data-crud-title">Basic</div>
-	<form class="form" cmt-app="core" cmt-controller="user" cmt-action="profile" action="user/profile" cmt-keep>
+	<form class="form" cmt-app="core" cmt-controller="user" cmt-action="profile" action="admin/profile" cmt-keep>
 		<?php include "$themeIncludes/components/spinners/form.php"; ?>
 		<div class="data-crud-form">
 			<div class="row">
 				<div class="colf colf15x7">
 					<?= AvatarUploader::widget([
 						'model' => $avatar,
-						'clearAction' => true, 'clearActionUrl' => "user/clear-avatar?id=$model->id",
+						'clearAction' => true, 'clearActionUrl' => "admin/clear-avatar?id=$model->id",
 						'cmtController' => 'user', 'cmtClearAction' => 'clearAvatar',
 						'info' => true, 'fields' => false, 'dragger' => true
 					])?>

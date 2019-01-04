@@ -4,7 +4,7 @@ use yii\helpers\Html;
 ?>
 <div class="data-crud">
 	<div class="data-crud-title">Address</div>
-	<form class="cmt-location form" cmt-app="core" cmt-controller="user" cmt-action="address" action="user/address?ctype=primary" cmt-keep>
+	<form class="cmt-location form" cmt-app="core" cmt-controller="user" cmt-action="address" action="admin/address?ctype=primary" cmt-keep>
 		<?php include "$themeIncludes/components/spinners/form.php"; ?>
 		<div class="data-crud-form row max-cols-100">
 			<div class="row">
