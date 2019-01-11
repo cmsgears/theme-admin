@@ -7,6 +7,7 @@ $user		= Yii::$app->user->getIdentity();
 
 // Sidebar
 $sidebar	= $this->context->sidebar;
+
 $parent 	= isset( $sidebar[ 'parent' ] ) ? $sidebar[ 'parent' ] : '';
 $child 		= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 ?>

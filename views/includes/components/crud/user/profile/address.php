@@ -24,17 +24,17 @@ use yii\helpers\Html;
 				</div>
 			</div>
 			<div class="row">
-				<div class="cmt-location-countries col col3">
+				<div class="cmt-location-countries col col3" cmt-app="core" cmt-controller="province" cmt-action="optionsList" action="location/province-options" cmt-keep cmt-custom>
 					<div class="form-group">
 						<label>Country *</label>
-						<?= Html::dropDownList( 'Address[countryId]', $address->countryId, $countryMap, [ 'class' => 'cmt-location-country element-60 cmt-select' ] ) ?>
+						<?= Html::dropDownList( 'Address[countryId]', $address->countryId, $countryMap, [ 'class' => 'cmt-location-country cmt-select cmt-change element-60' ] ) ?>
 						<span  class="error" cmt-error="Address[countryId]"></span>
 					</div>
 				</div>
 				<div class="cmt-location-provinces col col3" cmt-app="core" cmt-controller="region" cmt-action="optionsList" action="location/region-options" cmt-keep cmt-custom>
 					<div class="form-group">
 						<label><?= Yii::$app->core->provinceLabel ?> *</label>
-						<?= Html::dropDownList( 'Address[provinceId]', $address->provinceId, $provinceMap, [ 'class' => 'cmt-location-province element-60 cmt-select cmt-change' ] ) ?>
+						<?= Html::dropDownList( 'Address[provinceId]', $address->provinceId, $provinceMap, [ 'class' => 'cmt-location-province cmt-select cmt-change element-60' ] ) ?>
 						<span  class="error" cmt-error="Address[provinceId]"></span>
 						<span class="hidden cmt-click"></span>
 					</div>
@@ -42,7 +42,7 @@ use yii\helpers\Html;
 				<div class="cmt-location-regions col col3">
 					<div class="form-group">
 						<label><?= Yii::$app->core->regionLabel ?></label>
-						<?= Html::dropDownList( 'Address[regionId]', $address->regionId, $regionMap, [ 'class' => 'cmt-location-region element-60 cmt-select' ] ) ?>
+						<?= Html::dropDownList( 'Address[regionId]', $address->regionId, $regionMap, [ 'class' => 'cmt-location-region cmt-select cmt-change element-60' ] ) ?>
 						<span  class="error" cmt-error="Address[regionId]"></span>
 					</div>
 				</div>
