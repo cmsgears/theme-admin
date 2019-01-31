@@ -2,7 +2,8 @@
 // Yii Imports
 use yii\helpers\Html;
 
-$model = isset( $parent ) ? $parent : $gallery;
+$model	= isset( $parent ) ? $parent : $gallery;
+$name	= isset( $parent ) ? ( isset( $parent->name ) ? $parent->name : $parent->title ) : null;
 
 $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$gallery->id" : "$apixBase/update?id=$gallery->id&cid=$gallery->id";
 ?>
@@ -10,7 +11,7 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 	<div class="data-crud-wrap-main colf colf15x11">
 		<div class="data-crud data-crud-basic">
 			<div class="data-crud-title">
-				Manage Gallery <?= isset( $parent ) ? "($parent->name)" : null ?>
+				Manage Gallery <?= isset( $name ) ? "($name)" : null ?>
 				<span class="data-crud-title-actions">
 					<span class="action">
 						<?= Html::a( '<i class="btn-icon cmti cmti-return text text-micro" title="Back"></i>', $returnUrl ) ?>

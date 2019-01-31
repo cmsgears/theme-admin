@@ -10704,6 +10704,7 @@ background banner of Block.
 .card-gallery-item .card-content-wrap {
   width: 180px;
   height: 210px;
+  overflow: hidden;
   -webkit-box-shadow: 0px 0px 5px 1px #7F7F7F;
   -moz-box-shadow: 0px 0px 5px 1px #7F7F7F;
   box-shadow: 0px 0px 5px 1px #7F7F7F;
