@@ -42,7 +42,7 @@ use yii\helpers\Html;
 				<div class="cmt-location-regions col col3">
 					<div class="form-group">
 						<label><?= Yii::$app->core->regionLabel ?></label>
-						<?= Html::dropDownList( 'Address[regionId]', $address->regionId, $regionMap, [ 'class' => 'cmt-location-region cmt-select cmt-change element-60' ] ) ?>
+						<?= Html::dropDownList( 'Address[regionId]', $address->regionId, $regionMap, [ 'class' => 'cmt-location-region cmt-select element-60' ] ) ?>
 						<span  class="error" cmt-error="Address[regionId]"></span>
 					</div>
 				</div>

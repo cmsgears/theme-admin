@@ -2,17 +2,16 @@
 // Yii Imports
 use yii\helpers\Url;
 
-$core		= Yii::$app->core;
-$user		= Yii::$app->user->getIdentity();
+$core	= Yii::$app->core;
+$user	= Yii::$app->core->getUser();
 
 // Sidebar
-$sidebar	= $this->context->sidebar;
+$sidebar = $this->context->sidebar;
 
-$parent 	= isset( $sidebar[ 'parent' ] ) ? $sidebar[ 'parent' ] : '';
-$child 		= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
+$parent = isset( $sidebar[ 'parent' ] ) ? $sidebar[ 'parent' ] : '';
+$child 	= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 ?>
 <div class="collapsible-menu collapsible-menu-admin">
-
 	<div id="sidebar-dasboard" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-dashboard' ) == 0 ) echo 'active'; ?>">
 		<span class="marker"></span>
 		<div class="tab-header">

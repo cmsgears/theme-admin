@@ -11,8 +11,8 @@ use cmsgears\core\common\utilities\CodeGenUtil;
 
 $menuItems = [
 	[ 'label' => 'Dashboard', 'url' => [ '/dashboard' ] ],
-	[ 'label' => 'Profile', 'url' => [ '/core/user/profile' ] ],
-	[ 'label' => 'Settings', 'url' => [ '/core/user/settings' ] ],
+	[ 'label' => 'Profile', 'url' => [ '/core/admin/profile' ] ],
+	[ 'label' => 'Settings', 'url' => [ '/core/admin/settings' ] ],
 	[ 'label' => 'Logout', 'url' => [ '/logout' ] ]
 ];
 

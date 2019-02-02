@@ -254,11 +254,11 @@ function initSidebar() {
 
 		if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-micro' ) ) {
 
-			setUserConfig( 'microSidebar', 0 );
+			setAdminConfig( 'microSidebar', 0 );
 		}
 		else {
 
-			setUserConfig( 'microSidebar', 1 );
+			setAdminConfig( 'microSidebar', 1 );
 		}
 
 		jQuery( '#sidebar-main' ).toggleClass( 'sidebar-micro' );
