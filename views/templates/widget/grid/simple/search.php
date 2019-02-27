@@ -2,8 +2,8 @@
 $searchColumns	= $widget->searchColumns;
 
 // Searching
-$search			= Yii::$app->request->getQueryParam( 'search' );
-$keywords		= Yii::$app->request->getQueryParam( 'keywords' );
+$search		= Yii::$app->request->getQueryParam( 'search' );
+$keywords	= Yii::$app->request->getQueryParam( 'keywords' );
 ?>
 
 <div class="grid-search-wrap">
@@ -21,7 +21,7 @@ $keywords		= Yii::$app->request->getQueryParam( 'keywords' );
 					<?php } ?>
 				<?php } ?>
 			</select>
-			<span class="trigger-search btn btn-small">Search</span>
+			<span class="grid-search-trigger btn btn-small">Search</span>
 		</span>
 	</span>
 </div>

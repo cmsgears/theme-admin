@@ -3,7 +3,7 @@
 
 	&.count-sidebar-header {
 		position: absolute;
-		top: 6px;
+		top: 1em;
 		right: 20px;
 		padding: $size-small;
 		line-height: 1em !important;
@@ -26,26 +26,26 @@
 	background-color: $color-tertiary-d;
 	color: $color-tertiary-text-d;
 	border-radius: 5px;
-	font-size: $font-size-9;
+	font-size: $font-size-tiny;
 	height: 1.5em;
 	padding: 0 0.25em;
 	line-height: 1.5em;
 	top: 1em;
 }
 
-// Disabled
-.disabled {
-	background-color: #C5C5C5 !important;
-	color: $color-white !important;
-
-	&:hover {
-		background-color: #C5C5C5 !important;
-		color: $color-white !important;
-	}
-}
-
 #pre-loader-main {
 	z-index: 1000;
 	position: absolute;
 	width: 100%;
+}
+
+.rp-map {
+
+	.col4 {
+		margin-bottom: 1em;
+
+		input[type=checkbox] {
+			margin-right: 0.5em;
+		}
+	}
 }

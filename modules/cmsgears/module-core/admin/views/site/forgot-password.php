@@ -11,8 +11,8 @@ $this->title 	= 'Forgot Password | ' . $coreProperties->getSiteTitle();
 ?>
 
 <?php BasicBlock::begin([
-	'options' => [ 'id' => 'block-public', 'class' => 'block block-basic' ],
-	'contentWrapClass' => 'align align-center', 'content' => true
+	'options' => [ 'id' => 'block-public', 'class' => 'cmt-block block block-basic' ],
+	'content' => true
 ]);?>
 
 	<h2 class="align align-center">Forgot Password</h2>

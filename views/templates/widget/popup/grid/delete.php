@@ -36,7 +36,7 @@ $url		= $data[ 'url' ];
 					<div class="filler-height"></div>
 					<p class="align align-center">Are you sure you want to delete the selected <?= $model ?> ?</p>
 					<div class="filler-height filler-height-medium"></div>
-					<div class="align align-center"><input class="element-medium" type="submit" value="Delete" /></div>
+					<div class="align align-center"><input class="frm-element-medium" type="submit" value="Delete" /></div>
 				</form>
 			</div>
 		</div>

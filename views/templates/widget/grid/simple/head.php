@@ -2,7 +2,8 @@
 // Yii Imports
 use yii\helpers\Url;
 
-$title	= $widget->title;
+$title			= $widget->title;
+$reportColumns	= $widget->reportColumns;
 ?>
 <div class="grid-head-wrap row">
 	<div class="colf colf12x6">
@@ -17,6 +18,8 @@ $title	= $widget->title;
 	<div class="colf colf12x6 grid-head-options">
 		<?= $sortHtml ?>
 		<?= $filtersHtml ?>
-		<i class="trigger-report-toggle btn-icon cmti cmti-chart-column <?= isset( $report ) ? 'active' : null ?>" title="Generate Report"></i>
+		<?php if( count( $reportColumns ) > 0 ) { ?>
+			<i class="trigger-report-toggle btn-icon cmti cmti-chart-column <?= isset( $report ) ? 'active' : null ?>" title="Generate Report"></i>
+		<?php } ?>
 	</div>
 </div>

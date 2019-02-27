@@ -24,18 +24,19 @@
 			padding-left: 40px;
             padding-right: 8px;
             cursor: pointer;
-			height: 2em;
+			height: 3em;
 
             .tab-icon {
                 position: absolute;
                 top: 0;
                 left: 0;
-                padding: 0.5em 10px;
+                padding: 1em 10px;
                 color: $color-secondary-text-d;
             }
 
             .tab-title {
                 color: $color-secondary-text-d;
+				line-height: 2em;
             }
         }
 

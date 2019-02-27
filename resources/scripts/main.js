@@ -5,6 +5,8 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
+	
+	initDatePickers();
 
 	initPopups();
 
@@ -13,12 +15,8 @@ jQuery( document ).ready( function() {
 	initSidebarTabs();
 
 	initSettings();
-
-	initTemplates();
-
-	initAutoHide();
-
-	initWindowResize();
+	
+	initGallery();
 });
 
 // == Pre Loaders =========================
@@ -35,13 +33,23 @@ function initPreloaders() {
 
 function initCmgTools() {
 
-	// Page Blocks
-	jQuery( '.block' ).cmtBlock({
+	// Blocks
+	jQuery( '.cmt-block' ).cmtBlock({
 		// Generic
-		fullHeight: true,
+		halfHeight: true,
+		heightAuto: true,
 		// Block Specific - Ignores generic
 		blocks: {
-			'block-public': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
+			'block-auto': { autoHeight: true, heightAuto: true },
+			'block-half': { halfHeight: true },
+			'block-qtf': { qtfHeight: true },
+			'block-full': { fullHeight: true },
+			'block-half-auto': { halfHeight: true, heightAuto: true },
+			'block-qtf-auto': { qtfHeight: true, heightAuto: true },
+			'block-full-auto': { fullHeight: true, heightAuto: true },
+			'block-half-mauto': { halfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-qtf-mauto': { qtfHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 },
+			'block-full-mauto': { fullHeight: true, heightAutoMobile: true, heightAutoMobileWidth: 1024 }
 		}
 	});
 
@@ -56,8 +64,11 @@ function initCmgTools() {
 	jQuery( '.cmt-select-c' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', copyOptionClass: true } );
 	jQuery( '.cmt-select-s' ).cmtSelect( { iconHtml: '<span class="fa fa-caret-down"></span>', wrapperClass: 'element-small' } );
 
-	// Custom Checkbox
+	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
+	
+	// Field Groups
+	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
 	// File Uploader
 	jQuery( '.file-uploader' ).cmtFileUploader();
@@ -71,11 +82,11 @@ function initCmgTools() {
 	// Auto Fillers
 	jQuery( '.auto-fill' ).cmtAutoFill();
 
+	// Tabs
+	jQuery( '.tabs,.box-crud-tabs-v' ).cmtTabs();
+
 	// Form with Info
 	jQuery( '.box-form' ).cmtFormInfo();
-
-	// Tabs
-	jQuery( '.box-crud-tabs-v' ).cmtTabs();
 
 	// Grid
 	jQuery( '.grid-data' ).cmtGrid();
@@ -83,36 +94,83 @@ function initCmgTools() {
 	// Collapsible Menu
 	jQuery( '#sidebar-main' ).cmtCollapsibleMenu();
 
+	// Actions
+	jQuery( '.cmt-actions' ).cmtActions();
+
+	// Auto Hide
+	jQuery( '.cmt-auto-hide' ).cmtAutoHide();
+
 	// Icon Picker
-	jQuery( '.icon-picker' ).cmtIconPicker();
+	jQuery( '.cmt-icon-picker, .cmt-texture-picker' ).cmtIconPicker();
 }
 
 // == JS Listeners ========================
 
 function initListeners() {
 
-	// Datepicker
-	if( jQuery().datepicker ) {
+	// Custom scroller
+	jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
 
-		var start 	= jQuery( '.datepicker' ).attr( 'start' );
+	// Auto save checkbox action
+	jQuery( '.cmt-checkbox input' ).on( 'input', function() {
 
-		jQuery( '.datepicker' ).datepicker({
-			dateFormat: 'yy-mm-dd',
-			minDate: start
+		jQuery( this ).parent().find( '.cmt-click' ).click();
+	});
+	
+	if( jQuery( '#popout-settings-trigger' ).length == 1 ) {
+
+		jQuery( '#popout-settings-trigger' ).click( function() {
+
+			jQuery( '#popout-settings' ).slideToggle();
 		});
+
+		jQuery( '#popout-settings .popout-setting-core .cmt-click' ).trigger( 'click' );
 	}
+}
 
-	// Custom Scroller
-	if( jQuery().mCustomScrollbar ) {
+// == Datepickers =========================
 
-		jQuery( '.cscroller' ).mCustomScrollbar( { autoHideScrollbar: true } );
-	}
+function initDatePickers() {
 
-	// Profile tabs
-	if( jQuery().tabs ) {
+	// Datepicker
+	var datepickers = jQuery( '.datepicker' );
 
-		jQuery( '.tabs-default' ).tabs();
-	}
+	datepickers.each( function() {
+
+		var datepicker = jQuery( this );
+
+		var start	= datepicker.attr( 'ldata-start' );
+		var end		= datepicker.attr( 'ldata-end' );
+
+		if( null != start && null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: start,
+				maxDate: end
+			});
+		}
+		else if( null != start ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				minDate: start
+			});
+		}
+		else if( null != end ) {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd',
+				maxDate: end
+			});
+		}
+		else {
+
+			datepicker.datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+		}
+	});
 }
 
 // == Popups ==============================
@@ -128,7 +186,7 @@ function initPopups() {
 
 function bindPopups( trigger ) {
 
-	var selector	= trigger.attr( 'popup' );
+	var selector = trigger.attr( 'popup' );
 
 	showPopup( '#' + selector );
 
@@ -196,11 +254,11 @@ function initSidebar() {
 
 		if( jQuery( '#sidebar-main' ).hasClass( 'sidebar-micro' ) ) {
 
-			updateUserMeta( 'microSidebar', 0 );
+			setAdminConfig( 'microSidebar', 0 );
 		}
 		else {
 
-			updateUserMeta( 'microSidebar', 1 );
+			setAdminConfig( 'microSidebar', 1 );
 		}
 
 		jQuery( '#sidebar-main' ).toggleClass( 'sidebar-micro' );
@@ -255,13 +313,13 @@ function initSidebarTabs() {
 
 function initSettings() {
 
-	jQuery( '.box-settings .box-content-wrap' ).hide();
+	jQuery( '.box-settings .box-content-wrap .box-content' ).hide();
 
-	jQuery( '.box-settings .box-collapse-trigger' ).click( function() {
+	jQuery( '.box-settings .box-trigger-collapse' ).click( function() {
 
 		var parent		= jQuery( this ).closest( '.box-settings' );
-		var contentWrap = parent.find( '.box-content-wrap' );
-		var content		= contentWrap.find( '.box-content' );
+		var contentWrap = parent.find( '.box-content-wrap .box-content' );
+		var content		= contentWrap.find( '.box-content-data' );
 
 		if( contentWrap.is( ':visible' ) ) {
 
@@ -279,65 +337,29 @@ function initSettings() {
 	});
 }
 
-// == Templates ===========================
+function initGallery() {
 
-function initTemplates() {
+	var gallery = jQuery( '#data-crud-gallery' );
 
-	// Templates
-	var templateCheck = jQuery( '.template-file input[type=checkbox]' );
+	if( gallery.length == 1 ) {
 
-	if( templateCheck.length > 0 ) {
+		var form = gallery.find( '.form-gallery' );
 
-		var templateCheckParent	= templateCheck.closest( '#frm-template' );
+		gallery.find( '.data-crud-title .action-update' ).click( function() {
 
-		if( templateCheck.prop( 'checked' ) ) {
-
-			templateCheckParent.find( '.render-file' ).show();
-			templateCheckParent.find( '.render-content' ).hide();
-		}
-		else {
-
-			templateCheckParent.find( '.render-file' ).hide();
-			templateCheckParent.find( '.render-content' ).show();
-		}
-
-		templateCheck.click( function() {
-
-			if( templateCheck.prop( 'checked' ) ) {
-
-				templateCheckParent.find( '.render-file' ).fadeIn( 'slow' );
-				templateCheckParent.find( '.render-content' ).fadeOut( 'fast' );
-			}
-			else {
-
-				templateCheckParent.find( '.render-content' ).fadeIn( 'slow' );
-				templateCheckParent.find( '.render-file' ).fadeOut( 'fast' );
-			}
+			form.slideToggle();
 		});
+
+		var app		= cmt.api.root.getApplication( 'gallery' );
+		var service = app.getService( 'item' );
+
+		service.hiddenForm = false;
+
+		service.initAddForm( gallery );
 	}
 }
 
-// == Auto Hide ===========================
-
-function initAutoHide() {
-
-	hideElement( jQuery( '.popout-trigger' ), jQuery( '.popout' ) );
-}
-
-function hideElement( targetElement, hideElement ) {
-
-	jQuery( window ).click( function( e ) {
-
-	    if ( !targetElement.is( e.target ) && targetElement.has( e.target ).length === 0 ) {
-
-			jQuery( hideElement ).slideUp();
-
-	        targetElement.removeClass( 'active' );
-	    }
-	});
-}
-
-// == Window Resize =======================
+// == Window Resize, Scroll ===============
 
 function initWindowResize() {
 
@@ -349,7 +371,22 @@ function initWindowResize() {
 	});
 }
 
+function initWindowScroll() {
+
+	jQuery( window ).scroll( function() {
+
+		var scrolledY = jQuery( window ).scrollTop();
+
+		configScrollAt( scrolledY );
+	});
+}
+
 function resizeElements() {
 
 	// Resize elements on window resize
+}
+
+function configScrollAt() {
+
+	// Show hidden elements with animation effects
 }

@@ -1,10 +1,23 @@
 <?php
+/**
+ * This file is part of CMSGears Framework. Please view License file distributed
+ * with the source code for license details.
+ *
+ * @link https://www.cmsgears.org/
+ * @copyright Copyright (c) 2015 VulpineCode Technologies Pvt. Ltd.
+ */
+
 namespace themes\admin\assets;
 
 // Yii Imports
 use yii\web\AssetBundle;
 use yii\web\View;
 
+/**
+ * PrivateAssets registers the private assets required for private pages.
+ *
+ * @since 1.0.0
+ */
 class PrivateAssets extends AssetBundle {
 
 	// Variables ---------------------------------------------------
@@ -22,54 +35,58 @@ class PrivateAssets extends AssetBundle {
 	// Public -----------------
 
 	// Path Configuration
-	public $sourcePath	= '@themes/admin/resources';
+	public $sourcePath = '@themes/admin/resources';
 
 	// Load css
-	public $css     = [
+	public $css = [
 		'styles/private.css'
 	];
 
-	// Position to load css
+	// CSS Position
 	public $cssOptions = [
 		'position' => View::POS_HEAD
 	];
 
-	// Load Javascript
+	// Load JS
 	public $js = [
 		// vendor
 		// templates
 		'scripts/templates/public.js',
 		'scripts/templates/private.js',
-		// scripts
-		'scripts/main.js',
-		'scripts/search.js',
 		// apix
 		'scripts/apix/public.js',
 		'scripts/apix/private.js',
 		// apps
 		'scripts/apps/public.js',
 		'scripts/apps/private.js',
-		'scripts/apps/user.js',
-		'scripts/apps/location.js',
-		'scripts/apps/notification.js',
-		'scripts/apps/category.js'
+		'scripts/apps/core/services/user.js',
+		'scripts/apps/core/controllers/site.js',
+		'scripts/apps/core/controllers/main.js',
+		'scripts/apps/core/controllers/user.js',
+		'scripts/apps/core/controllers/admin.js',
+		// scripts
+		'scripts/main.js',
+		'scripts/search.js'
 	];
 
-	// Position to load Javascript
+	// JS Position
 	public $jsOptions = [
 		'position' => View::POS_END
 	];
 
-	// Define dependent Asset Loaders
+	// Dependent Assets
 	public $depends = [
-		'cmsgears\core\common\assets\Jquery',
-		'cmsgears\core\common\assets\JqueryUi',
-		'cmsgears\core\common\assets\JqueryMouseWheel',
-		'cmsgears\core\common\assets\MCustomScrollbar',
-		'cmsgears\core\common\assets\ImagesLoaded',
-		'cmsgears\core\common\assets\Handlebars',
-		'cmsgears\core\common\assets\CmgToolsJs',
-		'cmsgears\icons\assets\IconAssets'
+		'cmsgears\assets\jquery\Jquery',
+		'cmsgears\assets\jquery\JqueryUi',
+		'cmsgears\assets\jquery\JqueryMouseWheel',
+		'cmsgears\assets\components\MCustomScrollbar',
+		'cmsgears\assets\utilities\ImagesLoaded',
+		'cmsgears\assets\templates\Handlebars',
+		'cmsgears\assets\cmgtools\Velocity',
+		'cmsgears\icons\assets\IconAssets',
+		'themes\admin\assets\vapps\BaseAssets',
+		'themes\admin\assets\vapps\CoreAssets',
+		'themes\admin\assets\vapps\NotifyAssets'
 	];
 
 	// Protected --------------
