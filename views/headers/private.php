@@ -20,7 +20,8 @@ $user = Yii::$app->core->getUser();
 
 $notifyFlag	= $user->isPermitted( NotifyGlobal::PERM_NOTIFY_ADMIN );
 
-$themeIncludes	= Yii::getAlias( '@themes/admin/views/includes' );
+$breezeTemplates = Yii::getAlias( '@breeze/templates' );
+
 $userAvatar		= isset( $user->avatar ) ? $user->avatar : null;
 $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 'image' => 'avatar-user.png', 'class' => 'user-avatar' ] );
 ?>
@@ -34,19 +35,19 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 	<div class="colf colf15x11 header-menu popout-group popout-group-main">
 		<div class="popout-actions align align-right">
 			<?php if( $notifyFlag ) { ?>
-				<span cmt-app="notify" cmt-controller="notification" cmt-action="notificationData" action="notify/stats/stats">
+				<span cmt-app="notify" cmt-controller="notification" cmt-action="notificationData" action="notify/stats/stats?type=notification">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-notification" title="Notifications" ldata-target="#popout-notification">
 						<span class="cmti cmti-flag-o"></span>
 						<span class="count-header count-notification">0</span>
 					</span>
 				</span>
-				<span cmt-app="notify" cmt-controller="notification" cmt-action="reminderData" action="notify/stats/stats">
+				<span cmt-app="notify" cmt-controller="notification" cmt-action="reminderData" action="notify/stats/stats?type=reminder">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-reminder" title="Reminders" ldata-target="#popout-reminder">
 						<span class="cmti cmti-bell-o "></span>
 						<span class="count-header count-reminder">0</span>
 					</span>
 				</span>
-				<span cmt-app="notify" cmt-controller="notification" cmt-action="activityData" action="notify/stats/stats">
+				<span cmt-app="notify" cmt-controller="notification" cmt-action="activityData" action="notify/stats/stats?type=activity">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-activity" title="Activities" ldata-target="#popout-activity">
 						<span class="cmti cmti-sliders"></span>
 						<span class="count-header count-activity">0</span>
@@ -64,7 +65,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 					<div class="popout-content-wrap">
 						<div class="popout-content">
 							<ul>
-								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1" ></span></li>
+								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1"></span></li>
 							</ul>
 						</div>
 					</div>
@@ -73,7 +74,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 					<div class="popout-content-wrap">
 						<div class="popout-content">
 							<ul>
-								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1" ></span></li>
+								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1"></span></li>
 							</ul>
 						</div>
 					</div>
@@ -82,7 +83,7 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 					<div class="popout-content-wrap">
 						<div class="popout-content">
 							<ul>
-								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1" ></span></li>
+								<li class="align align-center"><span class="fa fa-spin cmti cmti-2x cmti-spinner-1"></span></li>
 							</ul>
 						</div>
 					</div>
@@ -102,4 +103,5 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 	</div>
 </header>
 
-<?php include "$themeIncludes/handlebars/header.php"; ?>
+<?php
+include "$breezeTemplates/handlebars/notify/admin.php";
