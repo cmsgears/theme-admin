@@ -27,50 +27,56 @@
 					<input name="File[changed]" class="change" type="hidden" />
 				</div>
 				<div class="file-fields">
-					<div class="row">
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Slide Title</label>
-								<input class="title" name="Slide[name]" placeholder="Title" type="text" />
-								<span  class="error" cmt-error="Slide[name]"></span>
-							</div>
-						</div>
-						<div class="colf colf15"></div>
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Slide Url</label>
-								<input name="Slide[url]" placeholder="Url" type="text" />
-								<span  class="error" cmt-error="Slide[url]"></span>
-								<input type="hidden" name="Slide[sliderId]" value="<?= $slider->id ?>" />
-							</div>
-						</div>
+					<div class="form-group">
+						<label>Slide Name</label>
+						<input name="Slide[name]" placeholder="Name" type="text" />
+						<span  class="error" cmt-error="Slide[name]"></span>
 					</div>
-					<div class="row">
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Image Caption</label>
-								<input class="caption" name="File[caption]" placeholder="Caption" type="text" />
-								<span  class="error" cmt-error="File[caption]"></span>
-							</div>
-						</div>
-						<div class="colf colf15"></div>
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Image Alt</label>
-								<input class="alt" name="File[altText]" placeholder="Alternative Text" type="text" />
-								<span  class="error" cmt-error="File[altText]"></span>
-							</div>
-						</div>
+					<div class="form-group">
+						<label>Slide Title</label>
+						<input name="Slide[title]" placeholder="Title" type="text" />
+						<span  class="error" cmt-error="Slide[title]"></span>
+					</div>
+					<div class="form-group">
+						<label>Slide Url</label>
+						<input name="Slide[url]" placeholder="Url" type="text" />
+						<span  class="error" cmt-error="Slide[url]"></span>
+						<input type="hidden" name="Slide[sliderId]" value="<?= $slider->id ?>" />
 					</div>
 					<div class="form-group">
 						<label>Slide Description</label>
-						<textarea class="desc" name="Slide[description]" placeholder="Description"></textarea>
+						<textarea name="Slide[description]" placeholder="Description"></textarea>
 						<span  class="error" cmt-error="Slide[description]"></span>
 					</div>
 					<div class="form-group">
 						<label>Slide content</label>
 						<textarea name="Slide[content]" placeholder="Content"></textarea>
 						<span  class="error" cmt-error="Slide[content]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Title</label>
+						<input class="title" name="File[title]" placeholder="Title" type="text" />
+						<span  class="error" cmt-error="File[title]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Caption</label>
+						<input class="caption" name="File[caption]" placeholder="Caption" type="text" />
+						<span  class="error" cmt-error="File[caption]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Alt</label>
+						<input class="alt" name="File[altText]" placeholder="Alternative Text" type="text" />
+						<span  class="error" cmt-error="File[altText]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Description</label>
+						<textarea class="desc" name="File[description]" placeholder="Description"></textarea>
+						<span  class="error" cmt-error="File[description]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Content</label>
+						<textarea class="content" name="File[content]" placeholder="Content"></textarea>
+						<span  class="error" cmt-error="File[content]"></span>
 					</div>
 				</div>
 				<div class="data-crud-message">
@@ -116,50 +122,56 @@
 					<input name="File[changed]" class="change" type="hidden" />
 				</div>
 				<div class="file-fields">
-					<div class="row">
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Slide Title</label>
-								<input class="title" name="Slide[name]" placeholder="Title" type="text" value="{{title}}" />
-								<span  class="error" cmt-error="Slide[name]"></span>
-							</div>
-						</div>
-						<div class="colf colf15"></div>
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Slide Url</label>
-								<input name="Slide[url]" placeholder="Url" type="text" value="{{link}}" />
-								<span  class="error" cmt-error="Slide[url]"></span>
-								<input type="hidden" name="Slide[sliderId]" value="<?= $slider->id ?>" />
-							</div>
-						</div>
+					<div class="form-group">
+						<label>Slide Name</label>
+						<input name="Slide[name]" placeholder="Name" type="text" value="{{title}}" />
+						<span  class="error" cmt-error="Slide[name]"></span>
 					</div>
-					<div class="row">
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Image Caption</label>
-								<input class="caption" name="File[caption]" placeholder="Caption" type="text" value="{{caption}}" />
-								<span  class="error" cmt-error="File[caption]"></span>
-							</div>
-						</div>
-						<div class="colf colf15"></div>
-						<div class="colf colf15x7">
-							<div class="form-group">
-								<label>Image Alt</label>
-								<input class="alt" name="File[altText]" placeholder="Alternative Text" type="text" value="{{altText}}" />
-								<span  class="error" cmt-error="File[altText]"></span>
-							</div>
-						</div>
+					<div class="form-group">
+						<label>Slide Title</label>
+						<input name="Slide[title]" placeholder="Title" type="text" value="{{stitle}}" />
+						<span  class="error" cmt-error="Slide[title]"></span>
+					</div>
+					<div class="form-group">
+						<label>Slide Url</label>
+						<input name="Slide[url]" placeholder="Url" type="text" value="{{link}}" />
+						<span  class="error" cmt-error="Slide[url]"></span>
+						<input type="hidden" name="Slide[sliderId]" value="<?= $slider->id ?>" />
 					</div>
 					<div class="form-group">
 						<label>Slide Description</label>
-						<textarea class="desc" name="Slide[description]" placeholder="Description">{{description}}</textarea>
+						<textarea name="Slide[description]" placeholder="Description">{{description}}</textarea>
 						<span  class="error" cmt-error="Slide[description]"></span>
 					</div>
 					<div class="form-group">
 						<label>Slide Content</label>
 						<textarea name="Slide[content]" placeholder="Content">{{content}}</textarea>
 						<span  class="error" cmt-error="Slide[content]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Title</label>
+						<input class="title" name="File[title]" placeholder="Title" type="text" value="{{ititle}}" />
+						<span  class="error" cmt-error="File[title]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Caption</label>
+						<input class="caption" name="File[caption]" placeholder="Caption" type="text" value="{{caption}}" />
+						<span  class="error" cmt-error="File[caption]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Alt</label>
+						<input class="alt" name="File[altText]" placeholder="Alternative Text" type="text" value="{{altText}}" />
+						<span  class="error" cmt-error="File[altText]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Description</label>
+						<textarea class="desc" name="File[description]" placeholder="Description">{{idescription}}</textarea>
+						<span  class="error" cmt-error="File[description]"></span>
+					</div>
+					<div class="form-group">
+						<label>Image Content</label>
+						<textarea class="content" name="File[content]" placeholder="Content">{{icontent}}</textarea>
+						<span  class="error" cmt-error="File[content]"></span>
 					</div>
 				</div>
 				<div class="data-crud-message">

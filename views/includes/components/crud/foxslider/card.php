@@ -70,7 +70,7 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 					<div class="cmt-gallery-item card card-gallery-item" data-id="<?= $slide->id ?>">
 						<div class="card-content-wrap">
 							<div class="cmt-gallery-item-header card-header row">
-								<div class="col col3x2 title align align-left" title="<?= $file->title ?>"><?= $file->title ?></div>
+								<div class="col col3x2 title align align-left" title="<?= $slide->name ?>"><?= $slide->name ?></div>
 								<div class="col col3 align align-right">
 									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
