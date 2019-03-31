@@ -60,7 +60,6 @@ class PrivateAssets extends AssetBundle {
 		'scripts/apps/public.js',
 		'scripts/apps/private.js',
 		'scripts/apps/core/services/user.js',
-		'scripts/apps/core/controllers/site.js',
 		'scripts/apps/core/controllers/main.js',
 		'scripts/apps/core/controllers/user.js',
 		'scripts/apps/core/controllers/admin.js',

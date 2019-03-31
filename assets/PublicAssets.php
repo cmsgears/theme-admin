@@ -58,7 +58,8 @@ class PublicAssets extends AssetBundle {
 		// apix
 		'scripts/apix/public.js',
 		// apps
-		'scripts/apps/public.js'
+		'scripts/apps/public.js',
+		'scripts/apps/core/controllers/site.js'
 	];
 
 	// JS Position
