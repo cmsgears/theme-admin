@@ -320,7 +320,7 @@ function initSettings() {
 		var parent		= jQuery( this ).closest( '.box-settings' );
 		var contentWrap = parent.find( '.box-content-wrap .box-content' ).first();
 
-		var nested	= contentWrap.find('.box-content-wrap .box-content' );
+		var nested = contentWrap.find('.box-content-wrap .box-content' );
 
 		content = contentWrap.find( '.box-content-data' ).not( nested );
 
