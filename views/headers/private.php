@@ -36,25 +36,25 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 		<div class="popout-actions align align-right">
 			<?php if( $notifyFlag ) { ?>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="notificationData" action="notify/stats/stats?type=notification">
-					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-notification" title="Notifications" ldata-target="#popout-notification">
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-notification" title="Notifications" data-target="#popout-notification">
 						<span class="cmti cmti-flag-o"></span>
 						<span class="count-header count-notification">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="reminderData" action="notify/stats/stats?type=reminder">
-					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-reminder" title="Reminders" ldata-target="#popout-reminder">
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-reminder" title="Reminders" data-target="#popout-reminder">
 						<span class="cmti cmti-bell-o "></span>
 						<span class="count-header count-reminder">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="activityData" action="notify/stats/stats?type=activity">
-					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-activity" title="Activities" ldata-target="#popout-activity">
+					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-activity" title="Activities" data-target="#popout-activity">
 						<span class="cmti cmti-sliders"></span>
 						<span class="count-header count-activity">0</span>
 					</span>
 				</span>
 			<?php } ?>
-			<span class="popout-trigger cmt-auto-hide wrap-user" popout="popout-user" ldata-target="#popout-user">
+			<span class="popout-trigger cmt-auto-hide wrap-user" popout="popout-user" data-target="#popout-user">
 				<?= $avatarThumb ?>
 				<span class="fa fa-caret-down"></span>
 			</span>
