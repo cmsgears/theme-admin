@@ -2714,6 +2714,9 @@ html, body {
 .width.width-80 {
   width: 80% !important;
 }
+.width.width-90 {
+  width: 90% !important;
+}
 .width.width-100 {
   width: 100% !important;
 }
@@ -2744,6 +2747,12 @@ html, body {
 }
 .height.height-75 {
   height: 75% !important;
+}
+.height.height-80 {
+  height: 80% !important;
+}
+.height.height-90 {
+  height: 90% !important;
 }
 .height.height-100 {
   height: 100% !important;
@@ -7557,6 +7566,9 @@ label, input[type="text"], input[type="email"], input[type="password"], textarea
   display: inline-block;
   width: 100%;
 }
+.frm-icon-element.frm-element-auto {
+  width: auto !important;
+}
 .frm-icon-element.frm-element-25 {
   width: 25% !important;
 }
@@ -8044,7 +8056,7 @@ Details: It defines the styles of tab components as listed below:
 
 Tabs - The barebone card class with minimum styles defining tab links and content.
 
-Basic - It define the styles of basic tab with borders. The bordered tabs are commonly 
+Basic - It define the styles of basic tab with borders. The bordered tabs are commonly
 used for bordered boxes and panels.
 
 Underline - The underlined tabs use underline to hightlight the tabs and active tab.
@@ -8093,13 +8105,13 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
   display: none;
 }
 
-.tabs-table .tab-links-wrap {
+.tabs-table > .tab-links-wrap {
   text-align: center;
   border-bottom: 0px;
   display: table;
   width: 100%;
 }
-.tabs-table .tab-links-wrap .tab-link {
+.tabs-table > .tab-links-wrap .tab-link {
   background-color: #F9F9F9;
   color: #898989;
   border-bottom: 1px solid #D1D2D3;
@@ -8112,20 +8124,20 @@ Table - Tabs arranged using table display. Preferred for evenly spaced tabs with
   -webkit-transition: background-color 250ms ease-in-out 0s;
   transition: background-color 250ms ease-in-out 0s;
 }
-.tabs-table .tab-links-wrap .tab-link.active, .tabs-table .tab-links-wrap .tab-link:hover {
+.tabs-table > .tab-links-wrap .tab-link.active, .tabs-table > .tab-links-wrap .tab-link:hover {
   background-color: #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
-.tabs-table .tab-links-wrap .tab-link.tab-link-100 {
+.tabs-table > .tab-links-wrap .tab-link.tab-link-100 {
   width: 50%;
 }
-.tabs-table .tab-links-wrap .tab-link.tab-link-50 {
+.tabs-table > .tab-links-wrap .tab-link.tab-link-50 {
   width: 50%;
 }
-.tabs-table .tab-links-wrap .tab-link.tab-link-25 {
+.tabs-table > .tab-links-wrap .tab-link.tab-link-25 {
   width: 25%;
 }
-.tabs-table .tab-links-wrap .tab-link.tab-link-10 {
+.tabs-table > .tab-links-wrap .tab-link.tab-link-10 {
   width: 10%;
 }
 
@@ -9913,25 +9925,25 @@ Details: It defines the styles for popup components as listed below:
   cursor: pointer;
 }
 .popup .popup-data.popup-data-small {
-  height: 200px;
   width: 400px;
 }
-.popup .popup-data.popup-data-small .popup-content-wrap .popup-content {
-  height: 120px;
-}
 .popup .popup-data.popup-data-medium {
-  height: 300px;
   width: 600px;
 }
-.popup .popup-data.popup-data-medium .popup-content-wrap .popup-content {
-  height: 220px;
-}
 .popup .popup-data.popup-data-large {
-  height: 400px;
   width: 800px;
 }
-.popup .popup-data.popup-data-large .popup-content-wrap .popup-content {
-  height: 320px;
+.popup .popup-data.popup-data-max {
+  height: 96%;
+  width: 96%;
+  top: 2%;
+  left: 2%;
+}
+.popup .popup-data.popup-data-max .popup-content-wrap {
+  height: 100%;
+}
+.popup .popup-data.popup-data-max .popup-content-wrap .popup-content {
+  height: 100%;
 }
 @media only screen and (max-width: 768px) {
   .popup .popup-data-small, .popup .popup-data-medium, .popup .popup-data-large {
@@ -10342,6 +10354,600 @@ Details: It defines the styles of cmt slider as listed below:
   box-shadow: inset 0px 0px 0px 0px #000000;
 }
 
+.slider-collage-5 .crl-wrap .cr.cr-w-h {
+  width: 50%;
+}
+.slider-collage-5 .crl-wrap .cr.cr-w-f {
+  width: 100%;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cr.cr-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cl {
+  display: inline-block;
+}
+.slider-collage-5 .crl-wrap .cl.cl-w-ot {
+  width: 33.3333%;
+}
+.slider-collage-5 .crl-wrap .cl.cl-w-h {
+  width: 50%;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cl.cl-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cb {
+  display: inline-block;
+}
+.slider-collage-5 .crl-wrap .cb.cb-w-0 {
+  width: 0%;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-m {
+  height: 120px;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-l {
+  height: 180px;
+}
+.slider-collage-5 .crl-wrap .cb.cb-h-xl {
+  height: 240px;
+}
+.slider-collage-5 .crl-wrap .cl-wrap {
+  width: 100%;
+  height: 100%;
+}
+.slider-collage-5 .crl-wrap .cr-wrap {
+  width: 100%;
+  height: 100%;
+}
+.slider-collage-5 .crl-wrap .wrap-slide-content {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 5px solid white;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-position: 50% 50% 9 !important;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+}
+.slider-collage-5 .crl-wrap .wrap-slide-content:hover {
+  -webkit-box-shadow: inset 1px 1px 50px 0px #000000;
+  -moz-box-shadow: inset 1px 1px 50px 0px #000000;
+  box-shadow: inset 1px 1px 50px 0px #000000;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 160px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 160px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 120px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-collage-5 .crl-wrap .cr.cr-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cr.cr-h-xl {
+    height: 100px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cl.cl-h-xl {
+    height: 100px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-m {
+    height: 50px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-l {
+    height: 80px;
+  }
+  .slider-collage-5 .crl-wrap .cb.cb-h-xl {
+    height: 100px;
+  }
+}
+
+.slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+  height: 480px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+  height: 480px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+  height: 240px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+  height: 360px;
+}
+.slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+  height: 480px;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 320px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 320px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 160px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 240px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cr.cr-h-xl {
+    height: 120px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cl.cl-h-xl {
+    height: 120px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-m {
+    height: 60px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-l {
+    height: 100px;
+  }
+  .slider-collage-5x2 .crl-wrap .cb.cb-h-xl {
+    height: 120px;
+  }
+}
+
+.slider-basic .slider-slides-wrap .slider-slides .slider-slide .slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 10;
+}
+.slider-basic .slider-slides-wrap .slider-slides .slider-slide .slide-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.5em;
+}
+.slider-basic .slider-control {
+  z-index: 50;
+  width: 25px;
+  height: 150px;
+  font-size: 2em;
+  text-align: center;
+}
+.slider-basic .slider-control:hover {
+  background-color: rgba(2, 110, 183, 0.6);
+}
+.slider-basic .slider-control.slider-control-left {
+  margin-left: -25px;
+}
+.slider-basic .slider-control.slider-control-right {
+  margin-right: -25px;
+}
+
+.popup-lightbox-slider .slider-lightbox {
+  width: 85%;
+  height: 79px;
+}
+.popup-lightbox-slider .slider-lightbox .slider-slides-wrap {
+  height: 75px;
+}
+.popup-lightbox-slider .slider-lightbox .slider-slides-wrap .slider-slides .slider-slide {
+  width: 100px;
+  height: 75px;
+}
+.popup-lightbox-slider .slider-lightbox .slider-slides-wrap .slider-slides .slider-slide .bkg-image {
+  width: 90px;
+  height: 75px;
+  background-color: #A5A5A5;
+}
+.popup-lightbox-slider .slider-lightbox .slider-control {
+  height: 75px;
+}
+.popup-lightbox-slider .popup-data {
+  background-color: #7F7F7F;
+  border: 5px solid #026eb7;
+}
+.popup-lightbox-slider .popup-data .popup-data-bkg {
+  overflow: hidden;
+  text-align: center;
+}
+.popup-lightbox-slider .popup-data .popup-data-bkg img {
+  max-width: 95%;
+  max-height: 95%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.popup-lightbox-slider .popup-data .popup-content-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.popup-lightbox-slider .popup-data .popup-content-wrap .popup-content {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow-y: auto;
+}
+.popup-lightbox-slider .popup-data .wrap-gallery {
+  padding: 0.25em;
+}
+.popup-lightbox-slider .popup-data .wrap-gallery .slide {
+  border: 1px solid #FFFFFF;
+  padding: 0 0;
+}
+.popup-lightbox-slider .popup-data .wrap-gallery .slide .bkg-image {
+  width: 198px;
+}
+
+/**********************************************************************
+Description: It defines the styles for gallery components available in CMT-UI css framework.
+
+Dependencies: variables, variables-ext, mixins
+
+Details: It defines the styles for mapper components as listed below:
+
+* Gallery     - The gallery component defines the barebone classes required to display image gallery.
+*
+* Basic       - The basic gallery display items with flipper.
+
+***********************************************************************/
+.gallery {
+  position: relative;
+}
+.gallery .gallery-header {
+  position: relative;
+}
+.gallery .gallery-content-wrap {
+  position: relative;
+}
+.gallery .gallery-items-wrap {
+  position: relative;
+}
+
+.gallery-basic {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.gallery-basic .gallery-header {
+  background-color: #026eb7;
+  color: #FFFFFF;
+}
+.gallery-basic .gallery-content-wrap {
+  background-color: #F9F9F9;
+  color: #898989;
+}
+.gallery-basic .gallery-footer {
+  background-color: #F2F2F2;
+  color: #6D6E6F;
+}
+
+/* The basic gallery to be used for the default gallery widget from CMSGears core module. We can also use it for any other platform.
+ * The preferred image size for gallery item is 360 x 270. We can maintain the same aspect ratio for larger images for expected results. */
+/*
+.gallery-basic {
+	padding: 0 10%;
+
+	.header {
+		background-color: $color-secondary;
+		color: $color-secondary-text;
+		min-height: 150px;
+		height: auto;
+		padding: 1em;
+		line-height: 1.4em;
+
+		h2 {
+			text-align: center;
+			margin-bottom: 1em;
+		}
+	}
+
+	.items {
+		padding: 1em;
+
+		li {
+			display: inline-block;
+			width: 49%;
+			padding: 1%;
+		}
+
+		.wrap-item {
+			position: relative;
+			width: 100%;
+			height: 150px;
+			cursor: pointer;
+
+			&:hover {
+
+				.flip2 {
+					opacity: 1;
+					@include transform-rotate( 360deg );
+				}
+			}
+
+			.flip1 {
+				width: 100%;
+				height: 100%;
+			}
+
+			.flip2 {
+				background-color: $color-primary;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				text-align: center;
+				opacity: 0;
+				@include transit-all( $transit-linear, $transit-time-medium );
+
+				.info {
+					display: inline-block;
+					width: 100%;
+					height: 60%;
+					padding: 5% 0;
+				}
+			}
+		}
+	}
+
+	@include responsive-min( screen-mobile-large ) {
+
+		.items {
+
+			.wrap-item {
+				height: 200px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-small ) {
+
+		.items {
+
+			li {
+				width: 33%;
+			}
+
+			.wrap-item {
+				height: 220px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		.header {
+			height: 400px;
+			width: 30%;
+			padding: 2em;
+			float: left;
+		}
+
+		.items {
+			width: 70%;
+			float: left;
+			padding: 0;
+
+			li {
+				width: 32%;
+				padding-top: 0;
+			}
+
+			.wrap-item {
+				height: 175px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-desktop-small ) {
+
+		.header {
+			height: 450px;
+		}
+
+		.items {
+
+			.wrap-item {
+				height: 200px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-desktop-large ) {
+		@include valign-center;
+
+		.header {
+			height: 500px;
+		}
+
+		.items {
+
+			.wrap-item {
+				height: 250px;
+			}
+		}
+	}
+}
+
+.portfolio {
+
+	.flip-container {
+		width: 100%;
+		height: 150px;
+
+		.front, .back {
+			width: 100%;
+			height: 150px;
+		}
+	}
+
+	.link {
+		display: inline-block;
+		width: 100%;
+		margin-top: 15px;
+		text-align: center;
+	}
+
+	@include responsive-min( screen-mobile-small ) {
+
+		.flip-container {
+			height: 180px;
+
+			.front, .back {
+				height: 180px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-mobile-large ) {
+
+		.flip-container {
+			height: 200px;
+
+			.front, .back {
+				height: 200px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-small ) {
+
+		.flip-container {
+			height: 220px;
+
+			.front, .back {
+				height: 220px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-tablet-large ) {
+
+		.flip-container {
+			height: 175px;
+
+			.front, .back {
+				height: 175px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-desktop-small ) {
+
+		.flip-container {
+			height: 200px;
+
+			.front, .back {
+				height: 200px;
+			}
+		}
+	}
+
+	@include responsive-min( screen-desktop-large ) {
+
+		.flip-container {
+			height: 250px;
+
+			.front, .back {
+				height: 250px;
+			}
+		}
+	}
+}
+*/
 /**********************************************************************
 Description: It defines the styles of data card components available in Breeze Framework.
 

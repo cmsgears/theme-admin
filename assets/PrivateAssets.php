@@ -10,7 +10,6 @@
 namespace themes\admin\assets;
 
 // Yii Imports
-use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
@@ -18,7 +17,7 @@ use yii\web\View;
  *
  * @since 1.0.0
  */
-class PrivateAssets extends AssetBundle {
+class PrivateAssets extends \yii\web\AssetBundle {
 
 	// Variables ---------------------------------------------------
 
@@ -65,7 +64,10 @@ class PrivateAssets extends AssetBundle {
 		'scripts/apps/core/controllers/admin.js',
 		// scripts
 		'scripts/main.js',
-		'scripts/search.js'
+		'scripts/search.js',
+		'scripts/sliders.js',
+		'scripts/popups.js',
+		'scripts/maps.js'
 	];
 
 	// JS Position
