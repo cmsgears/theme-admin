@@ -7352,6 +7352,15 @@ a:hover, .link:hover {
   padding: 0.5em;
 }
 
+.cmt-choice label {
+  width: 24%;
+}
+@media only screen and (max-width: 1024px) {
+  .cmt-choice label {
+    width: 49%;
+  }
+}
+
 .cmt-switch .cmt-toggle-round + label {
   height: 1.75em;
   padding: 0.75em;

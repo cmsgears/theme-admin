@@ -1,0 +1,13 @@
+.cmt-choice {
+
+    label {
+        width: 24%;
+    }
+
+	@include responsive-max( screen-tablet-large ) {
+
+		label {
+			width: 49%;
+		}
+	}
+}
