@@ -25,7 +25,7 @@ $breezeTemplates = Yii::getAlias( '@breeze/templates' );
 $userAvatar		= isset( $user->avatar ) ? $user->avatar : null;
 $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 'image' => 'avatar-user.png', 'class' => 'user-avatar' ] );
 ?>
-<header id="header-main" class="header header-absolute header-private row">
+<header id="header-main" class="header header-fixed header-private row">
 	<div class="colf colf15x4 header-logo">
 		<span id="btn-sidebar-main">
 			<i class="cmti cmti-menu valign-center"></i>

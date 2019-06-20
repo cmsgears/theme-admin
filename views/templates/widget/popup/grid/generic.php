@@ -29,7 +29,7 @@ $url		= $data[ 'url' ];
 		<div class="popup-content-wrap">
 			<div class="popup-content">
 				<div class="filler-height filler-height-medium"></div>
-				<form class="form" cmt-app="<?= $app ?>" cmt-controller="<?= $controller ?>" cmt-action="<?= $action ?>" action="<?= $url ?>">
+				<form class="form" cmt-app="<?= $app ?>" cmt-controller="<?= $controller ?>" cmt-action="<?= $action ?>" action="<?= $url ?>" data-action="<?= $url ?>">
 					<div class="spinner max-area-cover-color">
 						<div class="valign-center cmti cmti-2x cmti-spinner-9 spin"></div>
 					</div>
