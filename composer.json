@@ -1,0 +1,23 @@
+{
+	"name": "cmsgears/plugin-file-manager",
+	"description": "File Manager plugin for CMSGears provide default component to accept files uploaded by users. The File Uploader widget can be used to upload files.",
+	"homepage": "http://www.cmsgears.org",
+	"type": "package",
+	"keywords": [ "yii2", "cmsgears", "plugin", "file uploader" ],
+	"license": "GPL-3.0-or-later",
+	"support": {
+        "source": "http://www.cmsgears.org/downloads/modules/forms",
+		"forum": "http://forum.cmsgears.org/",
+		"resources": "http://resources.cmsgears.org/",
+		"issues": "https://www.amazingdesk.com/cmsgears/issues/",
+		"blog": "http://cmsgears.tutorials24x7.com/"
+	},
+	"autoload": {
+		"psr-4": {
+			"cmsgears\\files\\": ""
+		}
+	},
+    "require": {
+        "cmsgears/module-core": "*"
+    }
+}
