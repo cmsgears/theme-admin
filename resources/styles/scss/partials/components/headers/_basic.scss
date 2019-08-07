@@ -35,6 +35,7 @@
 			cursor: pointer;
 			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 			text-align: center;
+			vertical-align: middle;
 
 			&:hover {
 				background-color: $color-btn-h;

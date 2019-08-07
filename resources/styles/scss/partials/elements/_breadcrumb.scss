@@ -24,13 +24,14 @@
 		height: 0;
 		border-top: 1em solid transparent;
 		border-bottom: 1em solid transparent;
+		vertical-align: middle;
 	}
 
 	.wrap-link {
 		display: inline-block;
 		position: relative;
 		margin-left: -1em;
-		
+
 		.link {
 			padding-left: 1.5em;
 		}

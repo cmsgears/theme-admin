@@ -7,8 +7,11 @@
 	.cmt-select-wrap {
 		width: 125px;
 
-		.cmt-select .cmt-select-list li {
-			text-align: center !important;
+		.cmt-select {
+
+			.cmt-select-list li {
+				text-align: center !important;
+			}
 		}
 	}
 

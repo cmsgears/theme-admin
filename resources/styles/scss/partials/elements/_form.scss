@@ -1,6 +1,6 @@
 // == Form Elements =================
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-selected {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, label {
 	@include rounded( $size-medium );
 	padding: 0.5em;
 	line-height: 1.75em;
@@ -19,7 +19,7 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 	}
 
 	.icon {
-		padding: 0.65em 0.40em;
+		//padding: 0.65em 0.40em;
 		@include rounded-left( $size-medium );
 		@include border-right( 1px, solid, $color-shadow-inset );
 	}
@@ -27,10 +27,26 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 
 .form {
 
+	.btn {
+		vertical-align: middle;
+	}
+
 	.cmt-select-wrap {
 
-		.cmt-selected {
-			padding: 0.5em;
+		.cmt-select {
+
+			.cmt-selected {
+				padding: 0.5em;
+				line-height: 1.616em;
+
+				.s-icon {
+					padding: 0.5em;
+				}
+			}
+
+			.cmt-select-list li {
+				padding: 0.5em;
+			}
 		}
 	}
 

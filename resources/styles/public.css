@@ -7540,6 +7540,21 @@ a:hover, .link:hover {
   cursor: default;
 }
 
+.cmt-select-wrap .cmt-select .cmt-selected {
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 0.5em;
+  line-height: 1.75em;
+}
+.cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  padding: 0.5em;
+}
+.cmt-select-wrap .cmt-select .cmt-select-list li {
+  padding: 0.5em;
+}
+
 .cmt-switch .cmt-toggle-round + label {
   height: 1.75em;
   padding: 0.75em;
@@ -8010,6 +8025,9 @@ select, .cmt-select-wrap .cmt-selected {
 .form input[type="text"], .form input[type="email"], .form input[type="password"], .form textarea, .form select, .form .icon-picker-wrap, .form .btn, .form .btn-icon {
   margin-bottom: 0.5rem;
 }
+.form .frm-element-25, .form .frm-element-50, .form .frm-element-75, .form .frm-element-small, .form .frm-element-medium, .form .frm-element-large, .form .frm-element-xlarge {
+  margin-bottom: 0.5rem;
+}
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
   margin-bottom: 0.5rem;
 }
@@ -8127,7 +8145,7 @@ table td {
   }
 }
 
-input[type="text"], input[type="email"], input[type="password"], textarea, select, .cmt-selected {
+input[type="text"], input[type="email"], input[type="password"], textarea, select, label {
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -8155,7 +8173,6 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-bottom-left: 5px;
 }
 .frm-icon-element .icon {
-  padding: 0.65em 0.40em;
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
@@ -8166,7 +8183,17 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   border-right: 1px solid #F2F2F2;
 }
 
-.form .cmt-select-wrap .cmt-selected {
+.form .btn {
+  vertical-align: middle;
+}
+.form .cmt-select-wrap .cmt-select .cmt-selected {
+  padding: 0.5em;
+  line-height: 1.616em;
+}
+.form .cmt-select-wrap .cmt-select .cmt-selected .s-icon {
+  padding: 0.5em;
+}
+.form .cmt-select-wrap .cmt-select .cmt-select-list li {
   padding: 0.5em;
 }
 .form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
@@ -8368,6 +8395,7 @@ Details: It defines the styles for header components as listed below:
   -webkit-transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
   transition: color 420ms ease-in-out 0s, background-color 420ms ease-in-out 0s;
   text-align: center;
+  vertical-align: middle;
 }
 .header-private .header-logo #btn-sidebar-main:hover {
   background-color: #0059A6;
