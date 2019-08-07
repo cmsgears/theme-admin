@@ -19,7 +19,8 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 	}
 
 	.icon {
-		//padding: 0.65em 0.40em;
+		padding: 0.5em;
+		line-height: 1.75em;
 		@include rounded-left( $size-medium );
 		@include border-right( 1px, solid, $color-shadow-inset );
 	}

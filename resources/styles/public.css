@@ -8173,6 +8173,8 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-bottom-left: 5px;
 }
 .frm-icon-element .icon {
+  padding: 0.5em;
+  line-height: 1.75em;
   border-radius: 5px 0 0 5px;
   -webkit-border-radius-top-left: 5px;
   -webkit-border-radius-bottom-left: 5px;
