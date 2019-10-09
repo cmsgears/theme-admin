@@ -54,6 +54,11 @@
 						<span  class="error" cmt-error="Slide[content]"></span>
 					</div>
 					<div class="form-group">
+						<label>Slide Order</label>
+						<input name="Slide[order]" placeholder="Order" type="text" />
+						<span  class="error" cmt-error="Slide[order]"></span>
+					</div>
+					<div class="form-group">
 						<label>Image Title</label>
 						<input class="title" name="File[title]" placeholder="Title" type="text" />
 						<span  class="error" cmt-error="File[title]"></span>
@@ -147,6 +152,11 @@
 						<label>Slide Content</label>
 						<textarea name="Slide[content]" placeholder="Content">{{content}}</textarea>
 						<span  class="error" cmt-error="Slide[content]"></span>
+					</div>
+					<div class="form-group">
+						<label>Slide Order</label>
+						<input name="Slide[order]" placeholder="Order" type="text" value="{{order}}"/>
+						<span  class="error" cmt-error="Slide[order]"></span>
 					</div>
 					<div class="form-group">
 						<label>Image Title</label>
