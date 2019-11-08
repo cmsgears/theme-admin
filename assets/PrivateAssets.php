@@ -57,6 +57,7 @@ class PrivateAssets extends AssetBundle {
 		$this->js[] = 'scripts/apps/core/controllers/main.js';
 		$this->js[] = 'scripts/apps/core/controllers/user.js';
 		$this->js[] = 'scripts/apps/core/controllers/admin.js';
+		$this->js[] = 'scripts/apps/notify/base.js';
 
 		$this->js[] = 'scripts/main.js';
 		$this->js[] = 'scripts/search.js';
