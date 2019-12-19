@@ -1335,6 +1335,9 @@ Notes:
   background-image: radial-gradient(circle at center top, #F9F9F9, #F9F9F9);
 }
 
+.circled {
+  position: relative;
+}
 .circled.circled-tiny {
   width: 80px;
   height: 80px;
@@ -2879,6 +2882,12 @@ html, body {
 .width.width-25 {
   width: 25% !important;
 }
+.width.width-40 {
+  width: 40% !important;
+}
+.width.width-48 {
+  width: 48% !important;
+}
 .width.width-50 {
   width: 50% !important;
 }
@@ -3341,6 +3350,14 @@ html, body {
   margin-right: 0.5em;
 }
 
+#mce-modal-block {
+  z-index: 100100 !important;
+}
+
+.mce-widget, .mce-container {
+  z-index: 100101 !important;
+}
+
 /**********************************************************************
 Description: This file define the text and background colors used by Breeze CSS Framework.
 
@@ -3419,9 +3436,29 @@ from secondary for highlighting purpose.
   background-color: #3489DB !important;
   color: #FFFFFF !important;
 }
+.color.color-header {
+  background-color: #FFFFFF !important;
+  color: #6D6E6F !important;
+}
+.color.color-footer {
+  background-color: #000000 !important;
+  color: #AAAAAA !important;
+}
 .color.color-white {
   background-color: #FFFFFF !important;
   color: #000000 !important;
+}
+.color.color-gray {
+  background-color: #7F7F7F !important;
+  color: #FFFFFF !important;
+}
+.color.color-gray-l {
+  background-color: #A5A5A5 !important;
+  color: #FFFFFF !important;
+}
+.color.color-gray-d {
+  background-color: #595959 !important;
+  color: #FFFFFF !important;
 }
 .color.color-black {
   background-color: #000000 !important;
@@ -3435,12 +3472,20 @@ from secondary for highlighting purpose.
   background-color: #1E96FF !important;
   color: #FFFFFF !important;
 }
+.color.color-blue-d {
+  background-color: #0059A6 !important;
+  color: #FFFFFF !important;
+}
 .color.color-purple {
   background-color: #8946C4 !important;
   color: #FFFFFF !important;
 }
 .color.color-purple-l {
   background-color: #AA7AD4 !important;
+  color: #FFFFFF !important;
+}
+.color.color-purple-d {
+  background-color: #663096 !important;
   color: #FFFFFF !important;
 }
 .color.color-orange {
@@ -3451,12 +3496,20 @@ from secondary for highlighting purpose.
   background-color: #FFA95F !important;
   color: #FFFFFF !important;
 }
+.color.color-orange-d {
+  background-color: #E76B00 !important;
+  color: #FFFFFF !important;
+}
 .color.color-yellow {
   background-color: #FFDC00 !important;
   color: #FFFFFF !important;
 }
 .color.color-yellow-l {
   background-color: #FFE544 !important;
+  color: #FFFFFF !important;
+}
+.color.color-yellow-d {
+  background-color: #DDBF00 !important;
   color: #FFFFFF !important;
 }
 .color.color-red {
@@ -3467,12 +3520,20 @@ from secondary for highlighting purpose.
   background-color: #FF6158 !important;
   color: #FFFFFF !important;
 }
+.color.color-red-d {
+  background-color: #F10D00 !important;
+  color: #FFFFFF !important;
+}
 .color.color-pink {
   background-color: #E4287C !important;
   color: #FFFFFF !important;
 }
 .color.color-pink-l {
   background-color: #EC64A1 !important;
+  color: #FFFFFF !important;
+}
+.color.color-pink-d {
+  background-color: #B2165C !important;
   color: #FFFFFF !important;
 }
 .color.color-magenta {
@@ -3483,6 +3544,10 @@ from secondary for highlighting purpose.
   background-color: #F600F6 !important;
   color: #FFFFFF !important;
 }
+.color.color-magenta-d {
+  background-color: #6E006E !important;
+  color: #FFFFFF !important;
+}
 .color.color-green {
   background-color: #7CAA2D !important;
   color: #FFFFFF !important;
@@ -3491,12 +3556,20 @@ from secondary for highlighting purpose.
   background-color: #9FCF4B !important;
   color: #FFFFFF !important;
 }
+.color.color-green-d {
+  background-color: #55741F !important;
+  color: #FFFFFF !important;
+}
 .color.color-brown {
   background-color: #8B4513 !important;
   color: #FFFFFF !important;
 }
 .color.color-brown-l {
   background-color: #C7631B !important;
+  color: #FFFFFF !important;
+}
+.color.color-brown-d {
+  background-color: #4F270B !important;
   color: #FFFFFF !important;
 }
 .color.color-aqua {
@@ -3526,6 +3599,106 @@ from secondary for highlighting purpose.
 .color.color-navy {
   background-color: #003653 !important;
   color: #FFFFFF !important;
+}
+.color.color-error {
+  background-color: #E74343 !important;
+  color: #FFFFFF !important;
+}
+.color.color-warning {
+  background-color: #EF9300 !important;
+  color: #FFFFFF !important;
+}
+.color.color-success {
+  background-color: #A5D75A !important;
+  color: #FFFFFF !important;
+}
+.color.color-info {
+  background-color: #3F62A0 !important;
+  color: #FFFFFF !important;
+}
+.color.color-dropbox {
+  background-color: #007EE5 !important;
+  color: #FFFFFF !important;
+}
+.color.color-facebook {
+  background-color: #3B5998 !important;
+  color: #FFFFFF !important;
+}
+.color.color-flickr {
+  background-color: #FF0084 !important;
+  color: #FFFFFF !important;
+}
+.color.color-foursquare {
+  background-color: #0072B1 !important;
+  color: #FFFFFF !important;
+}
+.color.color-google {
+  background-color: #DD4B39 !important;
+  color: #FFFFFF !important;
+}
+.color.color-instagram {
+  background-color: #125688 !important;
+  color: #FFFFFF !important;
+}
+.color.color-linkedin {
+  background-color: #007BB6 !important;
+  color: #FFFFFF !important;
+}
+.color.color-pintrest {
+  background-color: #CB2027 !important;
+  color: #FFFFFF !important;
+}
+.color.color-quora {
+  background-color: #A82400 !important;
+  color: #FFFFFF !important;
+}
+.color.color-snapchat {
+  background-color: #FFFC00 !important;
+  color: #FFFFFF !important;
+}
+.color.color-twitter {
+  background-color: #00ACED !important;
+  color: #FFFFFF !important;
+}
+.color.color-tumblr {
+  background-color: #32506D !important;
+  color: #FFFFFF !important;
+}
+.color.color-vimeo {
+  background-color: #AAD450 !important;
+  color: #FFFFFF !important;
+}
+.color.color-vine {
+  background-color: #00BF8F !important;
+  color: #FFFFFF !important;
+}
+.color.color-whatsapp {
+  background-color: #43D854 !important;
+  color: #FFFFFF !important;
+}
+.color.color-youtube {
+  background-color: #BB0000 !important;
+  color: #FFFFFF !important;
+}
+.color.color-vk {
+  background-color: #45668E !important;
+  color: #FFFFFF !important;
+}
+.color.color-btn {
+  background-color: #3498DB !important;
+  color: #FFFFFF !important;
+}
+.color.color-btn-h {
+  background-color: #0059A6 !important;
+  color: #FFFFFF !important;
+}
+.color.color-btn-a {
+  background-color: #2980B9 !important;
+  color: #FFFFFF !important;
+}
+.color.color-btn-d {
+  background-color: #808080 !important;
+  color: #E6E7E8 !important;
 }
 
 .bkg.bkg-primary {
@@ -3920,119 +4093,119 @@ Tab Filler - These classes can be used to add horizontal spacing between inline 
   padding-left: 0 !important;
 }
 .padding.padding-default {
-  padding: 0.5rem;
+  padding: 0.5rem !important;
 }
 .padding.padding-default-v {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 .padding.padding-default-h {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
 }
 .padding.padding-small-v {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 .padding.padding-small-h {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 .padding.padding-medium {
-  padding: 2rem;
+  padding: 2rem !important;
 }
 .padding.padding-medium-v {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
 }
 .padding.padding-medium-h {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2rem !important;
+  padding-right: 2rem !important;
 }
 .padding.padding-large {
-  padding: 3rem;
+  padding: 3rem !important;
 }
 .padding.padding-large-v {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
 }
 .padding.padding-large-h {
-  padding-left: 3rem;
-  padding-right: 3rem;
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 .padding.padding-xlarge {
-  padding: 5rem;
+  padding: 5rem !important;
 }
 .padding.padding-xlarge-v {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
 }
 .padding.padding-xlarge-h {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 5rem !important;
+  padding-right: 5rem !important;
 }
 .padding.padding-top-default {
-  padding-top: 0.5rem;
+  padding-top: 0.5rem !important;
 }
 .padding.padding-bottom-default {
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.5rem !important;
 }
 .padding.padding-left-default {
-  padding-left: 0.5rem;
+  padding-left: 0.5rem !important;
 }
 .padding.padding-right-default {
-  padding-right: 0.5rem;
+  padding-right: 0.5rem !important;
 }
 .padding.padding-small {
-  padding: 1rem;
+  padding: 1rem !important;
 }
 .padding.padding-top-small {
-  padding-top: 1rem;
+  padding-top: 1rem !important;
 }
 .padding.padding-bottom-small {
-  padding-bottom: 1rem;
+  padding-bottom: 1rem !important;
 }
 .padding.padding-left-small {
-  padding-left: 1rem;
+  padding-left: 1rem !important;
 }
 .padding.padding-right-small {
-  padding-right: 1rem;
+  padding-right: 1rem !important;
 }
 .padding.padding-top-medium {
-  padding-top: 2rem;
+  padding-top: 2rem !important;
 }
 .padding.padding-bottom-medium {
-  padding-bottom: 2rem;
+  padding-bottom: 2rem !important;
 }
 .padding.padding-left-medium {
-  padding-left: 2rem;
+  padding-left: 2rem !important;
 }
 .padding.padding-right-medium {
-  padding-right: 2rem;
+  padding-right: 2rem !important;
 }
 .padding.padding-top-large {
-  padding-top: 3rem;
+  padding-top: 3rem !important;
 }
 .padding.padding-bottom-large {
-  padding-bottom: 3rem;
+  padding-bottom: 3rem !important;
 }
 .padding.padding-left-large {
-  padding-left: 3rem;
+  padding-left: 3rem !important;
 }
 .padding.padding-right-large {
-  padding-right: 3rem;
+  padding-right: 3rem !important;
 }
 .padding.padding-top-xlarge {
-  padding-top: 5rem;
+  padding-top: 5rem !important;
 }
 .padding.padding-bottom-xlarge {
-  padding-bottom: 5rem;
+  padding-bottom: 5rem !important;
 }
 .padding.padding-left-xlarge {
-  padding-left: 5rem;
+  padding-left: 5rem !important;
 }
 .padding.padding-right-xlarge {
-  padding-right: 5rem;
+  padding-right: 5rem !important;
 }
 
 .margin.margin-none {
@@ -4059,119 +4232,119 @@ Tab Filler - These classes can be used to add horizontal spacing between inline 
   margin-left: 0 !important;
 }
 .margin.margin-default {
-  margin: 0.5rem;
+  margin: 0.5rem !important;
 }
 .margin.margin-default-v {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 .margin.margin-default-h {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+  margin-left: 0.5rem !important;
+  margin-right: 0.5rem !important;
 }
 .margin.margin-small-v {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 .margin.margin-small-h {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
 }
 .margin.margin-medium {
-  margin: 2rem;
+  margin: 2rem !important;
 }
 .margin.margin-medium-v {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 .margin.margin-medium-h {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 2rem !important;
+  margin-right: 2rem !important;
 }
 .margin.margin-large {
-  margin: 3rem;
+  margin: 3rem !important;
 }
 .margin.margin-large-v {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 .margin.margin-large-h {
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
 }
 .margin.margin-xlarge {
-  margin: 5rem;
+  margin: 5rem !important;
 }
 .margin.margin-xlarge-v {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
 }
 .margin.margin-xlarge-h {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 .margin.margin-top-default {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem !important;
 }
 .margin.margin-bottom-default {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem !important;
 }
 .margin.margin-left-default {
-  margin-left: 0.5rem;
+  margin-left: 0.5rem !important;
 }
 .margin.margin-right-default {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem !important;
 }
 .margin.margin-small {
-  margin: 1rem;
+  margin: 1rem !important;
 }
 .margin.margin-top-small {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 .margin.margin-bottom-small {
-  margin-bottom: 1rem;
+  margin-bottom: 1rem !important;
 }
 .margin.margin-left-small {
-  margin-left: 1rem;
+  margin-left: 1rem !important;
 }
 .margin.margin-right-small {
-  margin-right: 1rem;
+  margin-right: 1rem !important;
 }
 .margin.margin-top-medium {
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 .margin.margin-bottom-medium {
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 .margin.margin-left-medium {
-  margin-left: 2rem;
+  margin-left: 2rem !important;
 }
 .margin.margin-right-medium {
-  margin-right: 2rem;
+  margin-right: 2rem !important;
 }
 .margin.margin-top-large {
-  margin-top: 3rem;
+  margin-top: 3rem !important;
 }
 .margin.margin-bottom-large {
-  margin-bottom: 3rem;
+  margin-bottom: 3rem !important;
 }
 .margin.margin-left-large {
-  margin-left: 3rem;
+  margin-left: 3rem !important;
 }
 .margin.margin-right-large {
-  margin-right: 3rem;
+  margin-right: 3rem !important;
 }
 .margin.margin-top-xlarge {
-  margin-top: 5rem;
+  margin-top: 5rem !important;
 }
 .margin.margin-bottom-xlarge {
-  margin-bottom: 5rem;
+  margin-bottom: 5rem !important;
 }
 .margin.margin-left-xlarge {
-  margin-left: 5rem;
+  margin-left: 5rem !important;
 }
 .margin.margin-right-xlarge {
-  margin-right: 5rem;
+  margin-right: 5rem !important;
 }
 
 /**
@@ -5454,10 +5627,16 @@ Details: It defines the grid system and basic containers as listed below:
   bottom: 0px;
   float: none;
 }
-.col-filler-wrap .col-filler.col-filler-left {
+.col-filler-wrap .col.col-filler.col-filler-left {
+  left: 1%;
+}
+.col-filler-wrap .col.col-filler.col-filler-right {
+  right: 1%;
+}
+.col-filler-wrap .colf.col-filler.col-filler-left {
   left: 0;
 }
-.col-filler-wrap .col-filler.col-filler-right {
+.col-filler-wrap .colf.col-filler.col-filler-right {
   right: 0;
 }
 
@@ -5522,7 +5701,7 @@ Details: It defines the grid system and basic containers as listed below:
  */
 .container-main {
   position: relative;
-  z-index: 1;
+  z-index: 90000;
 }
 .container-main .content-main-wrap {
   position: relative;
@@ -6372,6 +6551,22 @@ html, body {
 @keyframes height {
   from {
     height: 0;
+  }
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
   }
 }
 .animate {
@@ -8028,9 +8223,6 @@ select, .cmt-select-wrap .cmt-selected {
 .form .frm-element-25, .form .frm-element-50, .form .frm-element-75, .form .frm-element-small, .form .frm-element-medium, .form .frm-element-large, .form .frm-element-xlarge {
   margin-bottom: 0.5rem;
 }
-.form .frm-icon-element .cmti, .form .frm-icon-element .icon, .form .frm-icon-element .fa {
-  margin-bottom: 0.5rem;
-}
 .form .cmt-checkbox, .form .cmt-switch, .form .cmt-select-wrap {
   margin-bottom: 0.5rem;
 }
@@ -8220,13 +8412,17 @@ Details: It defines the styles for header components as listed below:
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10001;
+  z-index: 100000;
 }
 .header.header-absolute {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 10001;
+  z-index: 100000;
+}
+
+.header-main {
+  z-index: 100000;
 }
 
 /* Basic Header having fixed height logo, main menu and mobile menu.
@@ -8238,7 +8434,7 @@ Details: It defines the styles for header components as listed below:
   background-color: #FFFFFF;
   color: #6D6E6F;
   position: relative;
-  z-index: 10001;
+  z-index: 100000;
 }
 .header-basic .header-logo {
   cursor: pointer;

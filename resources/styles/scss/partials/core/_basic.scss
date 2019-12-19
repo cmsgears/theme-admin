@@ -49,3 +49,11 @@
 		}
 	}
 }
+
+#mce-modal-block {
+	z-index: 100100 !important;
+}
+
+.mce-widget, .mce-container {
+	z-index: 100101 !important;
+}
