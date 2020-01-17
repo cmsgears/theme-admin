@@ -909,37 +909,37 @@ Notes:
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(139, 69, 19, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(139, 69, 19, 0.6);
 }
-.shadow-inset.shadow-aqua {
+.shadow-inset.shadow-inset-aqua {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
 }
-.shadow-inset.shadow-golden {
+.shadow-inset.shadow-inset-golden {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
 }
-.shadow-inset.shadow-silver {
+.shadow-inset.shadow-inset-silver {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
 }
-.shadow-inset.shadow-maroon {
+.shadow-inset.shadow-inset-maroon {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
 }
-.shadow-inset.shadow-olive {
+.shadow-inset.shadow-inset-olive {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
 }
-.shadow-inset.shadow-lime {
+.shadow-inset.shadow-inset-lime {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
 }
-.shadow-inset.shadow-navy {
+.shadow-inset.shadow-inset-navy {
   -webkit-box-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   -moz-box-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   box-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
@@ -1025,37 +1025,37 @@ Notes:
   -moz-text-shadow: 1px 1px 5px 0 rgba(139, 69, 19, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(139, 69, 19, 0.6);
 }
-.text-shadow.shadow-aqua {
+.text-shadow.text-shadow-aqua {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
 }
-.text-shadow.shadow-golden {
+.text-shadow.text-shadow-golden {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
 }
-.text-shadow.shadow-silver {
+.text-shadow.text-shadow-silver {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
 }
-.text-shadow.shadow-maroon {
+.text-shadow.text-shadow-maroon {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
 }
-.text-shadow.shadow-olive {
+.text-shadow.text-shadow-olive {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
 }
-.text-shadow.shadow-lime {
+.text-shadow.text-shadow-lime {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
 }
-.text-shadow.shadow-navy {
+.text-shadow.text-shadow-navy {
   -webkit-text-shadow: 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   -moz-text-shadow: 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   text-shadow: 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
@@ -1136,37 +1136,37 @@ Notes:
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(85, 116, 31, 0.6);
 }
-.text-shadow-inset.shadow-aqua {
+.text-shadow-inset.text-shadow-inset-aqua {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(138, 226, 227, 0.6);
 }
-.text-shadow-inset.shadow-golden {
+.text-shadow-inset.text-shadow-inset-golden {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(233, 192, 17, 0.6);
 }
-.text-shadow-inset.shadow-silver {
+.text-shadow-inset.text-shadow-inset-silver {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(231, 232, 231, 0.6);
 }
-.text-shadow-inset.shadow-maroon {
+.text-shadow-inset.text-shadow-inset-maroon {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(84, 38, 40, 0.6);
 }
-.text-shadow-inset.shadow-olive {
+.text-shadow-inset.text-shadow-inset-olive {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(163, 165, 76, 0.6);
 }
-.text-shadow-inset.shadow-lime {
+.text-shadow-inset.text-shadow-inset-lime {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(211, 242, 53, 0.6);
 }
-.text-shadow-inset.shadow-navy {
+.text-shadow-inset.text-shadow-inset-navy {
   -webkit-text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   -moz-text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
   text-shadow: inset 1px 1px 5px 0 rgba(0, 54, 83, 0.6);
@@ -1619,6 +1619,8 @@ Notes:
   margin: auto;
   min-width: 50%;
   min-height: 50%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .bkg-element-medium {
@@ -3078,6 +3080,18 @@ html, body {
   margin-left: auto;
   margin-right: auto;
 }
+.absolute.absolute-top {
+  top: 0px;
+}
+.absolute.absolute-left {
+  left: 0px;
+}
+.absolute.absolute-bottom {
+  bottom: 0px;
+}
+.absolute.absolute-right {
+  right: 0px;
+}
 .absolute.absolute-top-left {
   top: 0px;
   left: 0px;
@@ -3177,16 +3191,16 @@ html, body {
   z-index: 200;
 }
 
-.block {
-  display: block !important;
+.inline {
+  display: inline !important;
 }
 
 .inline-block {
   display: inline-block !important;
 }
 
-.inline {
-  display: inline !important;
+.inline-table {
+  display: inline-table !important;
 }
 
 .visible {
@@ -3259,6 +3273,17 @@ html, body {
   color: #FFFFFF !important;
 }
 
+/*
+.disabled {
+	background-color: $color-btn-d !important;
+	color: $color-btn-text-d !important;
+
+	&:hover {
+		background-color: $color-btn-d !important;
+		color: $color-btn-text-d !important;
+	}
+}
+*/
 .fluid {
   max-width: 100%;
   height: auto;
@@ -3291,10 +3316,6 @@ html, body {
 
 .info {
   color: #3F62A0;
-}
-
-.form-group .help-block {
-  color: #E74343;
 }
 
 .error-field {
@@ -3620,6 +3641,10 @@ from secondary for highlighting purpose.
   background-color: #007EE5 !important;
   color: #FFFFFF !important;
 }
+.color.color-evernote {
+  background-color: #00A82D !important;
+  color: #FFFFFF !important;
+}
 .color.color-facebook {
   background-color: #3B5998 !important;
   color: #FFFFFF !important;
@@ -3644,12 +3669,24 @@ from secondary for highlighting purpose.
   background-color: #007BB6 !important;
   color: #FFFFFF !important;
 }
-.color.color-pintrest {
+.color.color-pinterest {
   background-color: #CB2027 !important;
   color: #FFFFFF !important;
 }
 .color.color-quora {
   background-color: #A82400 !important;
+  color: #FFFFFF !important;
+}
+.color.color-reddit {
+  background-color: #FF4500 !important;
+  color: #FFFFFF !important;
+}
+.color.color-rss {
+  background-color: #EE802F !important;
+  color: #FFFFFF !important;
+}
+.color.color-skype {
+  background-color: #00AFF0 !important;
   color: #FFFFFF !important;
 }
 .color.color-snapchat {
@@ -3672,16 +3709,16 @@ from secondary for highlighting purpose.
   background-color: #00BF8F !important;
   color: #FFFFFF !important;
 }
+.color.color-vk {
+  background-color: #4680C2 !important;
+  color: #FFFFFF !important;
+}
 .color.color-whatsapp {
   background-color: #43D854 !important;
   color: #FFFFFF !important;
 }
 .color.color-youtube {
   background-color: #BB0000 !important;
-  color: #FFFFFF !important;
-}
-.color.color-vk {
-  background-color: #45668E !important;
   color: #FFFFFF !important;
 }
 .color.color-btn {
@@ -4015,7 +4052,7 @@ from secondary for highlighting purpose.
 .text.text-aqua {
   color: #8AE2E3 !important;
 }
-.text.btextkg-golden {
+.text.text-golden {
   color: #E9C011 !important;
 }
 .text.text-silver {
@@ -4497,6 +4534,9 @@ html, body {
 .text.text-micro {
   font-size: 0.5em !important;
 }
+.text.text-top {
+  vertical-align: text-top !important;
+}
 .text.text-bottom {
   vertical-align: text-bottom !important;
 }
@@ -4601,7 +4641,7 @@ p, span, em, div, a {
 }
 .reader .wrap-editor-image .image-caption {
   text-align: center;
-  margin-top: 0.5em;
+  margin: 0.5em 0;
 }
 
 .cmti, .fa {
@@ -4811,26 +4851,30 @@ html, body {
 }
 
 /**********************************************************************
-Description: This file define the grid system and basic containers of CMT-UI css framework.
+Description: This file define the grid system and basic containers of Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the grid system and basic containers as listed below:
-* Row               - The row is the primary class of grid system. It can cover either 100% width
-*                     or specified width keeping itself at center of parent element. A row can also be declared
-*                     to have all columns inline irrespective of their float.
-* Column            - The column system can form either 12 column or 15 column grid with or without margin
-*                     seperating each column. The columns without margin can be implemented using full column
-*                     classes.
-* Column Filler     - The filler column can be used to make a column with full height in case it's background
-*                     color is different from other columns in same grid. The filler column will act as placeholder
-*                     and fill the background of smaller column in order to have all the columns appear as full
-*                     columns with same height and with different background color.
-* Container         - The container is placeholder for content. The content can also be wrapped within content wrapper.
-*                     This section also explain the possible arrangements for page header, footer, sidebar and content
-*                     within main container.
-* Content           - The content classes can be used to align content by occupying full or partial width. The classes
-*                     also include classes to arrange content within container or parent element.
+
+Row - The row is the primary class of grid system. It can cover either 100% width or specified
+width keeping itself at center of parent element. A row can also be declared to have all columns
+inline irrespective of their float.
+
+Column - The column system can form either 12 column or 15 column grid with or without margin
+seperating each column. The columns without margin can be implemented using full column classes.
+
+Column Filler - The filler column can be used to make a column with full height in case it's background
+color is different from other columns in same grid. The filler column will act as placeholder and fill
+the background of smaller column in order to have all the columns appear as full columns with same height
+and with different background color.
+
+Container - The container is placeholder for content. The content can also be wrapped within content
+wrapper. This section also explain the possible arrangements for page header, footer, sidebar and content
+within main container.
+
+Content - The content classes can be used to align content by occupying full or partial width. The classes
+also include classes to arrange content within container or parent element.
 ***********************************************************************/
 .row {
   position: relative;
@@ -6668,15 +6712,15 @@ html, body {
 }
 
 /**********************************************************************
-Description: It defines the styles for html elements except form and table for CMT-UI css framework.
+Description: It defines the styles for html elements except form and table.
 
 Dependencies: none
 
 Details: It defines the styles for html elements as listed below:
 
-* Fieldset    - The fieldset can be used to group elements with appropriate title using legend.
-*
-* Optgroup    - The optgroup used in select box will be bold by default.
+Fieldset - The fieldset can be used to group elements with appropriate title using legend.
+
+Optgroup - The optgroup used in select box will be bold by default.
 ***********************************************************************/
 fieldset {
   border: 1px solid #F9F9F9;
@@ -6721,40 +6765,36 @@ blockquote:after {
   content: "\201D";
 }
 
-.list.list-radio label {
-  width: auto;
-}
-.list.style-circle {
+.list.list-style-circle {
   list-style-type: circle;
 }
-.list.style-square {
+.list.list-style-square {
   list-style-type: square;
 }
-.list.style-decimal {
+.list.list-style-decimal {
   list-style-type: decimal;
 }
-.list.style-image-default {
+.list.list-style-image-default {
   list-style-image: url("../images/list-default.jpg");
 }
-.list.position-inside {
+.list.list-position-inside {
   list-style-position: inside;
 }
-.list.position-outside {
+.list.list-position-outside {
   list-style-position: outside;
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of custom elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Icon picker     - The icon picker element allows users to pick an item. It depends on cmtIconPicker jQuery
-*                   plugin available in CMT-JS framework.
-*
+Icon picker - The icon picker element allows users to pick an item. It depends on
+cmtIconPicker jQuery plugin available in Velocity JS Framework.
 ***********************************************************************/
 .icon-picker-wrap {
   width: 100%;
@@ -6816,6 +6856,18 @@ Details: It defines the custom element styles as listed below:
   cursor: pointer;
 }
 
+/**********************************************************************
+Description: It defines the styles of time picker elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Time picker - The time picker element allows users to choose time. It depends on
+cmtTimePicker jQuery plugin available in Velocity JS Framework.
+***********************************************************************/
 .cmt-timepicker {
   position: absolute;
   display: none;
@@ -6889,32 +6941,35 @@ Details: It defines the custom element styles as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of elements list available in Breeze CSS Framework.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* List		  - 
+Radio List - A list of radio elements.
 ***********************************************************************/
-.list-radio label {
+.list.list-radio label {
   width: auto;
   clear: none;
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework. Most of
-these elements are also dependent on Velocity. Though the JS implementation can also be
-done for other standard libraries.
+Description: It defines the styles of select elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Select - The custom select allows user to select an item. It override the default select ui
-dependent on browsers. It depends on cmtSelect jQuery plugin available in Velocity.
+CMT Select - The custom select allows user to select an item. It override the
+default select ui dependent on browsers. It depends on cmtSelect jQuery plugin
+available in Velocity JS Framework.
+
+CMT Multiselect -
+
+CMT Select Native - It works without cmtSelect plugin.
 ***********************************************************************/
 .cmt-select-wrap {
   width: 100%;
@@ -7074,15 +7129,15 @@ dependent on browsers. It depends on cmtSelect jQuery plugin available in Veloci
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in Breeze Framework.
-Most of these elements are also dependent on CMT-JS library. Though the JS implementation
-can also be done for other standard libraries.
+Description: It defines the styles of radio and checkbox elements available in
+Breeze CSS Framework. Most of these elements are also dependent on Velocity JS
+Framework. Though the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-1. Choice - The choice allows user to select single or multiple options from available
+Choice - The choice allows user to select single or multiple options from available
 options. It include radio and checkbox html components and change their default behaviour
 by showing good looking icons instead of browser dependentent graphics. These are indepedent
 of JS and purely css solutions.
@@ -7138,16 +7193,16 @@ of JS and purely css solutions.
   color: #BBB;
 }
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
-  content: "\e0a2";
+  content: "\e91d";
 }
 .cmt-choice input[type=radio]:checked + .label::before {
-  content: "\e0a3";
+  content: "\e91e";
 }
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
-  content: "\3b";
+  content: "\e847";
 }
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "\3a";
+  content: "\e849";
 }
 
 .cmt-choice.cmt-choice-inline label {
@@ -7179,16 +7234,15 @@ of JS and purely css solutions.
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of rating elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Rating          - The rating element can be used to provide ratings.
-*
+Rating - The rating element can be used to provide ratings.
 ***********************************************************************/
 .cmt-rating {
   text-align: left;
@@ -7222,11 +7276,11 @@ Details: It defines the custom element styles as listed below:
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of switch elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
@@ -7330,19 +7384,19 @@ Switch - It's an advanced and custom element overriding default behavoir of radi
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of button elements available in Breeze CSS Framework.
+Most of these elements are also dependent on Velocity JS Framework. Though the JS
+implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Button          - This class turns an element into button and does not need any JS to work.
-*
-* Button Group    - It can be used to show a group of bottons placed absolutely at the corners of parent element. The
-*                   parent element must use positioning i.e. absolute, relative etc in order to place group at
-*                   appropriate postion.
+Button - This class turns an element into button and does not need any JS to work.
+
+Button Group - It can be used to show a group of bottons placed absolutely at the corners
+of parent element. The parent element must use positioning i.e. absolute, relative etc in
+order to place group at appropriate postion.
 ***********************************************************************/
 .btn {
   -webkit-transition: all 420ms ease-in-out 0s;
@@ -7921,41 +7975,40 @@ a:hover, .link:hover {
 }
 
 /**********************************************************************
-Description: It defines the styles of form elements for CMT-UI css framework.
+Description: It defines the styles of form elements for Breeze CSS Framework.
 
 Dependencies: variables, mixins
 
 Details: It defines the styles of form elements as listed below:
 
-* Form              - The form occupy 100% width by default. This section adds classes so that we can make
-*                     fixed width responsive forms using these classes.
-*
-* Extended classes  - This section define the extended classes required to style the form elements.
-*
-* Label             - This section adds default styles for label.
-*
-* Text              - This section adds default styles for text, email, password, textarea and select elements.
-*
-* Button            - This section adds default styles for submit and button elements.
-*
-* Mandatory         - This class adds * to field lables marked as required.
-*
-* Icon elements     - This class adds options to specify icon for an element. The icon will be added to left by
-*                     default, but it can also be displayed on right side.
-*
-* Placeholder       - This section make placeholder color same for all the browsers.
-*
-* Custom Element	- This section decorates the custom elements.
-*
-* Round corner      - This section define classes to make form elements round cornered.
-*
-* Ignore 100%       - This class allows form to ignore 100% width of elements.
-*
-* Split 40-60       - This section define classes to split form into 40% for labels on left side and 60% for
-*                     fields on right side.
-*
-* Forms				- The form class add required spacing to render the form elements.
-*
+Form - The form occupy 100% width by default. This section adds classes so that we can
+make fixed width responsive forms using these classes.
+
+Extended classes - This section define the extended classes required to style the form elements.
+
+Label - This section adds default styles for label.
+
+Text - This section adds default styles for text, email, password, textarea and select elements.
+
+Button - This section adds default styles for submit and button elements.
+
+Mandatory - This class adds * to field lables marked as required.
+
+Icon elements - This class adds options to specify icon for an element. The icon will be added
+to left by default, but it can also be displayed on right side.
+
+Placeholder - This section make placeholder color same for all the browsers.
+
+Custom Element - This section decorates the custom elements.
+
+Round corner - This section define classes to make form elements round cornered.
+
+Ignore 100% - This class allows form to ignore 100% width of elements.
+
+Split 40-60 - This section define classes to split form into 40% for labels on left side and 60%
+for fields on right side.
+
+Forms - The form class add required spacing to render the form elements.
 ***********************************************************************/
 form {
   margin: 0 auto;
@@ -8088,15 +8141,6 @@ label {
 
 .frm-element {
   display: inline-block;
-}
-
-.disabled {
-  background-color: #808080 !important;
-  color: #E6E7E8 !important;
-}
-.disabled:hover {
-  background-color: #808080 !important;
-  color: #E6E7E8 !important;
 }
 
 input[type="submit"], input[type="button"], button, .btn {
@@ -8304,7 +8348,13 @@ select, .cmt-select-wrap .cmt-selected {
   width: auto;
 }
 
-.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"], .frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
+/* Splitted forms having label on left consuming 40% width and field on right side
+having remaining 60% width We have two options to use the 40-60 concept i.e. either
+using frm-split-40-60 or using element-40 and element-60. For both the options, the
+left side element clears the floating and parent must use clearfix to derive it's
+height from form elements.*/
+.frm-split-40-60 .ignore-40-60 label, .frm-split-40-60 .ignore-40-60 .frm-element-40, .frm-split-40-60 .ignore-40-60 input[type="text"], .frm-split-40-60 .ignore-40-60 input[type="email"], .frm-split-40-60 .ignore-40-60 input[type="password"],
+.frm-split-40-60 .ignore-40-60 textarea, .frm-split-40-60 .ignore-40-60 select, .frm-split-40-60 .ignore-40-60 .frm-element-60 {
   width: 100%;
 }
 .frm-split-40-60 .auto-fill-items-wrap {
@@ -8362,8 +8412,10 @@ select, .cmt-select-wrap .cmt-selected {
 }
 
 @media only screen and (max-width: 480px) {
-  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"], .frm-split-40-60 input[type="password"],
-  .frm-split-40-60 textarea, .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch, .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
+  .frm-split-40-60 input[type="text"], .frm-split-40-60 input[type="email"],
+  .frm-split-40-60 input[type="password"], .frm-split-40-60 textarea,
+  .frm-split-40-60 select, .frm-split-40-60 .cmt-checkbox, .frm-split-40-60 .cmt-switch,
+  .frm-element-60, .frm-split-40-60 label, .cmt-select-wrap, .frm-icon-element {
     width: 100%;
   }
 
@@ -8386,7 +8438,8 @@ select, .cmt-select-wrap .cmt-selected {
 .form .message.warning, .form .message.error, .form .message.success, .form .message.info {
   margin-top: 0.5rem;
 }
-.form .form-group .help-block {
+.form .help-block {
+  color: #E74343 !important;
   margin: 0.25rem 0;
 }
 .form .frm-split-40-60 label {
@@ -8415,6 +8468,10 @@ select, .cmt-select-wrap .cmt-selected {
     width: 80%;
     padding: 2rem 2%;
   }
+}
+
+.form-group .help-block {
+  color: #E74343 !important;
 }
 
 /**********************************************************************
@@ -8549,15 +8606,15 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 }
 
 /**********************************************************************
-Description: It defines the styles of custom elements available in CMT-UI css framework. Most of these
-			 elements are also dependent on CMT-JS library. Though the JS implementation can also be done
-			 for other standard libraries.
+Description: It defines the styles of select elements available in Breeze CSS
+Framework. Most of these elements are also dependent on Velocity JS Framework. Though
+the JS implementation can also be done for other standard libraries.
 
-Dependencies: variables, mixins, transitions, transformation
+Dependencies: variables, mixins, transitions, transformations
 
 Details: It defines the custom element styles as listed below:
 
-* Splitter		  - The splitters can be used to split an element either vertically or horizontally.
+Splitter - The splitters can be used to split an element either vertically or horizontally.
 ***********************************************************************/
 .splitter {
   margin: 0 auto;
@@ -10103,7 +10160,6 @@ Details: It defines the styles for header components as listed below:
   background-color: #FFFFFF;
   color: #6D6E6F;
   position: relative;
-  z-index: 100000;
 }
 .header-basic .header-logo {
   cursor: pointer;
