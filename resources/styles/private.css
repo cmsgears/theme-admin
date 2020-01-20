@@ -3642,7 +3642,7 @@ from secondary for highlighting purpose.
   color: #FFFFFF !important;
 }
 .color.color-evernote {
-  background-color: #00A82D !important;
+  background-color: #5BA525 !important;
   color: #FFFFFF !important;
 }
 .color.color-facebook {
@@ -7193,16 +7193,16 @@ of JS and purely css solutions.
   color: #BBB;
 }
 .cmt-choice input[type=radio] + .label::before, .cmt-choice input[type=radio]:disabled + .label::before {
-  content: "\e91d";
+  content: "\e90e";
 }
 .cmt-choice input[type=radio]:checked + .label::before {
-  content: "\e91e";
+  content: "\e90f";
 }
 .cmt-choice input[type=checkbox] + .label::before, .cmt-choice input[type=checkbox]:disabled + .label::before {
-  content: "\e847";
+  content: "\e84d";
 }
 .cmt-choice input[type=checkbox]:checked + .label::before {
-  content: "\e849";
+  content: "\e84f";
 }
 
 .cmt-choice.cmt-choice-inline label {
