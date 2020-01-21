@@ -5,7 +5,7 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
-	
+
 	initDatePickers();
 
 	initPopups();
@@ -15,7 +15,7 @@ jQuery( document ).ready( function() {
 	initSidebarTabs();
 
 	initSettings();
-	
+
 	initGallery();
 });
 
@@ -66,7 +66,7 @@ function initCmgTools() {
 
 	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
-	
+
 	// Field Groups
 	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
@@ -116,7 +116,7 @@ function initListeners() {
 
 		jQuery( this ).parent().find( '.cmt-click' ).click();
 	});
-	
+
 	if( jQuery( '#popout-settings-trigger' ).length == 1 ) {
 
 		jQuery( '#popout-settings-trigger' ).click( function() {
@@ -353,8 +353,8 @@ function initGallery() {
 			form.slideToggle();
 		});
 
-		var app		= cmt.api.root.getApplication( 'gallery' );
-		var service = app.getService( 'item' );
+		var app		= cmt.api.root.getApplication( 'core' );
+		var service = app.getService( 'galleryItem' );
 
 		service.hiddenForm = false;
 

@@ -73,13 +73,13 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 							<div class="cmt-gallery-item-header card-header row">
 								<div class="col col3x2 title align align-left" title="<?= $file->title ?>"><?= $file->title ?></div>
 								<div class="col col3 align align-right">
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/get-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="get" action="<?= $apixBase ?>/get-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
 										<i class="icon cmti cmti-edit cmt-click"></i>
 									</span>
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="delete" action="<?= $apixBase ?>/delete-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="delete" action="<?= $apixBase ?>/delete-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>

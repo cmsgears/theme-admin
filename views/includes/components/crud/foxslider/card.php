@@ -72,13 +72,13 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 							<div class="cmt-gallery-item-header card-header row">
 								<div class="col col3x2 title align align-left" title="<?= $slide->name ?>"><?= $slide->name ?></div>
 								<div class="col col3 align align-right">
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
 										<i class="icon cmti cmti-edit cmt-click"></i>
 									</span>
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>

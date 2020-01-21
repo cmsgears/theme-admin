@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<form class="form frm-split-40-60" cmt-app="gallery" cmt-controller="item" cmt-action="add" action="<?= $apixBase ?>/slide/create?id=<?= $slider->id ?>">
+			<form class="form frm-split-40-60" cmt-app="core" cmt-controller="galleryItem" cmt-action="add" action="<?= $apixBase ?>/slide/create?id=<?= $slider->id ?>">
 				<?php include "$themeIncludes/components/spinners/form.php"; ?>
 				<div class="file-info">
 					<input name="File[name]" class="name" type="hidden" />
@@ -117,7 +117,7 @@
 			</div>
 		</div>
 		<div class="row">
-			<form class="form frm-split-40-60" cmt-app="gallery" cmt-controller="item" cmt-action="update" action="<?= $apixBase ?>/slide/update?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
+			<form class="form frm-split-40-60" cmt-app="core" cmt-controller="galleryItem" cmt-action="update" action="<?= $apixBase ?>/slide/update?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
 				<div class="file-info">
 					<input name="File[id]" class="id" type="hidden" value="{{fid}}" />
 					<input name="File[name]" class="name" type="hidden" value="{{name}}" />
@@ -206,13 +206,13 @@
 		<div class="cmt-gallery-item-header card-header row">
 			<div class="col col3x2 title align align-left" title="{{title}}">{{title}}</div>
 			<div class="col col3 align align-right">
-				<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
+				<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
 					<span class="spinner hidden-easy">
 						<span class="icon cmti cmti-spinner-1 spin"></span>
 					</span>
 					<i class="icon cmti cmti-edit cmt-click"></i>
 				</span>
-				<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
+				<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid={{mid}}&fid={{fid}}">
 					<span class="spinner hidden-easy">
 						<span class="icon cmti cmti-spinner-1 spin"></span>
 					</span>
