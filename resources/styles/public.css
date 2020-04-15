@@ -1787,6 +1787,30 @@ Notes:
   background-image: url("../images/pattern-default.png");
 }
 
+.line-clamp-2 > *, .line-clamp-3 > * {
+  display: none;
+}
+
+.line-clamp-2 > *:first-child, .line-clamp-3 > *:first-child {
+  display: block;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
 /**********************************************************************
 Description: This file define the transition effects available in the Breeze CSS Framework. These
 allow changes in allowed css properties smoothly over a defined time interval. We can define the
@@ -3035,32 +3059,35 @@ html, body {
 .valign {
   vertical-align: baseline;
 }
+.valign.valign-none {
+  vertical-align: unset !important;
+}
 .valign.valign-initial {
-  vertical-align: initial;
+  vertical-align: initial !important;
 }
 .valign.valign-inherit {
-  vertical-align: inherit;
+  vertical-align: inherit !important;
 }
 .valign.valign-top {
-  vertical-align: top;
+  vertical-align: top !important;
 }
 .valign.valign-middle {
-  vertical-align: middle;
+  vertical-align: middle !important;
 }
 .valign.valign-bottom {
-  vertical-align: bottom;
+  vertical-align: bottom !important;
 }
 .valign.valign-text-top {
-  vertical-align: text-top;
+  vertical-align: text-top !important;
 }
 .valign.valign-text-bottom {
-  vertical-align: text-bottom;
+  vertical-align: text-bottom !important;
 }
 .valign.valign-sub {
-  vertical-align: sub;
+  vertical-align: sub !important;
 }
 .valign.valign-super {
-  vertical-align: super;
+  vertical-align: super !important;
 }
 
 .absolute {
@@ -3215,6 +3242,30 @@ html, body {
   display: none;
 }
 
+.display-block {
+  display: block !important;
+}
+
+.display-inline {
+  display: inline !important;
+}
+
+.display-inline-block {
+  display: inline-block !important;
+}
+
+.display-inline-table {
+  display: inline-table !important;
+}
+
+.display-visible {
+  display: block !important;
+}
+
+.display-hidden {
+  display: none !important;
+}
+
 .visible-space {
   visibility: visible !important;
 }
@@ -3252,6 +3303,12 @@ html, body {
 }
 .cursor.cursor-pointer {
   cursor: pointer;
+}
+.cursor.cursor-pointer-none {
+  pointer-events: none;
+}
+.cursor.cursor-pointer-auto {
+  pointer-events: auto;
 }
 .cursor.cursor-crosshair {
   cursor: crosshair;
@@ -3316,13 +3373,6 @@ html, body {
 
 .info {
   color: #3F62A0;
-}
-
-.error-field {
-  border: 1px solid #E74343;
-  -webkit-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
-  -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
-  box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
 }
 
 .count-sidebar {
@@ -4617,17 +4667,19 @@ p, span, em, div, a {
   text-align: justify !important;
 }
 .reader ol li {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: decimal;
-  line-height: 2.5;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
 }
 .reader ol ul, .reader ol ol {
   margin-left: 2em;
 }
 .reader ul li {
-  list-style-position: inside;
+  list-style-position: outside;
   list-style-type: disc;
-  line-height: 2.5;
+  margin-left: 1em;
+  margin-bottom: 0.5em;
 }
 .reader ul ul, .reader ul ol {
   margin-left: 2em;
@@ -4672,6 +4724,19 @@ code, pre {
   font-weight: lighter;
 }
 
+.text.text-normal {
+  font-weight: normal;
+}
+.text.text-bold {
+  font-weight: bold;
+}
+.text.text-bolder {
+  font-weight: bolder;
+}
+.text.text-lighter {
+  font-weight: lighter;
+}
+
 .italic {
   font-style: italic;
 }
@@ -4705,6 +4770,34 @@ code, pre {
 }
 
 .ellipsis {
+  text-overflow: ellipsis;
+}
+
+.text.text-italic {
+  font-style: italic;
+}
+.text.text-underline {
+  text-decoration: underline;
+}
+.text.text-uppercase {
+  text-transform: uppercase;
+}
+.text.text-lowercase {
+  text-transform: lowercase;
+}
+.text.text-strikethrough {
+  text-decoration: line-through;
+}
+.text.text-nowrap {
+  white-space: nowrap;
+}
+.text.text-break-all {
+  word-break: break-all;
+}
+.text.text-break-word {
+  word-wrap: break-word;
+}
+.text.text-ellipsis {
   text-overflow: ellipsis;
 }
 
@@ -4812,16 +4905,16 @@ a:active, a:hover, .link:active, .link:hover {
   padding: 0.5em;
   background-color: #F9F9F9;
 }
-.note .note-info {
+.note.note-info {
   color: #3F62A0;
 }
-.note .note-success {
+.note.note-success {
   color: #A5D75A;
 }
-.note .note-warning {
+.note.note-warning {
   color: #EF9300;
 }
-.note .note-error {
+.note.note-error {
   color: #E74343;
 }
 
@@ -5929,6 +6022,7 @@ html, body {
   width: 500px;
   height: 500px;
 }
+
 .shape.shape-rectangle.shape-rectangle-small {
   background: #026eb7;
   color: #FFFFFF;
@@ -5953,6 +6047,7 @@ html, body {
   width: 750px;
   height: 500px;
 }
+
 .shape.shape-circle {
   border-radius: 50%;
 }
@@ -5980,6 +6075,7 @@ html, body {
   width: 500px;
   height: 500px;
 }
+
 .shape.shape-oval {
   border-radius: 100%/50%;
 }
@@ -6007,6 +6103,7 @@ html, body {
   width: 500px;
   height: 500px;
 }
+
 .shape.shape-triangle {
   width: 0;
   height: 0;
@@ -6023,6 +6120,7 @@ html, body {
   width: 50px;
   height: 100px;
 }
+
 .shape.shape-hexagon {
   width: 50px;
   height: 29px;
@@ -6721,6 +6819,8 @@ Details: It defines the styles for html elements as listed below:
 Fieldset - The fieldset can be used to group elements with appropriate title using legend.
 
 Optgroup - The optgroup used in select box will be bold by default.
+
+Blockquote - The default styles to display quotes.
 ***********************************************************************/
 fieldset {
   border: 1px solid #F9F9F9;
@@ -6752,7 +6852,7 @@ blockquote:before {
   line-height: 1;
   top: 0;
   left: 0;
-  content: "\201C";
+  content: "\e90d";
 }
 
 blockquote:after {
@@ -6762,9 +6862,18 @@ blockquote:after {
   line-height: 1;
   right: 0;
   bottom: -0.5em;
-  content: "\201D";
+  content: "\e90c";
 }
 
+/**********************************************************************
+Description: It defines the styles of elements list available in Breeze CSS Framework.
+
+Dependencies: variables, mixins, transitions, transformations
+
+Details: It defines the custom element styles as listed below:
+
+Radio List - A list of radio elements.
+***********************************************************************/
 .list.list-style-circle {
   list-style-type: circle;
 }
@@ -6784,15 +6893,6 @@ blockquote:after {
   list-style-position: outside;
 }
 
-/**********************************************************************
-Description: It defines the styles of elements list available in Breeze CSS Framework.
-
-Dependencies: variables, mixins, transitions, transformations
-
-Details: It defines the custom element styles as listed below:
-
-Radio List - A list of radio elements.
-***********************************************************************/
 .list.list-radio label {
   width: auto;
   clear: none;
@@ -7105,6 +7205,9 @@ Rating - The rating element can be used to provide ratings.
 .cmt-rating .wrap-messages .star-message.selected {
   display: inline-block;
 }
+.cmt-rating.read-only .wrap-stars .star {
+  cursor: default;
+}
 
 .cmt-rating-native {
   text-align: left;
@@ -7113,10 +7216,10 @@ Rating - The rating element can be used to provide ratings.
   margin-right: 8px;
 }
 .cmt-rating-native input[type=radio] + .label::before, .cmt-rating-native input[type=radio]:disabled + .label::before {
-  content: "\e0f3";
+  content: "\e946";
 }
 .cmt-rating-native input[type=radio]:checked + .label::before {
-  content: "\e0f3";
+  content: "\e944";
 }
 
 /**********************************************************************
@@ -7995,6 +8098,13 @@ select, .cmt-select-wrap .cmt-selected {
   line-height: 1.4;
 }
 
+.error-field {
+  border: 1px solid #E74343;
+  -webkit-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  -moz-box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+  box-shadow: 1px 1px 5px 0 rgba(231, 67, 67, 0.25);
+}
+
 /** Iconified Elements - Works in presence of CMT-Icons and Font Awsome. It can be overriden to use any preferred icon font library. */
 .frm-icon-element {
   position: relative;
@@ -8447,9 +8557,9 @@ Dependencies: variables, variables-ext, mixins
 
 Details: It defines the styles for header components as listed below:
 
-* Header      - The barebone header class with minimum styles. The header can be made fixed or absolute.
-*
-* Basic       - The basic header define the styles for primary header having logo and menus.
+Header - The barebone header class with minimum styles. The header can be made fixed or absolute.
+
+Basic - The basic header define the styles for primary header having logo and menus.
 ***********************************************************************/
 .header {
   position: relative;
@@ -8580,21 +8690,31 @@ Details: It defines the styles for header components as listed below:
   .header-basic.header-small {
     height: 50px;
   }
+  .header-basic.header-small .header-logo {
+    padding: 5px 10px;
+  }
+  .header-basic.header-small .header-logo .logo {
+    display: inline-block;
+  }
+  .header-basic.header-small .header-logo .logo img {
+    height: 40px;
+  }
   .header-basic.header-small #menu-main {
-    height: 50px;
-    line-height: 50px;
     padding: 0;
+  }
+  .header-basic.header-small #menu-main li a {
+    line-height: 50px;
   }
 }
 
 .header-basic-duo .header-logo .logo-small {
-  display: none;
+  display: none !important;
 }
-.header-basic-duo.header-small .logo {
-  display: none;
+.header-basic-duo.header-small .header-logo .logo {
+  display: none !important;
 }
 .header-basic-duo.header-small .header-logo .logo-small {
-  display: inline-block;
+  display: inline-block !important;
 }
 .header-basic-duo.header-small .header-logo .logo-small img {
   height: 40px;
