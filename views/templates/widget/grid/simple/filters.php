@@ -1,5 +1,5 @@
 <?php
-$filters	= $widget->filters;
+$filters = $widget->filters;
 ?>
 <?php if( count( $filters ) > 0 ) { ?>
 <span class="grid-filters-wrap">
@@ -7,9 +7,9 @@ $filters	= $widget->filters;
 		<select class="cmt-select-c">
 			<option value="select">Select Filter</option>
 			<?php
-				foreach ( $filters as $column => $options ) {
+				foreach( $filters as $column => $options ) {
 
-					$colFilter	= Yii::$app->request->getQueryParam( $column );
+					$colFilter = Yii::$app->request->getQueryParam( $column );
 
 					foreach ( $options as $key => $filter ) {
 			?>

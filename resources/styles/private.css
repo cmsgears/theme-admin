@@ -402,6 +402,12 @@ Notes:
   -moz-border-radius: 13px;
   border-radius: 13px;
 }
+.rounded.rounded-50 {
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
 .rounded.rounded-top {
   border-radius: 1px 1px 0 0;
   -webkit-border-radius-top-left: 1px;
@@ -1191,10 +1197,10 @@ Notes:
   border: 1px solid #D1D2D3;
 }
 .border.border-default-l {
-  border: 1px solid #A5A5A5;
+  border: 1px solid #F4F4F4;
 }
 .border.border-default-d {
-  border: 1px solid #F4F4F4;
+  border: 1px solid #A5A5A5;
 }
 .border.border-small {
   border: 3px solid #D1D2D3;
@@ -12320,23 +12326,26 @@ Details: It defines the styles of box components as listed below:
 
 * Panel       - The panel box define the styles of simple box having icon and header within header wrapper and
 *               content within content box. The content is aligned center by default.
-*				The Banner and Video can be placed at any position within the Box. The possible postions 
+*				The Banner and Video can be placed at any position within the Box. The possible postions
 *				are outside content wrapper as background, within header, within content and within footer.
 *
 * Collapsible - The collapsible boxes are similar to panel, but these can also be collapsed hiding content keeping
 *               header and footer visible. The content collapse on clicking header / collapse button on header.
 ***********************************************************************/
 .box-panel .box-content-wrap .box-header-wrap {
+  position: relative;
   background-color: #026eb7;
   color: #FFFFFF;
   padding: 0.5rem;
 }
 .box-panel .box-content-wrap .box-data {
+  position: relative;
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.5rem;
 }
 .box-panel .box-content-wrap .box-footer-wrap {
+  position: relative;
   background-color: #F9F9F9;
   color: #898989;
   padding: 0.5rem;
@@ -12352,7 +12361,7 @@ Details: It defines the styles of box components as listed below:
   padding-left: 1.5rem;
 }
 
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger {
+.box-collapsible .box-content-wrap .box-header-wrap .box-collapsible-trigger {
   position: absolute;
   display: inline-block;
   top: 0.5em;
@@ -12360,7 +12369,7 @@ Details: It defines the styles of box components as listed below:
   color: #898989;
   cursor: pointer;
 }
-.box-collapsible .box-content-wrap .box-header-wrap .box-header .box-collapsible-trigger:hover {
+.box-collapsible .box-content-wrap .box-header-wrap .box-collapsible-trigger:hover {
   color: #E74343;
 }
 
@@ -12699,8 +12708,8 @@ Basic - The basic widget defines the styles of widget having text and background
 }
 
 /**********************************************************************
-Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
-			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks.
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps
 			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
@@ -12789,6 +12798,18 @@ Details: It defines the styles for header components as listed below:
 }
 .block .block-content-wrap .block-header-wrap {
   position: relative;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-fixed {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-scroll {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-parallax {
+  z-index: 5;
 }
 .block .block-content-wrap .block-header-wrap .block-header {
   position: relative;

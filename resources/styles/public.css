@@ -402,6 +402,12 @@ Notes:
   -moz-border-radius: 13px;
   border-radius: 13px;
 }
+.rounded.rounded-50 {
+  -webkit-border-radius: 50%;
+  -khtml-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
 .rounded.rounded-top {
   border-radius: 1px 1px 0 0;
   -webkit-border-radius-top-left: 1px;
@@ -1191,10 +1197,10 @@ Notes:
   border: 1px solid #D1D2D3;
 }
 .border.border-default-l {
-  border: 1px solid #A5A5A5;
+  border: 1px solid #F4F4F4;
 }
 .border.border-default-d {
-  border: 1px solid #F4F4F4;
+  border: 1px solid #A5A5A5;
 }
 .border.border-small {
   border: 3px solid #D1D2D3;
@@ -8800,8 +8806,8 @@ Basic - The basic header define the styles for primary header having logo and me
 }
 
 /**********************************************************************
-Description: It defines the styles of the block components. We can devide the entire page in one or more blocks. 
-			 Each block can have background image with or without parallax effect, a content wrapper which wraps 
+Description: It defines the styles of the block components. We can devide the entire page in one or more blocks.
+			 Each block can have background image with or without parallax effect, a content wrapper which wraps
 			 header, content and footer. Blocks can be considered as large containers for Boxes, Cards and other components.
 
 Dependencies: variables, variables-ext, mixins
@@ -8890,6 +8896,18 @@ Details: It defines the styles for header components as listed below:
 }
 .block .block-content-wrap .block-header-wrap {
   position: relative;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-fixed {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-scroll {
+  z-index: 1;
+}
+.block .block-content-wrap .block-header-wrap .block-bkg-parallax {
+  z-index: 5;
 }
 .block .block-content-wrap .block-header-wrap .block-header {
   position: relative;

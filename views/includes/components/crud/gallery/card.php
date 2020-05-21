@@ -47,6 +47,15 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col col1">
+							<div class="form-group">
+								<label>Content</label>
+								<textarea name="Gallery[content]" placeholder="Content"><?= $gallery->content ?></textarea>
+								<span  class="error" cmt-error="Gallery[content]"></span>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="data-crud-message">
 					<div class="message success"></div>
