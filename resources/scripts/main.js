@@ -83,7 +83,7 @@ function initCmgTools() {
 	jQuery( '.auto-fill' ).cmtAutoFill();
 
 	// Tabs
-	jQuery( '.tabs,.box-crud-tabs-v' ).cmtTabs();
+	jQuery( '.tabs, .box-crud-tabs-v' ).cmtTabs();
 
 	// Form with Info
 	jQuery( '.box-form' ).cmtFormInfo();

@@ -3415,7 +3415,7 @@ html, body {
 }
 
 #pre-loader-main {
-  z-index: 1000;
+  z-index: 100001;
   position: absolute;
   width: 100%;
 }
