@@ -139,13 +139,27 @@ function initDatePickers() {
 
 		var datepicker = jQuery( this );
 
-		var start	= datepicker.attr( 'ldata-start' );
-		var end		= datepicker.attr( 'ldata-end' );
+		var start	= datepicker.attr( 'data-start' );
+		var end		= datepicker.attr( 'data-end' );
+		var cmonth	= datepicker.attr( 'data-cmonth' );
+		var cyear	= datepicker.attr( 'data-cyear' );
+
+		if( null == cmonth ) {
+
+			cmonth = false;
+		}
+
+		if( null == cyear ) {
+
+			cyear = false;
+		}
 
 		if( null != start && null != end ) {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				minDate: start,
 				maxDate: end
 			});
@@ -154,6 +168,8 @@ function initDatePickers() {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				minDate: start
 			});
 		}
@@ -161,16 +177,32 @@ function initDatePickers() {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				maxDate: end
 			});
 		}
 		else {
 
 			datepicker.datepicker({
-				dateFormat: 'yy-mm-dd'
+				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear
 			});
 		}
 	});
+
+	// Datetimepicker
+	if( jQuery().datetimepicker ) {
+
+		jQuery( '.datetimepicker' ).datetimepicker( { format: 'Y-m-d H:i:00', step: 5 } );
+
+		jQuery( '.dt-date-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d' } );
+
+		jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, yearEnd: 2010, defaultDate: '2000-01-01' } );
+
+		jQuery( '.dt-time-picker' ).datetimepicker( { datepicker: false, format: 'H:i:00', step: 5 } );
+	}
 }
 
 // == Popups ==============================

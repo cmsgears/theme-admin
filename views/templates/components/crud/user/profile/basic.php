@@ -8,7 +8,7 @@ use cmsgears\files\widgets\AvatarUploader;
 <div class="data-crud">
 	<div class="data-crud-title">Basic</div>
 	<form class="form" cmt-app="core" cmt-controller="user" cmt-action="profile" action="admin/profile" cmt-keep>
-		<?php include "$themeIncludes/components/spinners/form.php"; ?>
+		<?php include "$themeTemplates/components/spinners/form.php"; ?>
 		<div class="data-crud-form">
 			<div class="row">
 				<div class="colf colf15x7">
@@ -64,7 +64,7 @@ use cmsgears\files\widgets\AvatarUploader;
 						<label>Date of Birth</label>
 						<div class="frm-icon-element icon-right">
 							<span class="icon cmti cmti-calendar"></span>
-							<input type="text" name="User[dob]" placeholder="Date of Birth" value="<?= $model->dob ?>" class="datepicker" />
+							<input type="text" name="User[dob]" placeholder="Date of Birth" value="<?= $model->dob ?>" class="datepicker" data-cmonth="true" data-cyear="true" />
 						</div>
 						<span  class="error" cmt-error="User[dob]"></span>
 					</div>

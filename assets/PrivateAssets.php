@@ -64,6 +64,7 @@ class PrivateAssets extends AssetBundle {
 		$this->js[] = 'scripts/sliders.js';
 		$this->js[] = 'scripts/popups.js';
 
+		$this->depends[] = 'cmsgears\assets\components\DateTimeAssets';
 		$this->depends[] = 'cmsgears\assets\vapps\CoreAssets';
 		$this->depends[] = 'cmsgears\assets\vapps\NotifyAssets';
 	}

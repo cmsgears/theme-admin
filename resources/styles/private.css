@@ -14270,11 +14270,16 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   z-index: 100001 !important;
 }
 
+.ui-datepicker-title {
+  padding: 0.5em;
+}
+
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
   background-color: #FFFFFF;
 }
 
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover, .ui-datepicker-title:hover {
+  background-color: #0074D9 !important;
   color: #FFFFFF !important;
 }
 
@@ -14344,6 +14349,10 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   -webkit-box-shadow: 0 0 0 0 white;
   -moz-box-shadow: 0 0 0 0 white;
   box-shadow: 0 0 0 0 white;
+}
+
+.xdsoft_datetimepicker {
+  z-index: 100005;
 }
 
 /*# sourceMappingURL=private.css.map */
