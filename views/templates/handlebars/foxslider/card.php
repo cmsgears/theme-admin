@@ -18,7 +18,7 @@
 		</div>
 		<div class="row">
 			<form class="form frm-split-40-60" cmt-app="core" cmt-controller="galleryItem" cmt-action="add" action="<?= $apixBase ?>/slide/create?id=<?= $slider->id ?>">
-				<?php include "$themeIncludes/components/spinners/form.php"; ?>
+				<?php include "$themeTemplates/components/spinners/form.php"; ?>
 				<div class="file-info">
 					<input name="File[name]" class="name" type="hidden" />
 					<input name="File[extension]" class="extension" type="hidden" />

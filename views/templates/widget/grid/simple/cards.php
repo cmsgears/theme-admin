@@ -2,10 +2,10 @@
 $dataProvider	= $widget->dataProvider;
 $models			= $dataProvider->getModels();
 
-$columns		= count( $widget->cardColumns ) > 0 ? $widget->cardColumns : $widget->gridColumns;
-$actions		= $widget->actions;
+$columns	= count( $widget->cardColumns ) > 0 ? $widget->cardColumns : $widget->gridColumns;
+$actions	= $widget->actions;
 
-$actionView		= $widget->actionView;
+$actionView = $widget->actionView;
 ?>
 <div class="grid-cards-wrap <?= $widget->layout == 'card' ? 'active' : null ?>">
 	<div class="grid-cards row">
@@ -19,8 +19,9 @@ $actionView		= $widget->actionView;
 
 				foreach( $models as $model ) {
 
-					$id		= $model->id;
-					$index	= 0;
+					$id = $model->id;
+
+					$index = 0;
 		?>
 			<div class="card grid-card <?= $root . $factor ?>">
 				<div class="card-header grid-card-header row">
@@ -32,7 +33,7 @@ $actionView		= $widget->actionView;
 							</label>
 						</span>
 					</div>
-					<div class="colf colf5x4 grid-card-actions">
+					<div class="colf colf5x4 actions grid-card-actions">
 						<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>
 					</div>
 				</div>

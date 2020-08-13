@@ -22,7 +22,7 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 				</span>
 			</div>
 			<form class="form form-gallery hidden-easy" cmt-app="core" cmt-controller="gallery" cmt-action="update" action="<?= $updateUrl ?>" cmt-keep>
-				<?php include "$themeIncludes/components/spinners/form.php"; ?>
+				<?php include "$themeTemplates/components/spinners/form.php"; ?>
 				<div class="data-crud-form">
 					<div class="row">
 						<div class="col col3">
@@ -108,4 +108,4 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 	<div class="cmt-gallery-item-form data-crud-wrap-sidebar colf colf15x4"></div>
 </div>
 <?php
-include "$themeIncludes/handlebars/gallery/card.php";
+include "$themeTemplates/handlebars/gallery/card.php";

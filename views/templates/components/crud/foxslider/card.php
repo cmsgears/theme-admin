@@ -21,7 +21,7 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 				</span>
 			</div>
 			<form class="form form-gallery hidden-easy" cmt-app="core" cmt-controller="gallery" cmt-action="update" action="<?= $updateUrl ?>" cmt-keep>
-				<?php include "$themeIncludes/components/spinners/form.php"; ?>
+				<?php include "$themeTemplates/components/spinners/form.php"; ?>
 				<div class="data-crud-form">
 					<div class="row">
 						<div class="col col3">
@@ -98,4 +98,4 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 	<div class="cmt-gallery-item-form data-crud-wrap-sidebar colf colf15x6"></div>
 </div>
 <?php
-include "$themeIncludes/handlebars/foxslider/card.php";
+include "$themeTemplates/handlebars/foxslider/card.php";

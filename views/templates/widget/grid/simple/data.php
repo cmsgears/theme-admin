@@ -96,7 +96,7 @@ $actionView		= $widget->actionView;
 							</span>
 						</div>
 					<?php } else if( $key === 'actions' ) { ?>
-						<div class="<?= "$cClass $root" . $factor[ $index ] ?> actions">
+						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
 							<span class="data">
 								<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>
