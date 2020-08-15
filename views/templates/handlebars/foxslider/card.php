@@ -1,3 +1,7 @@
+<?php
+// CMG Imports
+use cmsgears\icons\widgets\TextureChooser;
+?>
 <script id="addItemTemplate" type="text/x-handlebars-template">
 	<div class="cmt-gallery-item-uploader" type="image" directory="gallery" gen="0">
 		<div class="row margin margin-bottom-small">
@@ -52,6 +56,10 @@
 						<label>Slide content</label>
 						<textarea name="Slide[content]" placeholder="Content"></textarea>
 						<span  class="error" cmt-error="Slide[content]"></span>
+					</div>
+					<div class="form-group">
+						<?= TextureChooser::widget( [ 'className' => 'Slide', 'attribute' => 'texture', 'options' => [ 'class' => 'icon-picker-wrap' ] ] ) ?>
+						<span  class="error" cmt-error="Slide[texture]"></span>
 					</div>
 					<div class="form-group">
 						<label>Slide Order</label>
@@ -152,6 +160,10 @@
 						<label>Slide Content</label>
 						<textarea name="Slide[content]" placeholder="Content">{{content}}</textarea>
 						<span  class="error" cmt-error="Slide[content]"></span>
+					</div>
+					<div class="form-group">
+						<?= TextureChooser::widget( [ 'className' => 'Slide', 'attribute' => 'texture', 'texture' => '{{texture}}', 'options' => [ 'class' => 'icon-picker-wrap' ] ] ) ?>
+						<span  class="error" cmt-error="Slide[texture]"></span>
 					</div>
 					<div class="form-group">
 						<label>Slide Order</label>
