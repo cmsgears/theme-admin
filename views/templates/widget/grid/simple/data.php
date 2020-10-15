@@ -1,11 +1,13 @@
 <?php
-$dataProvider	= $widget->dataProvider;
-$models			= $dataProvider->getModels();
+$dataProvider = $widget->dataProvider;
 
-$gridColumns	= $widget->gridColumns;
-$actions		= $widget->actions;
+$models = $dataProvider->getModels();
 
-$actionView		= $widget->actionView;
+$gridColumns = $widget->gridColumns;
+
+$actions = $widget->actions;
+
+$actionView = $widget->actionView;
 ?>
 
 <?php
@@ -31,7 +33,7 @@ $actionView		= $widget->actionView;
 				if( $key === 'bulk' ) {
 		?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>">
-						<span class="data cmt-choice">
+						<span class="cmt-choice choice data">
 							<label>
 								<input class="grid-bulk-all" type="checkbox" />
 								<span class="label cmti cmti-checkbox"></span>
@@ -88,7 +90,7 @@ $actionView		= $widget->actionView;
 		?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
-							<span class="data cmt-choice">
+							<span class="cmt-choice choice data">
 								<label>
 									<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
 									<span class="label cmti cmti-checkbox"></span>

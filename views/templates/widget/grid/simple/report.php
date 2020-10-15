@@ -37,8 +37,8 @@ $report = Yii::$app->request->getQueryParam( 'report' );
 						<div class="colf colf2 row">
 							<div class="colf colf3 bold"><?= $title ?></div>
 							<div class="colf colf3x2">
-								<span class='cmt-switch cmt-checkbox'>
-									<input id="<?= $key . '-flag' ?>" class="cmt-toggle cmt-toggle-round" type="checkbox" name="value" />
+								<span class="cmt-checkbox switch">
+									<input id="<?= $key . '-flag' ?>" class="switch-toggle switch-toggle-round" type="checkbox" name="value" />
 									<label for='<?= $key . '-flag' ?>'></label>
 									<input class="report-field" type="hidden" name="<?= $key . '-flag' ?>" value="<?= isset( $flag ) ? $flag : 0 ?>" />
 								</span>

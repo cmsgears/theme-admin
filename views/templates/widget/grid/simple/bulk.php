@@ -1,5 +1,5 @@
 <?php
-$bulkActions	= $widget->bulkActions;
+$bulkActions = $widget->bulkActions;
 ?>
 
 <?php if( count( $bulkActions ) > 0 ) { ?>

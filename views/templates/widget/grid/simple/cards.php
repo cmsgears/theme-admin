@@ -26,7 +26,7 @@ $actionView = $widget->actionView;
 			<div class="card grid-card <?= $root . $factor ?>">
 				<div class="card-header grid-card-header row">
 					<div class="colf colf5 card-title grid-card-title">
-						<span class="data cmt-choice">
+						<span class="cmt-choice choice data">
 							<label>
 								<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
 								<span class="label cmti cmti-checkbox"></span>
