@@ -33,12 +33,12 @@ $actionView = $widget->actionView;
 				if( $key === 'bulk' ) {
 		?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>">
-						<span class="cmt-choice choice data">
-							<label>
+						<div class="choice data">
+							<label class="choice-option">
 								<input class="grid-bulk-all" type="checkbox" />
 								<span class="label cmti cmti-checkbox"></span>
 							</label>
-						</span>
+						</div>
 					</div>
 				<?php } else { ?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>"><?= $title ?></div>
@@ -90,12 +90,12 @@ $actionView = $widget->actionView;
 		?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
-							<span class="cmt-choice choice data">
-								<label>
+							<div class="choice data">
+								<label class="choice-option">
 									<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
 									<span class="label cmti cmti-checkbox"></span>
 								</label>
-							</span>
+							</div>
 						</div>
 					<?php } else if( $key === 'actions' ) { ?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
