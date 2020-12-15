@@ -268,4 +268,58 @@
 			}
 		}
 	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.grid-head-wrap {
+
+			.colf {
+				text-align: left !important;
+				margin-bottom: 1em;
+			}
+		}
+
+		.grid-report-wrap {
+
+			.grid-report {
+
+				.grid-report-fields > .row:nth-child(even) {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.grid-options-wrap {
+
+			.colf {
+				text-align: left !important;
+				margin-bottom: 1em;
+			}
+		}
+
+		.grid-content-wrap {
+
+			.grid-content {
+
+				.grid-rows-wrap {
+					border: none;
+
+					.grid-rows {
+
+						.grid-row {
+							border: 1px solid $color-border;
+							margin-bottom: 1em;
+
+							.grid-row-data {
+
+								.icon {
+									text-align: left;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

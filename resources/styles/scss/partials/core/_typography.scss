@@ -1,16 +1,32 @@
 html, body {
-    font-size: 11px;
+    font-size: 14px;
+
+    @include responsive-min( screen-mobile-large ) {
+        font-size: 16px;
+    }
+
+    @include responsive-min( screen-tablet-large ) {
+        font-size: 16px;
+    }
+
+    @include responsive-min( screen-desktop-large ) {
+        font-size: 18px;
+    }
+}
+
+.grid-data-admin {
+    font-size: 12px;
 
     @include responsive-min( screen-mobile-large ) {
         font-size: 12px;
     }
 
     @include responsive-min( screen-tablet-large ) {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     @include responsive-min( screen-desktop-large ) {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 

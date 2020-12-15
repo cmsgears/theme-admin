@@ -60,7 +60,7 @@ $actionView = $widget->actionView;
 			$index	= 0;
 	?>
 		<div class="grid-row">
-			<div class="grid-row-data row max-cols-50">
+			<div class="grid-row-data row max-cols-100">
 		<?php
 				foreach ( $gridColumns as $key => $column ) {
 

@@ -25,17 +25,28 @@
             padding-right: 8px;
             cursor: pointer;
 			height: 3em;
+			color: $color-sidebar-text;
+
+			&:hover {
+				color: $color-sidebar;
+			}
+
+			a {
+				color: $color-sidebar-text;
+
+				&:hover {
+					color: $color-sidebar;
+				}
+			}
 
             .tab-icon {
                 position: absolute;
                 top: 0;
                 left: 0;
                 padding: 1em 10px;
-                color: $color-secondary-text-d;
             }
 
             .tab-title {
-                color: $color-secondary-text-d;
 				line-height: 2em;
             }
         }
@@ -100,6 +111,7 @@
             background-color: $color-secondary;
 
 			.tab-header {
+				color: $color-sidebar;
 				border-right: 2px solid $color-secondary-d;
 			}
         }

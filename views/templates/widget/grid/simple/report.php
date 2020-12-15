@@ -10,7 +10,7 @@ $report = Yii::$app->request->getQueryParam( 'report' );
 <?php if( count( $reportColumns ) > 0 ) { ?>
 <div class="grid-report-wrap form <?= $report ? 'show-report' : null ?>">
 	<div class="grid-report">
-		<div class="row grid-report-fields max-cols-50">
+		<div class="row grid-report-fields max-cols-100">
 		<?php
 			foreach ( $reportColumns as $key => $reportColumn ) {
 

@@ -26,7 +26,7 @@ $this->title 	= 'Login | ' . $coreProperties->getSiteTitle();
 
 	<div class="filler-height"></div>
 	<div class="row">
-		<div class="colf colf2 align align-left">
+		<div class="colf colf2 align align-left text text-small">
 			<?= Html::a( "Forgot Password ?", [ '/forgot-password' ] ) ?>
 		</div>
 		<div class="colf colf2 align align-right">

@@ -3525,8 +3525,8 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .color.color-header {
-  background-color: #FFFFFF !important;
-  color: #6D6E6F !important;
+  background-color: #303030 !important;
+  color: #F2F2F2 !important;
 }
 .color.color-footer {
   background-color: #000000 !important;
@@ -5122,21 +5122,40 @@ a:active, a:hover, .link:active, .link:hover {
 }
 
 html, body {
-  font-size: 11px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 481px) {
   html, body {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1025px) {
   html, body {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1601px) {
   html, body {
+    font-size: 18px;
+  }
+}
+
+.grid-data-admin {
+  font-size: 12px;
+}
+@media only screen and (min-width: 481px) {
+  .grid-data-admin {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .grid-data-admin {
     font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .grid-data-admin {
+    font-size: 16px;
   }
 }
 
@@ -8615,7 +8634,7 @@ height from form elements.*/
   float: left;
 }
 
-.frm-split-40-60 .choice {
+.frm-split-40-60 .choice, .frm-split-40-60 .choice label {
   width: 100%;
   float: left;
 }
@@ -8885,8 +8904,8 @@ Basic - The basic header define the styles for primary header having logo and me
  * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
-  background-color: #FFFFFF;
-  color: #6D6E6F;
+  background-color: #303030;
+  color: #F2F2F2;
   position: relative;
   -webkit-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
   -moz-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
@@ -8995,8 +9014,8 @@ Basic - The basic header define the styles for primary header having logo and me
 }
 
 .header {
-  background-color: #FFFFFF;
-  color: #6D6E6F;
+  background-color: #303030;
+  color: #F2F2F2;
   -webkit-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
   -moz-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
   box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);

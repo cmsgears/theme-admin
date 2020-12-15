@@ -8,7 +8,7 @@ $reportColumns	= $widget->reportColumns;
 $import	= $widget->import;
 $export	= $widget->export;
 ?>
-<div class="grid-head-wrap row">
+<div class="grid-head-wrap row max-cols-100">
 	<div class="colf colf12x6">
 		<b class="grid-title"><?= $title ?></b>
 		<?php if( $widget->add ) { ?>

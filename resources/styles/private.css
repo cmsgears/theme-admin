@@ -3525,8 +3525,8 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .color.color-header {
-  background-color: #FFFFFF !important;
-  color: #6D6E6F !important;
+  background-color: #303030 !important;
+  color: #F2F2F2 !important;
 }
 .color.color-footer {
   background-color: #000000 !important;
@@ -5122,21 +5122,40 @@ a:active, a:hover, .link:active, .link:hover {
 }
 
 html, body {
-  font-size: 11px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 481px) {
   html, body {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1025px) {
   html, body {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 @media only screen and (min-width: 1601px) {
   html, body {
+    font-size: 18px;
+  }
+}
+
+.grid-data-admin {
+  font-size: 12px;
+}
+@media only screen and (min-width: 481px) {
+  .grid-data-admin {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .grid-data-admin {
     font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1601px) {
+  .grid-data-admin {
+    font-size: 16px;
   }
 }
 
@@ -8780,7 +8799,7 @@ height from form elements.*/
   float: left;
 }
 
-.frm-split-40-60 .choice {
+.frm-split-40-60 .choice, .frm-split-40-60 .choice label {
   width: 100%;
   float: left;
 }
@@ -9245,7 +9264,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 .actions-list-data {
   position: absolute;
   display: none;
-  z-index: 10000;
+  z-index: 100000;
 }
 .actions-list-data .action {
   display: inline-block;
@@ -9751,7 +9770,7 @@ Action - The action mapper will allow users to toggle each item individually by 
   height: 0;
   border-top: 1em solid transparent;
   border-bottom: 1em solid transparent;
-  vertical-align: middle;
+  vertical-align: top;
 }
 .breadcrumb .wrap-link {
   display: inline-block;
@@ -10532,16 +10551,24 @@ Details: It defines the collapsible menu components as listed below:
   padding-right: 8px;
   cursor: pointer;
   height: 3em;
+  color: #F2F2F2;
+}
+.collapsible-menu-admin .collapsible-tab .tab-header:hover {
+  color: #303030;
+}
+.collapsible-menu-admin .collapsible-tab .tab-header a {
+  color: #F2F2F2;
+}
+.collapsible-menu-admin .collapsible-tab .tab-header a:hover {
+  color: #303030;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header .tab-icon {
   position: absolute;
   top: 0;
   left: 0;
   padding: 1em 10px;
-  color: #6D6E6F;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header .tab-title {
-  color: #6D6E6F;
   line-height: 2em;
 }
 .collapsible-menu-admin .collapsible-tab .tab-content {
@@ -10588,6 +10615,7 @@ Details: It defines the collapsible menu components as listed below:
   background-color: #F9F9F9;
 }
 .collapsible-menu-admin .collapsible-tab.expanded .tab-header {
+  color: #303030;
   border-right: 2px solid #F2F2F2;
 }
 
@@ -10652,8 +10680,8 @@ Basic - The basic header define the styles for primary header having logo and me
  * Mobile Menu - Placed on right side, hidden for desktop
  */
 .header-basic {
-  background-color: #FFFFFF;
-  color: #6D6E6F;
+  background-color: #303030;
+  color: #F2F2F2;
   position: relative;
   -webkit-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
   -moz-transition: width 250ms ease-in-out 0s, height 250ms ease-in-out 0s;
@@ -10762,8 +10790,8 @@ Basic - The basic header define the styles for primary header having logo and me
 }
 
 .header {
-  background-color: #FFFFFF;
-  color: #6D6E6F;
+  background-color: #303030;
+  color: #F2F2F2;
   -webkit-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
   -moz-box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
   box-shadow: 1px 1px 5px 0 rgba(209, 210, 211, 0.6);
@@ -10956,8 +10984,8 @@ Details: Default Sidebar to be used as page sidebars as listed below:
 Usage: Sidebars can be used to manage page widgets on sidebars.
 ***********************************************************************/
 .sidebar-filler {
-  background-color: #F9F9F9;
-  color: #898989;
+  background-color: #303030;
+  color: #F2F2F2;
   padding-top: 62px;
 }
 .sidebar-filler.sidebar-filler-micro {
@@ -10965,8 +10993,8 @@ Usage: Sidebars can be used to manage page widgets on sidebars.
 }
 
 #sidebar-main {
-  background-color: #F9F9F9;
-  color: #898989;
+  background-color: #303030;
+  color: #F2F2F2;
   padding-top: 62px;
 }
 #sidebar-main.sidebar-micro {
@@ -14218,6 +14246,29 @@ Default Data Grid - The grid class fully implemented for application data grids.
 .grid-data-admin .grid-footer-wrap .grid-footer .grid-footer-options {
   text-align: right;
 }
+@media only screen and (max-width: 1024px) {
+  .grid-data-admin .grid-head-wrap .colf {
+    text-align: left !important;
+    margin-bottom: 1em;
+  }
+  .grid-data-admin .grid-report-wrap .grid-report .grid-report-fields > .row:nth-child(even) {
+    padding-left: 0;
+  }
+  .grid-data-admin .grid-options-wrap .colf {
+    text-align: left !important;
+    margin-bottom: 1em;
+  }
+  .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap {
+    border: none;
+  }
+  .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row {
+    border: 1px solid #D1D2D3;
+    margin-bottom: 1em;
+  }
+  .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .icon {
+    text-align: left;
+  }
+}
 
 /* == Content Header ============================================ */
 .header-content {
@@ -14557,7 +14608,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-title {
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 .ui-datepicker-title .ui-datepicker-month, .ui-datepicker-title .ui-datepicker-year {
   width: 72px;
@@ -14569,20 +14620,16 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 
 .ui-datepicker-prev {
   float: left;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .ui-datepicker-next {
   float: right;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
   background-color: #3489DB;
-}
-
-.ui-datepicker-title {
-  font-weight: bold;
 }
 
 .ui-datepicker-calendar {

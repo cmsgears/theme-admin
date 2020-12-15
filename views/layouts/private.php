@@ -15,7 +15,7 @@ $this->registerAssetBundle( 'child' );
 // Variables available for headers, sidebars and footers included within this layout
 $coreProperties = $this->context->getCoreProperties();
 $themePath		= Yii::getAlias( '@themes/admin' );
-$user			= Yii::$app->user->getIdentity();
+$user			= Yii::$app->core->getUser();
 $microSidebar	= $user->getDataConfigMeta( CoreGlobal::DATA_SIDEBAR_MICRO );
 ?>
 <?php $this->beginPage(); ?>
