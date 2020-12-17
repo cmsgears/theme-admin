@@ -26,6 +26,17 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
 	}
 }
 
+.frm-field-button {
+
+	input[type="text"] {
+		@include rounded-left( $size-medium );
+	}
+
+	.btn {
+		@include rounded-right( $size-medium );
+	}
+}
+
 .form {
 
 	.btn {

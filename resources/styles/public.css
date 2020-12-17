@@ -8473,7 +8473,8 @@ select, .select-wrap .selected {
 }
 .frm-field-button input[type="submit"], .frm-field-button input[type="button"], .frm-field-button button, .frm-field-button .btn {
   width: 30%;
-  margin-left: -4px;
+  margin-left: -5px;
+  border-left: none;
 }
 
 ::-webkit-input-placeholder {
@@ -8842,6 +8843,25 @@ input[type="submit"], input[type="button"], button, .btn, .btn-icon {
   -moz-border-radius-top-left: 5px;
   -moz-border-radius-bottom-left: 5px;
   border-right: 1px solid #F2F2F2;
+}
+
+.frm-field-button input[type="text"] {
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius-top-left: 5px;
+  -webkit-border-radius-bottom-left: 5px;
+  -khtml-border-radius-top-left: 5px;
+  -khtml-border-radius-bottom-left: 5px;
+  -moz-border-radius-top-left: 5px;
+  -moz-border-radius-bottom-left: 5px;
+}
+.frm-field-button .btn {
+  border-radius: 0 5px 5px 0;
+  -webkit-border-radius-top-right: 5px;
+  -webkit-border-radius-bottom-right: 5px;
+  -khtml-border-radius-top-right: 5px;
+  -khtml-border-radius-bottom-right: 5px;
+  -moz-border-radius-top-right: 5px;
+  -moz-border-radius-bottom-right: 5px;
 }
 
 .form .btn {

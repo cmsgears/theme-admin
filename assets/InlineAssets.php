@@ -10,8 +10,11 @@
 namespace themes\admin\assets;
 
 // Yii Imports
-use yii\helpers\Url;
 use yii\web\View;
+
+// CMG Imports
+use cmsgears\core\common\config\CoreProperties;
+use cmsgears\files\config\FileProperties;
 
 /**
  * InlineAssets registers the global variables.
@@ -52,11 +55,15 @@ class InlineAssets extends \yii\web\AssetBundle {
 
 		parent::registerAssetFiles( $view );
 
-		$rootUrl = Url::toRoute( '/', true );
+		$coreProperties = CoreProperties::getInstance();
+		$fileProperties	= FileProperties::getInstance();
 
-		$siteUrl = "var siteUrl	= '$rootUrl';
-					var ajaxUrl	= '" . $rootUrl ."apix/';
-					var fileUploadUrl	= '" . $rootUrl . "apix/file/file-handler';";
+		$adminUrl	= $coreProperties->getAdminUrl();
+		$uploadUrl	= $fileProperties->getUploadUrl();
+
+		$siteUrl = "var siteUrl	= '{$adminUrl}/';
+					var ajaxUrl	= '{$adminUrl}/apix/';
+					var uploadUrl = '{$uploadUrl}/';";
 
 		$view->registerJs( $siteUrl, View::POS_END );
 	}
