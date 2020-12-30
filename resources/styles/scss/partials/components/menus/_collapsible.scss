@@ -4,9 +4,10 @@
     .collapsible-tab {
         width: 100%;
         position: relative;
+		@include transit-bkg-color( $transit-eio, $transit-time-small );
 
         &:hover {
-            background-color: $color-secondary-l;
+            background-color: $color-sidebar-d;
         }
 
         .marker {
@@ -28,15 +29,11 @@
 			color: $color-sidebar-text;
 
 			&:hover {
-				color: $color-sidebar;
+/*				color: $color-sidebar;*/
 			}
 
 			a {
 				color: $color-sidebar-text;
-
-				&:hover {
-					color: $color-sidebar;
-				}
 			}
 
             .tab-icon {
@@ -78,7 +75,7 @@
         }
 
         &.active {
-            background-color: $color-tertiary-d;
+            background-color: $color-link;
 
             .marker {
                 display: inline-block;
@@ -102,6 +99,10 @@
 
                     &.active {
                         font-weight: bold;
+
+						a {
+							color: $color-link;
+						}
                     }
                 }
             }

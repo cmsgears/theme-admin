@@ -3,7 +3,7 @@
 use cmsgears\icons\widgets\TextureChooser;
 ?>
 <script id="addItemTemplate" type="text/x-handlebars-template">
-	<div class="cmt-gallery-item-uploader" type="image" directory="gallery" gen="0">
+	<div class="cmt-gallery-item-uploader" type="image" directory="gallery" gen="0" uploader="apix/file/file-handler">
 		<div class="row margin margin-bottom-small">
 			<label class="align align-center">Image</label>
 			<div class="uploader uploader-basic uploader-small">
@@ -107,7 +107,7 @@ use cmsgears\icons\widgets\TextureChooser;
 </script>
 
 <script id="updateItemTemplate" type="text/x-handlebars-template">
-	<div class="cmt-gallery-item-uploader row max-cols-50" type="image" directory="gallery" gen="0">
+	<div class="cmt-gallery-item-uploader row max-cols-50" type="image" directory="gallery" gen="0" uploader="apix/file/file-handler">
 		<div class="row margin margin-bottom-small">
 			<label class="align align-center">Image</label>
 			<div class="uploader uploader-basic uploader-small">

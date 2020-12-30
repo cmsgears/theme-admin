@@ -3471,13 +3471,13 @@ from secondary for highlighting purposes.
    * 1. primary: #F9F9F9
    * 2. primary text: #898989
    * 3. primary light: #FFFFFF
-   * 4. primary text light: #898989
+   * 4. primary text light: #606060
    * 5. primary dark: #E6E7E8
    * 6. primary text dark: #6D6E6F
    * 7. secondary: #F9F9F9
    * 8. secondary text: #898989
    * 9. secondary light: #FFFFFF
-   * 10. secondary text light: #898989
+   * 10. secondary text light: #606060
    * 11. secondary dark: #F2F2F2
    * 12. secondary text dark: #6D6E6F
    * 13. tertiary: #026eb7
@@ -3494,7 +3494,7 @@ from secondary for highlighting purposes.
 }
 .color.color-primary-l {
   background-color: #FFFFFF !important;
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .color.color-primary-d {
   background-color: #E6E7E8 !important;
@@ -3506,7 +3506,7 @@ from secondary for highlighting purposes.
 }
 .color.color-secondary-l {
   background-color: #FFFFFF !important;
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .color.color-secondary-d {
   background-color: #F2F2F2 !important;
@@ -3789,11 +3789,11 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .color.color-btn {
-  background-color: #3498DB !important;
+  background-color: #0059A6 !important;
   color: #FFFFFF !important;
 }
 .color.color-btn-h {
-  background-color: #0059A6 !important;
+  background-color: #004C84 !important;
   color: #FFFFFF !important;
 }
 .color.color-btn-a {
@@ -4159,7 +4159,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-primary-text-l {
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .text.text-primary-d {
   color: #E6E7E8 !important;
@@ -4177,7 +4177,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-secondary-text-l {
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .text.text-secondary-d {
   color: #F2F2F2 !important;
@@ -4204,7 +4204,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-link {
-  color: #0074D9 !important;
+  color: #0059A6 !important;
 }
 .text.text-white {
   color: #FFFFFF !important;
@@ -5050,7 +5050,7 @@ code, pre {
 }
 
 a, .link {
-  color: #0074D9;
+  color: #0059A6;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -5062,7 +5062,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:link, a:visited, .link:link, .link:visited {
-  color: #0074D9;
+  color: #0059A6;
 }
 a:active, a:hover, .link:active, .link:hover {
   color: #E74343;
@@ -6225,12 +6225,12 @@ html, body {
 }
 
 .container-private .sidebar-private, .container-private .content-wrap {
-  padding-top: 62px;
+  padding-top: 60px;
 }
 .container-private .content-main-wrap-micro {
   position: absolute;
   width: 100%;
-  padding-top: 62px;
+  padding-top: 60px;
   padding-left: 40px;
   z-index: 5;
 }
@@ -7270,7 +7270,7 @@ CMT Select Native - It works without cmtSelect plugin.
 }
 .select-wrap .select .select-list li:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0059A6;
 }
 
 .multiselect {
@@ -7330,7 +7330,7 @@ CMT Select Native - It works without cmtSelect plugin.
 }
 .multiselect .select-list li:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0059A6;
 }
 
 .select-native {
@@ -7411,7 +7411,7 @@ by showing breeze icons instead of browser icons.
 .choice .choice-option input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
-  color: #3498DB;
+  color: #0059A6;
 }
 .choice .choice-option input[type=checkbox]:checked + .label,
 .choice .choice-option input[type=radio]:checked + .label {
@@ -7419,7 +7419,7 @@ by showing breeze icons instead of browser icons.
 }
 .choice .choice-option input[type=checkbox]:hover + .label::before, .choice .choice-option input[type=checkbox] + .label:hover::before, .choice .choice-option input[type=checkbox]:checked + .label::before,
 .choice .choice-option input[type=radio]:hover + .label::before, .choice .choice-option input[type=radio] + .label:hover::before, .choice .choice-option input[type=radio]:checked + .label::before {
-  color: #0059A6;
+  color: #004C84;
 }
 .choice .choice-option input[type=checkbox]:disabled + .label::before,
 .choice .choice-option input[type=radio]:disabled + .label::before {
@@ -7447,11 +7447,11 @@ by showing breeze icons instead of browser icons.
 }
 .choice-custom .choice-option input[type=checkbox] + .label, .choice-custom .choice-option input[type=radio] + .label {
   display: inline-block;
-  background-color: #3498DB;
+  background-color: #0059A6;
   text: #FFFFFF;
 }
 .choice-custom .choice-option input[type=checkbox] + .label:hover, .choice-custom .choice-option input[type=radio] + .label:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   text: #FFFFFF;
 }
 
@@ -7672,13 +7672,13 @@ order to place group at appropriate postion.
   -ms-transition: all 420ms ease-in-out 0s;
   -o-transition: all 420ms ease-in-out 0s;
   transition: all 420ms ease-in-out 0s;
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .btn:active {
@@ -7739,7 +7739,7 @@ order to place group at appropriate postion.
   color: #FFFFFF;
 }
 .btn.btn-link {
-  background-color: #0074D9;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn.btn-link:hover {
@@ -7867,7 +7867,7 @@ order to place group at appropriate postion.
   background-color: #000407;
 }
 .btn.btn-reverse:hover {
-  background-color: #3498DB !important;
+  background-color: #0059A6 !important;
   color: #FFFFFF !important;
 }
 
@@ -7905,14 +7905,14 @@ order to place group at appropriate postion.
   background-color: #026eb7 !important;
 }
 .btn-border.btn-border-link {
-  color: #0074D9 !important;
-  -webkit-box-shadow: inset 0 0 0 1px #0074D9;
-  -moz-box-shadow: inset 0 0 0 1px #0074D9;
-  box-shadow: inset 0 0 0 1px #0074D9;
+  color: #0059A6 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #0059A6;
+  -moz-box-shadow: inset 0 0 0 1px #0059A6;
+  box-shadow: inset 0 0 0 1px #0059A6;
 }
 .btn-border.btn-border-link:hover {
   color: #FFFFFF !important;
-  background-color: #0074D9 !important;
+  background-color: #0059A6 !important;
 }
 .btn-border.btn-border-white {
   color: #FFFFFF !important;
@@ -8099,7 +8099,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:hover, .link:hover {
-  color: #0059A6;
+  color: #004C84;
 }
 
 .btn-icon-o {
@@ -8184,7 +8184,7 @@ a:hover, .link:hover {
   text-align: right;
 }
 .btn-group > .edit, .btn-group > .save, .btn-group > .delete {
-  color: #3498DB;
+  color: #0059A6;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -8193,7 +8193,7 @@ a:hover, .link:hover {
   transition: color 250ms ease-in-out 0s;
 }
 .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
-  color: #0059A6;
+  color: #004C84;
 }
 
 .click {
@@ -8354,13 +8354,13 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   -ms-transition: all 420ms ease-in-out 0s;
   -o-transition: all 420ms ease-in-out 0s;
   transition: all 420ms ease-in-out 0s;
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
 }
 .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
@@ -8958,7 +8958,7 @@ Basic - The basic header define the styles for primary header having logo and me
     float: right;
   }
   .header-basic #mobile-actions .mobile-action {
-    color: #898989;
+    color: #606060;
     cursor: pointer;
     margin-left: 0.5em;
     font-size: 2em;
@@ -8969,7 +8969,7 @@ Basic - The basic header define the styles for primary header having logo and me
     transition: all 250ms ease-in-out 0s;
   }
   .header-basic #mobile-actions .mobile-action:hover {
-    color: #0074D9;
+    color: #0059A6;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -9059,7 +9059,7 @@ Basic - The basic header define the styles for primary header having logo and me
   height: 60px;
 }
 .header-private .header-logo #btn-sidebar-main {
-  color: #0074D9;
+  color: #FFFFFF;
   display: inline-block;
   width: 40px;
   height: 60px;
@@ -9074,7 +9074,7 @@ Basic - The basic header define the styles for primary header having logo and me
   vertical-align: middle;
 }
 .header-private .header-logo #btn-sidebar-main:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .header-private .header-logo .logo {
@@ -9438,7 +9438,7 @@ Usage: Max Blocks can be used to divide page into multiple sections.
 }
 #block-public .block-content {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   width: 90%;
   margin: 0 auto;
   padding: 2rem;

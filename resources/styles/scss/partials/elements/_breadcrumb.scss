@@ -22,8 +22,8 @@
 		display: inline-block;
 		width: 0;
 		height: 0;
-		border-top: 1em solid transparent;
-		border-bottom: 1em solid transparent;
+		border-top: 20px solid transparent;
+		border-bottom: 20px solid transparent;
 		vertical-align: top;
 	}
 
@@ -34,6 +34,7 @@
 
 		.link {
 			padding-left: 1.5em;
+			height: 40px;
 		}
 	}
 
@@ -42,12 +43,12 @@
 		margin-left: 0;
 
 		.link {
-			background-color: $color-navy;
+			background-color: $color-link;
 			padding-left: 0.5em;
 		}
 
 		.separator {
-			border-left: 1em solid $color-navy;
+			border-left: 20px solid $color-link;
 		}
 	}
 
@@ -59,7 +60,7 @@
 		}
 
 		.separator {
-			border-left: 1em solid $color-blue;
+			border-left: 20px solid $color-blue;
 		}
 	}
 
@@ -71,7 +72,7 @@
 		}
 
 		.separator {
-			border-left: 1em solid $color-green;
+			border-left: 20px solid $color-green;
 		}
 	}
 
@@ -83,7 +84,7 @@
 		}
 
 		.separator {
-			border-left: 1em solid $color-orange;
+			border-left: 20px solid $color-orange;
 		}
 	}
 
@@ -95,7 +96,7 @@
 		}
 
 		.separator {
-			border-left: 1em solid $color-yellow;
+			border-left: 20px solid $color-yellow;
 		}
 	}
 

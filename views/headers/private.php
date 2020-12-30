@@ -37,19 +37,19 @@ $avatarThumb	= CodeGenUtil::getImageThumbTag( $userAvatar, [ 'image' => 'icon', 
 			<?php if( $notifyFlag ) { ?>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="notificationData" action="notify/stats/stats?type=notification">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-notification" title="Notifications" data-target="#popout-notification">
-						<span class="cmti cmti-flag-o"></span>
+						<span class="far fa-flag"></span>
 						<span class="count-header count-notification">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="reminderData" action="notify/stats/stats?type=reminder">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-reminder" title="Reminders" data-target="#popout-reminder">
-						<span class="cmti cmti-bell-o "></span>
+						<span class="far fa-bell"></span>
 						<span class="count-header count-reminder">0</span>
 					</span>
 				</span>
 				<span cmt-app="notify" cmt-controller="notification" cmt-action="activityData" action="notify/stats/stats?type=activity">
 					<span class="popout-trigger cmt-auto-hide cmt-click" popout="popout-activity" title="Activities" data-target="#popout-activity">
-						<span class="cmti cmti-sliders"></span>
+						<span class="far fa-list-alt"></span>
 						<span class="count-header count-activity">0</span>
 					</span>
 				</span>

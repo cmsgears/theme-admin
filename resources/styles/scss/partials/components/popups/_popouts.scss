@@ -16,13 +16,13 @@
 			@include transit-all( $transit-eio, $transit-time-small );
 
 			&:hover {
-				background-color: $color-tertiary;
+				background-color: $color-black;
 				color: $color-tertiary-text;
 			}
 
 			&.active, &.active:hover {
-				background-color: $color-primary !important;
-				color: $color-primary-text !important;
+				background-color: $color-btn !important;
+				color: $color-btn-text !important;
 			}
 		}
 
@@ -35,7 +35,8 @@
 
 			.user-avatar {
 				height: 2em;
-				@include shadow-inset( 0, 0, 0, $color-shadow-inset, 2px );
+				@include shadow-inset( 0, 0, 0, $color-border-d, 1px );
+				padding: 1px;
 			}
 		}
 	}
@@ -49,16 +50,16 @@
 			width: 350px;
 
 			.popout-content-wrap {
-				background-color: $color-primary;
+				background-color: $color-primary-l;
 				color: $color-primary-text;
-				padding: 0.5em;
+/*				padding: 0.5em;*/
 				text-align: left;
 				@include shadow( 0, 4px, 4px, $color-shadow, 0 );
 
 				.popout-content {
 
 					li {
-						padding: 0.5em;
+						padding: 1em;
 						@include transit-all( $transit-eio, $transit-time-small );
 
 						a {
@@ -66,7 +67,7 @@
 						}
 
 						&:hover {
-							background-color: $color-primary-l;
+							background-color: $color-primary;
 						}
 					}
 				}

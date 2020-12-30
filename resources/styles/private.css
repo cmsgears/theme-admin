@@ -3471,13 +3471,13 @@ from secondary for highlighting purposes.
    * 1. primary: #F9F9F9
    * 2. primary text: #898989
    * 3. primary light: #FFFFFF
-   * 4. primary text light: #898989
+   * 4. primary text light: #606060
    * 5. primary dark: #E6E7E8
    * 6. primary text dark: #6D6E6F
    * 7. secondary: #F9F9F9
    * 8. secondary text: #898989
    * 9. secondary light: #FFFFFF
-   * 10. secondary text light: #898989
+   * 10. secondary text light: #606060
    * 11. secondary dark: #F2F2F2
    * 12. secondary text dark: #6D6E6F
    * 13. tertiary: #026eb7
@@ -3494,7 +3494,7 @@ from secondary for highlighting purposes.
 }
 .color.color-primary-l {
   background-color: #FFFFFF !important;
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .color.color-primary-d {
   background-color: #E6E7E8 !important;
@@ -3506,7 +3506,7 @@ from secondary for highlighting purposes.
 }
 .color.color-secondary-l {
   background-color: #FFFFFF !important;
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .color.color-secondary-d {
   background-color: #F2F2F2 !important;
@@ -3789,11 +3789,11 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .color.color-btn {
-  background-color: #3498DB !important;
+  background-color: #0059A6 !important;
   color: #FFFFFF !important;
 }
 .color.color-btn-h {
-  background-color: #0059A6 !important;
+  background-color: #004C84 !important;
   color: #FFFFFF !important;
 }
 .color.color-btn-a {
@@ -4159,7 +4159,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-primary-text-l {
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .text.text-primary-d {
   color: #E6E7E8 !important;
@@ -4177,7 +4177,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-secondary-text-l {
-  color: #898989 !important;
+  color: #606060 !important;
 }
 .text.text-secondary-d {
   color: #F2F2F2 !important;
@@ -4204,7 +4204,7 @@ from secondary for highlighting purposes.
   color: #FFFFFF !important;
 }
 .text.text-link {
-  color: #0074D9 !important;
+  color: #0059A6 !important;
 }
 .text.text-white {
   color: #FFFFFF !important;
@@ -5050,7 +5050,7 @@ code, pre {
 }
 
 a, .link {
-  color: #0074D9;
+  color: #0059A6;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -5062,7 +5062,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:link, a:visited, .link:link, .link:visited {
-  color: #0074D9;
+  color: #0059A6;
 }
 a:active, a:hover, .link:active, .link:hover {
   color: #E74343;
@@ -6225,12 +6225,12 @@ html, body {
 }
 
 .container-private .sidebar-private, .container-private .content-wrap {
-  padding-top: 62px;
+  padding-top: 60px;
 }
 .container-private .content-main-wrap-micro {
   position: absolute;
   width: 100%;
-  padding-top: 62px;
+  padding-top: 60px;
   padding-left: 40px;
   z-index: 5;
 }
@@ -7193,7 +7193,7 @@ cmtIconPicker jQuery plugin available in Velocity JS Framework.
   transition: color 250ms ease-in-out 0s, background-color 250ms ease-in-out 0s;
 }
 .icon-picker-wrap .icon-picker .picker-icon-wrap:hover {
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .icon-picker-wrap .icon-picker .picker-icon-wrap .picker-icon {
@@ -7276,7 +7276,7 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 }
 .timepicker-basic .timepicker-header .timepicker-apm.active {
   background: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .timepicker-basic .timepicker-content {
   border-bottom: 1px solid #A5A5A5;
@@ -7289,7 +7289,7 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 }
 .timepicker-basic .timepicker-content .timepicker-hr-wrap .timepicker-hr.active {
   background: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .timepicker-basic .timepicker-content .timepicker-min-wrap {
   border-left: 1px solid #A5A5A5;
@@ -7302,7 +7302,7 @@ cmtTimePicker jQuery plugin available in Velocity JS Framework.
 }
 .timepicker-basic .timepicker-content .timepicker-min-wrap .timepicker-min.active {
   background: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .timepicker-basic .timepicker-footer {
   padding: 0.25em;
@@ -7426,7 +7426,7 @@ CMT Select Native - It works without cmtSelect plugin.
 }
 .select-wrap .select .select-list li:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0059A6;
 }
 
 .multiselect {
@@ -7486,7 +7486,7 @@ CMT Select Native - It works without cmtSelect plugin.
 }
 .multiselect .select-list li:hover {
   color: #FFFFFF;
-  background-color: #3498DB;
+  background-color: #0059A6;
 }
 
 .select-native {
@@ -7567,7 +7567,7 @@ by showing breeze icons instead of browser icons.
 .choice .choice-option input[type=radio]:checked + .label::before {
   display: inline-block;
   background-color: #F5F8FC;
-  color: #3498DB;
+  color: #0059A6;
 }
 .choice .choice-option input[type=checkbox]:checked + .label,
 .choice .choice-option input[type=radio]:checked + .label {
@@ -7575,7 +7575,7 @@ by showing breeze icons instead of browser icons.
 }
 .choice .choice-option input[type=checkbox]:hover + .label::before, .choice .choice-option input[type=checkbox] + .label:hover::before, .choice .choice-option input[type=checkbox]:checked + .label::before,
 .choice .choice-option input[type=radio]:hover + .label::before, .choice .choice-option input[type=radio] + .label:hover::before, .choice .choice-option input[type=radio]:checked + .label::before {
-  color: #0059A6;
+  color: #004C84;
 }
 .choice .choice-option input[type=checkbox]:disabled + .label::before,
 .choice .choice-option input[type=radio]:disabled + .label::before {
@@ -7603,11 +7603,11 @@ by showing breeze icons instead of browser icons.
 }
 .choice-custom .choice-option input[type=checkbox] + .label, .choice-custom .choice-option input[type=radio] + .label {
   display: inline-block;
-  background-color: #3498DB;
+  background-color: #0059A6;
   text: #FFFFFF;
 }
 .choice-custom .choice-option input[type=checkbox] + .label:hover, .choice-custom .choice-option input[type=radio] + .label:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   text: #FFFFFF;
 }
 
@@ -7828,13 +7828,13 @@ order to place group at appropriate postion.
   -ms-transition: all 420ms ease-in-out 0s;
   -o-transition: all 420ms ease-in-out 0s;
   transition: all 420ms ease-in-out 0s;
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
 }
 .btn:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .btn:active {
@@ -7895,7 +7895,7 @@ order to place group at appropriate postion.
   color: #FFFFFF;
 }
 .btn.btn-link {
-  background-color: #0074D9;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .btn.btn-link:hover {
@@ -8023,7 +8023,7 @@ order to place group at appropriate postion.
   background-color: #000407;
 }
 .btn.btn-reverse:hover {
-  background-color: #3498DB !important;
+  background-color: #0059A6 !important;
   color: #FFFFFF !important;
 }
 
@@ -8061,14 +8061,14 @@ order to place group at appropriate postion.
   background-color: #026eb7 !important;
 }
 .btn-border.btn-border-link {
-  color: #0074D9 !important;
-  -webkit-box-shadow: inset 0 0 0 1px #0074D9;
-  -moz-box-shadow: inset 0 0 0 1px #0074D9;
-  box-shadow: inset 0 0 0 1px #0074D9;
+  color: #0059A6 !important;
+  -webkit-box-shadow: inset 0 0 0 1px #0059A6;
+  -moz-box-shadow: inset 0 0 0 1px #0059A6;
+  box-shadow: inset 0 0 0 1px #0059A6;
 }
 .btn-border.btn-border-link:hover {
   color: #FFFFFF !important;
-  background-color: #0074D9 !important;
+  background-color: #0059A6 !important;
 }
 .btn-border.btn-border-white {
   color: #FFFFFF !important;
@@ -8255,7 +8255,7 @@ a.btn, .link.btn {
   color: #FFFFFF;
 }
 a:hover, .link:hover {
-  color: #0059A6;
+  color: #004C84;
 }
 
 .btn-icon-o {
@@ -8340,7 +8340,7 @@ a:hover, .link:hover {
   text-align: right;
 }
 .btn-group > .edit, .btn-group > .save, .btn-group > .delete {
-  color: #3498DB;
+  color: #0059A6;
   cursor: pointer;
   -moz-transition: color 250ms ease-in-out 0s;
   -ms-transition: color 250ms ease-in-out 0s;
@@ -8349,7 +8349,7 @@ a:hover, .link:hover {
   transition: color 250ms ease-in-out 0s;
 }
 .btn-group > .edit:hover, .btn-group > .save:hover, .btn-group > .delete:hover {
-  color: #0059A6;
+  color: #004C84;
 }
 
 .click {
@@ -8519,13 +8519,13 @@ input[type="text"]:disabled, input[type="email"]:disabled, input[type="password"
   -ms-transition: all 420ms ease-in-out 0s;
   -o-transition: all 420ms ease-in-out 0s;
   transition: all 420ms ease-in-out 0s;
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
   text-align: center;
   cursor: pointer;
 }
 .btn-icon:hover, input[type="submit"]:hover, input[type="button"]:hover, button:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .btn-icon:active, input[type="submit"]:active, input[type="button"]:active, button:active {
@@ -9428,7 +9428,7 @@ on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
 }
 .auto-suggest .auto-list-wrap .list-item:nth-child(even), .auto-suggest .auto-list-wrap li:nth-child(even) {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .auto-suggest .auto-list-wrap .list-item:hover, .auto-suggest .auto-list-wrap li:hover {
   background-color: #F9F9F9;
@@ -9768,7 +9768,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 .breadcrumb {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 0;
   margin-bottom: 0.75em;
   font-size: 1.08em;
@@ -9788,8 +9788,8 @@ Action - The action mapper will allow users to toggle each item individually by 
   display: inline-block;
   width: 0;
   height: 0;
-  border-top: 1em solid transparent;
-  border-bottom: 1em solid transparent;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
   vertical-align: top;
 }
 .breadcrumb .wrap-link {
@@ -9799,17 +9799,18 @@ Action - The action mapper will allow users to toggle each item individually by 
 }
 .breadcrumb .wrap-link .link {
   padding-left: 1.5em;
+  height: 40px;
 }
 .breadcrumb .wrap-link:nth-of-type(1) {
   z-index: 100;
   margin-left: 0;
 }
 .breadcrumb .wrap-link:nth-of-type(1) .link {
-  background-color: #003653;
+  background-color: #0059A6;
   padding-left: 0.5em;
 }
 .breadcrumb .wrap-link:nth-of-type(1) .separator {
-  border-left: 1em solid #003653;
+  border-left: 20px solid #0059A6;
 }
 .breadcrumb .wrap-link:nth-of-type(2) {
   z-index: 75;
@@ -9818,7 +9819,7 @@ Action - The action mapper will allow users to toggle each item individually by 
   background-color: #0074D9;
 }
 .breadcrumb .wrap-link:nth-of-type(2) .separator {
-  border-left: 1em solid #0074D9;
+  border-left: 20px solid #0074D9;
 }
 .breadcrumb .wrap-link:nth-of-type(3) {
   z-index: 50;
@@ -9827,7 +9828,7 @@ Action - The action mapper will allow users to toggle each item individually by 
   background-color: #7CAA2D;
 }
 .breadcrumb .wrap-link:nth-of-type(3) .separator {
-  border-left: 1em solid #7CAA2D;
+  border-left: 20px solid #7CAA2D;
 }
 .breadcrumb .wrap-link:nth-of-type(4) {
   z-index: 25;
@@ -9836,7 +9837,7 @@ Action - The action mapper will allow users to toggle each item individually by 
   background-color: #FF851B;
 }
 .breadcrumb .wrap-link:nth-of-type(4) .separator {
-  border-left: 1em solid #FF851B;
+  border-left: 20px solid #FF851B;
 }
 .breadcrumb .wrap-link:nth-of-type(5) {
   z-index: 5;
@@ -9845,7 +9846,7 @@ Action - The action mapper will allow users to toggle each item individually by 
   background-color: #FFDC00;
 }
 .breadcrumb .wrap-link:nth-of-type(5) .separator {
-  border-left: 1em solid #FFDC00;
+  border-left: 20px solid #FFDC00;
 }
 .breadcrumb .current {
   display: inline-block;
@@ -9908,7 +9909,7 @@ to show forms and widgets.
 
 .data-crud-wrap-basic {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 1em;
 }
 .data-crud-wrap-basic .data-crud {
@@ -10046,7 +10047,7 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 }
 #data-crud-settings .data-crud-title .wrap-popout-settings #popout-settings {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   position: absolute;
   top: 0.5em;
   width: 100%;
@@ -10416,7 +10417,7 @@ Details: It defines the menu components as listed below:
   text-align: left;
 }
 .vnav-slider-wrap .vnav-slider-content ul li a:hover {
-  color: #0074D9;
+  color: #0059A6;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -10447,7 +10448,7 @@ Details: It defines the menu components as listed below:
   }
   #menu-main-mobile li a, #menu-main-mobile li .link {
     background-color: #FFFFFF;
-    color: #898989;
+    color: #606060;
     padding: 1em 0;
     -webkit-transition: all 250ms ease-in-out 0s;
     -moz-transition: all 250ms ease-in-out 0s;
@@ -10457,7 +10458,7 @@ Details: It defines the menu components as listed below:
   }
   #menu-main-mobile li a:hover, #menu-main-mobile li .link:hover {
     background-color: #E6E7E8;
-    color: #0074D9;
+    color: #0059A6;
   }
   #menu-main-mobile li:active a, #menu-main-mobile li:active .link {
     background-color: #026eb7;
@@ -10553,9 +10554,14 @@ Details: It defines the collapsible menu components as listed below:
 .collapsible-menu-admin .collapsible-tab {
   width: 100%;
   position: relative;
+  -moz-transition: background-color 250ms ease-in-out 0s;
+  -ms-transition: background-color 250ms ease-in-out 0s;
+  -o-transition: background-color 250ms ease-in-out 0s;
+  -webkit-transition: background-color 250ms ease-in-out 0s;
+  transition: background-color 250ms ease-in-out 0s;
 }
 .collapsible-menu-admin .collapsible-tab:hover {
-  background-color: #FFFFFF;
+  background-color: #000;
 }
 .collapsible-menu-admin .collapsible-tab .marker {
   position: absolute;
@@ -10574,13 +10580,10 @@ Details: It defines the collapsible menu components as listed below:
   color: #F2F2F2;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header:hover {
-  color: #303030;
+  /*				color: $color-sidebar;*/
 }
 .collapsible-menu-admin .collapsible-tab .tab-header a {
   color: #F2F2F2;
-}
-.collapsible-menu-admin .collapsible-tab .tab-header a:hover {
-  color: #303030;
 }
 .collapsible-menu-admin .collapsible-tab .tab-header .tab-icon {
   position: absolute;
@@ -10595,7 +10598,7 @@ Details: It defines the collapsible menu components as listed below:
   padding-left: 40px;
   display: none;
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   border-right: 2px solid #F2F2F2;
   -webkit-box-shadow: inset 0 4px 4px -5px #7F7F7F, inset 0 -8px 8px -12px #7F7F7F;
   -moz-box-shadow: inset 0 4px 4px -5px #7F7F7F, inset 0 -8px 8px -12px #7F7F7F;
@@ -10612,11 +10615,11 @@ Details: It defines the collapsible menu components as listed below:
   padding: 0.5em 0;
 }
 .collapsible-menu-admin .collapsible-tab .tab-content ul li a {
-  color: #898989;
+  color: #606060;
   display: block;
 }
 .collapsible-menu-admin .collapsible-tab.active {
-  background-color: #3489DB;
+  background-color: #0059A6;
 }
 .collapsible-menu-admin .collapsible-tab.active .marker {
   display: inline-block;
@@ -10630,6 +10633,9 @@ Details: It defines the collapsible menu components as listed below:
 }
 .collapsible-menu-admin .collapsible-tab.active .tab-content ul li.active {
   font-weight: bold;
+}
+.collapsible-menu-admin .collapsible-tab.active .tab-content ul li.active a {
+  color: #0059A6;
 }
 .collapsible-menu-admin .collapsible-tab.expanded {
   background-color: #F9F9F9;
@@ -10734,7 +10740,7 @@ Basic - The basic header define the styles for primary header having logo and me
     float: right;
   }
   .header-basic #mobile-actions .mobile-action {
-    color: #898989;
+    color: #606060;
     cursor: pointer;
     margin-left: 0.5em;
     font-size: 2em;
@@ -10745,7 +10751,7 @@ Basic - The basic header define the styles for primary header having logo and me
     transition: all 250ms ease-in-out 0s;
   }
   .header-basic #mobile-actions .mobile-action:hover {
-    color: #0074D9;
+    color: #0059A6;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -10835,7 +10841,7 @@ Basic - The basic header define the styles for primary header having logo and me
   height: 60px;
 }
 .header-private .header-logo #btn-sidebar-main {
-  color: #0074D9;
+  color: #FFFFFF;
   display: inline-block;
   width: 40px;
   height: 60px;
@@ -10850,7 +10856,7 @@ Basic - The basic header define the styles for primary header having logo and me
   vertical-align: middle;
 }
 .header-private .header-logo #btn-sidebar-main:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .header-private .header-logo .logo {
@@ -11213,7 +11219,7 @@ Details: It defines the styles for popout components as listed below:
 }
 .popup-admin .popup-data {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -11264,12 +11270,12 @@ Details: It defines the styles for popout components as listed below:
   transition: all 250ms ease-in-out 0s;
 }
 .popout-group-main .popout-actions .popout-trigger:hover {
-  background-color: #026eb7;
+  background-color: #000000;
   color: #FFFFFF;
 }
 .popout-group-main .popout-actions .popout-trigger.active, .popout-group-main .popout-actions .popout-trigger.active:hover {
-  background-color: #F9F9F9 !important;
-  color: #898989 !important;
+  background-color: #0059A6 !important;
+  color: #FFFFFF !important;
 }
 .popout-group-main .popout-actions .wrap-user .icon {
   padding: 0.75em;
@@ -11285,9 +11291,10 @@ Details: It defines the styles for popout components as listed below:
 }
 .popout-group-main .popout-actions .wrap-user .user-avatar {
   height: 2em;
-  -webkit-box-shadow: inset 0 0 0 2px #F2F2F2;
-  -moz-box-shadow: inset 0 0 0 2px #F2F2F2;
-  box-shadow: inset 0 0 0 2px #F2F2F2;
+  -webkit-box-shadow: inset 0 0 0 1px #A5A5A5;
+  -moz-box-shadow: inset 0 0 0 1px #A5A5A5;
+  box-shadow: inset 0 0 0 1px #A5A5A5;
+  padding: 1px;
 }
 .popout-group-main .popouts {
   position: relative;
@@ -11298,16 +11305,16 @@ Details: It defines the styles for popout components as listed below:
   width: 350px;
 }
 .popout-group-main .popouts .popout .popout-content-wrap {
-  background-color: #F9F9F9;
+  background-color: #FFFFFF;
   color: #898989;
-  padding: 0.5em;
+  /*				padding: 0.5em;*/
   text-align: left;
   -webkit-box-shadow: 0 4px 4px 0 rgba(209, 210, 211, 0.25);
   -moz-box-shadow: 0 4px 4px 0 rgba(209, 210, 211, 0.25);
   box-shadow: 0 4px 4px 0 rgba(209, 210, 211, 0.25);
 }
 .popout-group-main .popouts .popout .popout-content-wrap .popout-content li {
-  padding: 0.5em;
+  padding: 1em;
   -webkit-transition: all 250ms ease-in-out 0s;
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
@@ -11318,7 +11325,7 @@ Details: It defines the styles for popout components as listed below:
   display: block;
 }
 .popout-group-main .popouts .popout .popout-content-wrap .popout-content li:hover {
-  background-color: #FFFFFF;
+  background-color: #F9F9F9;
 }
 .popout-group-main .popouts #popout-user {
   right: 0;
@@ -12825,7 +12832,7 @@ Details: It defines the styles of form box components as listed below:
   display: inline-block;
   top: 0.5rem;
   right: 0.5rem;
-  color: #0074D9;
+  color: #0059A6;
   cursor: pointer;
   z-index: 20;
 }
@@ -12963,7 +12970,7 @@ Usage: Boxes can be used to to show data of models.
 
 .box-crud-wrap {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 0.5rem 1rem;
 }
 
@@ -12998,7 +13005,7 @@ Usage: Boxes can be used to to show data of models.
 
 .box-form-regular {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 
 .box-settings {
@@ -13445,7 +13452,7 @@ Usage: Max Blocks can be used to divide page into multiple sections.
 }
 #block-public .block-content {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   width: 90%;
   margin: 0 auto;
   padding: 2rem;
@@ -13502,11 +13509,11 @@ Full - Full pagination having both info and pagination links.
 
 .pagination-basic li span, .pagination-basic li a, .pagination-basic .page-link span, .pagination-basic .page-link a {
   padding: 0.3em 0.5em;
-  background-color: #3498DB;
+  background-color: #0059A6;
   color: #FFFFFF;
 }
 .pagination-basic li span:hover, .pagination-basic li a:hover, .pagination-basic .page-link span:hover, .pagination-basic .page-link a:hover {
-  background-color: #0059A6;
+  background-color: #004C84;
   color: #FFFFFF;
 }
 .pagination-basic li span .icon, .pagination-basic li a .icon, .pagination-basic .page-link span .icon, .pagination-basic .page-link a .icon {
@@ -13802,7 +13809,7 @@ Basic - The basic data grid having default coloring.
   line-height: 1.4em;
 }
 .pagination-grid-default li span, .pagination-grid-default li a {
-  border: 1px solid #0074D9;
+  border: 1px solid #0059A6;
   color: #898989;
   padding: 0.3em 0.65em;
   text-decoration: none;
@@ -13812,7 +13819,7 @@ Basic - The basic data grid having default coloring.
   border-radius: 5px;
 }
 .pagination-grid-default li.prev a, .pagination-grid-default li.prev span {
-  border-left: 1px solid #0074D9;
+  border-left: 1px solid #0059A6;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -13849,7 +13856,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 ***********************************************************************/
 .grid-data-default {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 0 1rem;
 }
 .grid-data-default .cmt-select-wrap {
@@ -14030,7 +14037,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
   line-height: 1.4em;
 }
 .pagination-grid li span, .pagination-grid li a {
-  border: 1px solid #0074D9;
+  border: 1px solid #0059A6;
   color: #898989;
   padding: 0.6em 0.65em;
   text-decoration: none;
@@ -14040,7 +14047,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
   border-radius: 5px;
 }
 .pagination-grid li.prev a, .pagination-grid li.prev span {
-  border-left: 1px solid #0074D9;
+  border-left: 1px solid #0059A6;
   -webkit-border-radius: 5px;
   -khtml-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -14091,7 +14098,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 
 .grid-data-admin {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 0 1rem;
 }
 .grid-data-admin .select-wrap {
@@ -14222,6 +14229,8 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header {
   background-color: #F9F9F9;
+  color: black;
+  font-size: 1em;
 }
 .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows-header .colf:last-child {
   border-right: none;
@@ -14231,6 +14240,9 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .icon {
   text-align: center;
+}
+.grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row .grid-row-data .actions .action-delete {
+  color: #FF4136;
 }
 .grid-data-admin .grid-content-wrap .grid-content .grid-rows-wrap .grid-rows .grid-row:last-child .grid-row-data .colf {
   border-bottom: none;
@@ -14301,7 +14313,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 .header-content {
   padding: 0.5rem 1rem;
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .header-content .header-actions {
   min-height: 1em;
@@ -14346,7 +14358,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
   margin-top: 1em;
   padding-bottom: 1em;
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .box-cud .header {
   background-color: #F9F9F9;
@@ -14417,7 +14429,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .data-grid .grid-header, .data-grid .grid-footer {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .data-grid .grid-header .info, .data-grid .grid-footer .info {
   color: #898989;
@@ -14429,7 +14441,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .data-grid .grid-header .pagination a, .data-grid .grid-footer .pagination a {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   font-size: 0.8em;
 }
 .data-grid .grid-header .pagination .active a, .data-grid .grid-footer .pagination .active a {
@@ -14442,11 +14454,11 @@ Default Data Grid - The grid class fully implemented for application data grids.
   margin: 0.5rem 0px;
   border: 1px solid #E6E7E8;
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
 }
 .data-grid .grid-content th {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #606060;
   padding: 0.5rem 0px;
 }
 .data-grid .grid-content th:nth-child(1), .data-grid .grid-content td:nth-child(1) {
@@ -14596,7 +14608,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 
 ._mCS_1 .mCSB_dragger .mCSB_dragger_bar, ._mCS_2 .mCSB_dragger .mCSB_dragger_bar, .mCSB_dragger_bar {
-  background: #3498DB !important;
+  background: #0059A6 !important;
 }
 
 .mCustomScrollbar .mCSB_scrollTools .mCSB_draggerRail {
@@ -14713,11 +14725,11 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-calendar th {
-  color: #898989;
+  color: #606060;
   background: #F9F9F9;
 }
 .ui-datepicker-calendar td a {
-  color: #898989;
+  color: #606060;
 }
 .ui-datepicker-calendar td a:hover {
   background-color: #FFFFFF;
@@ -14760,11 +14772,11 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
   box-shadow: inset 0 0 0 1px #FFFFFF;
 }
 .tabs-jquery .ui-state-default .btn:hover {
-  color: #3498DB;
+  color: #0059A6;
 }
 .tabs-jquery .ui-tabs-active .btn {
   background-color: #FFFFFF !important;
-  color: #3498DB;
+  color: #0059A6;
 }
 
 .mce-tinymce {
