@@ -7250,6 +7250,9 @@ CMT Select Native - It works without cmtSelect plugin.
 .select-wrap .select .selected.disabled {
   cursor: default;
 }
+.select-wrap .select .selected.disabled .s-text, .select-wrap .select .selected.disabled .s-icon {
+  color: #CCCCCC;
+}
 .select-wrap .select .select-list {
   position: absolute;
   width: 100%;
