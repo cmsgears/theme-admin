@@ -1492,7 +1492,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
 }
 
 .max-area-cover-black {
@@ -1504,7 +1504,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
   background-color: black;
 }
 
@@ -1517,7 +1517,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -2644,7 +2644,7 @@ input[type="checkbox"] {
 }
 */
 .wysiwyg {
-  color: #898989;
+  color: #303030;
 }
 .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
   display: block;
@@ -2820,7 +2820,7 @@ html {
 
 html, body {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 
 /**
@@ -3469,9 +3469,9 @@ from secondary for highlighting purposes.
   /**
    * Color Palatte:
    * 1. primary: #F9F9F9
-   * 2. primary text: #898989
+   * 2. primary text: #303030
    * 3. primary light: #FFFFFF
-   * 4. primary text light: #606060
+   * 4. primary text light: #000000
    * 5. primary dark: #E6E7E8
    * 6. primary text dark: #6D6E6F
    * 7. secondary: #F9F9F9
@@ -3490,11 +3490,11 @@ from secondary for highlighting purposes.
 }
 .color.color-primary {
   background-color: #F9F9F9 !important;
-  color: #898989 !important;
+  color: #303030 !important;
 }
 .color.color-primary-l {
   background-color: #FFFFFF !important;
-  color: #606060 !important;
+  color: #000000 !important;
 }
 .color.color-primary-d {
   background-color: #E6E7E8 !important;
@@ -4153,13 +4153,13 @@ from secondary for highlighting purposes.
   color: #F9F9F9 !important;
 }
 .text.text-primary-text {
-  color: #898989 !important;
+  color: #303030 !important;
 }
 .text.text-primary-l {
   color: #FFFFFF !important;
 }
 .text.text-primary-text-l {
-  color: #606060 !important;
+  color: #000000 !important;
 }
 .text.text-primary-d {
   color: #E6E7E8 !important;
@@ -5136,7 +5136,7 @@ html, body {
 }
 @media only screen and (min-width: 1601px) {
   html, body {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -5155,7 +5155,7 @@ html, body {
 }
 @media only screen and (min-width: 1601px) {
   .grid-data-admin {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -6405,7 +6405,7 @@ html, body {
 }
 .hover-color-primary:hover {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 
 .hover-color-secondary {
@@ -6519,7 +6519,7 @@ html, body {
   transition: color 420ms ease-in-out 0s;
 }
 .hover-text-primary:hover {
-  color: #898989;
+  color: #303030;
 }
 
 .hover-text-secondary {
@@ -7719,7 +7719,7 @@ order to place group at appropriate postion.
 }
 .btn.btn-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .btn.btn-primary:hover {
   background-color: #E6E7E8;
@@ -7884,7 +7884,7 @@ order to place group at appropriate postion.
   box-shadow: inset 0 0 0 1px #F9F9F9;
 }
 .btn-border.btn-border-primary:hover {
-  color: #898989 !important;
+  color: #303030 !important;
   background-color: #F9F9F9 !important;
 }
 .btn-border.btn-border-secondary {
@@ -8961,7 +8961,7 @@ Basic - The basic header define the styles for primary header having logo and me
     float: right;
   }
   .header-basic #mobile-actions .mobile-action {
-    color: #606060;
+    color: #000000;
     cursor: pointer;
     margin-left: 0.5em;
     font-size: 2em;
@@ -9082,8 +9082,10 @@ Basic - The basic header define the styles for primary header having logo and me
 }
 .header-private .header-logo .logo {
   display: inline-block;
-  height: 60px;
-  padding: 10px 0;
+  height: 50px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: white;
 }
 @media only screen and (max-width: 1024px) {
   .header-private {
@@ -9276,7 +9278,7 @@ Details: It defines the styles for header components as listed below:
 }
 .block.block-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .block.block-secondary {
   background-color: #F9F9F9;
@@ -9441,7 +9443,7 @@ Usage: Max Blocks can be used to divide page into multiple sections.
 }
 #block-public .block-content {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   width: 90%;
   margin: 0 auto;
   padding: 2rem;

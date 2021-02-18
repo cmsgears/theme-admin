@@ -199,7 +199,8 @@ function initDatePickers() {
 
 		jQuery( '.dt-date-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d' } );
 
-		jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, yearEnd: 2010, defaultDate: '2000-01-01' } );
+		//jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, yearEnd: 2010, defaultDate: '2000-01-01' } );
+		jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, defaultDate: '2000-01-01' } );
 
 		jQuery( '.dt-time-picker' ).datetimepicker( { datepicker: false, format: 'H:i:00', step: 5 } );
 	}

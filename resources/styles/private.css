@@ -1492,7 +1492,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
 }
 
 .max-area-cover-black {
@@ -1504,7 +1504,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
   background-color: black;
 }
 
@@ -1517,7 +1517,7 @@ Notes:
   z-index: 1000000;
   display: none;
   text-align: center;
-  color: #898989;
+  color: #303030;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -2644,7 +2644,7 @@ input[type="checkbox"] {
 }
 */
 .wysiwyg {
-  color: #898989;
+  color: #303030;
 }
 .wysiwyg html, .wysiwyg address, .wysiwyg blockquote, .wysiwyg body, .wysiwyg dd, .wysiwyg div, .wysiwyg dl, .wysiwyg dt, .wysiwyg fieldset, .wysiwyg form, .wysiwyg frame, .wysiwyg frameset, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6, .wysiwyg noframes, .wysiwyg ol, .wysiwyg p, .wysiwyg ul, .wysiwyg center, .wysiwyg dir, .wysiwyg hr, .wysiwyg menu, .wysiwyg pre {
   display: block;
@@ -2820,7 +2820,7 @@ html {
 
 html, body {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 
 /**
@@ -3469,9 +3469,9 @@ from secondary for highlighting purposes.
   /**
    * Color Palatte:
    * 1. primary: #F9F9F9
-   * 2. primary text: #898989
+   * 2. primary text: #303030
    * 3. primary light: #FFFFFF
-   * 4. primary text light: #606060
+   * 4. primary text light: #000000
    * 5. primary dark: #E6E7E8
    * 6. primary text dark: #6D6E6F
    * 7. secondary: #F9F9F9
@@ -3490,11 +3490,11 @@ from secondary for highlighting purposes.
 }
 .color.color-primary {
   background-color: #F9F9F9 !important;
-  color: #898989 !important;
+  color: #303030 !important;
 }
 .color.color-primary-l {
   background-color: #FFFFFF !important;
-  color: #606060 !important;
+  color: #000000 !important;
 }
 .color.color-primary-d {
   background-color: #E6E7E8 !important;
@@ -4153,13 +4153,13 @@ from secondary for highlighting purposes.
   color: #F9F9F9 !important;
 }
 .text.text-primary-text {
-  color: #898989 !important;
+  color: #303030 !important;
 }
 .text.text-primary-l {
   color: #FFFFFF !important;
 }
 .text.text-primary-text-l {
-  color: #606060 !important;
+  color: #000000 !important;
 }
 .text.text-primary-d {
   color: #E6E7E8 !important;
@@ -5136,7 +5136,7 @@ html, body {
 }
 @media only screen and (min-width: 1601px) {
   html, body {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -5155,7 +5155,7 @@ html, body {
 }
 @media only screen and (min-width: 1601px) {
   .grid-data-admin {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -6405,7 +6405,7 @@ html, body {
 }
 .hover-color-primary:hover {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 
 .hover-color-secondary {
@@ -6519,7 +6519,7 @@ html, body {
   transition: color 420ms ease-in-out 0s;
 }
 .hover-text-primary:hover {
-  color: #898989;
+  color: #303030;
 }
 
 .hover-text-secondary {
@@ -7875,7 +7875,7 @@ order to place group at appropriate postion.
 }
 .btn.btn-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .btn.btn-primary:hover {
   background-color: #E6E7E8;
@@ -8040,7 +8040,7 @@ order to place group at appropriate postion.
   box-shadow: inset 0 0 0 1px #F9F9F9;
 }
 .btn-border.btn-border-primary:hover {
-  color: #898989 !important;
+  color: #303030 !important;
   background-color: #F9F9F9 !important;
 }
 .btn-border.btn-border-secondary {
@@ -9254,7 +9254,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 }
 .accordian-basic.accordian-primary .accordian-tab .accordian-view {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .accordian-basic.accordian-secondary .accordian-tab .accordian-trigger {
   background-color: #F9F9F9;
@@ -9301,7 +9301,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 
 .actions-list-settings .actions-list-title {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   width: 64px;
   height: 35px;
   padding: 5px 8px;
@@ -9333,7 +9333,7 @@ Border Accordian - It's extension of Basic Accordian with default borders.
 }
 .actions-list-data-settings .action a, .actions-list-data-settings .action .link, .actions-list-data-settings .action .action-title {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   padding: 0.5em;
 }
 .actions-list-data-settings .action:hover a, .actions-list-data-settings .action:hover .link, .actions-list-data-settings .action:hover .action-title {
@@ -9404,7 +9404,7 @@ on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
 }
 .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-item:hover {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .auto-fill-basic .auto-fill-source .auto-fill-items-wrap .auto-fill-items .auto-fill-message {
   background-color: #E6E7E8;
@@ -9431,7 +9431,7 @@ on cmtAutoSuggest jQuery plugin available in Velocity JS Framework.
 }
 .auto-suggest .auto-list-wrap .list-item:nth-child(even), .auto-suggest .auto-list-wrap li:nth-child(even) {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 .auto-suggest .auto-list-wrap .list-item:hover, .auto-suggest .auto-list-wrap li:hover {
   background-color: #F9F9F9;
@@ -9771,7 +9771,7 @@ Action - The action mapper will allow users to toggle each item individually by 
 
 .breadcrumb {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   padding: 0;
   margin-bottom: 0.75em;
   font-size: 1.08em;
@@ -9867,7 +9867,7 @@ Data - The barebone card class with minimum styles.
 ***********************************************************************/
 .data.data-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .data.data-secondary {
   background-color: #F9F9F9;
@@ -9912,7 +9912,7 @@ to show forms and widgets.
 
 .data-crud-wrap-basic {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   padding: 1em;
 }
 .data-crud-wrap-basic .data-crud {
@@ -10050,7 +10050,7 @@ ZigZag - The barebone zigzag class with minimum styles with each section having 
 }
 #data-crud-settings .data-crud-title .wrap-popout-settings #popout-settings {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   position: absolute;
   top: 0.5em;
   width: 100%;
@@ -10208,7 +10208,7 @@ Details: It defines the menu components as listed below:
   transition: all 250ms ease-in-out 0s;
 }
 .hnav-basic > li > a {
-  color: #898989;
+  color: #303030;
   font-size: 1em;
   line-height: 48px;
   padding: 0 15px;
@@ -10308,7 +10308,7 @@ Details: It defines the menu components as listed below:
 .vnav-basic a {
   display: block;
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   font-size: 1em;
   line-height: 35px;
   width: 98%;
@@ -10451,7 +10451,7 @@ Details: It defines the menu components as listed below:
   }
   #menu-main-mobile li a, #menu-main-mobile li .link {
     background-color: #FFFFFF;
-    color: #606060;
+    color: #000000;
     padding: 1em 0;
     -webkit-transition: all 250ms ease-in-out 0s;
     -moz-transition: all 250ms ease-in-out 0s;
@@ -10743,7 +10743,7 @@ Basic - The basic header define the styles for primary header having logo and me
     float: right;
   }
   .header-basic #mobile-actions .mobile-action {
-    color: #606060;
+    color: #000000;
     cursor: pointer;
     margin-left: 0.5em;
     font-size: 2em;
@@ -10864,8 +10864,10 @@ Basic - The basic header define the styles for primary header having logo and me
 }
 .header-private .header-logo .logo {
   display: inline-block;
-  height: 60px;
-  padding: 10px 0;
+  height: 50px;
+  padding: 5px;
+  margin: 5px 0;
+  background-color: white;
 }
 @media only screen and (max-width: 1024px) {
   .header-private {
@@ -11222,7 +11224,7 @@ Details: It defines the styles for popout components as listed below:
 }
 .popup-admin .popup-data {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -11294,9 +11296,9 @@ Details: It defines the styles for popout components as listed below:
 }
 .popout-group-main .popout-actions .wrap-user .user-avatar {
   height: 2em;
-  -webkit-box-shadow: inset 0 0 0 1px #A5A5A5;
-  -moz-box-shadow: inset 0 0 0 1px #A5A5A5;
-  box-shadow: inset 0 0 0 1px #A5A5A5;
+  -webkit-box-shadow: inset 0 0 0 1px #F2F2F2;
+  -moz-box-shadow: inset 0 0 0 1px #F2F2F2;
+  box-shadow: inset 0 0 0 1px #F2F2F2;
   padding: 1px;
 }
 .popout-group-main .popouts {
@@ -11309,7 +11311,7 @@ Details: It defines the styles for popout components as listed below:
 }
 .popout-group-main .popouts .popout .popout-content-wrap {
   background-color: #FFFFFF;
-  color: #898989;
+  color: #303030;
   /*				padding: 0.5em;*/
   text-align: left;
   -webkit-box-shadow: 0 4px 4px 0 rgba(209, 210, 211, 0.25);
@@ -11317,7 +11319,7 @@ Details: It defines the styles for popout components as listed below:
   box-shadow: 0 4px 4px 0 rgba(209, 210, 211, 0.25);
 }
 .popout-group-main .popouts .popout .popout-content-wrap .popout-content li {
-  padding: 1em;
+  padding: 0.5em 1em;
   -webkit-transition: all 250ms ease-in-out 0s;
   -moz-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;
@@ -11336,12 +11338,15 @@ Details: It defines the styles for popout components as listed below:
 }
 .popout-group-main .popouts #popout-activity {
   right: 100px;
+  font-size: 0.75em;
 }
 .popout-group-main .popouts #popout-reminder {
   right: 200px;
+  font-size: 0.75em;
 }
 .popout-group-main .popouts #popout-notification {
   right: 300px;
+  font-size: 0.75em;
 }
 @media only screen and (max-width: 1024px) {
   .popout-group-main .popout-actions .popout-trigger {
@@ -11908,7 +11913,7 @@ Details: It defines the styles for mapper components as listed below:
 
 .gallery-basic {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .gallery-basic .gallery-header {
   background-color: #026eb7;
@@ -12219,7 +12224,7 @@ Details: It defines the styles of card components as listed below:
 }
 .card.card-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .card.card-secondary {
   background-color: #F9F9F9;
@@ -12311,7 +12316,7 @@ Details: It defines the styles of card panels as listed below:
 }
 .card-panel .card-content-wrap .card-data {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   padding: 0.5rem;
 }
 .card-panel .card-content-wrap .card-footer {
@@ -12490,7 +12495,7 @@ background banner of Block.
   background-color: #F9F9F9;
 }
 .card-info-icon-box .card-info-icon-bbox-primary .card-header .card-header-icon .icon {
-  color: #898989;
+  color: #303030;
 }
 .card-info-icon-box .card-info-icon-bbox-secondary .card-header .card-header-icon {
   background-color: #F9F9F9;
@@ -12525,14 +12530,14 @@ background banner of Block.
   text-align: center;
   vertical-align: middle;
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   -webkit-border-radius: 100%;
   -khtml-border-radius: 100%;
   -moz-border-radius: 100%;
   border-radius: 100%;
 }
 .card-info-icon-round.card-info-icon-bround-primary .card-header .card-header-icon .icon {
-  color: #898989;
+  color: #303030;
 }
 .card-info-icon-round.card-info-icon-bround-secondary .card-header .card-header-icon {
   overflow: hidden;
@@ -12661,7 +12666,7 @@ Details: It defines the styles of box components as listed below:
 }
 .box.box-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .box.box-secondary {
   background-color: #F9F9F9;
@@ -12763,7 +12768,7 @@ Details: It defines the styles of box components as listed below:
 .box-panel .box-content-wrap .box-data {
   position: relative;
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   padding: 0.5rem;
 }
 .box-panel .box-content-wrap .box-footer-wrap {
@@ -12828,7 +12833,7 @@ Details: It defines the styles of form box components as listed below:
 
 .box-form-basic {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .box-form-basic .box-form-trigger {
   position: absolute;
@@ -12973,7 +12978,7 @@ Usage: Boxes can be used to to show data of models.
 
 .box-crud-wrap {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   padding: 0.5rem 1rem;
 }
 
@@ -13008,7 +13013,7 @@ Usage: Boxes can be used to to show data of models.
 
 .box-form-regular {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 
 .box-settings {
@@ -13070,7 +13075,7 @@ Basic - The basic widget defines the styles of widget having text and background
 }
 .widget.widget-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .widget.widget-secondary {
   background-color: #F9F9F9;
@@ -13290,7 +13295,7 @@ Details: It defines the styles for header components as listed below:
 }
 .block.block-primary {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .block.block-secondary {
   background-color: #F9F9F9;
@@ -13455,7 +13460,7 @@ Usage: Max Blocks can be used to divide page into multiple sections.
 }
 #block-public .block-content {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   width: 90%;
   margin: 0 auto;
   padding: 2rem;
@@ -13571,7 +13576,7 @@ Full - Full pagination having both info and pagination links.
 }
 .pagination-full .page-links .pagination li span:hover, .pagination-full .page-links .pagination li a:hover, .pagination-full .page-links .pagination .page-link span:hover, .pagination-full .page-links .pagination .page-link a:hover {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .pagination-full .page-links .pagination li.first.link-disabled span, .pagination-full .page-links .pagination li.prev.link-disabled span, .pagination-full .page-links .pagination li.next.link-disabled span, .pagination-full .page-links .pagination li.last.link-disabled span, .pagination-full .page-links .pagination .page-link.first.link-disabled span, .pagination-full .page-links .pagination .page-link.prev.link-disabled span, .pagination-full .page-links .pagination .page-link.next.link-disabled span, .pagination-full .page-links .pagination .page-link.last.link-disabled span {
   background-color: #7F7F7F;
@@ -13687,7 +13692,7 @@ Basic - The basic data grid having default coloring.
 
 .grid-data-basic {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
   padding: 10px;
 }
 .grid-data-basic .grid-header-wrap .grid-header {
@@ -13840,7 +13845,7 @@ Basic - The basic data grid having default coloring.
 }
 .pagination-grid-default a:hover {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .pagination-grid-default .link-disabled span {
   background-color: #7F7F7F;
@@ -13859,7 +13864,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 ***********************************************************************/
 .grid-data-default {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   padding: 0 1rem;
 }
 .grid-data-default .cmt-select-wrap {
@@ -14101,7 +14106,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 
 .grid-data-admin {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
   padding: 0 1rem;
 }
 .grid-data-admin .select-wrap {
@@ -14316,7 +14321,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 .header-content {
   padding: 0.5rem 1rem;
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 .header-content .header-actions {
   min-height: 1em;
@@ -14361,7 +14366,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
   margin-top: 1em;
   padding-bottom: 1em;
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 .box-cud .header {
   background-color: #F9F9F9;
@@ -14432,7 +14437,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .data-grid .grid-header, .data-grid .grid-footer {
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 .data-grid .grid-header .info, .data-grid .grid-footer .info {
   color: #898989;
@@ -14449,7 +14454,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
 }
 .data-grid .grid-header .pagination .active a, .data-grid .grid-footer .pagination .active a {
   background-color: #F9F9F9;
-  color: #898989;
+  color: #303030;
 }
 .data-grid .grid-content table {
   width: 100%;
@@ -14457,7 +14462,7 @@ Default Data Grid - The grid class fully implemented for application data grids.
   margin: 0.5rem 0px;
   border: 1px solid #E6E7E8;
   background-color: #FFFFFF;
-  color: #606060;
+  color: #000000;
 }
 .data-grid .grid-content th {
   background-color: #FFFFFF;
@@ -14728,11 +14733,11 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 
 .ui-datepicker-calendar th {
-  color: #606060;
+  color: #000000;
   background: #F9F9F9;
 }
 .ui-datepicker-calendar td a {
-  color: #606060;
+  color: #000000;
 }
 .ui-datepicker-calendar td a:hover {
   background-color: #FFFFFF;
@@ -14760,7 +14765,7 @@ Details: It defines the themes for jQuery UI datepicker component as listed belo
 }
 .tabs-jquery .ui-state-default .btn {
   background-color: transparent !important;
-  color: #898989;
+  color: #303030;
   margin: 0 !important;
   padding: 0.5em 1em !important;
   border-radius: 0 0 0px 0px;
