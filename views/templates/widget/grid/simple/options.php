@@ -2,7 +2,7 @@
 $title	= $widget->title;
 $layout	= $widget->layout;
 ?>
-<div class="grid-options-wrap row">
+<div class="grid-options-wrap row max-cols-100">
 	<div class="colf colf12x6">
 		<?= $bulkHtml ?>
 	</div>

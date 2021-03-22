@@ -9,10 +9,6 @@
 
 namespace themes\admin\assets;
 
-// Yii Imports
-use yii\web\AssetBundle;
-use yii\web\View;
-
 /**
  * PublicAssets registers the public assets required for public pages.
  *
@@ -34,45 +30,9 @@ class PublicAssets extends AssetBundle {
 
 	// Public -----------------
 
-	// Path Configuration
-	public $sourcePath = '@themes/admin/resources';
-
 	// Load css
 	public $css = [
 		'styles/public.css'
-	];
-
-	// CSS Position
-	public $cssOptions = [
-		'position' => View::POS_HEAD
-	];
-
-	// Load JS
-	public $js = [
-		// vendor
-		// templates
-		'scripts/templates/public.js',
-		// scripts
-		'scripts/main.js',
-		'scripts/search.js',
-		// apix
-		'scripts/apix/public.js',
-		// apps
-		'scripts/apps/public.js'
-	];
-
-	// JS Position
-	public $jsOptions = [
-		'position' => View::POS_END
-	];
-
-	// Dependent Assets
-	public $depends = [
-		'cmsgears\assets\jquery\Jquery',
-		'cmsgears\assets\utilities\ImagesLoaded',
-		'cmsgears\assets\cmgtools\Velocity',
-		'cmsgears\icons\assets\IconAssets',
-		'themes\admin\assets\vapps\BaseAssets'
 	];
 
 	// Protected --------------
@@ -81,7 +41,15 @@ class PublicAssets extends AssetBundle {
 
 	// Traits ------------------------------------------------------
 
-	// Constructor and Initialisation ------------------------------
+    // Constructor and Initialisation ------------------------------
+
+	public function init() {
+
+		parent::init();
+
+		$this->js[] = 'scripts/main.js';
+		$this->js[] = 'scripts/search.js';
+	}
 
 	// Instance methods --------------------------------------------
 

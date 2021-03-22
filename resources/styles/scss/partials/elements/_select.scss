@@ -1,8 +1,18 @@
-.cmt-select-wrap {
+.select-wrap {
 
-	.cmt-select {
+	.select {
 
-		.cmt-selected {
+		.selected {
+			@include rounded( $size-medium );
+			padding: 0.5em;
+			line-height: 1.75em;
+
+			.s-icon {
+				padding: 0.5em;
+			}
+		}
+
+		.select-list li {
 			padding: 0.5em;
 		}
 	}

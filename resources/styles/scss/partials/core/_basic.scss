@@ -34,7 +34,7 @@
 }
 
 #pre-loader-main {
-	z-index: 1000;
+	z-index: 100001;
 	position: absolute;
 	width: 100%;
 }
@@ -48,4 +48,12 @@
 			margin-right: 0.5em;
 		}
 	}
+}
+
+#mce-modal-block {
+	z-index: 100100 !important;
+}
+
+.mce-widget, .mce-container {
+	z-index: 100101 !important;
 }

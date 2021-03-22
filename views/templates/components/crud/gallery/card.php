@@ -22,7 +22,7 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 				</span>
 			</div>
 			<form class="form form-gallery hidden-easy" cmt-app="core" cmt-controller="gallery" cmt-action="update" action="<?= $updateUrl ?>" cmt-keep>
-				<?php include "$themeIncludes/components/spinners/form.php"; ?>
+				<?php include "$themeTemplates/components/spinners/form.php"; ?>
 				<div class="data-crud-form">
 					<div class="row">
 						<div class="col col3">
@@ -44,6 +44,15 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 								<label>Description</label>
 								<textarea name="Gallery[description]" placeholder="Description"><?= $gallery->description ?></textarea>
 								<span  class="error" cmt-error="Gallery[description]"></span>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col col1">
+							<div class="form-group">
+								<label>Content</label>
+								<textarea name="Gallery[content]" placeholder="Content"><?= $gallery->content ?></textarea>
+								<span  class="error" cmt-error="Gallery[content]"></span>
 							</div>
 						</div>
 					</div>
@@ -73,13 +82,13 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 							<div class="cmt-gallery-item-header card-header row">
 								<div class="col col3x2 title align align-left" title="<?= $file->title ?>"><?= $file->title ?></div>
 								<div class="col col3 align align-right">
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/get-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="get" action="<?= $apixBase ?>/get-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
 										<i class="icon cmti cmti-edit cmt-click"></i>
 									</span>
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="delete" action="<?= $apixBase ?>/delete-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="delete" action="<?= $apixBase ?>/delete-gallery-item?id=<?= $model->id ?>&cid=<?= $gallery->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
@@ -99,4 +108,4 @@ $updateUrl = isset( $parent ) ? "$apixBase/update-gallery?id=$parent->id&cid=$ga
 	<div class="cmt-gallery-item-form data-crud-wrap-sidebar colf colf15x4"></div>
 </div>
 <?php
-include "$themeIncludes/handlebars/gallery/card.php";
+include "$themeTemplates/handlebars/gallery/card.php";

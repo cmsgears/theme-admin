@@ -1,8 +1,17 @@
+#ui-datepicker-div {
+	z-index: 100001 !important;
+}
+
+.ui-datepicker-title {
+    padding: 0.5em;
+}
+
 .ui-datepicker-prev-hover, .ui-datepicker-next-hover {
 	background-color: $color-tertiary-l;
 }
 
 .ui-datepicker-prev:hover, .ui-datepicker-next:hover, .ui-datepicker-title:hover {
+	background-color: $color-blue !important;
 	color: $color-white !important;
 }
 

@@ -54,7 +54,7 @@
 @import "breeze/elements/switch";
 @import "breeze/elements/button";
 @import "partials/elements/select";
-@import "partials/elements/switch";
+//@import "partials/elements/choice";
 
 @import "breeze/elements/form";
 @import "breeze/elements/table";
@@ -169,3 +169,5 @@
 //@import "breeze/extensions/fox-slider";
 
 @import "breeze/extensions/tinymce";
+
+//@import "partials/extensions/datetimepicker";

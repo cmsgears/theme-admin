@@ -21,7 +21,7 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 				</span>
 			</div>
 			<form class="form form-gallery hidden-easy" cmt-app="core" cmt-controller="gallery" cmt-action="update" action="<?= $updateUrl ?>" cmt-keep>
-				<?php include "$themeIncludes/components/spinners/form.php"; ?>
+				<?php include "$themeTemplates/components/spinners/form.php"; ?>
 				<div class="data-crud-form">
 					<div class="row">
 						<div class="col col3">
@@ -70,15 +70,15 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 					<div class="cmt-gallery-item card card-gallery-item" data-id="<?= $slide->id ?>">
 						<div class="card-content-wrap">
 							<div class="cmt-gallery-item-header card-header row">
-								<div class="col col3x2 title align align-left" title="<?= $file->title ?>"><?= $file->title ?></div>
+								<div class="col col3x2 title align align-left" title="<?= $slide->name ?>"><?= $slide->name ?></div>
 								<div class="col col3 align align-right">
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="get" action="<?= $apixBase ?>/slide/get?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
 										<i class="icon cmti cmti-edit cmt-click"></i>
 									</span>
-									<span class="relative" cmt-app="gallery" cmt-controller="item" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
+									<span class="relative" cmt-app="core" cmt-controller="galleryItem" cmt-action="delete" action="<?= $apixBase ?>/slide/delete?id=<?= $slider->id ?>&cid=<?= $slide->id ?>&fid=<?= $file->id ?>">
 										<span class="spinner hidden-easy">
 											<span class="icon cmti cmti-spinner-1 spin"></span>
 										</span>
@@ -98,4 +98,4 @@ $updateUrl = "$apixBase/slider/update?id=$slider->id";
 	<div class="cmt-gallery-item-form data-crud-wrap-sidebar colf colf15x6"></div>
 </div>
 <?php
-include "$themeIncludes/handlebars/foxslider/card.php";
+include "$themeTemplates/handlebars/foxslider/card.php";

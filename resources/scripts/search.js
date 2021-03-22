@@ -34,6 +34,10 @@ function searchBro( selector, pageUrl ) {
 		pageUrl = cmt.utils.data.removeParam( pageUrl, 'keywords' );
 	}
 
+	// Clear Pagination
+	pageUrl = cmt.utils.data.removeParam( pageUrl, 'page' );
+	pageUrl = cmt.utils.data.removeParam( pageUrl, 'per-page' );
+
 	window.location	= pageUrl;
 }
 

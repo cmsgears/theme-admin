@@ -4,9 +4,10 @@
     .collapsible-tab {
         width: 100%;
         position: relative;
+		@include transit-bkg-color( $transit-eio, $transit-time-small );
 
         &:hover {
-            background-color: $color-secondary-l;
+            background-color: $color-sidebar-d;
         }
 
         .marker {
@@ -25,17 +26,24 @@
             padding-right: 8px;
             cursor: pointer;
 			height: 3em;
+			color: $color-sidebar-text;
+
+			&:hover {
+/*				color: $color-sidebar;*/
+			}
+
+			a {
+				color: $color-sidebar-text;
+			}
 
             .tab-icon {
                 position: absolute;
                 top: 0;
                 left: 0;
                 padding: 1em 10px;
-                color: $color-secondary-text-d;
             }
 
             .tab-title {
-                color: $color-secondary-text-d;
 				line-height: 2em;
             }
         }
@@ -67,7 +75,7 @@
         }
 
         &.active {
-            background-color: $color-tertiary-d;
+            background-color: $color-link;
 
             .marker {
                 display: inline-block;
@@ -91,6 +99,10 @@
 
                     &.active {
                         font-weight: bold;
+
+						a {
+							color: $color-link;
+						}
                     }
                 }
             }
@@ -100,6 +112,7 @@
             background-color: $color-secondary;
 
 			.tab-header {
+				color: $color-sidebar;
 				border-right: 2px solid $color-secondary-d;
 			}
         }

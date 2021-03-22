@@ -1,11 +1,13 @@
 <?php
-$dataProvider	= $widget->dataProvider;
-$models			= $dataProvider->getModels();
+$dataProvider = $widget->dataProvider;
 
-$gridColumns	= $widget->gridColumns;
-$actions		= $widget->actions;
+$models = $dataProvider->getModels();
 
-$actionView		= $widget->actionView;
+$gridColumns = $widget->gridColumns;
+
+$actions = $widget->actions;
+
+$actionView = $widget->actionView;
 ?>
 
 <?php
@@ -31,12 +33,12 @@ $actionView		= $widget->actionView;
 				if( $key === 'bulk' ) {
 		?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>">
-						<span class="data cmt-choice">
-							<label>
+						<div class="choice data">
+							<label class="choice-option">
 								<input class="grid-bulk-all" type="checkbox" />
 								<span class="label cmti cmti-checkbox"></span>
 							</label>
-						</span>
+						</div>
 					</div>
 				<?php } else { ?>
 					<div class="<?= $root . $factor[ $index ] ?>" title="<?= $title ?>"><?= $title ?></div>
@@ -58,7 +60,7 @@ $actionView		= $widget->actionView;
 			$index	= 0;
 	?>
 		<div class="grid-row">
-			<div class="grid-row-data row max-cols-50">
+			<div class="grid-row-data row max-cols-100">
 		<?php
 				foreach ( $gridColumns as $key => $column ) {
 
@@ -88,15 +90,15 @@ $actionView		= $widget->actionView;
 		?>
 						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
-							<span class="data cmt-choice">
-								<label>
+							<div class="choice data">
+								<label class="choice-option">
 									<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
 									<span class="label cmti cmti-checkbox"></span>
 								</label>
-							</span>
+							</div>
 						</div>
 					<?php } else if( $key === 'actions' ) { ?>
-						<div class="<?= "$cClass $root" . $factor[ $index ] ?> actions">
+						<div class="<?= "$cClass $root" . $factor[ $index ] ?>">
 							<span class="data data-title"><?= $title ?></span>
 							<span class="data">
 								<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>

@@ -9,10 +9,6 @@
 
 namespace themes\admin\assets;
 
-// Yii Imports
-use yii\web\AssetBundle;
-use yii\web\View;
-
 /**
  * PrivateAssets registers the private assets required for private pages.
  *
@@ -34,59 +30,9 @@ class PrivateAssets extends AssetBundle {
 
 	// Public -----------------
 
-	// Path Configuration
-	public $sourcePath = '@themes/admin/resources';
-
 	// Load css
 	public $css = [
 		'styles/private.css'
-	];
-
-	// CSS Position
-	public $cssOptions = [
-		'position' => View::POS_HEAD
-	];
-
-	// Load JS
-	public $js = [
-		// vendor
-		// templates
-		'scripts/templates/public.js',
-		'scripts/templates/private.js',
-		// apix
-		'scripts/apix/public.js',
-		'scripts/apix/private.js',
-		// apps
-		'scripts/apps/public.js',
-		'scripts/apps/private.js',
-		'scripts/apps/core/services/user.js',
-		'scripts/apps/core/controllers/site.js',
-		'scripts/apps/core/controllers/main.js',
-		'scripts/apps/core/controllers/user.js',
-		'scripts/apps/core/controllers/admin.js',
-		// scripts
-		'scripts/main.js',
-		'scripts/search.js'
-	];
-
-	// JS Position
-	public $jsOptions = [
-		'position' => View::POS_END
-	];
-
-	// Dependent Assets
-	public $depends = [
-		'cmsgears\assets\jquery\Jquery',
-		'cmsgears\assets\jquery\JqueryUi',
-		'cmsgears\assets\jquery\JqueryMouseWheel',
-		'cmsgears\assets\components\MCustomScrollbar',
-		'cmsgears\assets\utilities\ImagesLoaded',
-		'cmsgears\assets\templates\Handlebars',
-		'cmsgears\assets\cmgtools\Velocity',
-		'cmsgears\icons\assets\IconAssets',
-		'themes\admin\assets\vapps\BaseAssets',
-		'themes\admin\assets\vapps\CoreAssets',
-		'themes\admin\assets\vapps\NotifyAssets'
 	];
 
 	// Protected --------------
@@ -95,7 +41,33 @@ class PrivateAssets extends AssetBundle {
 
 	// Traits ------------------------------------------------------
 
-	// Constructor and Initialisation ------------------------------
+    // Constructor and Initialisation ------------------------------
+
+	public function init() {
+
+		parent::init();
+
+		$this->js[] = 'scripts/templates/private.js';
+
+		$this->js[] = 'scripts/apix/private.js';
+
+		$this->js[] = 'scripts/apps/private.js';
+
+		$this->js[] = 'scripts/apps/core/services/user.js';
+		$this->js[] = 'scripts/apps/core/controllers/main.js';
+		$this->js[] = 'scripts/apps/core/controllers/user.js';
+		$this->js[] = 'scripts/apps/core/controllers/admin.js';
+		$this->js[] = 'scripts/apps/notify/base.js';
+
+		$this->js[] = 'scripts/main.js';
+		$this->js[] = 'scripts/search.js';
+		$this->js[] = 'scripts/sliders.js';
+		$this->js[] = 'scripts/popups.js';
+
+		$this->depends[] = 'cmsgears\assets\components\DateTimeAssets';
+		$this->depends[] = 'cmsgears\assets\vapps\CoreAssets';
+		$this->depends[] = 'cmsgears\assets\vapps\NotifyAssets';
+	}
 
 	// Instance methods --------------------------------------------
 

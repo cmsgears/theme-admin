@@ -4,11 +4,14 @@
 	padding: 0 1rem;
 
 	// Grid Additionals
-	.cmt-select-wrap {
+	.select-wrap {
 		width: 125px;
 
-		.cmt-select .cmt-select-list li {
-			text-align: center !important;
+		.select {
+
+			.select-list li {
+				text-align: center !important;
+			}
 		}
 	}
 
@@ -19,7 +22,7 @@
 		}
 	}
 
-	.cmt-choice {
+	.choice {
 
 		.label {
 			margin-top: 0.5em;
@@ -38,7 +41,7 @@
 				background-color: $color-field;
 				@include rounded-left( $size-small );
 
-				input[type=text], .cmt-select-wrap {
+				input[type=text], .select-wrap {
 					width: 8em;
 					margin-bottom: 0;
 				}
@@ -48,7 +51,7 @@
 					@include rounded-left( $size-small );
 				}
 
-				.cmt-select-wrap {
+				.select-wrap {
 					display: inline-block;
 					text-align: left;
 				}
@@ -139,7 +142,7 @@
 		.grid-head-options {
 			text-align: right;
 
-			.cmt-select-wrap {
+			.select-wrap {
 				margin-right: 0.5em;
 			}
 		}
@@ -170,6 +173,8 @@
 
 				.grid-rows-header {
 					background-color: $color-secondary;
+					color: black;
+					font-size: 1em;
 
 					.colf:last-child {
 						border-right: none;
@@ -188,6 +193,13 @@
 
 							.icon {
 								text-align: center;
+							}
+
+							.actions {
+								
+								.action-delete {
+									color: $color-red;
+								}
 							}
 						}
 
@@ -262,6 +274,60 @@
 
 			.grid-footer-options {
 				text-align: right;
+			}
+		}
+	}
+
+	@include responsive-max( screen-tablet-large ) {
+
+		.grid-head-wrap {
+
+			.colf {
+				text-align: left !important;
+				margin-bottom: 1em;
+			}
+		}
+
+		.grid-report-wrap {
+
+			.grid-report {
+
+				.grid-report-fields > .row:nth-child(even) {
+					padding-left: 0;
+				}
+			}
+		}
+
+		.grid-options-wrap {
+
+			.colf {
+				text-align: left !important;
+				margin-bottom: 1em;
+			}
+		}
+
+		.grid-content-wrap {
+
+			.grid-content {
+
+				.grid-rows-wrap {
+					border: none;
+
+					.grid-rows {
+
+						.grid-row {
+							border: 1px solid $color-border;
+							margin-bottom: 1em;
+
+							.grid-row-data {
+
+								.icon {
+									text-align: left;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

@@ -32,7 +32,7 @@ $this->title 	= 'Reset Password | ' . $coreProperties->getSiteTitle();
 
 	<div class="filler-height"></div>
 	<div class="row">
-		<div class="colf colf2 align align-left">
+		<div class="colf colf2 align align-left text text-small">
 			<?= Html::a( "Login", [ '/login' ] ) ?>
 		</div>
 		<div class="colf colf2 align align-right">

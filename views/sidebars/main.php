@@ -2,6 +2,9 @@
 // Yii Imports
 use yii\helpers\Url;
 
+// CMG Imports
+use cmsgears\core\common\config\CoreGlobal;
+
 $core	= Yii::$app->core;
 $user	= Yii::$app->core->getUser();
 
@@ -24,7 +27,7 @@ $child 	= isset( $sidebar[ 'child' ] ) ? $sidebar[ 'child' ] : '';
 
 	<?= Yii::$app->sidebar->getSidebarHtml( $parent, $child ) ?>
 
-	<?php if( $core->hasModule( 'core' ) && $user->isPermitted( 'core' ) ) { ?>
+	<?php if( $core->hasModule( 'core' ) && $user->isPermitted( CoreGlobal::PERM_SETTINGS ) ) { ?>
 		<div id="sidebar-settings" class="collapsible-tab <?php if( strcmp( $parent, 'sidebar-settings' ) == 0 ) echo 'active'; ?>">
 			<span class="marker"></span>
 			<div class="tab-header">

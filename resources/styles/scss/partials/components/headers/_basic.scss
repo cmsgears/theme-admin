@@ -27,7 +27,7 @@
 	.header-logo {
 
 		#btn-sidebar-main {
-			color: $color-link;
+			color: $color-white;
 			display: inline-block;
 			width: 40px;
 			height: 60px;
@@ -35,6 +35,7 @@
 			cursor: pointer;
 			@include transit-color-bkg-color( $transit-eio, $transit-time-medium );
 			text-align: center;
+			vertical-align: middle;
 
 			&:hover {
 				background-color: $color-btn-h;
@@ -44,8 +45,10 @@
 
 		.logo {
 			display: inline-block;
-			height: 60px;
-			padding: 10px 0;
+			height: 50px;
+			padding: 5px;
+			margin: 5px 0;
+			background-color: white;
 		}
 	}
 

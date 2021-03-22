@@ -7,8 +7,8 @@ $color-primary-l: #FFFFFF;
 $color-primary-d: #E6E7E8;
 
 // Primary Text Color:
-$color-primary-text: #898989;
-$color-primary-text-l: #898989;
+$color-primary-text: #303030;
+$color-primary-text-l: #000000;
 $color-primary-text-d: #6D6E6F;
 
 // Secondary Color:
@@ -18,7 +18,7 @@ $color-secondary-d: #F2F2F2;
 
 // Secondary Text Color:
 $color-secondary-text: #898989;
-$color-secondary-text-l: #898989;
+$color-secondary-text-l: #606060;
 $color-secondary-text-d: #6D6E6F;
 
 // Tertiary Color:
@@ -48,10 +48,10 @@ $color-shadow-inset-f: #94CBEA; // Inset color for field focus
 $color-shadow-inset-d: #CCCCCC; // Inset color for disabled field
 
 // Buttons
-$color-btn: #3498DB;
+$color-btn: #0059A6;
 $color-btn-text: #FFFFFF;
 //$color-btn-h: #42A8E2;    // Button Hover
-$color-btn-h: $color-blue-d;
+$color-btn-h: #004C84;
 $color-btn-text-h: #FFFFFF;
 $color-btn-a: #2980B9;    // Active Button
 $color-btn-text-a: #FFFFFF;
@@ -59,15 +59,19 @@ $color-btn-d: #808080;       // Disabled Button
 $color-btn-text-d: #E6E7E8;
 
 // Additional Colors
-$color-header: #FFFFFF;
-$color-header-text: #6D6E6F;
+$color-header: #303030;
+$color-header-text: #F2F2F2;
 
 $color-footer: #000000;
 $color-footer-text: #AAAAAA;
 
 //$color-link: #3498DB;
-$color-link: $color-blue;
+$color-link: #0059A6;
 
 $color-border: #D1D2D3;
 $color-border-l: #F4F4F4; // Light border color
 $color-border-d: #A5A5A5; // Dark border color
+
+$color-sidebar: #303030;
+$color-sidebar-d: #000;
+$color-sidebar-text: #F2F2F2;

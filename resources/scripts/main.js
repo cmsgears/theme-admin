@@ -5,7 +5,7 @@ jQuery( document ).ready( function() {
 	initCmgTools();
 
 	initListeners();
-	
+
 	initDatePickers();
 
 	initPopups();
@@ -15,7 +15,7 @@ jQuery( document ).ready( function() {
 	initSidebarTabs();
 
 	initSettings();
-	
+
 	initGallery();
 });
 
@@ -66,7 +66,7 @@ function initCmgTools() {
 
 	// Checkboxes
 	jQuery( '.cmt-checkbox' ).cmtCheckbox();
-	
+
 	// Field Groups
 	jQuery( '.cmt-field-group' ).cmtFieldGroup();
 
@@ -83,7 +83,7 @@ function initCmgTools() {
 	jQuery( '.auto-fill' ).cmtAutoFill();
 
 	// Tabs
-	jQuery( '.tabs,.box-crud-tabs-v' ).cmtTabs();
+	jQuery( '.tabs, .box-crud-tabs-v' ).cmtTabs();
 
 	// Form with Info
 	jQuery( '.box-form' ).cmtFormInfo();
@@ -116,7 +116,7 @@ function initListeners() {
 
 		jQuery( this ).parent().find( '.cmt-click' ).click();
 	});
-	
+
 	if( jQuery( '#popout-settings-trigger' ).length == 1 ) {
 
 		jQuery( '#popout-settings-trigger' ).click( function() {
@@ -139,13 +139,27 @@ function initDatePickers() {
 
 		var datepicker = jQuery( this );
 
-		var start	= datepicker.attr( 'ldata-start' );
-		var end		= datepicker.attr( 'ldata-end' );
+		var start	= datepicker.attr( 'data-start' );
+		var end		= datepicker.attr( 'data-end' );
+		var cmonth	= datepicker.attr( 'data-cmonth' );
+		var cyear	= datepicker.attr( 'data-cyear' );
+
+		if( null == cmonth ) {
+
+			cmonth = false;
+		}
+
+		if( null == cyear ) {
+
+			cyear = false;
+		}
 
 		if( null != start && null != end ) {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				minDate: start,
 				maxDate: end
 			});
@@ -154,6 +168,8 @@ function initDatePickers() {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				minDate: start
 			});
 		}
@@ -161,16 +177,33 @@ function initDatePickers() {
 
 			datepicker.datepicker({
 				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear,
 				maxDate: end
 			});
 		}
 		else {
 
 			datepicker.datepicker({
-				dateFormat: 'yy-mm-dd'
+				dateFormat: 'yy-mm-dd',
+				changeMonth: cmonth,
+				changeYear: cyear
 			});
 		}
 	});
+
+	// Datetimepicker
+	if( jQuery().datetimepicker ) {
+
+		jQuery( '.datetimepicker' ).datetimepicker( { format: 'Y-m-d H:i:00', step: 5 } );
+
+		jQuery( '.dt-date-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d' } );
+
+		//jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, yearEnd: 2010, defaultDate: '2000-01-01' } );
+		jQuery( '.dt-dob-picker' ).datetimepicker( { timepicker: false, format: 'Y-m-d', yearStart: 1950, defaultDate: '2000-01-01' } );
+
+		jQuery( '.dt-time-picker' ).datetimepicker( { datepicker: false, format: 'H:i:00', step: 5 } );
+	}
 }
 
 // == Popups ==============================
@@ -318,8 +351,11 @@ function initSettings() {
 	jQuery( '.box-settings .box-trigger-collapse' ).click( function() {
 
 		var parent		= jQuery( this ).closest( '.box-settings' );
-		var contentWrap = parent.find( '.box-content-wrap .box-content' );
-		var content		= contentWrap.find( '.box-content-data' );
+		var contentWrap = parent.find( '.box-content-wrap .box-content' ).first();
+
+		var nested = contentWrap.find('.box-content-wrap .box-content' );
+
+		content = contentWrap.find( '.box-content-data' ).not( nested );
 
 		if( contentWrap.is( ':visible' ) ) {
 
@@ -350,8 +386,8 @@ function initGallery() {
 			form.slideToggle();
 		});
 
-		var app		= cmt.api.root.getApplication( 'gallery' );
-		var service = app.getService( 'item' );
+		var app		= cmt.api.root.getApplication( 'core' );
+		var service = app.getService( 'galleryItem' );
 
 		service.hiddenForm = false;
 

@@ -20,13 +20,13 @@ $this->title 	= 'Login | ' . $coreProperties->getSiteTitle();
 
 	<?php $form = ActiveForm::begin( [ 'id' => 'frm-login', 'options' => [ 'class' => 'form' ] ] ); ?>
 
-	<?= Yii::$app->formDesigner->getIconInput( $form, $model, 'email', [ 'icon' => 'cmti cmti-user-full', 'options' => [ 'placeholder' => 'Email/Username' ] ] ) ?>
+	<?= Yii::$app->formDesigner->getIconInput( $form, $model, 'identifier', [ 'icon' => 'cmti cmti-user-full', 'options' => [ 'placeholder' => 'Email/Username' ] ] ) ?>
 	<?= Yii::$app->formDesigner->getIconPassword( $form, $model, 'password', [ 'options' => [ 'placeholder' => 'Password' ] ] ) ?>
 	<?= Yii::$app->formDesigner->getIconCheckbox( $form, $model, 'rememberMe', null, 'cmti cmti-checkbox', 'Remember Me' ) ?>
 
 	<div class="filler-height"></div>
 	<div class="row">
-		<div class="colf colf2 align align-left">
+		<div class="colf colf2 align align-left text text-small">
 			<?= Html::a( "Forgot Password ?", [ '/forgot-password' ] ) ?>
 		</div>
 		<div class="colf colf2 align align-right">

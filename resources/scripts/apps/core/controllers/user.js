@@ -19,6 +19,10 @@ cmg.core.controllers.UserController.prototype.clearAvatarActionSuccess = functio
 
 	// Update Uploader
 	uploader.find( '.file-wrap .file-data' ).html( '<i class="cmti cmti-5x cmti-user"></i>');
+
+	uploader.find( '.id' ).val( '' );
+	uploader.find( '.change' ).val( '' );
+	uploader.find( '.name' ).val( '' );
 	uploader.find( '.file-clear' ).hide();
 	uploader.find( '.post-action' ).hide();
 };
@@ -35,7 +39,7 @@ cmg.core.controllers.UserController.prototype.profileActionSuccess = function( r
 		jQuery( '.popout-group-main .wrap-user' ).prepend( '<img class="user-avatar" src="' + response.data.thumbUrl + '" />' );
 	}
 	else {
-		
+
 		jQuery( '.popout-group-main .wrap-user' ).prepend( '<img class="user-avatar" src="' + siteUrl + 'images/avatar-user.png" />' );
 	}
 

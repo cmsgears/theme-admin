@@ -16,7 +16,7 @@ $url		= $data[ 'url' ];
 	<?php } ?>
 	<div class="popup-screen-listener"></div>
 	<div class="popup-data <?= isset( $widget->size ) ? "popup-data-$widget->size" : null ?>">
-		<span class="popup-close"><span class="icon fa fa-close"></span></span>
+		<span class="popup-close"><span class="icon cmti cmti-2x cmti-close"></span></span>
 		<?php if( $widget->bkgData ) { ?>
 			<div class='popup-data-bkg <?= $widget->bkgDataClass ?>' <?= isset( $widget->bkgDataUrl ) ? "style='background-image:url($widget->bkgDataUrl);'" : null ?>></div>
 		<?php } ?>
@@ -26,7 +26,7 @@ $url		= $data[ 'url' ];
 		<div class="popup-content">
 			<div class="filler-height filler-height-medium"></div>
 			<form cmt-app="<?= $app ?>" cmt-controller="<?= $controller ?>" cmt-action="<?= $action ?>" action="<?= $url ?>">
-				<div class="spinner max-area-cover-color">
+				<div class="spinner max-area-cover-black-transparent">
 					<div class="valign-center cmti cmti-2x cmti-spinner-9 spin"></div>
 				</div>
 				<div class="clear filler-height"></div>

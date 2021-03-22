@@ -54,7 +54,7 @@
 @import "breeze/elements/switch";
 @import "breeze/elements/button";
 @import "partials/elements/select";
-@import "partials/elements/switch";
+@import "partials/elements/choice";
 
 @import "breeze/elements/form";
 @import "breeze/elements/table";
@@ -101,15 +101,17 @@
 @import "partials/components/popups/popouts";
 
 @import "breeze/components/sliders/basic";
+@import "breeze/components/sliders/collage";
+@import "partials/components/sliders/basic";
 
-//@import "breeze/components/galleries/basic";
+@import "breeze/components/galleries/basic";
 
 @import "breeze/components/cards/basic";
 @import "breeze/components/cards/panel";
 //@import "breeze/components/cards/comment";
 @import "breeze-templates/components/cards/default";
 @import "breeze-templates/components/cards/info";
-@import "breeze-templates/components/cards/page";
+@import "breeze-templates/components/cards/grid";
 @import "partials/components/cards/basic";
 
 @import "breeze/components/boxes/basic";
@@ -120,7 +122,7 @@
 //@import "breeze/components/boxes/comment";
 @import "breeze-templates/components/boxes/default";
 @import "breeze-templates/components/boxes/info";
-@import "breeze-templates/components/boxes/page";
+@import "breeze-templates/components/boxes/grid";
 @import "partials/components/boxes/basic";
 @import "partials/components/boxes/crud";
 @import "partials/components/boxes/form";
@@ -169,3 +171,5 @@
 //@import "breeze/extensions/fox-slider";
 
 @import "breeze/extensions/tinymce";
+
+@import "partials/extensions/datetimepicker";

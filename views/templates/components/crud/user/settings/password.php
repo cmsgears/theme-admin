@@ -1,7 +1,7 @@
 <div class="data-crud">
 	<div class="data-crud-title">Change Password</div>
 	<form class="form" cmt-app="core" cmt-controller="user" cmt-action="account" action="admin/account">
-		<?php include "$themeIncludes/components/spinners/form.php"; ?>
+		<?php include "$themeTemplates/components/spinners/form.php"; ?>
 		<div class="data-crud-form">
 			<div class="row">
 				<div class="col col3 hidden-easy">

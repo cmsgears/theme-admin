@@ -1,8 +1,19 @@
 <?php
 $layout	= $widget->layout;
+
+$import	= $widget->import;
+$export	= $widget->export;
 ?>
 
 <?= $headHtml ?>
+
+<?php if( $import ) { ?>
+	<?= $importHtml ?>
+<?php } ?>
+
+<?php if( $export ) { ?>
+	<?= $exportHtml ?>
+<?php } ?>
 
 <?= $reportHtml ?>
 
