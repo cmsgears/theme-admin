@@ -26,12 +26,12 @@ $actionView = $widget->actionView;
 			<div class="card grid-card <?= $root . $factor ?>">
 				<div class="card-header grid-card-header row">
 					<div class="colf colf5 card-title grid-card-title">
-						<span class="cmt-choice choice data">
-							<label>
+						<div class="choice data">
+							<label class="choice-option">
 								<input class="grid-bulk-single grid-bulk-<?= $id ?>" type="checkbox" data-id=<?= $id ?> />
 								<span class="label cmti cmti-checkbox"></span>
 							</label>
-						</span>
+						</div>
 					</div>
 					<div class="colf colf5x4 actions grid-card-actions">
 						<?= $widget->render( $actionView, [ 'widget' => $widget, 'model' => $model ] ) ?>
