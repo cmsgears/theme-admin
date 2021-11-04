@@ -67,6 +67,7 @@ class PrivateAssets extends AssetBundle {
 		$this->depends[] = 'cmsgears\assets\components\DateTimeAssets';
 		$this->depends[] = 'cmsgears\assets\vapps\CoreAssets';
 		$this->depends[] = 'cmsgears\assets\vapps\NotifyAssets';
+		$this->depends[] = 'cmsgears\assets\vapps\NewsletterAssets';
 	}
 
 	// Instance methods --------------------------------------------

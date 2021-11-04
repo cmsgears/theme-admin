@@ -5,14 +5,14 @@
 	.data-crud {
 		border: 1px solid $color-border;
 
-		.data-crud-title {			
+		.data-crud-title {
 			background-color: $color-secondary;
 			color: $color-secondary-text;
 			height: 2.3em;
 			line-height: 1.8em;
 			padding: 0.25em;
 			border-bottom: 1px solid $color-border;
-			
+
 			.data-crud-title-actions {
 				float: right;
 			}
@@ -68,15 +68,15 @@
 
 		.form {
 
-			.frm-field {
+			.form-group {
 				display: inline-block;
 				width: 50%;
 				margin-bottom: 0.5em;
-				
+
 				&:nth-child( even ) {
 					padding-right: 0.5em;
 				}
-				
+
 				&:nth-child( odd ) {
 					padding-left: 0.5em;
 				}
@@ -100,7 +100,7 @@
 	.data-crud-wrap-sidebar {
 		padding: 1em;
 		border: 1px solid $color-border;
-		
+
 		.uploader {
 			margin: 0 auto;
 		}
